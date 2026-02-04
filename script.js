@@ -1,6 +1,6 @@
-// 1. GLOBAL VARIABLES - Must be outside the listener for HTML onclick/onsubmit to work
+
 let isMainModalOpen = false;
-let isProjectModalOpen = false; // Initialized to prevent errors in toggle logic
+let isProjectModalOpen = false; 
 
 function toggleModal() {
     const mainModal = document.querySelector(".main-modal");
@@ -13,15 +13,15 @@ function toggleModal() {
     }
 }
 
-// Global contact function for onsubmit="contact(event)"
+
 function contact(event) {
     event.preventDefault();
     const loading = document.querySelector(".modal__overlay--loading");
     const success = document.querySelector(".modal__overlay--success");
-    const submitBtn = document.querySelector(".form__submit"); // Target the button
+    const submitBtn = document.querySelector(".form__submit"); 
     const originalBtnText = submitBtn.innerHTML;
 
-    // 1. Visual loading state on the button
+    
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.style.cursor = "not-allowed";
     submitBtn.disabled = true;
@@ -39,7 +39,7 @@ function contact(event) {
         
         setTimeout(() => {
             success.classList.remove("modal__overlay--visible");
-            // Reset button after success
+           
             submitBtn.innerHTML = originalBtnText;
             submitBtn.style.cursor = "pointer";
             submitBtn.disabled = false;
@@ -49,7 +49,7 @@ function contact(event) {
         event.target.reset();
     }).catch((err) => {
         loading.classList.remove("modal__overlay--visible");
-        // Reset button on error
+        
         submitBtn.innerHTML = originalBtnText;
         submitBtn.style.cursor = "pointer";
         submitBtn.disabled = false;
@@ -59,10 +59,10 @@ function contact(event) {
     });
 }
 
-// 2. DOM CONTENT LOADED - For animations and internal listeners
+
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Navigation Letter Animation
+    
     const navLinks = document.querySelectorAll('.nav-link');
     const linkTexts = ['Home', 'About', 'Projects', 'Contact'];
     
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Intersection Observer for Scroll Animations
+  
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -100px 0px'
@@ -93,14 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Stagger Project Cards
+    
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
         card.style.transitionDelay = `${index * 0.1}s`;
     });
 });
       
-       // Close modal on "Escape" key press
+       
 window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && isMainModalOpen) {
         toggleModal();
