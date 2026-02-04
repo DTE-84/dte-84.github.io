@@ -109,10 +109,10 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-// Get the button
+
 let mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -123,10 +123,10 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
 }
 
 // 1. Handle the Progress Line Fill
@@ -157,7 +157,7 @@ const observer = new IntersectionObserver((entries) => {
                 orbs.forEach(orb => orb.classList.remove('active'));
                 targetOrbWrapper.classList.add('active');
                 
-                // This snaps the bar exactly to the 'top' style we set in HTML
+                
                 progressBar.style.height = targetOrbWrapper.style.top;
             }
         }
