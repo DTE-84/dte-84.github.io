@@ -8,6 +8,8 @@ body {
   font-family: "Courier New", monospace;
   background: #0a0a0a;
   color: #fff;
+  display: block;
+  min-height: 100vh;
   overflow-x: hidden;
   position: relative;
 }
@@ -355,6 +357,10 @@ nav {
   border-top: 1px solid rgba(209, 254, 0, 0.1);
   text-align: center;
 }
+#footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 10vh;
+}
 
 .contact-links {
   display: flex;
@@ -438,6 +444,7 @@ nav {
 
 html {
   scroll-behavior: smooth;
+  overflow-anchor: none;
 }
 
 /* MODAL */
@@ -774,6 +781,8 @@ footer {
 .footer__copyright {
   color: #d1fe00;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
   margin-top: 50px;
   font-size: 1.2rem;
@@ -885,4 +894,138 @@ footer {
     top: 10px;
     right: 20px;
   }
+}
+.scroll-nav-container {
+  position: fixed;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 320px; /* Increased for padding */
+  padding: 10px 0; /* Padding so orbs don't cut off */
+  z-index: 9999;
+  pointer-events: none;
+  overflow: visible; /* CRITICAL: allows labels to be seen */
+}
+
+/* --- SCROLL NAV WIDGET --- */
+:root {
+  --neon-yellow: #d1fe00;
+}
+
+.scroll-nav-container {
+  position: fixed;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 320px;
+  z-index: 9999;
+  pointer-events: none;
+  /* CRITICAL FIX: allow labels to be visible outside the 20px width */
+  overflow: visible;
+}
+
+.scroll-track {
+  position: absolute;
+  left: 9px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: rgba(209, 254, 0, 0.2);
+  /* 3. Lower z-index so it stays BEHIND the orbs */
+  z-index: 1 !important;
+}
+
+.scroll-progress {
+  position: absolute;
+  left: 9px;
+  top: 10px;
+  width: 2px;
+  /* Gradient makes it look like a glowing beam */
+  background: linear-gradient(
+    to bottom,
+    rgba(209, 254, 0, 0.3),
+    var(--neon-yellow) 80%,
+    #fff 100%
+  );
+  box-shadow:
+    0 0 8px var(--neon-yellow),
+    0 0 15px var(--neon-yellow);
+  z-index: 3; /* ABOVE the inactive orbs */
+  transition: height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+}
+
+.orb-wrapper {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translateY(-50%);
+  /* Ensure opacity is not set here, only on the children */
+  z-index: 4;
+}
+
+.orb {
+  width: 20px;
+  height: 20px;
+  background-color: #0a0a0a;
+  border: 2px solid var(--neon-yellow);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2; /* BELOW the progress bar */
+  transition: all 0.4s ease;
+}
+
+.orb-label {
+  margin-left: 15px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  color: var(--neon-yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  opacity: 0; /* Start hidden */
+  transform: translateX(-10px);
+  transition: all 0.4s ease;
+}
+.orb-wrapper.active .orb-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.orb-wrapper.active .orb {
+  background-color: #d1fe00 !important; /* Match neon color */
+  animation: orbPulse 1s ease infinite;
+  z-index: 4; /* TOP LAYER */
+  box-shadow: 0 0 20px var(--neon-yellow);
+}
+
+@keyframes orbPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(209, 254, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(209, 254, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(209, 254, 0, 0);
+  }
+}
+
+.footer__copyright {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  color: rgba(209, 254, 0, 0.6); /* Matches your neon theme */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(209, 254, 0, 0.1); /* Subtle divider */
+  margin-top: 50px;
 }

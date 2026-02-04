@@ -128,3 +128,55 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// 1. Handle the Progress Line Fill
+window.onscroll = function() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.height = scrolled + "%";
+};
+
+// --- SCROLL NAV LOGIC ---
+const orbs = document.querySelectorAll('.orb-wrapper');
+const progressBar = document.getElementById("progressBar");
+
+const observerOptions = {
+    root: null,
+    rootMargin: '-40% 0px -40% 0px', 
+    threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            const targetOrbWrapper = document.querySelector(`[data-section="${sectionId}"]`);
+            
+            if (targetOrbWrapper) {
+                orbs.forEach(orb => orb.classList.remove('active'));
+                targetOrbWrapper.classList.add('active');
+                
+                // This snaps the bar exactly to the 'top' style we set in HTML
+                progressBar.style.height = targetOrbWrapper.style.top;
+            }
+        }
+    });
+}, observerOptions);
+
+// Observe your main sections
+['home', 'about', 'projects', 'contact__footer'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+});
+
+// Click to scroll logic
+orbs.forEach(wrapper => {
+    wrapper.addEventListener('click', () => {
+        const sectionId = wrapper.getAttribute('data-section');
+        const target = document.getElementById(sectionId);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});

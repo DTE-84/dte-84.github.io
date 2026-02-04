@@ -41,7 +41,7 @@
         <li><a href="#" onClick="toggleModal()" class="nav-link  link__hover-effect"></a></li>
       </ul>
     </nav>
-
+   
     <!-- Contact -->
        <button onClick="topFunction()" id="myBtn" class="toparrow__btn click">
             <i class="fas fa-arrow-up"></i>
@@ -253,13 +253,34 @@ Passionate about building intuitive, user-centric web applications and continuou
       </div>
     </section>
     </div>
-    <div class="footer__copyright">Copyright &copy; 2025 Drew Ernst</div> 
-    
-      
-    <footer>
-    </section>
    
-</footer> 
+    
+    <div class="footer__copyright">Copyright &copy; 2025 Drew Ernst</div> 
+
+    <div class="scroll-nav-container">
+        <div class="scroll-track"></div>
+        <div class="scroll-progress" id="progressBar"></div>
+        
+        <div class="orb-wrapper" data-section="home" style="top: 0%;">
+            <div class="orb"></div>
+            <span class="orb-label">HOME</span>
+        </div>
+        <div class="orb-wrapper" data-section="about" style="top: 33%;">
+            <div class="orb"></div>
+            <span class="orb-label">ABOUT</span>
+        </div>
+        <div class="orb-wrapper" data-section="projects" style="top: 66%;">
+            <div class="orb"></div>
+            <span class="orb-label">PROJECTS</span>
+        </div>
+        <div class="orb-wrapper" data-section="contact__footer" style="top: 100%;">
+            <div class="orb"></div>
+            <span class="orb-label">CONTACT</span>
+        </div>
+    </div>
+
 <script src="script.js"></script>
   </body>
 </html>
+ 
+ 
