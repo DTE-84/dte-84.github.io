@@ -828,3 +828,23 @@ footer {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 999; /* Just below the modal (9999) */
 }
+
+.modal-content {
+  width: 90%;          /* Occupies most of the screen on mobile */
+  max-width: 500px;    /* Prevents it from looking huge on desktop */
+  margin: auto;        /* Centers it */
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't break the width */
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 95%;        /* Even tighter margins for small phones */
+    padding: 15px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.2rem; /* Shrink text so it doesn't wrap weirdly */
+  }
+}
+
