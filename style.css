@@ -796,6 +796,8 @@ footer {
   left: 40px;
   box-shadow: 0 4px 50px 0 rgba(209, 254, 0, 0.2);
   transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+  animation-direction: up, down;
 }
 
 .toparrow__btn:hover {
@@ -805,6 +807,20 @@ footer {
 
 .toparrow__btn:active {
   transform: scale(0.9);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .modal--open .bg-animation {
