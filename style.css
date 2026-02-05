@@ -72,7 +72,7 @@ h4 {
 .orb1 {
   width: 400px;
   height: 400px;
-  background: #d1fe00;
+  background: #cffe00c5;
   top: 20%;
   left: 10%;
   animation-delay: 0s;
@@ -94,6 +94,33 @@ h4 {
   bottom: 10%;
   left: 50%;
   animation-delay: 4s;
+}
+
+.orb4  {
+  width: 300px;
+  height: 300px;
+  background: #064b3a;
+  top: 70%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+.orb5 {
+  width: 400px;
+  height: 400px;
+  background: #5279b8b5;
+  top: 20%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.orb6 {
+  width: 400px;
+  height: 400px;
+  background: #52b891;
+  top: 25%;
+  right: 15%;
+  animation-delay: 0s;
 }
 
 @keyframes float {
