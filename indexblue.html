@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DTE E-Portfolio</title>
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&family=Smooch+Sans:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styleblue.css" />
+    
+    <script src="https://kit.fontawesome.com/66240d21b2.js" crossorigin="anonymous"></script>
+   
+    
+  </head>
+  <body>
+    <div id="protocol-loader">
+    <div class="loader-content">
+        <div class="glitch-text" data-text="REBOOTING PROTOCOL...">REBOOTING PROTOCOL...</div>
+        <div class="load-bar"><div class="load-progress"></div></div>
+    </div>
+</div>
+    
+    <!-- Animated Background -->
+    <div class="bg-animation">
+      <div class="neon-grid"></div>
+      <div class="glow-orb orb1"></div>
+      <div class="glow-orb orb2"></div>
+      <div class="glow-orb orb3"></div>
+      <div class="glow-orb orb4"></div>
+      <div class="glow-orb orb5"></div>
+      <div class="glow-orb orb6"></div>
+          </div>
+
+    <!-- Navigation -->
+    <nav class="circuit-nav">
+      <div class="protocol-switcher">
+  <span class="protocol-label">INDX-YEL</span>
+  <label class="switch">
+    <input type="checkbox" id="protocol-toggle">
+    <span class="slider"></span>
+  </label>
+  <span class="protocol-label">INDX-CYN</span>
+</div>
+       <a id="top"></a>    
+  <ul class="nav-links">
+    <li class="chip-socket"><a href="#home" class="tech-tab nav-link">Home</a></li>
+    <li class="chip-socket"><a href="#about" class="tech-tab nav-link">About</a></li>
+    <li class="chip-socket"><a href="#projects" class="tech-tab nav-link">Projects</a></li>
+    <li class="chip-socket"><a href="javascript:void(0)" onclick="toggleModal()" class="tech-tab nav-link">Contact</a></li>
+  </ul>
+</nav>
+   
+    <!-- Contact -->
+       <button onClick="topFunction()" id="myBtn" class="toparrow__btn click">
+            <i class="fas fa-arrow-up"></i>
+            </button>
+     <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+            </a>
+            <div class="main-modal">
+                
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+                <p class="modal__para">
+                    I'm a 41 year old<span class="Blue"> Frontend Software Engineer</span>. I love the challenge of
+                    working on and solving extremely difficult engineering problems.
+                    <br>
+                    I'm currently learning to become a<span class="Blue"> Full Stack Software Engineer</span> with a
+                    focus on the frontend. I was taught by a team consisting of some of the most <span
+                        class="Blue">talented</span> and<span class="Blue"> experienced</span> software
+                    engineers,</span> including David Bragg at Frontend Simplified Mentorship Program.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png" alt="">
+                        <span class="language__name">TypeScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
+                            alt="">
+                        <span class="language__name">React</span>
+                    </figure>
+
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <h3 class="modal__sub-title modal__sub-title--contact">
+                    I'm currently open to new opportunities.
+                </h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">E-mail</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon.
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="main-content-wrapper">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm Drew Ernst</h1>
+        <p class="typewriter">Frontend Developer | Creative Problem Solver</p>
+        <a href="#projects" class="cta-button">View My Work</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>
+            A <b class="bold">results-oriented</b> Software Engineer with a background in<b class="bold"> operations</b> and management. I <b class="bold">specialize</b> in building<b class="bold"> intuitive</b>, user-centric web applications where technical<b class="bold"> precision</b> meets business <b class="bold">logic</b>.
+</p>
+<br>
+          <p>
+My previous career in<b class="bold"> leadership</b> taught me that the best software isn’t built in a vacuum — it’s the result of <b class="bold"> clear communication</b> and <b class="bold"> effective collaboration</b>. I <b class="bold">excel</b> in across-functional collaboration. I translate <b class="bold">complex </b>requirements into <b class="bold">seamless</b> digital<b class="bold"> experiences</b>, leveraging my background in<b class="bold"> client management</b> to ensure every line of code <b class="bold">serves</b> the end <b class="bold">user</b> and the business <b class="bold">goals</b>. I <b class="bold">thrive</b> in remote, collaborative <b class="bold">environments</b> where my blend of technical <b class="bold">expertise</b> and interpersonal <b class="bold">strategy</b> can drive a project forward.
+          </p>
+          <br>
+          <p>
+          I<b class="bold"> build</b> software with a focus on<b class="bold"> clarity, usability, and impact</b>. Transitioning from a <b class="bold">successful</b> career in operations to frontend development, I bring a <b class="bold">unique</b> perspective and <b class="bold">"business-first" </b>lens to the engineering<b class="bold"> process</b>.
+</p>
+<br>
+<p>
+ <h4 class="philosophy"> My Philosophy: </h4>
+  <ul class="pulsing-list">
+    
+
+<li>User-Centric <b class="bold">Design</b>: My background in communication allows me to empathize with the user, ensuring the interfaces I build are as intuitive as they are functional.
+</li>
+<li>Collaborative<b class="bold"> Excellence</b>: Having led teams in my previous career, I understand the nuances of remote collaboration. I believe documentation and clear communication are just as vital as the codebase itself.
+</li>
+<li>Results-Driven <b class="bold">Development</b>: I don't just solve technical puzzles; I build tools that streamline operations and enhance user engagement.
+</li>
+</ul>
+</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>TREACT: The "Problem/Solution" Approach</h3>
+            <p>
+              The Challenge: To create a high-converting business landing page that balances complex information (pricing, features, testimonials) with a clean, user-friendly interface without relying on heavy frameworks.
+              <br>
+              The Solution: I developed "Treact," a multi-section landing page that utilizes JavaScript for interactivity and sleek CSS transitions for a premium feel. I focused heavily on typography and whitespace to ensure the "value propositions" of the business were clear. The result is a fast-loading, accessible, and fully responsive site that mimics the quality of modern corporate SaaS websites.
+              <ul class="pulsing-list">
+                <li>I implemented a tiered pricing section to clearly communicate service levels to potential customers.</li>
+                <li>Vanilla JavaScript and Advanced CSS</li>
+              </ul>
+            </p>
+            <div class="project-links">
+              <a href="https://dte-84.github.io/treact-2/" target="_blank" class="project-link">The Project</a>
+              <a href="https://github.com/DTE-84/treact-2" target="_blank" class="project-link">GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3>React E-Store (Library)</h3>
+            <p>
+              "A modern e-commerce solution built to handle dynamic data and user interactions. This project served as an exploration into advanced State Management in React, specifically handling complex shopping cart logic and item persistence.
+              <br>
+              Used useState, useEffect, or Redux to manage the cart state but:
+              <br>
+              "The biggest challenge was managing the synchronized state between the product list and the shopping cart, which I solved by [using React Hooks/Context API]."
+            
+              <ul class="pulsing-list">
+           <li>   Front-end: React.js, JavaScript (ES6), HTML5, CSS3.</li>
+           <li>  Back-end Tools: Git, Heroku (Deployment), NPM.</li>
+            </ul>
+            
+            <div class="project-links">
+              <a href="https://ecommercelibray-react-a3c104c7bd57.herokuapp.com/" target="_blank" class="project-link">The Project</a>
+              <a href= "https://github.com/DTE-84/EcommerceLibrary" target="_blank" class="project-link">GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3>Project: CarSales – Automotive E-Commerce Platform</h3>
+            <p>
+              Developed a high-performance, responsive car dealership application using React.js. The project focuses on a seamless user experience for browsing vehicle inventory, featuring dynamic data fetching from an external API.
+              <br>
+              <ul class="pulsing-list">
+                <li>Key Technologies: React, JavaScript (ES6+), HTML5, CSS3, REST APIs.</li>
+                <li>Core Features: Integrated real-time car data, implemented advanced filtering (make, model, price), and ensured a mobile-first responsive design.</li>
+                <li>Technical Challenge: Managed complex state for inventory filtering and optimized component rendering for faster load times.</li>
+               </ul><img src="">
+            </p>
+            <div class="project-links">
+              <a href="https://dte-84.github.io/CarsFinal/" target="_blank" class="project-link">The Project</a>
+              <a href="https://github.com/DTE-84/CarsFinal" target="_blank" class="project-link">GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3>Tony’s Landscaping LLC – Business Website</h3>
+            <p>
+              
+
+"I designed and developed a comprehensive digital presence for Tony’s Landscaping LLC using HTML5, CSS3, and JavaScript. The project focuses on a clean, modern user interface that prioritizes visual storytelling through high-resolution galleries and interactive project showcases. Key features include a responsive navigation system, dynamic modal windows for service portfolios, and a custom-built contact interface. The site is optimized for performance and accessibility, ensuring a seamless experience for clients seeking lawn care, hardscaping, and garden design services."
+            <ul class="pulsing-list">
+             <li> Responsive Design: The site scales perfectly from desktop to mobile.</li>
+
+<li>Modals & DOM Manipulation: You used JavaScript to handle the "Before/After" and gallery pop-ups, which shows you can manage state and the DOM.</li>
+
+<li>HTML: Using sections like <~header~>, <~services~>, and <~gallery~> for better SEO and accessibility.</li>
+
+<li>Clean UI/UX: The use of whitespace and a consistent green/earth-tone color palette reinforces the brand identity.</li>
+            </ui>
+</p>
+            <div class="project-links">
+              <a href="https://dte-84.github.io/TonysLandscaping/" target="_blank" class="project-link">The Project</a>
+              <a href="https://github.com/DTE-84/TonysLandscaping" target="_blank" class="project-link">GitHub</a>
+            </div>
+            </div>
+             <div class="project-card">
+            <h3>My first Portfolio - The "About Me" Section</h3>
+            <p>
+              Welcome to my digital space. I built this portfolio to document my journey as a developer and to showcase the projects I’ve created using core web technologies. By leveraging HTML for structure, CSS for styling and layouts, and JavaScript for interactivity, I’ve created a platform that reflects my technical skills and design philosophy.
+            <ul class="pulsing-list">
+              <li>Optimized for seamless viewing across mobile, tablet, and desktop.</li>
+
+<li>Utilizing JavaScript to enhance user experience.</li>
+</ul>
+            </p>
+            <div class="project-links">
+              <a href="https://dte-84.github.io/FEDPortfolio/" target="_blank" class="project-link">The Project</a>
+              <a href="https://github.com/DTE-84/FEDPortfolio" target="_blank" class="project-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact__footer" class="footer__contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 20px">
+          Let's work together on your next project!
+        </p>
+    </div>
+       
+        <div class="footer__social--list">         
+    </a>
+    <div class="footer__social--list">
+  <a href="https://github.com/dte84" target="_blank" class="tech-tab nav-link">
+    GitHub
+  </a>
+  <a href="https://www.linkedin.com/in/dte84/" target="_blank" class="tech-tab nav-link">
+    LinkedIn
+  </a>
+  <a href="./assets/DTEFEresume.pdf" target="_blank" class="tech-tab nav-link">
+    Resume
+  </a>
+</div>
+      </div>
+    </section>
+    </div>
+   
+    
+    <div class="footer__copyright">Copyright &copy; 2025 Drew Ernst</div> 
+
+    <div class="scroll-nav-container">
+        <div class="scroll-track"></div>
+        <div class="scroll-progress" id="progressBar"></div>
+        
+        <div class="orb-wrapper" data-section="home" style="top: 0%;">
+            <div class="orb"></div>
+            <span class="orb-label">HOME</span>
+        </div>
+        <div class="orb-wrapper" data-section="about" style="top: 33%;">
+            <div class="orb"></div>
+            <span class="orb-label">ABOUT</span>
+        </div>
+        <div class="orb-wrapper" data-section="projects" style="top: 66%;">
+            <div class="orb"></div>
+            <span class="orb-label">PROJECTS</span>
+        </div>
+        <div class="orb-wrapper" data-section="contact__footer" style="top: 100%;">
+            <div class="orb"></div>
+            <span class="orb-label">CONTACT</span>
+        </div>
+    </div>
+
+
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  (function () {
+    emailjs.init("zmPiRmxRkScwdiYFX");
+  })();
+</script>
+
+<script src="scriptblue.js"></script>
+
+  </body>
+</html>
+ 
+ 
