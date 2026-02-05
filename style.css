@@ -1075,7 +1075,8 @@ footer {
   padding-left: 30px;
   margin-bottom: 20px;
   color: #fff; 
-  font-family: sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
 }
 
 .pulsing-list li::before {
