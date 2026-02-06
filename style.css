@@ -1108,7 +1108,7 @@ footer {
   -webkit-overflow-scrolling: touch;
 }
 
-/* --- SCROLL NAV WIDGET --- */
+
 :root {
   --neon-yellow: #22d3ee;
 }
@@ -1344,13 +1344,6 @@ footer {
   }
 }
 
-.protocol-switcher {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0 15px;
-}
-
 .protocol-label {
   font-family: "Space Grotesk", sans-serif;
   font-size: 10px;
@@ -1450,23 +1443,24 @@ input:checked + .slider:before {
   }
 }
 
-/* --- PROTOCOL TOGGLE (BLUE/DEFAULT ON) --- */
+
 .protocol-switch {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
+  margin-right: 40px;
 }
 
 .protocol-input {
   display: none;
 }
 
-/* The Track */
+
 .slider {
   width: 48px;
   height: 24px;
   background-color: #0a0a0a;
-  border: 1px solid #00f2ff; /* Blue Glow */
+  border: 1px solid #00f2ff;
   border-radius: 20px;
   position: relative;
   cursor: pointer;
@@ -1474,13 +1468,13 @@ input:checked + .slider:before {
   box-shadow: 0 0 5px rgba(0, 242, 255, 0.2);
 }
 
-/* The Ball (Knob) */
+
 .slider::before {
   content: "";
   position: absolute;
   height: 16px;
   width: 16px;
-  left: 26px; /* Start on the RIGHT for Blue */
+  left: 26px; 
   bottom: 3px;
   background-color: #00f2ff;
   border-radius: 50%;
@@ -1488,9 +1482,8 @@ input:checked + .slider:before {
   box-shadow: 0 0 8px #00f2ff;
 }
 
-/* Visual state when clicked (Yellow bound) */
 .protocol-input:checked + .slider::before {
-  transform: translateX(-22px); /* Move left */
+  transform: translateX(-22px); 
   background-color: #555;
 }
 

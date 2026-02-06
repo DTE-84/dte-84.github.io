@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("protocol-loader");
   const path = window.location.pathname;
 
-  // --- 1. ARRIVAL: Hide the loader when the page loads ---
+  
   if (loader) {
     setTimeout(() => {
       loader.style.opacity = "0";
@@ -13,15 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 600);
   }
 
-  // --- 2. STATE: Sync toggle position with the current URL ---
+  
   if (toggle) {
     toggle.checked = path.includes("indexyellow.html");
 
-    // --- 3. DEPARTURE: Switch pages when toggle changes ---
+    
     toggle.addEventListener("change", () => {
       if (loader) {
         loader.style.display = "flex";
-        void loader.offsetWidth; // Force CSS refresh
+        void loader.offsetWidth; 
         loader.style.opacity = "1";
       }
 

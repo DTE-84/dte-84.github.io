@@ -30,7 +30,6 @@ h4 {
   color: #d1fe00;
 }
 
-/* Animated Background */
 .bg-animation {
   position: fixed;
   top: 0;
@@ -145,7 +144,6 @@ h4 {
   padding: 0 20px;
 }
 
-/* Navigation */
 nav {
   position: fixed;
   top: 0;
@@ -526,7 +524,6 @@ html {
   overflow-anchor: none;
 }
 
-/* MODAL */
 .main-modal {
   position: fixed;
   top: 50%;
@@ -991,7 +988,6 @@ footer {
   -webkit-overflow-scrolling: touch;
 }
 
-/* --- SCROLL NAV WIDGET --- */
 :root {
   --neon-yellow: #d1fe00;
 }
@@ -1179,18 +1175,11 @@ footer {
   }
 }
 
-.protocol-switcher {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0 15px;
-}
-
 .protocol-label {
   font-family: "Space Grotesk", sans-serif;
   font-size: 10px;
   letter-spacing: 1px;
-  color: #22d3ee; /* Use #d1fe00 on the yellow page */
+  color: #d1fe00;
 }
 
 .switch {
@@ -1214,7 +1203,7 @@ footer {
   right: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid #22d3ee;
+  border: 1px solid #d1fe00;
   transition: 0.4s;
   border-radius: 20px;
 }
@@ -1226,13 +1215,12 @@ footer {
   width: 12px;
   left: 4px;
   bottom: 3px;
-  background-color: #22d3ee;
+  background-color: #d1fe00;
   transition: 0.4s;
   border-radius: 50%;
-  box-shadow: 0 0 10px #22d3ee;
+  box-shadow: 0 0 10px #d1fe00;
 }
 
-/* When checked (Cyan Mode) */
 input:checked + .slider:before {
   transform: translateX(18px);
 }
@@ -1256,7 +1244,7 @@ input:checked + .slider:before {
 }
 
 .glitch-text {
-  color: #22d3ee; /* Set to #d1fe00 on the yellow page */
+  color: #d1fe00;
   font-family: "Space Grotesk", sans-serif;
   font-weight: bold;
   letter-spacing: 5px;
@@ -1273,8 +1261,8 @@ input:checked + .slider:before {
 .load-progress {
   width: 0%;
   height: 100%;
-  background: #22d3ee;
-  box-shadow: 0 0 10px #22d3ee;
+  background: #d1fe00;
+  box-shadow: 0 0 10px #d1fe00;
   animation: load-fill 0.4s forwards;
 }
 
@@ -1284,25 +1272,18 @@ input:checked + .slider:before {
   }
 }
 
-
-.nav__link--anchor:has(.protocol-switch) {
-  margin-left: 0; 
-  margin-right: 15px; 
-}
-
-
 .nav__link--list {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   align-items: center;
-  gap: 20px; 
+  gap: 20px;
 }
 
-/* --- PROTOCOL TOGGLE (YELLOW/OFF) --- */
 .protocol-switch {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
+  margin-right: 40px;
 }
 
 .protocol-input {
@@ -1325,15 +1306,14 @@ input:checked + .slider:before {
   position: absolute;
   height: 16px;
   width: 16px;
-  left: 4px; /* Start on the LEFT for Yellow */
+  left: 4px;
   bottom: 3px;
-  background-color: #d1fe00; /* Yellow Knob */
+  background-color: #d1fe00;
   border-radius: 50%;
   transition: 0.4s;
 }
 
-/* Visual state when clicked (Blue bound) */
 .protocol-input:checked + .slider::before {
   transform: translateX(22px);
-  background-color: #00f2ff;
+  background-color: #d1fe00;
 }

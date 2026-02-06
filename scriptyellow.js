@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   toggle.addEventListener("change", () => {
-    // Show loader again before moving
+   
     loader.style.display = "flex";
     loader.style.opacity = "1";
 
