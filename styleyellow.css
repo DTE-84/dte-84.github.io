@@ -155,9 +155,9 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px; /* Limits how wide the content can get */
-  margin: 0 auto;    /* This is the magic that centers the box */
-  padding: 0 40px;   /* Prevents text from touching the screen edges on mobile */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%; /* Percentage padding scales with the screen */
 }
 /* Navigation */
 nav {
