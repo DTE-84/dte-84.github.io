@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px; /* Base size */
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  } /* Everything using 'rem' shrinks by ~12% */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  } /* Everything shrinks further for tablets/phones */
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -18,11 +38,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
-}
-
-h4 {
-  color: #d1fe00;
-  font-family: "Space Grotesk", sans-serif;
 }
 
 .bold {
@@ -137,6 +152,13 @@ h4 {
     transform: translate(20px, 30px) scale(1.05);
   }
 }
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Limits how wide the content can get */
+  margin: 0 auto;    /* This is the magic that centers the box */
+  padding: 0 40px;   /* Prevents text from touching the screen edges on mobile */
+}
 /* Navigation */
 nav {
   position: fixed;
@@ -155,7 +177,7 @@ nav {
 }
 
 .circuit-nav {
-  position: fixed;
+  position: relative;
   top: 0; /* Set to 0 so it sits flush at the top */
   left: 0;
   width: 100%; /* Full width for a clean edge-to-edge line */
@@ -175,6 +197,8 @@ nav {
   z-index: 1000;
   box-sizing: border-box;
 }
+
+
 
 .nav-section-left,
 .nav-section-right {
@@ -313,10 +337,11 @@ nav {
 }
 
 .nav-section-center {
-  flex: 1; /* Only takes what it needs, stays centered by the two flex:1 sides */
+  flex: 1;
+  height: 100%; 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* This is the key for vertical centering */
 }
 
 .nav-links {
@@ -558,20 +583,29 @@ nav {
   opacity: 1;
   transform: translateY(0);
 }
+
 .projects {
-  padding: 100px 0;
+  padding: 100px;
+  overflow: hidden;
   min-height: 100vh;
+  display: block; 
+  position: relative;
+  margin-bottom: 50px;
+
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
-  margin-top: 60px;
-  align-items: start;
+  /* This creates as many columns as possible between 280px and 400px */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 30px;
+  max-width: 1200px; /* Limits the total width of the grid area */
+  margin: 60px auto 0 auto; /* Centers the whole grid on the page */
+  padding: 0 20px;
 }
 
 .project-card {
+  
   background: rgba(209, 254, 0, 0.03);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -668,14 +702,24 @@ nav {
 }
 
 .footer__contact {
-  padding: 100px 0;
+  padding: 100px 0; /* Increased from 50px */
+  margin-top: 80px;  /* Pushes it away from the last project card */
   background: rgba(209, 254, 0, 0.02);
   border-top: 1px solid rgba(209, 254, 0, 0.1);
   text-align: center;
+  margin-bottom: 40px;
 }
-#footer {
-  margin-bottom: 0 !important;
-  padding-bottom: 10vh;
+
+
+footer {
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 100px 5% 60px 5%; /* Increased top padding */
+  border-top: 1px solid rgba(209, 254, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Increased gap to separate the Grid from the Copyright bar */
+  width: 100%;
 }
 
 .contact-links {
@@ -684,6 +728,8 @@ nav {
   gap: 30px;
   margin-top: 40px;
   flex-wrap: wrap;
+margin-top: 50px;      /* Space between the 'Work Together' text and buttons */
+  margin-bottom: 60px;   /* Space between the buttons and the final copyright */
 }
 
 .contact-link {
@@ -1046,22 +1092,67 @@ textarea.input {
   transform: scale(0.9);
 }
 
-/*
 
-  FOOTER
 
-*/
-footer {
-  position: relative;
-  background-color: transparent;
-  display: flex;
-  padding: 1.5% 0;
+.footer__main-content {
+  display: grid;
+  /* Creates 3 columns: Brand (wide), Links, and Socials */
+  grid-template-columns: 2fr 1fr 1fr; 
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.footer__row {
+.footer__section-title {
+  color: #d1fe00;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.footer__link-list {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+
+.footer__link-list a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer__link-list a:hover {
+  color: #d1fe00;
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer__copyright {
+  margin: 0; /* Remove that old 50px margin */
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+@media (max-width: 850px) {
+  .footer__main-content {
+    grid-template-columns: 1fr; /* Stacks vertically on mobile */
+    text-align: center;
+  }
 }
 
 .footer__social--link {
@@ -1074,6 +1165,8 @@ footer {
   transition: all 0.3s ease;
   font-size: 0.95rem;
   font-weight: 500;
+  display: inline-block;
+  padding: 12px 28px;
 }
 
 .footer__social--link:hover {
@@ -1082,26 +1175,26 @@ footer {
   box-shadow: 0 0 20px rgba(209, 254, 0, 0.5);
 }
 
-.footer__logo--popper {
-  position: absolute;
-  right: 0;
-  top: 16px;
-  font-weight: 700;
-  opacity: 0;
-  transition: all 300ms ease;
-  color: #d1fe00;
-  font-family: "Smooch Sans", sans-serif;
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;       /* Horizontal space between buttons */
+  margin-top: 30px; /* Vertical space between the paragraph and buttons */
+  flex-wrap: wrap;
 }
 
+
+
 .footer__copyright {
-  color: #d1fe00;
+  width: 100%;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  margin-top: 50px;
-  font-size: 1.2rem;
-  text-shadow: 0 0 20px rgba(209, 254, 0, 0.5);
+  padding-top: 40px;
+  margin-top: 60px; /* Space between links and copyright */
+  
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  color: rgba(209, 254, 0, 0.5);
+  letter-spacing: 3px;
 }
 
 .toparrow__btn {
@@ -1562,7 +1655,7 @@ input:checked + .slider:before {
 }
 
 /* --- [2] DESKTOP MODE (Screens wider than 850px) --- */
-@media screen and (min-width: 851px) {
+@media screen and (min-width: 850px) {
   .hamburger {
     display: none !important; /* Hide burger on desktop */
   }
@@ -1571,6 +1664,7 @@ input:checked + .slider:before {
     flex-direction: row;
     opacity: 1 !important;
     visibility: visible !important;
+    
   }
 }
 
@@ -1589,6 +1683,7 @@ input:checked + .slider:before {
     width: 100%;
     flex-direction: column;
     background: rgba(10, 10, 10, 0.98);
+    list-style: none !important;
     padding: 40px 0;
 
     /* Animation: Hidden by default */
@@ -1605,6 +1700,7 @@ input:checked + .slider:before {
     display: flex;
     justify-content: center;
 }
+
 
   /* Force Hamburger to show */
   .hamburger {
@@ -1632,6 +1728,21 @@ input:checked + .slider:before {
   }
   @media screen and (max-width: 850px) {
     /* 1. Scale down the Logo Brackets & Text */
+    .circuit-nav {
+      height: 80px;
+    }
+
+.nav-links {
+    top: 80px; /* MUST match the .circuit-nav height */
+    height: calc(100vh - 80px); /* Makes the menu fill the rest of the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers links vertically in the dropdown */
+    align-items: center;     /* Centers links horizontally */
+    background: rgba(10, 10, 10, 0.98);
+    text-decoration: none !important;
+}
+
     .nav-brand-container {
       gap: 5px !important;
     }
