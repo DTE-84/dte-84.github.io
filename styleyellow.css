@@ -1734,13 +1734,16 @@ input:checked + .slider:before {
 
 .nav-links {
     top: 80px; /* MUST match the .circuit-nav height */
-    height: calc(100vh - 80px); /* Makes the menu fill the rest of the screen */
+    height:auto; /* Makes the menu fill the rest of the screen */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers links vertically in the dropdown */
     align-items: center;     /* Centers links horizontally */
     background: rgba(10, 10, 10, 0.98);
     text-decoration: none !important;
+    padding-bottom: 40px;
+    max-height: 90vh;
+    overflow: auto;
 }
 
     .nav-brand-container {
