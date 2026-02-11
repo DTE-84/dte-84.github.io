@@ -177,7 +177,7 @@ nav {
 }
 
 .circuit-nav {
-  position: relative;
+  position: fixed;
   top: 0; /* Set to 0 so it sits flush at the top */
   left: 0;
   width: 100%; /* Full width for a clean edge-to-edge line */
