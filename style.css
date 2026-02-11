@@ -359,9 +359,10 @@ nav {
 }
 
 .nav-section-center {
-  flex: 0; /* Only takes what it needs, stays centered by the two flex:1 sides */
+  flex: 1; /* Only takes what it needs, stays centered by the two flex:1 sides */
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav-links {

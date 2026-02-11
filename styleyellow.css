@@ -313,9 +313,10 @@ nav {
 }
 
 .nav-section-center {
-  flex: 0; /* Only takes what it needs, stays centered by the two flex:1 sides */
+  flex: 1; /* Only takes what it needs, stays centered by the two flex:1 sides */
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav-links {
@@ -1577,6 +1578,10 @@ input:checked + .slider:before {
 @media screen and (max-width: 850px) {
   /* Force desktop buttons to hide */
   .nav-links {
+    justify-content: center; /* Centers vertically in the dropdown */
+    align-items: center;     /* Centers horizontally */
+    text-align: center;
+    gap: 20px;
     display: flex; /* We need flex for the vertical list */
     position: fixed;
     top: 60px;
@@ -1594,6 +1599,13 @@ input:checked + .slider:before {
     z-index: 1000;
   }
 
+  .nav-links li {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
   /* Force Hamburger to show */
   .hamburger {
     display: flex !important;
@@ -1608,8 +1620,8 @@ input:checked + .slider:before {
   .bar {
     width: 100%;
     height: 2px;
-    background-color: #22d3ee;
-    box-shadow: 0 0 8px #22d3ee;
+    background-color: #d1fe00;
+    box-shadow: 0 0 8px #d1fe00;
   }
 
   /* Show menu when checkbox is clicked */
