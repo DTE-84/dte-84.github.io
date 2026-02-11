@@ -47,22 +47,45 @@
           </div>
 
     
-    <nav> 
-      <a id="top"></a>
-      <ul class="nav-links">
-     <div class="protocol-switch">
-  <input type="checkbox" id="protocol-toggle" class="protocol-input">
-  <label for="protocol-toggle" class="slider">
-    </label>
-  <span class="protocol-label">PROTOCOL</span>
-</div>
-        <li class="nav__link--anchor">       
-         <li><a href="#home" target="_blank" class="nav-link  link__hover-effect"></a></li>
-        <li><a href="#about" target="_blank" class="nav-link link__hover-effect"></a></li>
-        <li><a href="#projects" target="_blank" class="nav-link link__hover-effect"></a></li>
-        <li><a href="#" onClick="toggleModal()" class="nav-link  link__hover-effect"></a></li>
-      </ul>
-    </nav>
+     <nav class="circuit-nav">
+      <div class="nav-section-left">
+    <div class="nav-brand-container">
+      <div class="code-brackets">
+        <span class="bracket">&lt;</span>
+        <span class="logo-char">DTE</span>
+        <span class="bracket">&gt;</span>
+      </div>
+      <span class="brand-text"> <span class="dim"></span> SYSTEM<span class="dim">_</span>v1<span class="dim">.</span>0</span>
+    </div>
+  </div>
+      
+       <a id="top"></a> 
+
+          <div class="nav-section-center">
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+  
+  <label for="menu-toggle" class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </label>
+  <ul class="nav-links">
+    <li class="chip-socket"><a href="#home" class="tech-tab nav-link">Home</a></li>
+    <li class="chip-socket"><a href="#about" class="tech-tab nav-link">About</a></li>
+    <li class="chip-socket"><a href="#projects" class="tech-tab nav-link">Projects</a></li>
+    <li class="chip-socket"><a href="javascript:void(0)" onclick="toggleModal()" class="tech-tab nav-link">Contact</a></li>
+  </ul>
+          </div>
+
+     <div class="nav-section-right">
+      
+    <div class="protocol-switch">
+      <input type="checkbox" id="protocol-toggle" class="protocol-input">
+      <label for="protocol-toggle" class="slider"></label>
+      <span class="protocol-label">PROTOCOL</span>
+    </div>
+      </div>
+</nav>
    
     
        <button onClick="topFunction()" id="myBtn" class="toparrow__btn click">
