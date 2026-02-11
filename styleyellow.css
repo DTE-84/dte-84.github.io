@@ -167,8 +167,8 @@ nav {
   top: 0;
   width: 100%;
   background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(207, 254, 0, 0);
+  backdrop-filter: blur(25px);
+  
   z-index: 1000;
   padding: px 0;
   height: 100px;
@@ -187,14 +187,11 @@ nav {
   justify-content: space-between;
   padding: 0 40px;
   background: rgba(10, 10, 10, 0.85);
-  backdrop-filter: blur(15px);
-  padding-bottom: 75px;
-  padding-top: 75px;
-  margin-bottom: auto;
+  backdrop-filter: blur(25px);
 
   /* --- THE BORDER FIX --- */
   border: none; /* Removes the existing 4-sided border */
-  border-bottom: 1px solid rgba(209, 254, 0, 0.3); /* Only bottom line */
+  
   border-radius: 0; /* Removes rounded corners for a cleaner horizontal line */
 
   z-index: 1000;
