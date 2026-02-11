@@ -1720,7 +1720,7 @@ input:checked + .slider:before {
     flex-direction: column;
     background: rgba(10, 10, 10, 0.98);
     padding: 40px 0;
-    
+
     /* Animation: Hidden by default */
     opacity: 0;
     visibility: hidden;
@@ -1731,7 +1731,7 @@ input:checked + .slider:before {
 
   /* Force Hamburger to show */
   .hamburger {
-    display: flex !important; 
+    display: flex !important;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
@@ -1754,51 +1754,50 @@ input:checked + .slider:before {
     transform: translateY(0);
   }
   @media screen and (max-width: 850px) {
-  
-  /* 1. Scale down the Logo Brackets & Text */
-  .nav-brand-container {
-    gap: 5px !important;
-  }
+    /* 1. Scale down the Logo Brackets & Text */
+    .nav-brand-container {
+      gap: 5px !important;
+    }
 
-  .bracket {
-    font-size: 10px !important; /* Shrunk from 16px */
-  }
+    .bracket {
+      font-size: 10px !important; /* Shrunk from 16px */
+    }
 
-  .logo-char {
-    font-size: 9px !important;
-  }
+    .logo-char {
+      font-size: 9px !important;
+    }
 
-  .brand-text {
-    font-size: 8px !important; /* Micro-scale for the name */
-    letter-spacing: 0.1em !important;
-  }
+    .brand-text {
+      font-size: 8px !important; /* Micro-scale for the name */
+      letter-spacing: 0.1em !important;
+    }
 
-  /* 2. Scale down the Protocol Toggle */
-  .protocol-switch {
-    transform: scale(0.7) !important; /* Shrinks the entire slider by 30% */
-    transform-origin: right center; /* Keeps it pinned to the right side */
-    margin-right: -10px; /* Pulls it closer to the edge after scaling */
-  }
+    /* 2. Scale down the Protocol Toggle */
+    .protocol-switch {
+      transform: scale(0.7) !important; /* Shrinks the entire slider by 30% */
+      transform-origin: right center; /* Keeps it pinned to the right side */
+      margin-right: -10px; /* Pulls it closer to the edge after scaling */
+    }
 
-  .protocol-label {
-    font-size: 8px !important;
-    margin-left: 4px !important;
-  }
+    .protocol-label {
+      font-size: 8px !important;
+      margin-left: 4px !important;
+    }
 
-  /* 3. Scale down the Live Status */
-  .status-badge {
-    padding: 2px 6px !important;
-    margin-left: 5px !important;
-    border-radius: 2px !important;
-  }
+    /* 3. Scale down the Live Status */
+    .status-badge {
+      padding: 2px 6px !important;
+      margin-left: 5px !important;
+      border-radius: 2px !important;
+    }
 
-  .status-text {
-    font-size: 8px !important;
-  }
+    .status-text {
+      font-size: 8px !important;
+    }
 
-  .status-dot {
-    width: 4px !important;
-    height: 4px !important;
+    .status-dot {
+      width: 4px !important;
+      height: 4px !important;
+    }
   }
-}
 }
