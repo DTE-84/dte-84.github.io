@@ -198,8 +198,6 @@ nav {
   box-sizing: border-box;
 }
 
-
-
 .nav-section-left,
 .nav-section-right {
   flex: 1; /* These take up equal space to keep center perfectly centered */
@@ -338,7 +336,7 @@ nav {
 
 .nav-section-center {
   flex: 1;
-  height: 100%; 
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center; /* This is the key for vertical centering */
@@ -351,6 +349,8 @@ nav {
   padding: 0;
   margin: 0;
 }
+
+
 
 .nav-links a {
   display: flex;
@@ -588,7 +588,7 @@ nav {
   padding: 100px;
   overflow: hidden;
   min-height: 100vh;
-  display: block; 
+  display: block;
   position: relative;
   margin-bottom: 50px;
 }
@@ -605,7 +605,7 @@ nav {
 .projects-grid {
   display: grid;
   /* This creates as many columns as possible between 280px and 400px */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1200px; /* Limits the total width of the grid area */
   margin: 60px auto 0 auto; /* Centers the whole grid on the page */
@@ -613,7 +613,6 @@ nav {
 }
 
 .project-card {
-  
   background: rgba(209, 254, 0, 0.03);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -669,9 +668,9 @@ nav {
 }
 
 .project-link:hover {
-  background: #22d3ee;
+  background: #d1fe00;
   color: #0a0a0a;
-  box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 20px rgba(209, 254, 0, 0.5);
 }
 
 .thumbnail-container {
@@ -711,13 +710,12 @@ nav {
 
 .footer__contact {
   padding: 100px 0; /* Increased from 50px */
-  margin-top: 80px;  /* Pushes it away from the last project card */
+  margin-top: 80px; /* Pushes it away from the last project card */
   background: rgba(209, 254, 0, 0.02);
   border-top: 1px solid rgba(209, 254, 0, 0.1);
   text-align: center;
   margin-bottom: 40px;
 }
-
 
 footer {
   background: rgba(5, 5, 5, 0.8);
@@ -736,8 +734,8 @@ footer {
   gap: 30px;
   margin-top: 40px;
   flex-wrap: wrap;
-margin-top: 50px;      /* Space between the 'Work Together' text and buttons */
-  margin-bottom: 60px;   /* Space between the buttons and the final copyright */
+  margin-top: 50px; /* Space between the 'Work Together' text and buttons */
+  margin-bottom: 60px; /* Space between the buttons and the final copyright */
 }
 
 .contact-link {
@@ -1100,12 +1098,10 @@ textarea.input {
   transform: scale(0.9);
 }
 
-
-
 .footer__main-content {
   display: grid;
   /* Creates 3 columns: Brand (wide), Links, and Socials */
-  grid-template-columns: 2fr 1fr 1fr; 
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -1186,19 +1182,17 @@ textarea.input {
 .footer__social {
   display: flex;
   justify-content: center;
-  gap: 20px;       /* Horizontal space between buttons */
+  gap: 20px; /* Horizontal space between buttons */
   margin-top: 30px; /* Vertical space between the paragraph and buttons */
   flex-wrap: wrap;
 }
-
-
 
 .footer__copyright {
   width: 100%;
   text-align: center;
   padding-top: 40px;
   margin-top: 60px; /* Space between links and copyright */
-  
+
   font-family: "Space Grotesk", sans-serif;
   font-size: 13px;
   color: rgba(209, 254, 0, 0.5);
@@ -1517,18 +1511,18 @@ textarea.input {
 
 @media (max-width: 768) {
   .projects-grid {
-  grid-template-columns: 1fr; /* Force one column */
-  width: 100%;
-  padding: 0 20px;            /* Equal padding on both sides */
-  margin: 0 auto;             /* Centers the grid block */
-  justify-items: center;      /* Centers the cards within the grid */
-}
-.project-card {
-  width: 100%;
-  max-width: 100%; /* Allow it to fill the mobile container */
-  margin: 0 auto;  /* Standard centering trick */
-  left: 0;         /* Ensure no absolute positioning is shifting it */
-}
+    grid-template-columns: 1fr; /* Force one column */
+    width: 100%;
+    padding: 0 20px; /* Equal padding on both sides */
+    margin: 0 auto; /* Centers the grid block */
+    justify-items: center; /* Centers the cards within the grid */
+  }
+  .project-card {
+    width: 100%;
+    max-width: 100%; /* Allow it to fill the mobile container */
+    margin: 0 auto; /* Standard centering trick */
+    left: 0; /* Ensure no absolute positioning is shifting it */
+  }
 }
 
 .protocol-label {
@@ -1688,7 +1682,6 @@ input:checked + .slider:before {
     flex-direction: row;
     opacity: 1 !important;
     visibility: visible !important;
-    
   }
 }
 
@@ -1697,7 +1690,7 @@ input:checked + .slider:before {
   /* Force desktop buttons to hide */
   .nav-links {
     justify-content: center; /* Centers vertically in the dropdown */
-    align-items: center;     /* Centers horizontally */
+    align-items: center; /* Centers horizontally */
     text-align: center;
     gap: 20px;
     display: flex; /* We need flex for the vertical list */
@@ -1723,8 +1716,7 @@ input:checked + .slider:before {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
+  }
 
   /* Force Hamburger to show */
   .hamburger {
@@ -1756,19 +1748,19 @@ input:checked + .slider:before {
       height: 80px;
     }
 
-.nav-links {
-    top: 80px; /* MUST match the .circuit-nav height */
-    height:auto; /* Makes the menu fill the rest of the screen */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers links vertically in the dropdown */
-    align-items: center;     /* Centers links horizontally */
-    background: rgba(10, 10, 10, 0.98);
-    text-decoration: none !important;
-    padding-bottom: 40px;
-    max-height: 90vh;
-    overflow: auto;
-}
+    .nav-links {
+      top: 80px; /* MUST match the .circuit-nav height */
+      height: auto; /* Makes the menu fill the rest of the screen */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centers links vertically in the dropdown */
+      align-items: center; /* Centers links horizontally */
+      background: rgba(10, 10, 10, 0.98);
+      text-decoration: none !important;
+      padding-bottom: 40px;
+      max-height: 90vh;
+      overflow: auto;
+    }
 
     .nav-brand-container {
       gap: 5px !important;
