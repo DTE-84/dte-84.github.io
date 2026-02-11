@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px; /* Base size */
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  } /* Everything using 'rem' shrinks by ~12% */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  } /* Everything shrinks further for tablets/phones */
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -157,9 +177,10 @@ h4 {
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 5%; /* Percentage padding scales with the screen */
 }
 
 /* Navigation */
@@ -173,7 +194,7 @@ nav {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(207, 254, 0, 0);
   z-index: 1000;
-  padding: 30px 0;
+  padding: px 0;
   height: 100px;
   margin: 0 auto;
   align-items: center;
@@ -181,30 +202,174 @@ nav {
 
 .circuit-nav {
   position: fixed;
-  justify-content: space-evenly;
-  background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(207, 254, 0, 0);
-  z-index: 1000;
+  top: 0; /* Set to 0 so it sits flush at the top */
+  left: 0;
+  width: 100%; /* Full width for a clean edge-to-edge line */
   height: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(15px);
+
+  /* --- THE BORDER FIX --- */
+  border: none; /* Removes the existing 4-sided border */
+  border-bottom: 1px solid rgba(34, 211, 238, 0.3); /* Only bottom line */
+  border-radius: 0; /* Removes rounded corners for a cleaner horizontal line */
+
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.nav-section-left,
+.nav-section-right {
+  flex: 1; /* These take up equal space to keep center perfectly centered */
+  display: flex;
+  align-items: center;
+}
+
+.nav-links,
+.nav-brand-container,
+.protocol-switch {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-section-left {
+  flex: 1; /* Takes exactly 1/3 of space */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-section-right {
+  flex: 1; /* Takes exactly 1/3 of space */
+  display: flex;
+  justify-content: flex-end; /* Pushes content to the far right */
+  align-items: center;
+  gap: 20px;
+}
+
+/* Brand/Logo Styling */
+.nav-brand-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.code-brackets {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 900;
+  color: whitesmoke;
+}
+
+.bracket {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 32px; /* Brackets look better slightly larger than the K */
+  opacity: 0.7;
+  color: whitesmoke;
+}
+
+.logo-char {
+  font-size: 24px;
+  font-family: "Space Grotesk", sans-serif;
+  color: #22d3ee;
+}
+
+/* Unified 10px Font Size for Sides */
+.brand-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.status-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.protocol-label {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.brand-text {
+  color: #22d3ee;
+}
+
+.brand-text .dim {
+  color: whitesmoke;
+}
+
+/* Status Badge Styling (Blue Theme) */
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 211, 238, 0.05);
+  padding: 5px 12px;
+  border-radius: 4px; /* Squared off slightly to match the "tech" look */
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  margin-left: 10px; /* Spacing between protocol and status */
+}
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--primary-cyan);
+  box-shadow: 0 0 8px var(--primary-cyan);
+  animation: pulse-blue 2s infinite;
+}
+
+.status-text {
+  color: var(--primary-cyan);
+}
+
+@keyframes pulse-blue {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 8px var(--primary-cyan);
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 2px var(--primary-cyan);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 8px var(--primary-cyan);
+  }
+}
+
+/* Ensure protocol label matches */
+.protocol-label {
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 8px;
+}
+
+.nav-section-center {
+  flex: 0; /* Only takes what it needs, stays centered by the two flex:1 sides */
+  display: flex;
   justify-content: center;
-  background: rgba(10, 10, 10, 0.75);
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
 }
 
 .nav-links {
   display: flex;
-  align-items: center;
   gap: 12px;
-
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links a {
@@ -550,37 +715,38 @@ nav {
 }
 
 .thumbnail-container {
-    
-    position: absolute;
-    left: 100%;
-    bottom: 10px;
-    right: 10px;
-    width: 300px; 
-    height: auto;
-    box-shadow: 0 4px 15px #22d3ee;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-left: 15px;
-    pointer-events: none;
-    transform: scale(0);
-    opacity: 0;
-    transform-origin:  right;
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-    z-index: 10;
+  position: absolute;
+  left: 100%;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  height: auto;
+  box-shadow: 0 4px 15px #22d3ee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 15px;
+  pointer-events: none;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: right;
+  transition:
+    transform 0.4s ease-out,
+    opacity 0.4s ease-out;
+  z-index: 10;
 }
 
 .project-card:hover .thumbnail-container {
-    z-index: 10;
-    transform: translateX(10px) scale(1); 
-    opacity: 1;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  z-index: 10;
+  transform: translateX(10px) scale(1);
+  opacity: 1;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
-.thumbnail-container img {   
-    width: 100%;
-    height: auto;     
+.thumbnail-container img {
+  width: 100%;
+  height: auto;
 }
 
 .footer__contact {
@@ -1144,7 +1310,6 @@ footer {
   -webkit-overflow-scrolling: touch;
 }
 
-
 :root {
   --neon-yellow: #22d3ee;
 }
@@ -1479,7 +1644,6 @@ input:checked + .slider:before {
   }
 }
 
-
 .protocol-switch {
   display: flex;
   align-items: center;
@@ -1490,7 +1654,6 @@ input:checked + .slider:before {
 .protocol-input {
   display: none;
 }
-
 
 .slider {
   width: 48px;
@@ -1504,13 +1667,12 @@ input:checked + .slider:before {
   box-shadow: 0 0 5px rgba(0, 242, 255, 0.2);
 }
 
-
 .slider::before {
   content: "";
   position: absolute;
   height: 16px;
   width: 16px;
-  left: 26px; 
+  left: 26px;
   bottom: 3px;
   background-color: #00f2ff;
   border-radius: 50%;
@@ -1519,10 +1681,141 @@ input:checked + .slider:before {
 }
 
 .protocol-input:checked + .slider::before {
-  transform: translateX(-22px); 
+  transform: translateX(-22px);
   background-color: #555;
 }
 
 .protocol-input:checked + .slider {
   border-color: #555;
+}
+
+/* --- Desktop: Hide Mobile Elements --- */
+.menu-checkbox, .hamburger {
+  display: none;
+}
+
+/* --- Mobile Logic (Triggers at 850px) --- */
+@media (max-width: 850px) {
+  /* 1. Shrink the Bar Height */
+  .circuit-nav {
+    height: 60px; /* Reduced from 80px */
+    padding: 0 15px; /* Tighter side padding */
+  }
+
+  /* 2. Scale Down the Logo Brackets */
+  .code-brackets {
+    gap: 1px;
+  }
+  .bracket {
+    font-size: 12px; /* Smaller brackets */
+  }
+  .logo-char {
+    font-size: 10px;
+  }
+
+  /* 3. Hide non-essential text on tiny screens */
+  .brand-text .dim, 
+  .protocol-label {
+    display: none; /* Hides // SYSTEM_v1.0 and "PROTOCOL" text */
+  }
+  
+  .brand-text {
+    font-size: 9px; /* Even smaller brand name */
+  }
+
+  /* 4. Shrink the Protocol Toggle & Status */
+  .protocol-switch {
+    transform: scale(0.8); /* Shrinks the entire slider switch */
+    transform-origin: right;
+  }
+
+  .status-badge {
+    margin-left: 10px; /* Pulls it closer to the switch */
+    padding: 3px 8px;
+  }
+  
+  .status-text {
+    font-size: 8px; /* Micro-text for status */
+  }
+
+  .brand-text .dim {
+    font-size: 8px !important; /* Micro-size */
+    letter-spacing: 0.1em !important; /* Tighter spacing so it doesn't stretch */
+    opacity: 0.5; /* Makes it subtle so it doesn't distract from the Name */
+    display: inline-block; /* Ensures it respects the size change */
+  }
+
+  /* If it's STILL too big, use this to hide it entirely on phones */
+  /* .brand-text .dim {
+     display: none !important;
+  } 
+  */
+
+  .brand-text {
+    font-size: 9px !important;
+    white-space: nowrap; /* Prevents the text from wrapping to a second line */
+  }
+}
+  .hamburger {
+    display: flex !important; /* Forces it to show on mobile */
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    z-index: 1002;
+    position: relative;
+  }
+
+  .bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #22d3ee; /* Your Cyan Blue */
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.8);
+    transition: all 0.3s ease;
+  }
+
+  /* Force the nav links to absolute positioning */
+  .nav-links {
+    position: fixed; /* Changed from absolute to fixed for reliability */
+    top: 80px; 
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(10, 10, 10, 0.98);
+    flex-direction: column;
+    padding: 40px 0;
+    align-items: center;
+    
+    /* Reveal Animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+  }
+
+  /* Show menu when checked */
+  .menu-checkbox:checked ~ .nav-links {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Hamburger to X Animation */
+  .menu-checkbox:checked ~ .hamburger .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .menu-checkbox:checked ~ .hamburger .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-checkbox:checked ~ .hamburger .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+
+/* Hide checkbox from view */
+.menu-checkbox {
+  display: none;
 }
