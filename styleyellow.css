@@ -499,7 +499,7 @@ nav {
   font-size: 3.8rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5); /* Increased transparency for glitch feel */
+  color: whitesmoke;
   position: relative;
   display: inline-block;
   letter-spacing: 8px;
