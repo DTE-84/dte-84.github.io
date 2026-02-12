@@ -715,6 +715,11 @@ nav {
   margin-bottom: 40px;
 }
 
+.footer__sub-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
 footer {
   background: rgba(5, 5, 5, 0.8);
   backdrop-filter: blur(10px);

@@ -77,11 +77,11 @@
 </nav>
    
     
-       <button onClick="topFunction()" id="myBtn" class="toparrow__btn click">
+    <button onClick="topFunction()" id="myBtn" class="toparrow__btn click" aria-label="Scroll to top">
             <i class="fas fa-arrow-up"></i>
             </button>
      <a href="#">
-            <button class="mail__btn click" onclick="toggleModal()">
+            <button class="mail__btn click" onclick="toggleModal()" aria-label="Contact me">
                 <i class="fa-solid fa-envelope"></i>
             </button>
             </a>
@@ -213,7 +213,7 @@ My previous career in<b class="bold"> leadership</b> taught me that the best sof
       <div class="container">
         <h2 class="section-title">My Projects</h2>
         <div class="projects-grid">
-          <div class="project-card">
+          <article class="project-card">
             <h3>TREACT: The "Problem/Solution" Approach</h3>
             <p>
               The Challenge: To create a high-converting business landing page that balances complex information (pricing, features, testimonials) with a clean, user-friendly interface without relying on heavy frameworks.
@@ -231,9 +231,9 @@ My previous career in<b class="bold"> leadership</b> taught me that the best sof
             <div class="thumbnail-container">       
         <img src="./assets/treact.png" alt="Website Thumbnail Demo">
           </div>
-          </div>
+          </article>
 
-          <div class="project-card">
+          <article class="project-card">
             <h3>React E-Store (Library)</h3>
             <p>
               "A modern e-commerce solution built to handle dynamic data and user interactions. This project served as an exploration into advanced State Management in React, specifically handling complex shopping cart logic and item persistence.
@@ -255,9 +255,9 @@ My previous career in<b class="bold"> leadership</b> taught me that the best sof
             <div class="thumbnail-container">       
         <img src="./assets/library.png" alt="Website Thumbnail Demo">
           </div>
-          </div>
+          </article>
 
-          <div class="project-card">
+          <article class="project-card">
             <h3>Project: CarSales – Automotive E-Commerce Platform</h3>
             <p>
               Developed a high-performance, responsive car dealership application using React.js. The project focuses on a seamless user experience for browsing vehicle inventory, featuring dynamic data fetching from an external API.
@@ -277,9 +277,9 @@ My previous career in<b class="bold"> leadership</b> taught me that the best sof
             <div class="thumbnail-container">       
         <img src="./assets/toyotasanti.jpg" alt="Website Thumbnail Demo">
           </div>
-          </div>
+          </article>
 
-          <div class="project-card">
+          <article class="project-card">
             <h3>Tony’s Landscaping LLC – Business Website</h3>
             <p>
               
@@ -300,8 +300,8 @@ My previous career in<b class="bold"> leadership</b> taught me that the best sof
             <div class="thumbnail-container">       
         <img src="./assets/tonysllc.jpg" alt="Website Thumbnail Demo">
           </div>
-            </div>
-             <div class="project-card">
+            </article>
+             <article class="project-card">
             <h3>My first Portfolio - The "About Me" Section</h3>
             <p>
               Welcome to my digital space. While I continue to learn new ways to engineer more eccentric user-friendly programs, I look back on my first projects and laugh at how great I thought they were at the time.  This was my first project and what has continued to motivate myself to engineer more complex and interactive applications. 
@@ -318,7 +318,7 @@ My previous career in<b class="bold"> leadership</b> taught me that the best sof
             <div class="thumbnail-container">       
         <img src="./assets/eportfolio1.jpg" alt="Website Thumbnail Demo">
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -326,7 +326,7 @@ My previous career in<b class="bold"> leadership</b> taught me that the best sof
     <section id="contact__footer" class="footer__contact">
       <div class="container">
         <h2 class="section-title">Get In Touch</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 20px">
+        <p class="footer__sub-title">
           Let's work together on your next project!
         </p>
     </div>

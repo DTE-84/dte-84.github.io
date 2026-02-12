@@ -740,6 +740,12 @@ nav {
   border-top: 1px solid rgba(207, 254, 0, 0);
   text-align: center;
 }
+
+.footer__sub-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
 #footer {
   margin-bottom: 0 !important;
   padding-bottom: 10vh;
