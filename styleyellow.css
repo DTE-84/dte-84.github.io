@@ -391,7 +391,7 @@ nav {
   color: #d1fe00;
   text-decoration: none;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -930,9 +930,7 @@ footer {
   gap: 20px;
 }
 
-.nav-links a {
-  font-size: 16px;
-}
+
 
 .projects-grid {
   grid-template-columns: 1fr;
