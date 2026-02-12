@@ -521,19 +521,19 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0; /* Hidden by default */
 }
 
 .hero-content h1::before {
   color: #22d3ee;
   z-index: -1;
-  animation: glitch-left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  animation: glitch-left 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
 
 .hero-content h1::after {
-  color: #ff00c1; /* Cyberpunk pink for color split */
+  color: #ff00c1;
   z-index: -2;
-  animation: glitch-right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  animation: glitch-right 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
 }
 
 @keyframes main-flicker {
@@ -548,21 +548,21 @@ nav {
 }
 
 @keyframes glitch-left {
-  0% { transform: translate(0); }
-  20% { transform: translate(-3px, 3px); }
-  40% { transform: translate(-3px, -3px); }
-  60% { transform: translate(3px, 3px); }
-  80% { transform: translate(3px, -3px); }
-  100% { transform: translate(0); }
+  0%, 80%, 100% { transform: translate(0); opacity: 0; }
+  81% { transform: translate(-3px, 3px); opacity: 0.8; }
+  82% { transform: translate(-3px, -3px); opacity: 0.8; }
+  83% { transform: translate(3px, 3px); opacity: 0.8; }
+  84% { transform: translate(3px, -3px); opacity: 0.8; }
+  85% { transform: translate(0); opacity: 0; }
 }
 
 @keyframes glitch-right {
-  0% { transform: translate(0); }
-  20% { transform: translate(3px, -3px); }
-  40% { transform: translate(3px, 3px); }
-  60% { transform: translate(-3px, -3px); }
-  80% { transform: translate(-3px, 3px); }
-  100% { transform: translate(0); }
+  0%, 80%, 100% { transform: translate(0); opacity: 0; }
+  81% { transform: translate(3px, -3px); opacity: 0.8; }
+  82% { transform: translate(3px, 3px); opacity: 0.8; }
+  83% { transform: translate(-3px, -3px); opacity: 0.8; }
+  84% { transform: translate(-3px, 3px); opacity: 0.8; }
+  85% { transform: translate(0); opacity: 0; }
 }
 
 @keyframes tracking-in {
