@@ -502,49 +502,72 @@ nav {
 
 .hero-content h1 {
   font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
+  font-size: 4.5rem;
+  font-weight: 900;
   text-transform: uppercase;
-  color: rgba(34, 211, 238, 0.2);
+  color: #fff;
   position: relative;
   display: inline-block;
-  background: linear-gradient(
-    to right,
-    transparent 20%,
-    #22d3ee 40%,
-    #fff 50%,
-    #22d3ee 60%,
-    transparent 80%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation:
-    glow-wave 6.2s linear infinite,
-    tracking-in 10s ease-out infinite alternate;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+  animation: main-flicker 3s infinite;
 }
 
-@keyframes glow-wave {
-  0% {
-    background-position: 100% 0;
-    filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.2));
+.hero-content h1::before,
+.hero-content h1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.hero-content h1::before {
+  color: #22d3ee;
+  z-index: -1;
+  animation: glitch-left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+.hero-content h1::after {
+  color: #ff00c1; /* Cyberpunk pink for color split */
+  z-index: -2;
+  animation: glitch-right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+
+@keyframes main-flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
   }
-  50% {
-    filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.6));
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    text-shadow: none;
   }
-  100% {
-    background-position: -100% 0;
-    filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.2));
-  }
+}
+
+@keyframes glitch-left {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 3px); }
+  40% { transform: translate(-3px, -3px); }
+  60% { transform: translate(3px, 3px); }
+  80% { transform: translate(3px, -3px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-right {
+  0% { transform: translate(0); }
+  20% { transform: translate(3px, -3px); }
+  40% { transform: translate(3px, 3px); }
+  60% { transform: translate(-3px, -3px); }
+  80% { transform: translate(-3px, 3px); }
+  100% { transform: translate(0); }
 }
 
 @keyframes tracking-in {
-  from {
-    letter-spacing: 2px;
-  }
-  to {
-    letter-spacing: 8px;
-  }
+  from { letter-spacing: 2px; }
+  to { letter-spacing: 8px; }
 }
 
 .hero-content .typewriter {

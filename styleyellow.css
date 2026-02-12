@@ -465,49 +465,67 @@ nav {
 
 .hero-content h1 {
   font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
+  font-size: 4.5rem;
+  font-weight: 900;
   text-transform: uppercase;
-  color: #d1fe00;
+  color: #fff;
   position: relative;
   display: inline-block;
-  background: linear-gradient(
-    to right,
-    transparent 20%,
-    #d1fe00 40%,
-    #fff 50%,
-    #d1fe00 60%,
-    transparent 80%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation:
-    glow-wave 6.2s linear infinite,
-    tracking-in 10s ease-out infinite alternate;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px rgba(209, 254, 0, 0.5);
+  animation: main-flicker-yellow 3s infinite;
 }
 
-@keyframes glow-wave {
-  0% {
-    background-position: 100% 0;
-    filter: drop-shadow(0 0 5px rgba(209, 254, 0, 0.2));
+.hero-content h1::before,
+.hero-content h1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.hero-content h1::before {
+  color: #d1fe00;
+  z-index: -1;
+  animation: glitch-left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+.hero-content h1::after {
+  color: #ff4d00; /* Orange split for yellow theme */
+  z-index: -2;
+  animation: glitch-right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+
+@keyframes main-flicker-yellow {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(209, 254, 0, 0.5);
   }
-  50% {
-    filter: drop-shadow(0 0 15px rgba(209, 254, 0, 0.6));
-  }
-  100% {
-    background-position: -100% 0;
-    filter: drop-shadow(0 0 5px rgba(209, 254, 0, 0.2));
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    text-shadow: none;
   }
 }
 
-@keyframes tracking-in {
-  from {
-    letter-spacing: 2px;
-  }
-  to {
-    letter-spacing: 8px;
-  }
+@keyframes glitch-left {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 3px); }
+  40% { transform: translate(-3px, -3px); }
+  60% { transform: translate(3px, 3px); }
+  80% { transform: translate(3px, -3px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-right {
+  0% { transform: translate(0); }
+  20% { transform: translate(3px, -3px); }
+  40% { transform: translate(3px, 3px); }
+  60% { transform: translate(-3px, -3px); }
+  80% { transform: translate(-3px, 3px); }
+  100% { transform: translate(0); }
 }
 
 .hero-content .typewriter {
