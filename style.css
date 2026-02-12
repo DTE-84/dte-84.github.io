@@ -895,9 +895,9 @@ nav {
 .contact-link {
   padding: 15px 35px;
   background: transparent;
-  color: #22d3ee;
+  color: #7DF9FF;
   text-decoration: none;
-  border: 2px solid #22d3ee;
+  border: 2px solid #7DF9FF;
   border-radius: 30px;
   transition: all 0.3s ease;
   font-size: 1.1rem;
@@ -905,10 +905,10 @@ nav {
 }
 
 .contact-link:hover {
-  background: #22d3ee;
+  background: #7DF9FF;
   color: #0a0a0a;
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(34, 211, 238, 0.6);
+  box-shadow: 0 0 30px rgba(125, 249, 255, 0.6);
 }
 
 @keyframes fadeInUp {
@@ -1016,9 +1016,9 @@ html {
 }
 
 .modal__about {
-  background-color: #22d3ee;
+  background-color: #242424;
   transform: translateX(-100%);
-  color: #242424;
+  color: #22d3ee;
 }
 
 .modal__languages {
@@ -1041,8 +1041,8 @@ html {
 }
 
 .modal__language:hover {
-  filter: brightness(80%);
-  transform: scale(0.9);
+  filter: brightness(120%);
+  transform: scale(1.1);
 }
 
 .language__name {
@@ -1058,9 +1058,9 @@ html {
 }
 
 .modal__contact {
-  background-color: #242424;
+  background-color: #22d3ee;
   transform: translateX(100%);
-  color: white;
+  color: #242424;
 }
 
 .modal__title {
@@ -1072,6 +1072,8 @@ html {
   font-family: "Space Grotesk", sans-serif;
   margin: 12px 0 24px 0;
   font-size: 14px;
+  color: #fff;
+  text-shadow: #242424 2px 0 10px;
 }
 
 .modal__para {
@@ -1083,7 +1085,7 @@ html {
 
 .Blue {
   color: whitesmoke;
-  text-shadow: #0a0a0a 2px 0 10px;
+  text-shadow: #242424 2px 0 10px;
   font-weight: 600;
 }
 
@@ -1095,13 +1097,16 @@ html {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
+  color: #242424;
+  text-shadow: #fff 2px 0 20px;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .input {
   width: 100%;
-  background-color: #1f1f1f;
+  background-color: #242424;
   color: white;
-  border: 2px solid rgba(34, 211, 238, 0.3);
+  border: 2px solid #242424;
   border-radius: 8px;
   padding: 12px;
   font-size: 16px;
@@ -1111,8 +1116,8 @@ html {
 
 .input:focus {
   outline: none;
-  border-color: #22d3ee;
-  box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+  border-color: #fff;
+  box-shadow: 0 0 20px #242424;
 }
 
 textarea.input {
@@ -1121,9 +1126,10 @@ textarea.input {
 }
 
 .form__submit {
-  background-color: #22d3ee;
-  border: 2px solid #22d3ee;
-  color: #0a0a0a;
+  background-color: #242424;
+  box-shadow: 0 0 20px #242424;
+  border: 2px solid #242424;
+  color: #22d3ee;
   font-weight: 700;
   width: 100%;
   max-width: 240px;
@@ -1136,10 +1142,10 @@ textarea.input {
 }
 
 .form__submit:hover {
-  border-color: #22d3ee;
+  border-color: #fff;
   background-color: transparent;
-  color: #22d3ee;
-  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+  color: #242424;
+  box-shadow: 0 0 20px #242424;
 }
 
 .form__submit:active {
@@ -1202,7 +1208,7 @@ textarea.input {
 }
 
 .modal__exit:hover {
-  color: #22d3ee;
+  color: #1f1f1f;
   transform: rotate(90deg);
 }
 
@@ -1211,7 +1217,7 @@ textarea.input {
 }
 
 .click:hover {
-  color: #22d3ee;
+  color: #1f1f1f;
 }
 
 .mail__btn {
