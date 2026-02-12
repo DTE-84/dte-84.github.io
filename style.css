@@ -28,13 +28,13 @@ html {
 @media (max-width: 1200px) {
   html {
     font-size: 14px;
-  } /* Everything using 'rem' shrinks by ~12% */
+  } 
 }
 
 @media (max-width: 768px) {
   html {
     font-size: 12px;
-  } /* Everything shrinks further for tablets/phones */
+  } 
 }
 
 * {
@@ -70,7 +70,7 @@ h4 {
   color: #22d3ee;
 }
 
-/* Animated Background */
+
 .bg-animation {
   position: fixed;
   top: 0;
@@ -183,10 +183,10 @@ h4 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 5%; /* Percentage padding scales with the screen */
+  padding: 0 5%; 
 }
 
-/* Navigation */
+
 nav {
   position: fixed;
   display: inline-block;
@@ -205,9 +205,9 @@ nav {
 
 .circuit-nav {
   position: fixed;
-  top: 0; /* Set to 0 so it sits flush at the top */
+  top: 0; 
   left: 0;
-  width: 100%; /* Full width for a clean edge-to-edge line */
+  width: 100%; 
   height: 100px;
   display: flex;
   align-items: center;
