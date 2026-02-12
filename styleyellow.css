@@ -335,35 +335,73 @@ nav {
 }
 
 .nav-section-center {
-  flex: 1;
-  height: 100%;
+  flex: 1; /* Only takes what it needs, stays centered by the two flex:1 sides */
   display: flex;
   justify-content: center;
-  align-items: center; /* This is the key for vertical centering */
+  align-items: center;
 }
 
 .nav-links {
-  display: flex;
+  display: flex; /* Always visible on desktop */
+  align-items: center;
   gap: 12px;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 15px 40px;
-  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 50px;
+  background: rgba(209, 254, 0, 0.03);
   color: #d1fe00;
   text-decoration: none;
-  border: 2px solid #d1fe00;
-  border-radius: 50px;
-  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 30%,
+    100% 70%,
+    90% 100%,
+    10% 100%,
+    0 70%,
+    0 30%
+  );
+  border: 2px solid rgba(209, 254, 0, 0.3);
   transition: all 0.3s ease;
-  animation: fadeInUp 1s ease 0.6s both;
-  box-shadow: 0 0 20px rgba(209, 254, 0, 0.3);
-  
+  overflow: hidden;
+}
+
+.chip-socket {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.chip-socket:not(:last-child)::after {
+  content: "";
+  width: 12px;
+  height: 1px;
+  background: rgba(209, 254, 0, 0.2);
+}
+
+.chip-socket:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  right: -8px;
+  width: 4px;
+  height: 1px;
+  background: #d1fe00;
+  box-shadow: 0 0 8px #d1fe00;
+  z-index: 5;
 }
 
 @keyframes bridge-pulse {
@@ -1119,6 +1157,14 @@ textarea.input {
   }
 }
 
+.footer__social--list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+
 .footer__social--link {
   padding: 10px 25px;
   background: transparent;
@@ -1448,6 +1494,54 @@ textarea.input {
 }
 .pulsing-list li:nth-child(3)::before {
   animation-delay: 0.6s;
+}
+
+.tech-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 38px;
+  background: rgba(209, 254, 0, 0.03);
+  color: #d1fe00;
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 30%,
+    100% 70%,
+    90% 100%,
+    10% 100%,
+    0 70%,
+    0 30%
+  );
+  border: 1px solid rgba(209, 254, 0, 0.3);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.tech-tab:hover,
+.tech-tab.active {
+  background: transparent !important;
+  border-color: #d1fe00;
+  color: #fff;
+  box-shadow:
+    0 0 15px rgba(209, 254, 0, 0.6),
+    inset 0 0 10px rgba(209, 254, 0, 0.4);
+  transform: translateY(-2px);
+  text-shadow: 0 0 8px #d1fe00;
+}
+
+.tech-tab .letter {
+  display: inline-block;
+  line-height: 38px;
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .footer__copyright {
