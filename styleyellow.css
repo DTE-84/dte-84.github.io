@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "SD Glitch";
+  src: url("./assets/SdglitchdemoRegular-YzROj.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,13 +36,20 @@ body {
 }
 
 body {
-  font-family: "Courier New", monospace;
+  font-family: "Space Grotesk", sans-serif;
   background: #0a0a0a;
   color: #fff;
   display: block;
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Zen Dots", sans-serif;
+}
+h4 {
+  color: #d1fe00;
 }
 
 .bold {
@@ -280,14 +292,16 @@ nav {
 }
 
 .status-dot {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background-color: #fff;
   border-radius: 50%;
   box-shadow: 
-    0 0 5px #fff,
-    0 0 10px #d1fe00,
-    0 0 20px #d1fe00;
+    0 0 10px #fff,
+    0 0 20px #d1fe00,
+    0 0 30px #d1fe00;
+  z-index: 10;
+  position: relative;
   animation: status-pulse-yellow 2s infinite ease-in-out;
 }
 
@@ -345,7 +359,7 @@ nav {
   background: rgba(209, 254, 0, 0.03);
   color: #d1fe00;
   text-decoration: none;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -365,13 +379,7 @@ nav {
   transition: all 0.3s ease;
   overflow: hidden;
 }
-  display: flex; /* Always visible on desktop */
-  align-items: center;
-  gap: 12px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+
 
 .nav-links a {
   display: flex;
@@ -487,15 +495,17 @@ nav {
 }
 
 .hero-content h1 {
-  font-family: "Orbitron", sans-serif;
-  font-size: 4.5rem;
+  font-family: "Zen Dots", sans-serif;
+  font-size: 3.8rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.5); /* Increased transparency for glitch feel */
   position: relative;
   display: inline-block;
-  letter-spacing: 6px;
-  filter: blur(0.45px);
+  letter-spacing: 8px;
+  filter: blur(0.6px);
+  z-index: 10;
+  visibility: visible;
   animation: 
     main-flicker-yellow 3s infinite,
     neon-pulse-yellow 1.5s ease-in-out infinite alternate;
@@ -521,6 +531,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
+  font-family: "Zen Dots", sans-serif;
   opacity: 0;
 }
 
@@ -603,7 +614,7 @@ nav {
 }
 
 .section-title {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Zen Dots", sans-serif;
   font-size: 3rem;
   text-align: center;
   margin-bottom: 60px;
@@ -761,7 +772,7 @@ nav {
 }
 
 .project-card h3 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Zen Dots", sans-serif;
   font-size: 1.4rem;
   color: #d1fe00;
   margin-bottom: 15px;
@@ -907,11 +918,6 @@ footer {
     display: none;
   }
 }
-.hero-content h1 {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 3.5rem;
-}
-
 .hero-content .typewriter {
   font-size: 1.2rem;
 }
