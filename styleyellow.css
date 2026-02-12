@@ -602,23 +602,23 @@ nav {
 
 .projects-grid {
   display: grid;
-  /* This creates as many columns as possible between 280px and 400px */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
-  max-width: 1200px; /* Limits the total width of the grid area */
-  margin: 60px auto 0 auto; /* Centers the whole grid on the page */
-  padding: 0 20px;
+  max-width: 1200px;
+  margin: 60px auto 0 auto;
 }
 
 .project-card {
-  background: rgba(209, 254, 0, 0.03);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px;
-  transition: all 0.4s ease;
-  opacity: 0;
-  transform: translateY(50px);
+  background: rgba(10, 10, 10, 0.8);
   border: 1px solid rgba(209, 254, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .project-card.visible {
@@ -628,24 +628,98 @@ nav {
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(209, 254, 0, 0.3);
-  background: rgba(209, 254, 0, 0.08);
-  border-color: rgba(209, 254, 0, 0.5);
+  border-color: #d1fe00;
+  box-shadow: 0 0 30px rgba(209, 254, 0, 0.2);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d1fe00, transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover::before {
+  transform: translateX(100%);
+}
+
+.project-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(209, 254, 0, 0.1);
+}
+
+.project-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: grayscale(20%) brightness(0.8);
+}
+
+.project-card:hover .project-image-wrapper img {
+  transform: scale(1.1);
+  filter: grayscale(0%) brightness(1);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.8) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.project-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .project-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #d1fe00;
-  font-weight: 600;
   font-family: "Space Grotesk", sans-serif;
+  font-size: 1.4rem;
+  color: #d1fe00;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
-.project-card p {
-  font-size: 1.1rem;
+.project-description {
+  font-size: 0.95rem;
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.8);
+  flex-grow: 1;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tech-chip {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+  padding: 4px 10px;
+  background: rgba(209, 254, 0, 0.05);
+  border: 1px solid rgba(209, 254, 0, 0.3);
+  color: #d1fe00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 2px;
 }
 
 .project-links {
@@ -654,56 +728,28 @@ nav {
 }
 
 .project-link {
-  padding: 10px 25px;
-  background: transparent;
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid #d1fe00;
   color: #d1fe00;
   text-decoration: none;
-  border: 1px solid #d1fe00;
-  border-radius: 25px;
   transition: all 0.3s ease;
-  font-size: 0.95rem;
-  font-weight: 500;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
 }
 
 .project-link:hover {
   background: #d1fe00;
   color: #0a0a0a;
-  box-shadow: 0 0 20px rgba(209, 254, 0, 0.5);
+  box-shadow: 0 0 15px rgba(209, 254, 0, 0.4);
 }
 
 .thumbnail-container {
-  position: absolute;
-  left: 100%;
-  bottom: 10px;
-  right: 10px;
-  width: 300px;
-  height: auto;
-  box-shadow: 0 4px 15px #d1fe00;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-left: 15px;
-  pointer-events: none;
-  transform: scale(0);
-  opacity: 0;
-  transform-origin: right;
-  transition:
-    transform 0.4s ease-out,
-    opacity 0.4s ease-out;
-  z-index: 10;
-}
-
-.project-card:hover .thumbnail-container {
-  z-index: 10;
-  transform: translateX(10px) scale(1);
-  opacity: 1;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-
-.thumbnail-container img {
-  width: 100%;
-  height: auto;
+  display: none;
 }
 
 .footer__contact {
