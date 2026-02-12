@@ -125,12 +125,33 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
+      } else {
+        // Remove class when scrolling away for reverse effect
+        entry.target.classList.remove("visible");
       }
     });
   }, observerOptions);
 
+  // Initialize Word Reveal
+  document.querySelectorAll(".about-reveal").forEach((el) => {
+    const content = el.innerHTML;
+    const newContent = content
+      .split(/(\s+|<[^>]+>)/g)
+      .map((part) => {
+        if (part.trim() === "" || part.startsWith("<")) return part;
+        return `<span class="reveal-word">${part}</span>`;
+      })
+      .join("");
+    el.innerHTML = newContent;
+
+    const words = el.querySelectorAll(".reveal-word");
+    words.forEach((word, i) => {
+      word.style.transitionDelay = `${i * 40}ms`;
+    });
+  });
+
   document
-    .querySelectorAll(".section-title, .about-content, .project-card")
+    .querySelectorAll(".section-title, .about-content, .project-card, .about-reveal")
     .forEach((el) => {
       observer.observe(el);
     });

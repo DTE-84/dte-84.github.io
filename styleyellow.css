@@ -638,14 +638,37 @@ nav {
   max-width: 800px;
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.about-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-word {
+  display: inline-block;
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease 0.2s;
+  filter: blur(10px);
+  transform: translateY(15px) scale(0.9);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-right: 0.25em;
+}
+
+.about-reveal.visible .reveal-word {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+}
+
+.about-reveal:not(.visible) .reveal-word {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(15px) scale(0.9);
+  transition: all 0.4s ease;
 }
 
 .about-content.visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .projects {
@@ -846,6 +869,7 @@ nav {
 }
 
 .footer__sub-title {
+  font-family: "space grotesk", sans-serif;
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
@@ -1643,7 +1667,47 @@ textarea.input {
   border: 1px solid rgba(209, 254, 0, 0.3);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
+  animation: border-pulse-yellow 4s infinite alternate;
 }
+
+/* The Constant Scanning Line */
+.tech-tab::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(209, 254, 0, 0.1),
+    transparent
+  );
+  animation: scan-line 3s infinite linear;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@keyframes scan-line {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+@keyframes border-pulse-yellow {
+  from { border-color: rgba(209, 254, 0, 0.2); }
+  to { border-color: rgba(209, 254, 0, 0.5); }
+}
+
+/* Staggered Scanning Delays */
+.nav-links li:nth-child(1) .tech-tab::after { animation-delay: 0s; }
+.nav-links li:nth-child(2) .tech-tab::after { animation-delay: 0.4s; }
+.nav-links li:nth-child(3) .tech-tab::after { animation-delay: 0.8s; }
+.nav-links li:nth-child(4) .tech-tab::after { animation-delay: 1.2s; }
+
+.footer__social--list a:nth-child(1).tech-tab::after { animation-delay: 0.2s; }
+.footer__social--list a:nth-child(2).tech-tab::after { animation-delay: 0.6s; }
+.footer__social--list a:nth-child(3).tech-tab::after { animation-delay: 1s; }
 
 /* The Energy-Fill Effect */
 .tech-tab::before {
