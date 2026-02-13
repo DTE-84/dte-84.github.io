@@ -600,37 +600,10 @@ h4 {
 }
 
 .cta-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 30px;
-  width: 180px;
-  height: 45px;
-  background: rgba(10, 10, 10, 0.6);
-  color: var(--theme-accent);
-  text-decoration: none;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  position: relative;
-  clip-path: polygon(10% 0, 90% 0, 100% 30%, 100% 70%, 90% 100%, 10% 100%, 0 70%, 0 30%);
-  border: 2px solid rgba(var(--theme-accent-rgb), 0.3);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   animation: fadeInUp 1s ease 0.6s both;
-  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-}
-
-.cta-button:hover {
-  background: rgba(var(--theme-accent-rgb), 0.1) !important;
-  border-color: var(--theme-accent);
-  color: #fff;
-  box-shadow: 0 0 15px rgba(var(--theme-accent-rgb), 0.4);
-  transform: translateY(-2px);
-  text-shadow: 0 0 8px var(--theme-accent);
 }
 
 
@@ -1687,6 +1660,7 @@ footer {
 .nav-links li:nth-child(2) .tech-tab::after { animation-delay: 0.4s; }
 .nav-links li:nth-child(3) .tech-tab::after { animation-delay: 0.8s; }
 .nav-links li:nth-child(4) .tech-tab::after { animation-delay: 1.2s; }
+.cta-button.tech-tab::after { animation-delay: 1.6s; }
 
 .footer__social--list a:nth-child(1).tech-tab::after { animation-delay: 1s; }
 .footer__social--list a:nth-child(2).tech-tab::after { animation-delay: 1.4s; }
@@ -2100,12 +2074,18 @@ input:checked + .slider:before {
 
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     letter-spacing: 4px;
   }
   
   .hero-content .typewriter {
     font-size: 1rem;
+  }
+
+  .cta-button {
+    width: 150px !important;
+    height: 40px !important;
+    font-size: 11px !important;
   }
 
   .section-title {
@@ -2119,7 +2099,13 @@ input:checked + .slider:before {
 
 @media (max-width: 480px) {
   .hero-content h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     letter-spacing: 2px;
+  }
+
+  .cta-button {
+    width: 140px !important;
+    height: 38px !important;
+    font-size: 10px !important;
   }
 }

@@ -98,7 +98,7 @@ function contact(event) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
-  const linkTexts = ["Home", "About", "Projects", "Contact"];
+  const linkTexts = ["Home", "About", "Projects", "Contact", "View My Work"];
 
   const menuToggle = document.getElementById("menu-toggle");
   const navLinksList = document.querySelector(".nav-links");
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .split("")
         .map(
           (letter, i) =>
-            `<span class="letter" style="--sibling-index: ${i}">${letter}</span>`,
+            `<span class="letter" style="--sibling-index: ${i}">${letter === " " ? "&nbsp;" : letter}</span>`,
         )
         .join("");
     }
