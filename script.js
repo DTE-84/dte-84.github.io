@@ -3,21 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("protocol-loader");
   const path = window.location.pathname;
 
-  
   if (loader) {
     setTimeout(() => {
       loader.style.opacity = "0";
       setTimeout(() => {
         loader.style.display = "none";
       }, 500);
-    }, 600);
+    }, 800); // Snappier entry
   }
 
-  
   if (toggle) {
     toggle.checked = path.includes("indexyellow.html");
 
-    
     toggle.addEventListener("change", () => {
       if (loader) {
         loader.style.display = "flex";
@@ -31,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           window.location.href = "index.html";
         }
-      }, 500);
+      }, 1500); // Keep deliberate reboot time
     });
   }
 });
@@ -103,6 +100,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
   const linkTexts = ["Home", "About", "Projects", "Contact"];
 
+  // Close Mobile Menu on link click or click-outside
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinksList = document.querySelector(".nav-links");
+
+  document.addEventListener("click", (event) => {
+    if (!menuToggle) return;
+
+    const isClickInsideMenu = navLinksList && navLinksList.contains(event.target);
+    const isClickOnHamburger = event.target.closest(".hamburger");
+    const isClickOnNavLink = event.target.classList.contains("nav-link");
+
+    // Close if clicking a link OR clicking outside the menu/hamburger while open
+    if (menuToggle.checked && (isClickOnNavLink || (!isClickInsideMenu && !isClickOnHamburger))) {
+      menuToggle.checked = false;
+    }
+  });
+
   navLinks.forEach((link, index) => {
     const text = linkTexts[index];
     if (text) {
@@ -126,13 +140,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
       } else {
-        // Remove class when scrolling away for reverse effect
         entry.target.classList.remove("visible");
       }
     });
   }, observerOptions);
 
-  // Initialize Word Reveal
   document.querySelectorAll(".about-reveal").forEach((el) => {
     const content = el.innerHTML;
     const newContent = content
@@ -175,10 +187,12 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+  if (mybutton) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
   }
 }
 
@@ -188,25 +202,25 @@ function topFunction() {
 }
 
 window.onscroll = function () {
-  const winScroll =
-    document.body.scrollTop || document.documentElement.scrollTop;
-  const height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  const scrolled = (winScroll / height) * 100;
-  document.getElementById("progressBar").style.height = scrolled + "%";
+  const progressBar = document.getElementById("progressBar");
+  if (progressBar) {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    progressBar.style.height = scrolled + "%";
+  }
+  scrollFunction();
 };
 
 const orbs = document.querySelectorAll(".orb-wrapper");
-const progressBar = document.getElementById("progressBar");
 
-const observerOptions = {
+const orbObserverOptions = {
   root: null,
   rootMargin: "-40% 0px -40% 0px",
   threshold: 0,
 };
 
-const observer = new IntersectionObserver((entries) => {
+const orbObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const sectionId = entry.target.id;
@@ -217,16 +231,14 @@ const observer = new IntersectionObserver((entries) => {
       if (targetOrbWrapper) {
         orbs.forEach((orb) => orb.classList.remove("active"));
         targetOrbWrapper.classList.add("active");
-
-        progressBar.style.height = targetOrbWrapper.style.top;
       }
     }
   });
-}, observerOptions);
+}, orbObserverOptions);
 
 ["home", "about", "projects", "contact__footer"].forEach((id) => {
   const el = document.getElementById(id);
-  if (el) observer.observe(el);
+  if (el) orbObserver.observe(el);
 });
 
 orbs.forEach((wrapper) => {
@@ -237,78 +249,4 @@ orbs.forEach((wrapper) => {
       target.scrollIntoView({ behavior: "smooth" });
     }
   });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("protocol-toggle");
-  const currentPage = window.location.pathname;
-
-  if (currentPage.includes("indexyellow.html")) {
-    toggle.checked = true;
-  } else {
-    toggle.checked = false;
-  }
-
-  toggle.addEventListener("change", () => {
-    setTimeout(() => {
-      if (toggle.checked) {
-        window.location.href = "indexyellow.html";
-      } else {
-        window.location.href = "index.html";
-      }
-    }, 300);
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById("protocol-loader");
-  const toggle = document.getElementById("protocol-toggle");
-  const path = window.location.pathname;
-
-  setTimeout(() => {
-    loader.style.opacity = "0";
-    setTimeout(() => (loader.style.display = "none"), 500);
-  }, 600);
-
-  if (path.includes("indexyellow.html")) {
-    toggle.checked = true;
-  }
-
-  toggle.addEventListener("change", () => {
-    // Show loader again before moving
-    loader.style.display = "flex";
-    loader.style.opacity = "1";
-
-    setTimeout(() => {
-      if (toggle.checked) {
-        window.location.href = "indexyellow.html";
-      } else {
-        window.location.href = "index.html";
-      }
-    }, 400);
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  var loader = document.getElementById("protocol-loader");
-
-  console.log("DOM Loaded. Searching for loader...");
-
-  if (loader) {
-    console.log("Loader found! Starting fade-out timer.");
-    // We use a small delay so the user sees the 'Rebooting' text
-    setTimeout(function () {
-      loader.style.opacity = "0";
-      console.log("Opacity set to 0.");
-
-      setTimeout(function () {
-        loader.style.display = "none";
-        console.log("Loader display set to none. Site should be visible.");
-      }, 500);
-    }, 600);
-  } else {
-    console.error(
-      "ERROR: Could not find element with ID 'protocol-loader'. Check your HTML!",
-    );
-  }
 });

@@ -6,6 +6,7 @@
 
 .space-grotesk-regular {
   font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -1621,7 +1622,7 @@ footer {
   color: #00ffbf;
   text-decoration: none;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1806,7 +1807,7 @@ input:checked + .slider:before {
   height: 100%;
   background: #00ffbf;
   box-shadow: 0 0 10px #00ffbf;
-  animation: load-fill 0.4s forwards;
+  animation: load-fill 1.5s forwards;
 }
 
 @keyframes load-fill {
