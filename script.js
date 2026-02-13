@@ -100,20 +100,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
   const linkTexts = ["Home", "About", "Projects", "Contact"];
 
-  // Close Mobile Menu on link click or click-outside
   const menuToggle = document.getElementById("menu-toggle");
   const navLinksList = document.querySelector(".nav-links");
 
+  if (menuToggle) {
+    menuToggle.addEventListener("change", () => {
+      if (menuToggle.checked) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    });
+  }
+
   document.addEventListener("click", (event) => {
-    if (!menuToggle) return;
+    if (!menuToggle || !menuToggle.checked) return;
 
     const isClickInsideMenu = navLinksList && navLinksList.contains(event.target);
     const isClickOnHamburger = event.target.closest(".hamburger");
-    const isClickOnNavLink = event.target.classList.contains("nav-link");
+    const isClickOnNavLink = event.target.closest(".nav-link");
+    const isClickOnToggle = event.target === menuToggle;
 
-    // Close if clicking a link OR clicking outside the menu/hamburger while open
-    if (menuToggle.checked && (isClickOnNavLink || (!isClickInsideMenu && !isClickOnHamburger))) {
+    if (isClickOnNavLink || (!isClickInsideMenu && !isClickOnHamburger && !isClickOnToggle)) {
       menuToggle.checked = false;
+      document.body.style.overflow = "";
     }
   });
 
