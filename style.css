@@ -122,7 +122,7 @@ h4 {
 .orb2 {
   width: 300px;
   height: 300px;
-  background: #00d2ff;
+  background: #00fff2;
   top: 60%;
   right: 5%;
   animation-delay: 2s;
@@ -140,7 +140,7 @@ h4 {
 .orb4 {
   width: 300px;
   height: 300px;
-  background: #078484;
+  background: #41c4c4;
   top: 70%;
   left: 15%;
   animation-delay: 2s;
@@ -149,7 +149,7 @@ h4 {
 .orb5 {
   width: 400px;
   height: 400px;
-  background: rgba(0, 255, 191, 0.2);
+  background: rgba(11, 240, 183, 0.386);
   top: 20%;
   right: 10%;
   animation-delay: 0s;
