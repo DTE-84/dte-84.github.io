@@ -1120,7 +1120,7 @@ html {
 }
 
 .modal__contact {
-  background-color: #7DF9FF;
+  background: linear-gradient(to right, #7DF9FF, #242424);
   transform: translateX(100%);
   color: #242424;
 }
@@ -1161,14 +1161,14 @@ html {
   margin-bottom: 8px;
   font-weight: 500;
   color: #242424;
-  text-shadow: #fff 2px 0 20px;
+  
   font-family: "Space Grotesk", sans-serif;
 }
 
 .input {
   width: 100%;
-  background-color: #242424;
-  color: white;
+  background-color: whitesmoke;
+  color: #242424;
   border: 2px solid #242424;
   border-radius: 8px;
   padding: 12px;
@@ -1189,10 +1189,10 @@ textarea.input {
 }
 
 .form__submit {
-  background-color: #242424;
+  background-color: transparent;
   box-shadow: 0 0 20px #242424;
   border: 2px solid #242424;
-  color: #7DF9FF;
+  color: #242424;
   font-weight: 700;
   width: 100%;
   max-width: 240px;
@@ -1205,7 +1205,7 @@ textarea.input {
 }
 
 .form__submit:hover {
-  border-color: #242424;
+  border-color: #7DF9FF;
   background-color: transparent;
   color: #242424;
   box-shadow: 0 0 20px #242424;
@@ -1263,7 +1263,7 @@ textarea.input {
   position: absolute;
   top: 30px;
   right: 40px;
-  color: #1f1f1f;
+  color: #7DF9FF;
   font-size: 36px;
   z-index: 100;
   cursor: pointer;
@@ -1271,7 +1271,7 @@ textarea.input {
 }
 
 .modal__exit:hover {
-  color: #1f1f1f;
+  color: #7DF9FF;
   transform: rotate(90deg);
 }
 
