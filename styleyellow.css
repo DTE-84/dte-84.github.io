@@ -114,8 +114,8 @@ h4 {
 .glow-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
+  filter: blur(70px);
+  opacity: 0.6;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -140,7 +140,7 @@ h4 {
 .orb3 {
   width: 350px;
   height: 350px;
-  background: #39FF14;
+  background: #37ff14a6;
   bottom: 10%;
   left: 50%;
   animation-delay: 4s;
@@ -149,16 +149,16 @@ h4 {
 .orb4 {
   width: 300px;
   height: 300px;
-  background: #24273a;
+  background: #402e84;
   top: 70%;
   left: 15%;
   animation-delay: 2s;
 }
 
 .orb5 {
-  width: 400px;
-  height: 400px;
-  background: rgba(var(--theme-accent-rgb), 0.2);
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0);
   top: 20%;
   right: 10%;
   animation-delay: 0s;
@@ -167,7 +167,7 @@ h4 {
 .orb6 {
   width: 400px;
   height: 400px;
-  background: #ADFF2F;
+  background: #6eaf4d;
   top: 25%;
   right: 15%;
   animation-delay: 0s;

@@ -105,8 +105,8 @@ h4 {
 .glow-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
+  filter: blur(70px);
+  opacity: 0.6;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -140,7 +140,7 @@ h4 {
 .orb4 {
   width: 300px;
   height: 300px;
-  background: #002b2b;
+  background: #078484;
   top: 70%;
   left: 15%;
   animation-delay: 2s;
