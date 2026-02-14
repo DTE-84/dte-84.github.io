@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .protocol-label, .gl
 .bg-image {
   position: absolute;
   inset: 0;
-  background: url('./assets/thecomb.jpg') center/cover no-repeat;
+  background: url('./assets/cubes.jpg') center/cover no-repeat;
   opacity: 0.1;
   mix-blend-mode: luminosity;
   filter: grayscale(100%) contrast(120%) brightness(0.8);
