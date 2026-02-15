@@ -111,6 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById('projector')) {
     initParticles();
   }
+
+  // Initialize Image Tile Containers
+  document.querySelectorAll('.img__container').forEach(container => {
+    new ImageContainer(container);
+  });
 });
 
 // Modal Logic
@@ -152,6 +157,75 @@ function contact(event) {
       alert("Comms error. Direct uplink to: drew.t.ernst@gmail.com");
       console.error(err);
     });
+}
+
+// Tile Animation Logic
+const tileOptions = {
+  threshold: 0.4
+};
+
+const tileCallback = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.classList.contains('animated')){
+      entry.target.classList.add('animated');
+      
+      // Get all tiles and convert to array for shuffling
+      const tiles = Array.from(entry.target.querySelectorAll('.tile'));
+      
+      // Fisher-Yates Shuffle for true randomness
+      for (let i = tiles.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [tiles[i], tiles[j]] = [tiles[j], tiles[i]];
+      }
+
+      // Trigger hidden class with random delays
+      tiles.forEach((tile, idx) => {
+        setTimeout(() => {
+          tile.classList.add('hidden');
+        }, idx * 7); // Slightly faster cascade for random feel
+      });
+    }
+  });
+};
+
+const tileObserver = new IntersectionObserver(tileCallback, tileOptions);
+
+class ImageContainer {
+  constructor(el){
+    this.el = el;
+    this.tiles = [];
+    this.init();
+    this.observe();
+  }
+
+  init(){
+    for(let x = 0; x < 10; x++){
+      for (let y = 0; y < 10; y++){
+        let tile = document.createElement('div');
+        tile.classList.add('tile');
+        tile.style.left = `${(x * 10) - 0.5}%`;
+        tile.style.top = `${(y * 10) - 0.5}%`;
+
+        let borderTop = document.createElement('div');
+        let borderRight = document.createElement('div');
+        let borderBottom = document.createElement('div');
+        let borderLeft = document.createElement('div');
+
+        borderTop.classList.add('bTop', 'tile__cover');
+        borderRight.classList.add('bRight', 'tile__cover');
+        borderBottom.classList.add('bBottom', 'tile__cover');
+        borderLeft.classList.add('bLeft', 'tile__cover');
+
+        tile.append(borderTop, borderRight, borderBottom, borderLeft);
+        this.tiles.push(tile);
+        this.el.appendChild(tile);
+      }
+    }
+  }
+  
+  observe(){
+    tileObserver.observe(this.el);
+  }
 }
 
 // Particle Engine Logic
