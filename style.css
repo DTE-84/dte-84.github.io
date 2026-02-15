@@ -15,12 +15,18 @@
 }
 
 [data-theme="yellow"] {
-  --theme-bg: #1a1c2c;
-  --theme-bg-alt: #24273a;
-  --theme-accent: #FFD700;
-  --theme-accent-rgb: 255, 215, 0;
-  --theme-text: #e0e0e0;
-  --theme-shadow: rgba(255, 215, 0, 0.5);
+  --theme-bg: #2B2B2B;
+  --theme-bg-alt: #3D4042;
+  --theme-accent: #A3B18A;
+  --theme-accent-rgb: 163, 177, 138;
+  --theme-text: #ffffff;
+  --theme-shadow: rgba(163, 177, 138, 0.4);
+}
+
+/* Secondary accent for certain elements in this theme */
+[data-theme="yellow"] .tech-tab:hover {
+  color: #E29578;
+  border-color: #E29578;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }

@@ -26,6 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         html.setAttribute("data-theme", newTheme);
         localStorage.setItem("dte-theme", newTheme);
+        
+        // Re-initialize particles with new theme colors
+        if (window.particles) {
+            window.particles.destroy();
+        }
+        initParticles();
+
         loader.style.opacity = "0";
         setTimeout(() => loader.style.display = "none", 500);
       }, 800);
@@ -47,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const words = el.querySelectorAll(".reveal-word");
     words.forEach((word, i) => {
-      // Each paragraph starts its own delay but we can offset it if needed
       word.style.transitionDelay = `${i * 35}ms`;
     });
   });
@@ -158,6 +164,7 @@ var ParticleEngine = (function() {
 		}
 		
 		var _ParticleEngine = this;
+        var isYellowTheme = document.documentElement.getAttribute('data-theme') === 'yellow';
 
 		this.canvas_id = canvas_id;
 		this.stage = new createjs.Stage(canvas_id);
@@ -165,13 +172,22 @@ var ParticleEngine = (function() {
 		this.totalHeight = this.canvasHeight = document.getElementById(canvas_id).height = document.getElementById(canvas_id).offsetHeight;
 		this.compositeStyle = "lighter";
 
-		this.particleSettings = [{id:"small", num:300, fromX:0, toX:this.totalWidth, ballwidth:3, alphamax:0.4, areaHeight:.5, color:"#0cdbf3", fill:false}, 
-								{id:"medium", num:100, fromX:0, toX:this.totalWidth,  ballwidth:8, alphamax:0.3, areaHeight:1, color:"#6fd2f3", fill:true}, 
-								{id:"large", num:10, fromX:0, toX:this.totalWidth, ballwidth:30,  alphamax:0.2, areaHeight:1, color:"#93e9f3", fill:true}];
+        // Dynamic Colors based on theme (Graphite Scheme)
+        var pColor1 = isYellowTheme ? "#A3B18A" : "#0cdbf3"; // Soft Green
+        var pColor2 = isYellowTheme ? "#E29578" : "#6fd2f3"; // Muted Pink/Coral
+        var pColor3 = isYellowTheme ? "#84A59D" : "#93e9f3"; // Muted Teal
+        
+        var lColor1 = isYellowTheme ? "#3D4042" : "#6ac6e8";
+        var lColor2 = isYellowTheme ? "#A3B18A" : "#54d5e8";
+        var lColor3 = isYellowTheme ? "#E29578" : "#2ae8d8";
+
+		this.particleSettings = [{id:"small", num:300, fromX:0, toX:this.totalWidth, ballwidth:3, alphamax:0.4, areaHeight:.5, color:pColor1, fill:false}, 
+								{id:"medium", num:100, fromX:0, toX:this.totalWidth,  ballwidth:8, alphamax:0.3, areaHeight:1, color:pColor2, fill:true}, 
+								{id:"large", num:10, fromX:0, toX:this.totalWidth, ballwidth:30,  alphamax:0.2, areaHeight:1, color:pColor3, fill:true}];
 		this.particleArray = [];
-		this.lights = [{ellipseWidth:400, ellipseHeight:100, alpha:0.6, offsetX:0, offsetY:0, color:"#6ac6e8"}, 
-						{ellipseWidth:350, ellipseHeight:250, alpha:0.3, offsetX:-50, offsetY:0, color:"#54d5e8"}, 
-						{ellipseWidth:100, ellipseHeight:80, alpha:0.2, offsetX:80, offsetY:-50, color:"#2ae8d8"}];
+		this.lights = [{ellipseWidth:400, ellipseHeight:100, alpha:0.6, offsetX:0, offsetY:0, color:lColor1}, 
+						{ellipseWidth:350, ellipseHeight:250, alpha:0.3, offsetX:-50, offsetY:0, color:lColor2}, 
+						{ellipseWidth:100, ellipseHeight:80, alpha:0.2, offsetX:80, offsetY:-50, color:lColor3}];
 
 		this.stage.compositeOperation = _ParticleEngine.compositeStyle;
 
@@ -297,6 +313,12 @@ var ParticleEngine = (function() {
 		}
 	}
 
+    ParticleEngine.prototype.destroy = function() {
+        createjs.Ticker.removeEventListener("tick", updateCanvasProxy);
+        this.stage.removeAllChildren();
+        this.stage.clear();
+    }
+
 	return ParticleEngine;
 
 }());
@@ -318,8 +340,10 @@ function weightedRange(to, from, decimalPlaces, weightedRange, weightStrength) {
 	return(ret);
 }
 
+var updateCanvasProxy;
 function initParticles() {
-	var particles = new ParticleEngine('projector');
-	createjs.Ticker.addEventListener("tick", function() { particles.render(); });
-	window.addEventListener('resize', function() { particles.resize(); }, false);
+	window.particles = new ParticleEngine('projector');
+    updateCanvasProxy = function() { window.particles.render(); };
+	createjs.Ticker.addEventListener("tick", updateCanvasProxy);
+	window.addEventListener('resize', function() { window.particles.resize(); }, false);
 }
