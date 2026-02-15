@@ -4,25 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DTE E-Portfolio</title>
-    <link rel="icon" href="data:,">
+    <link rel="icon" href="data:," />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/66240d21b2.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/66240d21b2.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              accent: 'var(--theme-accent)',
-              'accent-rgb': 'var(--theme-accent-rgb)',
-            }
-          }
-        }
-      }
+              accent: "var(--theme-accent)",
+              "accent-rgb": "var(--theme-accent-rgb)",
+            },
+          },
+        },
+      };
     </script>
   </head>
   <body>
@@ -34,17 +40,31 @@
     </div>
 
     <div class="scroll-nav-container">
-        <div class="scroll-track"></div>
-        <div class="scroll-progress" id="progressBar"></div>
-        <div class="orb-wrapper active" data-section="home" style="top: 0%;"><div class="orb"></div><span class="orb-label">HOME</span></div>
-        <div class="orb-wrapper" data-section="about" style="top: 33%;"><div class="orb"></div><span class="orb-label">ABOUT</span></div>
-        <div class="orb-wrapper" data-section="projects" style="top: 66%;"><div class="orb"></div><span class="orb-label">PROJECTS</span></div>
-        <div class="orb-wrapper" data-section="footer" style="top: 100%;"><div class="orb"></div><span class="orb-label">CONTACT</span></div>
+      <div class="scroll-track"></div>
+      <div class="scroll-progress" id="progressBar"></div>
+      <div class="orb-wrapper active" data-section="home" style="top: 0%">
+        <div class="orb"></div>
+        <span class="orb-label">HOME</span>
+      </div>
+      <div class="orb-wrapper" data-section="about" style="top: 33%">
+        <div class="orb"></div>
+        <span class="orb-label">ABOUT</span>
+      </div>
+      <div class="orb-wrapper" data-section="projects" style="top: 66%">
+        <div class="orb"></div>
+        <span class="orb-label">PROJECTS</span>
+      </div>
+      <div class="orb-wrapper" data-section="footer" style="top: 100%">
+        <div class="orb"></div>
+        <span class="orb-label">CONTACT</span>
+      </div>
     </div>
 
     <div id="protocol-loader">
       <div class="loader-content">
-        <div class="glitch-text" data-text="REBOOTING PROTOCOL...">REBOOTING PROTOCOL...</div>
+        <div class="glitch-text" data-text="REBOOTING PROTOCOL...">
+          REBOOTING PROTOCOL...
+        </div>
         <div class="load-bar"><div class="load-progress"></div></div>
       </div>
     </div>
@@ -54,24 +74,36 @@
         <!-- FAR LEFT -->
         <div class="nav-section-left">
           <div class="nav-brand-container flex items-center gap-4">
-            <div class="tech-logo"><div class="logo-hex"><span class="logo-text">DTE</span></div></div>
+            <div class="tech-logo">
+              <div class="logo-hex"><span class="logo-text">DTE</span></div>
+            </div>
             <div class="brand-info flex flex-col">
               <span class="brand-text text-[9px]">SYSTEM_v22.8</span>
               <div class="system-status flex items-center gap-2">
                 <span class="status-dot"></span>
-                <span class="status-text text-[8px] opacity-50 uppercase tracking-widest font-black">Active</span>
+                <span
+                  class="status-text text-[8px] opacity-50 uppercase tracking-widest font-black"
+                  >Active</span
+                >
               </div>
             </div>
           </div>
         </div>
-        
+
         <!-- CENTER -->
         <div class="nav-section-center">
           <ul class="nav-links">
             <li><a href="#home" class="tech-tab">Home</a></li>
             <li><a href="#about" class="tech-tab">About</a></li>
             <li><a href="#projects" class="tech-tab">Projects</a></li>
-            <li><a href="javascript:void(0)" onclick="toggleModal()" class="tech-tab">Contact</a></li>
+            <li>
+              <a
+                href="javascript:void(0)"
+                onclick="toggleModal()"
+                class="tech-tab"
+                >Contact</a
+              >
+            </li>
           </ul>
         </div>
 
@@ -79,13 +111,23 @@
         <div class="nav-section-right">
           <div class="flex items-center gap-6">
             <div class="protocol-switch flex items-center gap-3">
-              <input type="checkbox" id="protocol-toggle" style="display:none">
+              <input
+                type="checkbox"
+                id="protocol-toggle"
+                style="display: none"
+              />
               <label for="protocol-toggle" class="slider"></label>
-              <span class="protocol-label text-[10px] font-bold text-accent tracking-widest uppercase">Protocol</span>
+              <span
+                class="protocol-label text-[10px] font-bold text-accent tracking-widest uppercase"
+                >Protocol</span
+              >
             </div>
-            
-            <input type="checkbox" id="menu-toggle" style="display:none">
-            <label for="menu-toggle" class="hamburger lg:hidden flex flex-col gap-1.5 cursor-pointer">
+
+            <input type="checkbox" id="menu-toggle" style="display: none" />
+            <label
+              for="menu-toggle"
+              class="hamburger lg:hidden flex flex-col gap-1.5 cursor-pointer"
+            >
               <span class="w-6 h-0.5 bg-accent"></span>
               <span class="w-6 h-0.5 bg-accent"></span>
               <span class="w-6 h-0.5 bg-accent"></span>
@@ -96,35 +138,89 @@
     </nav>
 
     <!-- Floating Mail Button -->
-    <button class="mail__btn click" onclick="toggleModal()" aria-label="Contact me">
-        <i class="fa-solid fa-envelope"></i>
+    <button
+      class="mail__btn click"
+      onclick="toggleModal()"
+      aria-label="Contact me"
+    >
+      <i class="fa-solid fa-envelope"></i>
     </button>
-   
+
     <div class="main-modal">
       <div class="modal__half modal__about">
-        <h3 class="modal__title text-2xl font-bold mb-4 uppercase tracking-widest text-black">DTE SYSTEM_v22.8</h3>
-        <h4 class="modal__sub-title text-black/60 font-bold mb-4 uppercase tracking-widest text-[10px]">Identity Profile</h4>
-        <p class="modal__para leading-relaxed text-black/80 text-sm font-medium">
-          Specialized in high-fidelity frontend architecture and immersive user experiences. Teaching digital geometry to render at peak human emotion.
+        <h3
+          class="modal__title text-2xl font-bold mb-4 uppercase tracking-widest text-black"
+        >
+          DTE SYSTEM_v22.8
+        </h3>
+        <h4
+          class="modal__sub-title text-black/60 font-bold mb-4 uppercase tracking-widest text-[10px]"
+        >
+          Identity Profile
+        </h4>
+        <p
+          class="modal__para leading-relaxed text-black/80 text-sm font-medium"
+        >
+          Specialized in high-fidelity frontend architecture and immersive user
+          experiences. Teaching digital geometry to render at peak human
+          emotion.
         </p>
       </div>
       <div class="modal__half modal__contact">
-        <i class="fas fa-times modal__exit absolute top-6 right-8 text-2xl cursor-pointer text-accent" onclick="toggleModal()"></i>
-        <h3 class="modal__title text-2xl font-bold mb-6 uppercase tracking-widest text-accent">Uplink</h3>
+        <i
+          class="fas fa-times modal__exit absolute top-6 right-8 text-2xl cursor-pointer text-accent"
+          onclick="toggleModal()"
+        ></i>
+        <h3
+          class="modal__title text-2xl font-bold mb-6 uppercase tracking-widest text-accent"
+        >
+          Uplink
+        </h3>
         <form id="contact__form" onsubmit="contact(event)" class="space-y-4">
           <div class="form__item">
-            <label class="block text-[9px] font-bold uppercase mb-1 text-accent tracking-[0.2em]">Name</label>
-            <input class="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none font-mono text-xs uppercase placeholder:text-black/30" placeholder="INPUT NAME..." name="user_name" type="text" required>
+            <label
+              class="block text-[9px] font-bold uppercase mb-1 text-accent tracking-[0.2em]"
+              >Name</label
+            >
+            <input
+              class="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none font-mono text-xs uppercase placeholder:text-black/30"
+              placeholder="INPUT NAME..."
+              name="user_name"
+              type="text"
+              required
+            />
           </div>
           <div class="form__item">
-            <label class="block text-[9px] font-bold uppercase mb-1 text-accent tracking-[0.2em]">Email</label>
-            <input class="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none font-mono text-xs uppercase placeholder:text-black/30" placeholder="INPUT EMAIL..." name="user_email" type="email" required>
+            <label
+              class="block text-[9px] font-bold uppercase mb-1 text-accent tracking-[0.2em]"
+              >Email</label
+            >
+            <input
+              class="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none font-mono text-xs uppercase placeholder:text-black/30"
+              placeholder="INPUT EMAIL..."
+              name="user_email"
+              type="email"
+              required
+            />
           </div>
           <div class="form__item">
-            <label class="block text-[9px] font-bold uppercase mb-1 text-accent tracking-[0.2em]">Transmission</label>
-            <textarea class="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none h-32 font-mono text-xs uppercase placeholder:text-black/30" placeholder="ENTER MESSAGE..." name="message" required></textarea>
+            <label
+              class="block text-[9px] font-bold uppercase mb-1 text-accent tracking-[0.2em]"
+              >Transmission</label
+            >
+            <textarea
+              class="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none h-32 font-mono text-xs uppercase placeholder:text-black/30"
+              placeholder="ENTER MESSAGE..."
+              name="message"
+              required
+            ></textarea>
           </div>
-          <button id="contact__submit" class="w-full py-3 border-2 border-accent text-accent font-bold uppercase tracking-widest hover:bg-accent hover:text-black transition-all text-xs">Send transmission</button>
+          <button
+            id="contact__submit"
+            class="w-full py-3 border-2 border-accent text-accent font-bold uppercase tracking-widest hover:bg-accent hover:text-black transition-all text-xs"
+          >
+            Send transmission
+          </button>
         </form>
       </div>
     </div>
@@ -132,15 +228,93 @@
     <main id="main-content">
       <section id="home" class="hero bg-transparent">
         <div class="container-main hero-content">
-          <h1 class="text-white font-bold uppercase tracking-widest leading-none mb-4" data-text="Drew T Ernst">Drew T Ernst</h1>
-          <p class="typewriter text-lg md:text-xl font-mono uppercase tracking-[0.3em]" style="color: var(--theme-accent)">Frontend Developer // Problem Solver</p>
-          <div class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <div class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"><iconify-icon icon="solar:atom-linear" class="text-accent text-xl"></iconify-icon><span class="text-[10px] font-bold uppercase tracking-widest text-accent">React</span></div>
-            <div class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"><iconify-icon icon="solar:server-square-linear" class="text-accent text-xl"></iconify-icon><span class="text-[10px] font-bold uppercase tracking-widest text-accent">Next.js</span></div>
-            <div class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"><iconify-icon icon="solar:pallete-2-linear" class="text-accent text-xl"></iconify-icon><span class="text-[10px] font-bold uppercase tracking-widest text-accent">Tailwind</span></div>
-            <div class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"><iconify-icon icon="solar:code-2-linear" class="text-accent text-xl"></iconify-icon><span class="text-[10px] font-bold uppercase tracking-widest text-accent">JavaScript</span></div>
-            <div class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"><iconify-icon icon="solar:layers-linear" class="text-accent text-xl"></iconify-icon><span class="text-[10px] font-bold uppercase tracking-widest text-accent">TypeScript</span></div>
-            <div class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"><iconify-icon icon="solar:clapperboard-edit-linear" class="text-accent text-xl"></iconify-icon><span class="text-[10px] font-bold uppercase tracking-widest text-accent">CSS3</span></div>
+          <h1
+            class="text-white font-bold uppercase tracking-widest leading-none mb-4"
+            data-text="Drew T Ernst"
+          >
+            Drew T Ernst
+          </h1>
+          <p
+            class="typewriter text-lg md:text-xl font-mono uppercase tracking-[0.3em]"
+            style="color: var(--theme-accent)"
+          >
+            Frontend Developer // Problem Solver
+          </p>
+          <div
+            class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
+          >
+            <div
+              class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"
+            >
+              <iconify-icon
+                icon="solar:atom-linear"
+                class="text-accent text-xl"
+              ></iconify-icon
+              ><span
+                class="text-[10px] font-bold uppercase tracking-widest text-accent"
+                >React</span
+              >
+            </div>
+            <div
+              class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"
+            >
+              <iconify-icon
+                icon="solar:server-square-linear"
+                class="text-accent text-xl"
+              ></iconify-icon
+              ><span
+                class="text-[10px] font-bold uppercase tracking-widest text-accent"
+                >Next.js</span
+              >
+            </div>
+            <div
+              class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"
+            >
+              <iconify-icon
+                icon="solar:pallete-2-linear"
+                class="text-accent text-xl"
+              ></iconify-icon
+              ><span
+                class="text-[10px] font-bold uppercase tracking-widest text-accent"
+                >Tailwind</span
+              >
+            </div>
+            <div
+              class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"
+            >
+              <iconify-icon
+                icon="solar:code-2-linear"
+                class="text-accent text-xl"
+              ></iconify-icon
+              ><span
+                class="text-[10px] font-bold uppercase tracking-widest text-accent"
+                >JavaScript</span
+              >
+            </div>
+            <div
+              class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"
+            >
+              <iconify-icon
+                icon="solar:layers-linear"
+                class="text-accent text-xl"
+              ></iconify-icon
+              ><span
+                class="text-[10px] font-bold uppercase tracking-widest text-accent"
+                >TypeScript</span
+              >
+            </div>
+            <div
+              class="toolkit-item border border-accent/20 p-4 rounded bg-accent/5 flex items-center justify-center gap-3 group hover:border-accent transition-all"
+            >
+              <iconify-icon
+                icon="solar:clapperboard-edit-linear"
+                class="text-accent text-xl"
+              ></iconify-icon
+              ><span
+                class="text-[10px] font-bold uppercase tracking-widest text-accent"
+                >CSS3</span
+              >
+            </div>
           </div>
           <a href="#projects" class="tech-tab mx-auto mt-16">View Works</a>
         </div>
@@ -149,29 +323,67 @@
       <section id="about">
         <div class="container-main">
           <div class="flex items-center gap-6 mb-16">
-             <h2 class="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase">01 // Identity</h2>
-             <div class="h-[1px] flex-grow bg-accent/20"></div>
+            <h2
+              class="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase"
+            >
+              01 // Identity
+            </h2>
+            <div class="h-[1px] flex-grow bg-accent/20"></div>
           </div>
-          
+
           <div class="grid lg:grid-cols-3 gap-12 lg:gap-20">
             <div class="lg:col-span-2 space-y-12">
               <p class="about-reveal">
-                A results-oriented <span class="bold">Frontend Developer</span>  with a background in operations and management. I specialize in building <span class="bold">intuitive</span>, user-centric web applications where technical <span class="bold">precision</span> meets business <span class="bold">logic</span>.
+                A results-oriented
+                <span class="bold">Frontend Developer</span> with a background
+                in operations and management. I specialize in building
+                <span class="bold">intuitive</span>, user-centric web
+                applications where technical
+                <span class="bold">precision</span> meets business
+                <span class="bold">logic</span>.
               </p>
               <p class="about-reveal">
-                My previous career in <span class="bold">leadership</span> taught me that the best software isn’t built in a vacuum — it’s the result of clear communication and effective <span class="bold">collaboration</span>. I excel in <span class="bold">cross-functional</span> teams with the ability to turn <span class="bold">complex</span> requirements into <span class="bold">seamless</span> digital <span class="bold">experiences</span>.
+                My previous career in
+                <span class="bold">leadership</span> taught me that the best
+                software isn’t built in a vacuum — it’s the result of clear
+                communication and effective
+                <span class="bold">collaboration</span>. I excel in
+                <span class="bold">cross-functional</span> teams with the
+                ability to turn <span class="bold">complex</span> requirements
+                into <span class="bold">seamless</span> digital
+                <span class="bold">experiences</span>.
               </p>
               <p class="about-reveal">
-                I build software with a focus on <span class="bold">clarity</span>, usability, and impact. Transitioning from a successful career in operations to <span class="bold">Frontend development</span>. I bring a <span class="bold">unique</span> perspective and "business-first" lens to the engineering process.
+                I build software with a focus on
+                <span class="bold">clarity</span>, usability, and impact.
+                Transitioning from a successful career in operations to
+                <span class="bold">Frontend development</span>. I bring a
+                <span class="bold">unique</span> perspective and
+                "business-first" lens to the engineering process.
               </p>
             </div>
 
             <div class="space-y-10">
-              <h4 class="text-lg font-bold text-white uppercase tracking-widest border-b border-accent/20 pb-4">Philosophy</h4>
+              <h4
+                class="text-lg font-bold text-white uppercase tracking-widest border-b border-accent/20 pb-4"
+              >
+                Philosophy
+              </h4>
               <ul class="terminal-list">
-                <li class="about-reveal"><span class="bold">User-Centric Design:</span> Empathizing with the user to ensure interfaces are as intuitive as they are functional.</li>
-                <li class="about-reveal"><span class="bold">Collaborative Excellence:</span> Clear communication and documentation are as vital as the codebase itself.</li>
-                <li class="about-reveal"><span class="bold">Results-Driven:</span> Building tools that streamline operations and enhance user engagement.</li>
+                <li class="about-reveal">
+                  <span class="bold">User-Centric Design:</span> Empathizing
+                  with the user to ensure interfaces are as intuitive as they
+                  are functional.
+                </li>
+                <li class="about-reveal">
+                  <span class="bold">Collaborative Excellence:</span> Clear
+                  communication and documentation are as vital as the codebase
+                  itself.
+                </li>
+                <li class="about-reveal">
+                  <span class="bold">Results-Driven:</span> Building tools that
+                  streamline operations and enhance user engagement.
+                </li>
               </ul>
             </div>
           </div>
@@ -180,260 +392,633 @@
 
       <section id="projects">
         <div class="container-main">
-            <div class="flex items-center gap-6 mb-20">
-               <h2 class="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase">02 // Archive</h2>
-               <div class="h-[1px] flex-grow bg-accent/20"></div>
+          <div class="flex items-center gap-6 mb-20">
+            <h2
+              class="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase"
+            >
+              02 // Archive
+            </h2>
+            <div class="h-[1px] flex-grow bg-accent/20"></div>
+          </div>
+
+          <div class="space-y-32">
+            <!-- Project: ISP Assistant Pro -->
+            <div class="group grid md:grid-cols-2 gap-16 items-center">
+              <div
+                class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"
+                ></div>
+                <img
+                  src="./assets/Screenshot 2026-02-15 135946.png"
+                  alt="ISP Assistant Pro"
+                  class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl"
+                />
+              </div>
+              <div>
+                <div class="flex items-center gap-4 mb-6">
+                  <span
+                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    >Healthcare</span
+                  >
+                  <span class="text-xs text-zinc-600 font-mono tracking-widest"
+                    >2026</span
+                  >
+                </div>
+                <h3
+                  class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest"
+                >
+                  ISP Assistant Pro
+                </h3>
+                <p class="text-zinc-400 text-lg leading-relaxed mb-8">
+                  HIPAA-compliant clinical drafting tool for Missouri DMH
+                  providers, automating complex ISP documentation with
+                  zero-knowledge architecture.
+                </p>
+                <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >Vanilla JS</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >HIPAA-Safe</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >OSHA Logic</span
+                  >
+                </div>
+                <div class="flex gap-6">
+                  <a
+                    href="https://dte-84.github.io/MCSDD-APP/"
+                    target="_blank"
+                    class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
+                    >Uplink App
+                    <iconify-icon
+                      icon="solar:arrow-right-up-linear"
+                      class="ml-2"
+                    ></iconify-icon
+                  ></a>
+                  <a
+                    href="case-study-isp.html"
+                    target="_blank"
+                    class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
+                    >Case Study
+                    <iconify-icon
+                      icon="solar:document-text-linear"
+                      class="ml-2"
+                    ></iconify-icon
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Project 1: CryptoLive -->
+            <div class="group grid md:grid-cols-2 gap-16 items-center">
+              <div
+                class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"
+                ></div>
+                <img
+                  src="./assets/cryptolive.png"
+                  alt="CryptoLive"
+                  class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl"
+                />
+              </div>
+              <div>
+                <div class="flex items-center gap-4 mb-6">
+                  <span
+                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    >Fintech</span
+                  >
+                  <span class="text-xs text-zinc-600 font-mono tracking-widest"
+                    >2026</span
+                  >
+                </div>
+                <h3
+                  class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest"
+                >
+                  CryptoLive App
+                </h3>
+                <p class="text-zinc-400 text-lg leading-relaxed mb-8">
+                  Real-time cryptocurrency tracking with live price feeds and
+                  dynamic visualization.
+                </p>
+                <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >React</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >Socket.io</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >Chart.js</span
+                  >
+                </div>
+                <a
+                  href="https://dte-84.github.io/CryptoLive/"
+                  target="_blank"
+                  class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
+                  >Uplink Project
+                  <iconify-icon
+                    icon="solar:arrow-right-up-linear"
+                    class="ml-2"
+                  ></iconify-icon
+                ></a>
+              </div>
             </div>
 
-            <div class="space-y-32">
-                                <!-- Project: ISP Assistant Pro -->
-                <div class="group grid md:grid-cols-2 gap-16 items-center">
-                    <div class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"></div>
-                        <img src="./assets/Screenshot 2026-02-15 135946.png" alt="ISP Assistant Pro" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl">
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent">Healthcare</span>
-                            <span class="text-xs text-zinc-600 font-mono tracking-widest">2026</span>
-                        </div>
-                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest">ISP Assistant Pro</h3>
-                        <p class="text-zinc-400 text-lg leading-relaxed mb-8">HIPAA-compliant clinical drafting tool for Missouri DMH providers, automating complex ISP documentation with zero-knowledge architecture.</p>
-                        <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">Vanilla JS</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">HIPAA-Safe</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">OSHA Logic</span>
-                        </div>
-                        <div class="flex gap-6">
-                            <a href="https://dte-84.github.io/MCSDD-APP/" target="_blank" class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest">Uplink App <iconify-icon icon="solar:arrow-right-up-linear" class="ml-2"></iconify-icon></a>
-                            <a href="case-study-isp.html" class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest">Case Study <iconify-icon icon="solar:document-text-linear" class="ml-2"></iconify-icon></a>
-                        </div>
-                    </div>
+            <!-- Project 2: Keano Modeling -->
+            <div class="group grid md:grid-cols-2 gap-16 items-center">
+              <div
+                class="md:order-2 relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"
+                ></div>
+                <img
+                  src="./assets/keymodeling.png"
+                  alt="Keano Modeling"
+                  class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl"
+                />
+              </div>
+              <div class="md:order-1">
+                <div class="flex items-center gap-4 mb-6">
+                  <span
+                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    >Creative</span
+                  >
+                  <span class="text-xs text-zinc-600 font-mono tracking-widest"
+                    >2026</span
+                  >
                 </div>
-                <!-- Project 1: CryptoLive -->
-                <div class="group grid md:grid-cols-2 gap-16 items-center">
-                    <div class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"></div>
-                        <img src="./assets/cryptolive.png" alt="CryptoLive" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl">
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent">Fintech</span>
-                            <span class="text-xs text-zinc-600 font-mono tracking-widest">2026</span>
-                        </div>
-                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest">CryptoLive App</h3>
-                        <p class="text-zinc-400 text-lg leading-relaxed mb-8">Real-time cryptocurrency tracking with live price feeds and dynamic visualization.</p>
-                        <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">React</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">Socket.io</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">Chart.js</span>
-                        </div>
-                        <a href="https://dte-84.github.io/CryptoLive/" target="_blank" class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest">Uplink Project <iconify-icon icon="solar:arrow-right-up-linear" class="ml-2"></iconify-icon></a>
-                    </div>
+                <h3
+                  class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest"
+                >
+                  Keano Modeling
+                </h3>
+                <p class="text-zinc-400 text-lg leading-relaxed mb-8">
+                  A professional high-fidelity modeling portfolio featuring
+                  immersive visual galleries.
+                </p>
+                <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >React</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >Tailwind</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >Next.js</span
+                  >
                 </div>
-
-                <!-- Project 2: Keano Modeling -->
-                <div class="group grid md:grid-cols-2 gap-16 items-center">
-                    <div class="md:order-2 relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"></div>
-                        <img src="./assets/keymodeling.png" alt="Keano Modeling" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl">
-                    </div>
-                    <div class="md:order-1">
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent">Creative</span>
-                            <span class="text-xs text-zinc-600 font-mono tracking-widest">2026</span>
-                        </div>
-                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest">Keano Modeling</h3>
-                        <p class="text-zinc-400 text-lg leading-relaxed mb-8">A professional high-fidelity modeling portfolio featuring immersive visual galleries.</p>
-                        <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">React</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">Tailwind</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">Next.js</span>
-                        </div>
-                        <a href="https://kw-portfolio-kappa.vercel.app/" target="_blank" class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest">Uplink Project <iconify-icon icon="solar:arrow-right-up-linear" class="ml-2"></iconify-icon></a>
-                    </div>
-                </div>
-
-                <!-- Project 3: CarSales -->
-                <div class="group grid md:grid-cols-2 gap-16 items-center">
-                    <div class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"></div>
-                        <img src="./assets/toyotasanti.jpg" alt="CarSales Platform" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl">
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent">Saas</span>
-                            <span class="text-xs text-zinc-600 font-mono tracking-widest">2025</span>
-                        </div>
-                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest">CarSales Platform</h3>
-                        <p class="text-zinc-400 text-lg leading-relaxed mb-8">An automotive marketplace optimized for high-performance discovery flows.</p>
-                        <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">React</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">Rest API</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">UX Design</span>
-                        </div>
-                        <a href="https://dte-84.github.io/CarsFinal/" target="_blank" class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest">Uplink Project <iconify-icon icon="solar:arrow-right-up-linear" class="ml-2"></iconify-icon></a>
-                    </div>
-                </div>
-
-                <!-- Project 4: TREACT -->
-                <div class="group grid md:grid-cols-2 gap-16 items-center">
-                    <div class="md:order-2 relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"></div>
-                        <img src="./assets/treact.png" alt="TREACT" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl">
-                    </div>
-                    <div class="md:order-1">
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent">Business</span>
-                            <span class="text-xs text-zinc-600 font-mono tracking-widest">2025</span>
-                        </div>
-                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest">TREACT Landing</h3>
-                        <p class="text-zinc-400 text-lg leading-relaxed mb-8">High-converting business landing page emphasizing performance and premium transitions.</p>
-                        <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">HTML5</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">CSS3</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">JS</span>
-                        </div>
-                        <a href="https://dte-84.github.io/treact-2/" target="_blank" class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest">Uplink Project <iconify-icon icon="solar:arrow-right-up-linear" class="ml-2"></iconify-icon></a>
-                    </div>
-                </div>
-
-                <!-- Project 5: React E-Store -->
-                <div class="group grid md:grid-cols-2 gap-16 items-center">
-                    <div class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"></div>
-                        <img src="./assets/library.png" alt="React E-Store" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl">
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent">Commerce</span>
-                            <span class="text-xs text-zinc-600 font-mono tracking-widest">2025</span>
-                        </div>
-                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest">React E-Store</h3>
-                        <p class="text-zinc-400 text-lg leading-relaxed mb-8">Modern e-commerce solution exploring advanced state management and React Hooks.</p>
-                        <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">React</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">Hooks</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">NPM</span>
-                        </div>
-                        <a href="https://ecommercelibray-react-a3c104c7bd57.herokuapp.com/" target="_blank" class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest">Uplink Project <iconify-icon icon="solar:arrow-right-up-linear" class="ml-2"></iconify-icon></a>
-                    </div>
-                </div>
-
-                <!-- Project 6: v1.0 Portfolio -->
-                <div class="group grid md:grid-cols-2 gap-16 items-center">
-                    <div class="md:order-2 relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"></div>
-                        <img src="./assets/eportfolio1.jpg" alt="v1.0 Portfolio" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl">
-                    </div>
-                    <div class="md:order-1">
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent">Archive</span>
-                            <span class="text-xs text-zinc-600 font-mono tracking-widest">2025</span>
-                        </div>
-                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest">v1.0 Portfolio</h3>
-                        <p class="text-zinc-400 text-lg leading-relaxed mb-8">My first dive into software development. A retrospective on my learning journey.</p>
-                        <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">HTML5</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">CSS3</span>
-                            <span class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5">JS</span>
-                        </div>
-                        <a href="https://dte-84.github.io/E-Portfolio/" target="_blank" class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest">Uplink Project <iconify-icon icon="solar:arrow-right-up-linear" class="ml-2"></iconify-icon></a>
-                    </div>
-                </div>
+                <a
+                  href="https://kw-portfolio-kappa.vercel.app/"
+                  target="_blank"
+                  class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
+                  >Uplink Project
+                  <iconify-icon
+                    icon="solar:arrow-right-up-linear"
+                    class="ml-2"
+                  ></iconify-icon
+                ></a>
+              </div>
             </div>
+
+            <!-- Project 3: CarSales -->
+            <div class="group grid md:grid-cols-2 gap-16 items-center">
+              <div
+                class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"
+                ></div>
+                <img
+                  src="./assets/toyotasanti.jpg"
+                  alt="CarSales Platform"
+                  class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl"
+                />
+              </div>
+              <div>
+                <div class="flex items-center gap-4 mb-6">
+                  <span
+                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    >Saas</span
+                  >
+                  <span class="text-xs text-zinc-600 font-mono tracking-widest"
+                    >2025</span
+                  >
+                </div>
+                <h3
+                  class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest"
+                >
+                  CarSales Platform
+                </h3>
+                <p class="text-zinc-400 text-lg leading-relaxed mb-8">
+                  An automotive marketplace optimized for high-performance
+                  discovery flows.
+                </p>
+                <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >React</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >Rest API</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >UX Design</span
+                  >
+                </div>
+                <a
+                  href="https://dte-84.github.io/CarsFinal/"
+                  target="_blank"
+                  class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
+                  >Uplink Project
+                  <iconify-icon
+                    icon="solar:arrow-right-up-linear"
+                    class="ml-2"
+                  ></iconify-icon
+                ></a>
+              </div>
+            </div>
+
+            <!-- Project 4: TREACT -->
+            <div class="group grid md:grid-cols-2 gap-16 items-center">
+              <div
+                class="md:order-2 relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"
+                ></div>
+                <img
+                  src="./assets/treact.png"
+                  alt="TREACT"
+                  class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl"
+                />
+              </div>
+              <div class="md:order-1">
+                <div class="flex items-center gap-4 mb-6">
+                  <span
+                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    >Business</span
+                  >
+                  <span class="text-xs text-zinc-600 font-mono tracking-widest"
+                    >2025</span
+                  >
+                </div>
+                <h3
+                  class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest"
+                >
+                  TREACT Landing
+                </h3>
+                <p class="text-zinc-400 text-lg leading-relaxed mb-8">
+                  High-converting business landing page emphasizing performance
+                  and premium transitions.
+                </p>
+                <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >HTML5</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >CSS3</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >JS</span
+                  >
+                </div>
+                <a
+                  href="https://dte-84.github.io/treact-2/"
+                  target="_blank"
+                  class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
+                  >Uplink Project
+                  <iconify-icon
+                    icon="solar:arrow-right-up-linear"
+                    class="ml-2"
+                  ></iconify-icon
+                ></a>
+              </div>
+            </div>
+
+            <!-- Project 5: React E-Store -->
+            <div class="group grid md:grid-cols-2 gap-16 items-center">
+              <div
+                class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"
+                ></div>
+                <img
+                  src="./assets/library.png"
+                  alt="React E-Store"
+                  class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl"
+                />
+              </div>
+              <div>
+                <div class="flex items-center gap-4 mb-6">
+                  <span
+                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    >Commerce</span
+                  >
+                  <span class="text-xs text-zinc-600 font-mono tracking-widest"
+                    >2025</span
+                  >
+                </div>
+                <h3
+                  class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest"
+                >
+                  React E-Store
+                </h3>
+                <p class="text-zinc-400 text-lg leading-relaxed mb-8">
+                  Modern e-commerce solution exploring advanced state management
+                  and React Hooks.
+                </p>
+                <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >React</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >Hooks</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >NPM</span
+                  >
+                </div>
+                <a
+                  href="https://ecommercelibray-react-a3c104c7bd57.herokuapp.com/"
+                  target="_blank"
+                  class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
+                  >Uplink Project
+                  <iconify-icon
+                    icon="solar:arrow-right-up-linear"
+                    class="ml-2"
+                  ></iconify-icon
+                ></a>
+              </div>
+            </div>
+
+            <!-- Project 6: v1.0 Portfolio -->
+            <div class="group grid md:grid-cols-2 gap-16 items-center">
+              <div
+                class="md:order-2 relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"
+                ></div>
+                <img
+                  src="./assets/eportfolio1.jpg"
+                  alt="v1.0 Portfolio"
+                  class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl"
+                />
+              </div>
+              <div class="md:order-1">
+                <div class="flex items-center gap-4 mb-6">
+                  <span
+                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    >Archive</span
+                  >
+                  <span class="text-xs text-zinc-600 font-mono tracking-widest"
+                    >2025</span
+                  >
+                </div>
+                <h3
+                  class="text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors uppercase tracking-widest"
+                >
+                  v1.0 Portfolio
+                </h3>
+                <p class="text-zinc-400 text-lg leading-relaxed mb-8">
+                  My first dive into software development. A retrospective on my
+                  learning journey.
+                </p>
+                <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >HTML5</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >CSS3</span
+                  >
+                  <span
+                    class="text-[10px] bg-white/5 px-3 py-1.5 rounded uppercase tracking-widest border border-white/5"
+                    >JS</span
+                  >
+                </div>
+                <a
+                  href="https://dte-84.github.io/E-Portfolio/"
+                  target="_blank"
+                  class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
+                  >Uplink Project
+                  <iconify-icon
+                    icon="solar:arrow-right-up-linear"
+                    class="ml-2"
+                  ></iconify-icon
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer id="footer" class="relative border-t border-white/5 bg-black/40 backdrop-blur-md overflow-hidden">
+    <footer
+      id="footer"
+      class="relative border-t border-white/5 bg-black/40 backdrop-blur-md overflow-hidden"
+    >
       <div class="container-main py-24 relative z-10">
         <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <div class="space-y-8">
-            <div class="inline-block px-4 py-2 rounded-full border border-accent/20 bg-accent/5 text-accent text-[10px] font-bold uppercase tracking-[0.3em]">
+            <div
+              class="inline-block px-4 py-2 rounded-full border border-accent/20 bg-accent/5 text-accent text-[10px] font-bold uppercase tracking-[0.3em]"
+            >
               Contact // Transmission
             </div>
-            <h2 class="text-4xl md:text-5xl font-bold text-white uppercase tracking-tighter leading-none">
-              Let's build the <span class="text-accent italic">Future</span> together.
+            <h2
+              class="text-4xl md:text-5xl font-bold text-white uppercase tracking-tighter leading-none"
+            >
+              Let's build the
+              <span class="text-accent italic">Future</span> together.
             </h2>
             <p class="text-zinc-400 text-lg max-w-md leading-relaxed">
-              Have a project in mind or just want to discuss high-fidelity frontend architecture? My uplink is always active.
+              Have a project in mind or just want to discuss high-fidelity
+              frontend architecture? My uplink is always active.
             </p>
             <div class="flex flex-col gap-4 pt-4">
-              <a href="mailto:drew.t.ernst@gmail.com" class="flex items-center gap-4 text-white group hover:text-accent transition-colors">
-                <div class="w-10 h-10 rounded border border-white/10 flex items-center justify-center group-hover:border-accent/50 transition-all">
-                  <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
+              <a
+                href="mailto:drew.t.ernst@gmail.com"
+                class="flex items-center gap-4 text-white group hover:text-accent transition-colors"
+              >
+                <div
+                  class="w-10 h-10 rounded border border-white/10 flex items-center justify-center group-hover:border-accent/50 transition-all"
+                >
+                  <iconify-icon
+                    icon="solar:letter-linear"
+                    class="text-xl"
+                  ></iconify-icon>
                 </div>
-                <span class="font-mono text-xs uppercase tracking-widest">drew.t.ernst@gmail.com</span>
+                <span class="font-mono text-xs uppercase tracking-widest"
+                  >drew.t.ernst@gmail.com</span
+                >
               </a>
               <div class="flex items-center gap-4 text-white">
-                <div class="w-10 h-10 rounded border border-white/10 flex items-center justify-center">
-                  <iconify-icon icon="solar:map-point-linear" class="text-xl"></iconify-icon>
+                <div
+                  class="w-10 h-10 rounded border border-white/10 flex items-center justify-center"
+                >
+                  <iconify-icon
+                    icon="solar:map-point-linear"
+                    class="text-xl"
+                  ></iconify-icon>
                 </div>
-                <span class="font-mono text-xs uppercase tracking-widest">Available Remotely // EST</span>
+                <span class="font-mono text-xs uppercase tracking-widest"
+                  >Available Remotely // EST</span
+                >
               </div>
             </div>
           </div>
 
           <div class="relative">
-            <div class="absolute -inset-4 bg-accent/5 blur-2xl rounded-full opacity-50"></div>
-            <form onsubmit="contact(event)" class="relative bg-white/5 border border-white/10 p-8 md:p-10 rounded-2xl backdrop-blur-sm space-y-6">
+            <div
+              class="absolute -inset-4 bg-accent/5 blur-2xl rounded-full opacity-50"
+            ></div>
+            <form
+              onsubmit="contact(event)"
+              class="relative bg-white/5 border border-white/10 p-8 md:p-10 rounded-2xl backdrop-blur-sm space-y-6"
+            >
               <div class="grid md:grid-cols-2 gap-6">
                 <div class="form__item">
-                  <label class="block text-[9px] font-bold uppercase mb-2 text-accent tracking-[0.2em]">Full Name</label>
-                  <input class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white font-bold outline-none font-mono text-xs uppercase placeholder:text-white/20 focus:border-accent/50 transition-all" placeholder="ID_NAME" name="user_name" type="text" required>
+                  <label
+                    class="block text-[9px] font-bold uppercase mb-2 text-accent tracking-[0.2em]"
+                    >Full Name</label
+                  >
+                  <input
+                    class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white font-bold outline-none font-mono text-xs uppercase placeholder:text-white/20 focus:border-accent/50 transition-all"
+                    placeholder="ID_NAME"
+                    name="user_name"
+                    type="text"
+                    required
+                  />
                 </div>
                 <div class="form__item">
-                  <label class="block text-[9px] font-bold uppercase mb-2 text-accent tracking-[0.2em]">Email Address</label>
-                  <input class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white font-bold outline-none font-mono text-xs uppercase placeholder:text-white/20 focus:border-accent/50 transition-all" placeholder="ID_EMAIL" name="user_email" type="email" required>
+                  <label
+                    class="block text-[9px] font-bold uppercase mb-2 text-accent tracking-[0.2em]"
+                    >Email Address</label
+                  >
+                  <input
+                    class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white font-bold outline-none font-mono text-xs uppercase placeholder:text-white/20 focus:border-accent/50 transition-all"
+                    placeholder="ID_EMAIL"
+                    name="user_email"
+                    type="email"
+                    required
+                  />
                 </div>
               </div>
               <div class="form__item">
-                <label class="block text-[9px] font-bold uppercase mb-2 text-accent tracking-[0.2em]">Transmission</label>
-                <textarea class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white font-bold outline-none h-32 font-mono text-xs uppercase placeholder:text-white/20 focus:border-accent/50 transition-all resize-none" placeholder="ENTER MESSAGE..." name="message" required></textarea>
+                <label
+                  class="block text-[9px] font-bold uppercase mb-2 text-accent tracking-[0.2em]"
+                  >Transmission</label
+                >
+                <textarea
+                  class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white font-bold outline-none h-32 font-mono text-xs uppercase placeholder:text-white/20 focus:border-accent/50 transition-all resize-none"
+                  placeholder="ENTER MESSAGE..."
+                  name="message"
+                  required
+                ></textarea>
               </div>
-              <button class="group relative w-full py-4 bg-accent text-black font-bold uppercase tracking-[0.2em] text-xs rounded-lg overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98]">
+              <button
+                class="group relative w-full py-4 bg-accent text-black font-bold uppercase tracking-[0.2em] text-xs rounded-lg overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98]"
+              >
                 <span class="relative z-10">Initialize Transmission</span>
-                <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <div
+                  class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+                ></div>
               </button>
             </form>
           </div>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-8"
+        >
           <div class="flex items-center gap-4">
-             <div class="tech-logo"><div class="logo-hex"><span class="logo-text">DTE</span></div></div>
-             <p class="font-mono text-[9px] uppercase tracking-[0.3em] opacity-40">System_v22.8 // Archive_2025</p>
+            <div class="tech-logo">
+              <div class="logo-hex"><span class="logo-text">DTE</span></div>
+            </div>
+            <p
+              class="font-mono text-[9px] uppercase tracking-[0.3em] opacity-40"
+            >
+              System_v22.8 // Archive_2025
+            </p>
           </div>
           <div class="flex gap-8">
-            <a href="https://github.com/dte-84" target="_blank" class="text-white/40 hover:text-accent transition-colors text-xl"><i class="fa-brands fa-github"></i></a>
-            <a href="#" target="_blank" class="text-white/40 hover:text-accent transition-colors text-xl"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="javascript:void(0)" onclick="toggleModal()" class="text-white/40 hover:text-accent transition-colors text-xl"><i class="fa-solid fa-envelope"></i></a>
+            <a
+              href="https://github.com/dte-84"
+              target="_blank"
+              class="text-white/40 hover:text-accent transition-colors text-xl"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="#"
+              target="_blank"
+              class="text-white/40 hover:text-accent transition-colors text-xl"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href="javascript:void(0)"
+              onclick="toggleModal()"
+              class="text-white/40 hover:text-accent transition-colors text-xl"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
           </div>
         </div>
       </div>
-      
+
       <!-- Decorative background elements -->
-      <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"></div>
+      <div
+        class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"
+      ></div>
     </footer>
 
     <!-- Overlays for Contact Form -->
     <div class="modal__overlay modal__overlay--loading hidden">
-      <i class="fas fa-spinner modal__overlay-spinner text-accent text-5xl animate-spin"></i>
+      <i
+        class="fas fa-spinner modal__overlay-spinner text-accent text-5xl animate-spin"
+      ></i>
     </div>
     <div class="modal__overlay modal__overlay--success hidden">
       <div class="text-center">
         <i class="fas fa-check-circle text-accent text-5xl mb-4"></i>
-        <h3 class="text-xl font-bold text-white uppercase tracking-widest">Transmission Successful</h3>
-        <p class="text-accent/60 text-xs font-mono mt-2">Diverting back to terminal...</p>
+        <h3 class="text-xl font-bold text-white uppercase tracking-widest">
+          Transmission Successful
+        </h3>
+        <p class="text-accent/60 text-xs font-mono mt-2">
+          Diverting back to terminal...
+        </p>
       </div>
     </div>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
-
-
