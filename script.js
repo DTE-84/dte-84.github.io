@@ -172,14 +172,26 @@ var ParticleEngine = (function() {
 		this.totalHeight = this.canvasHeight = document.getElementById(canvas_id).height = document.getElementById(canvas_id).offsetHeight;
 		this.compositeStyle = "lighter";
 
-        // Dynamic Colors based on theme (Graphite Scheme)
-        var pColor1 = isYellowTheme ? "#A3B18A" : "#0cdbf3"; // Soft Green
-        var pColor2 = isYellowTheme ? "#E29578" : "#6fd2f3"; // Muted Pink/Coral
-        var pColor3 = isYellowTheme ? "#84A59D" : "#93e9f3"; // Muted Teal
-        
-        var lColor1 = isYellowTheme ? "#3D4042" : "#6ac6e8";
-        var lColor2 = isYellowTheme ? "#A3B18A" : "#54d5e8";
-        var lColor3 = isYellowTheme ? "#E29578" : "#2ae8d8";
+        // Dynamic Colors based on theme
+        var pColor1, pColor2, pColor3, lColor1, lColor2, lColor3;
+
+        if (isYellowTheme) {
+            // Graphite Scheme
+            pColor1 = "#A3B18A"; // Soft Green
+            pColor2 = "#E29578"; // Muted Pink
+            pColor3 = "#84A59D"; // Muted Teal
+            lColor1 = "#3D4042";
+            lColor2 = "#A3B18A";
+            lColor3 = "#E29578";
+        } else {
+            // Stormy Monochromatic Blue Scheme
+            pColor1 = "#7DD3FC"; // Sky Blue
+            pColor2 = "#94A3B8"; // Slate Gray
+            pColor3 = "#38BDF8"; // Ocean Blue
+            lColor1 = "#1E293B";
+            lColor2 = "#334155";
+            lColor3 = "#0F172A";
+        }
 
 		this.particleSettings = [{id:"small", num:300, fromX:0, toX:this.totalWidth, ballwidth:3, alphamax:0.4, areaHeight:.5, color:pColor1, fill:false}, 
 								{id:"medium", num:100, fromX:0, toX:this.totalWidth,  ballwidth:8, alphamax:0.3, areaHeight:1, color:pColor2, fill:true}, 
