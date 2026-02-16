@@ -111,6 +111,27 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById('projector')) {
     initParticles();
   }
+
+  // Hamburger Menu Toggle
+  const hamburger = document.getElementById("hamburger-trigger");
+  const navLinksList = document.getElementById("navLinksList");
+  
+  if (hamburger && navLinksList) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("is-active");
+      navLinksList.classList.toggle("active");
+      document.body.style.overflow = navLinksList.classList.contains("active") ? "hidden" : "";
+    });
+
+    // Close menu when clicking links
+    navLinksList.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("is-active");
+        navLinksList.classList.remove("active");
+        document.body.style.overflow = "";
+      });
+    });
+  }
 });
 
 // Modal Logic

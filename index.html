@@ -92,7 +92,7 @@
 
         <!-- CENTER -->
         <div class="nav-section-center">
-          <ul class="nav-links">
+          <ul class="nav-links" id="navLinksList">
             <li><a href="#home" class="tech-tab">Home</a></li>
             <li><a href="#about" class="tech-tab">About</a></li>
             <li><a href="#projects" class="tech-tab">Projects</a></li>
@@ -105,11 +105,17 @@
               >
             </li>
           </ul>
+
+          <div id="hamburger-trigger" class="lg:hidden flex flex-col gap-1.5 cursor-pointer z-[1001] translate-x-12">
+            <span class="w-6 h-0.5 bg-accent transition-all duration-300 origin-center"></span>
+            <span class="w-6 h-0.5 bg-accent transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-accent transition-all duration-300 origin-center"></span>
+          </div>
         </div>
 
         <!-- FAR RIGHT -->
         <div class="nav-section-right">
-          <div class="flex items-center gap-6">
+          <div class="flex items-center gap-6 justify-end">
             <div class="protocol-switch flex items-center gap-3">
               <input
                 type="checkbox"
@@ -118,20 +124,10 @@
               />
               <label for="protocol-toggle" class="slider"></label>
               <span
-                class="protocol-label text-[10px] font-bold text-accent tracking-widest uppercase"
+                class="protocol-label hide-on-mobile text-[10px] font-bold text-accent tracking-widest uppercase"
                 >Protocol</span
               >
             </div>
-
-            <input type="checkbox" id="menu-toggle" style="display: none" />
-            <label
-              for="menu-toggle"
-              class="hamburger lg:hidden flex flex-col gap-1.5 cursor-pointer"
-            >
-              <span class="w-6 h-0.5 bg-accent"></span>
-              <span class="w-6 h-0.5 bg-accent"></span>
-              <span class="w-6 h-0.5 bg-accent"></span>
-            </label>
           </div>
         </div>
       </div>
