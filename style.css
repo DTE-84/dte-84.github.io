@@ -23,7 +23,6 @@
   --theme-shadow: rgba(163, 177, 138, 0.4);
 }
 
-/* Secondary accent for certain elements in this theme */
 [data-theme="yellow"] .tech-tab:hover {
   color: #E29578;
   border-color: #E29578;
@@ -51,7 +50,6 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
   font-weight: 700;
 }
 
-/* --- PERSISTENT BACKGROUND --- */
 .bg-animation { position: fixed; inset: 0; z-index: -1; }
 #projector {
   position: absolute; 
@@ -78,7 +76,6 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
 .orb2 { width: 400px; height: 400px; background: var(--theme-accent); bottom: 10%; right: -5%; animation-delay: -2s; }
 @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(30px, 30px) scale(1.1); } }
 
-/* --- NAVIGATION --- */
 .circuit-nav {
   position: fixed; top: 0; left: 0; width: 100%; height: clamp(65px, 8vh, 85px);
   display: flex; align-items: center; z-index: 1000;
@@ -88,11 +85,11 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
 
 .nav-container {
   width: 100%;
-  max-width: 100%; /* Spans full width of screen */
+  max-width: 100%;
   margin: 0;
-  padding: 0 50px 0 25px; /* Pulls right elements in while keeping left aligned with orbs */
+  padding: 0 50px 0 25px;
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) auto minmax(200px, 1fr); /* Keeps center links centered on screen */
+  grid-template-columns: minmax(200px, 1fr) auto minmax(200px, 1fr);
   align-items: center;
 }
 
@@ -117,8 +114,8 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
 
 @media (max-width: 1024px) {
   .nav-container { 
-    grid-template-columns: 1fr auto 1fr; /* Centering the middle section */
-    padding: 0 25px; /* Reverting to consistent side padding */
+    grid-template-columns: 1fr auto 1fr;
+    padding: 0 25px;
   }
   .nav-section-center { display: flex; justify-content: center; }
   .nav-links {
@@ -151,13 +148,11 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
 }
 .tech-tab:hover { background: rgba(var(--theme-accent-rgb), 0.1); box-shadow: 0 0 15px var(--theme-shadow); color: #fff; transform: translateY(-2px); }
 
-/* --- PROTOCOL SWITCH --- */
 .protocol-switch { display: flex; align-items: center; gap: 10px; }
 .slider { width: 36px; height: 18px; background: #222; border-radius: 20px; position: relative; cursor: pointer; border: 1px solid var(--theme-accent); }
 .slider::before { content: ""; position: absolute; width: 12px; height: 12px; left: 2px; top: 2px; background: var(--theme-accent); border-radius: 50%; transition: transform 0.3s ease; }
 #protocol-toggle:checked + .slider::before { transform: translateX(18px); }
 
-/* --- HERO --- */
 .hero {
   min-height: 100vh;
   min-height: 100svh;
@@ -261,7 +256,6 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
   to { letter-spacing: 8px; }
 }
 
-/* --- ABOUT REVEAL --- */
 .container-main { width: 100%; max-width: var(--container-width); margin: 0 auto; padding: 0 30px; }
 #about, #projects { padding: 100px 0; }
 .about-reveal { font-size: clamp(0.95rem, 2.2vw, 1.4rem); line-height: 1.5; font-weight: 600; color: var(--theme-text-dim); }
@@ -278,7 +272,6 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
 }
 @keyframes list-pulse { 0%, 100% { opacity: 1; transform: translateX(0); } 50% { opacity: 0.5; transform: translateX(3px); } }
 
-/* --- PROJECT GLOW EFFECT --- */
 .thumbnail-glow {
   transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1) !important;
 }
@@ -288,7 +281,6 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
   background: rgba(var(--theme-accent-rgb), 0.03);
 }
 
-/* --- ORB TRACKER --- */
 .scroll-nav-container { position: fixed; top: 50%; left: 25px; transform: translateY(-50%); width: 2px; height: 260px; z-index: 1000; }
 @media (max-width: 1250px) { .scroll-nav-container { display: none; } }
 .scroll-track { position: absolute; inset: 0; background: rgba(var(--theme-accent-rgb), 0.1); border-radius: 2px; }
@@ -300,11 +292,9 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
 .orb-label { margin-left: 15px; font-size: 8px !important; color: var(--theme-accent); opacity: 0; transform: translateX(-10px); transition: 0.3s; font-weight: bold; }
 .orb-wrapper:hover .orb-label, .orb-wrapper.active .orb-label { opacity: 1; transform: translateX(0); }
 
-/* --- MAIL BUTTON --- */
 .mail__btn { position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px; border-radius: 50%; background: var(--theme-bg-alt); border: 1px solid var(--theme-accent); color: var(--theme-accent); cursor: pointer; z-index: 1000; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
 .mail__btn:hover { background: var(--theme-accent); color: #000; transform: scale(1.1); box-shadow: 0 0 20px var(--theme-shadow); }
 
-/* --- MODAL --- */
 .main-modal { 
   position: fixed; 
   top: 50%; 
@@ -372,7 +362,6 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
   .modal__about { display: none; } 
 }
 
-/* --- CONTACT OVERLAYS --- */
 .modal__overlay {
   position: fixed;
   inset: 0;
@@ -391,7 +380,6 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
 
 .footer__copyright { width: 100%; text-align: center; padding: 60px 0; font-size: 9px; color: var(--theme-accent); letter-spacing: 4px; text-transform: uppercase; text-shadow: 0 0 15px var(--theme-shadow); opacity: 0.5; }
 
-/* --- RESPONSIVE UTILITIES --- */
 @media only screen and (max-width: 767px) {
     .hide-on-mobile {
         display: none !important;

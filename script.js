@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressBar = document.getElementById("progressBar");
   const orbs = document.querySelectorAll(".orb-wrapper");
 
-  // Initial Loader
   if (loader) {
     setTimeout(() => {
       loader.style.opacity = "0";
@@ -13,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
   }
 
-  // Theme Switcher
   if (toggle) {
     const savedTheme = localStorage.getItem("dte-theme") || "blue";
     html.setAttribute("data-theme", savedTheme);
@@ -27,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         html.setAttribute("data-theme", newTheme);
         localStorage.setItem("dte-theme", newTheme);
         
-        // Re-initialize particles with new theme colors
         if (window.particles) {
             window.particles.destroy();
         }
@@ -39,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- REFINED WORD-BY-WORD REVEAL ---
   let globalWordIndex = 0;
   document.querySelectorAll(".about-reveal").forEach((el) => {
     const content = el.innerHTML;
@@ -58,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Smooth Section & Word Reveals
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -71,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 
-  // Scroll Progress and Orb Activity
   window.addEventListener("scroll", () => {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -96,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Orb Click Navigation
   orbs.forEach(orb => {
     orb.addEventListener("click", () => {
       const targetId = orb.getAttribute("data-section");
@@ -107,12 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Initialize Particles
   if (document.getElementById('projector')) {
     initParticles();
   }
 
-  // Hamburger Menu Toggle
   const hamburger = document.getElementById("hamburger-trigger");
   const navLinksList = document.getElementById("navLinksList");
   
@@ -123,7 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = navLinksList.classList.contains("active") ? "hidden" : "";
     });
 
-    // Close menu when clicking links
     navLinksList.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("is-active");
@@ -134,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Modal Logic
 let isModalOpen = false;
 function toggleModal() {
   const body = document.body;
@@ -142,7 +131,6 @@ function toggleModal() {
   body.classList.toggle("modal--open", isModalOpen);
 }
 
-// Contact Form
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
@@ -171,11 +159,9 @@ function contact(event) {
     .catch(err => {
       if (loading) loading.style.display = "none";
       alert("Comms error. Direct uplink to: drew.t.ernst@gmail.com");
-      console.error(err);
     });
 }
 
-// Particle Engine Logic
 var ParticleEngine = (function() {
 	'use strict';
 
@@ -193,22 +179,19 @@ var ParticleEngine = (function() {
 		this.totalHeight = this.canvasHeight = document.getElementById(canvas_id).height = document.getElementById(canvas_id).offsetHeight;
 		this.compositeStyle = "lighter";
 
-        // Dynamic Colors based on theme
         var pColor1, pColor2, pColor3, lColor1, lColor2, lColor3;
 
         if (isYellowTheme) {
-            // Graphite Scheme
-            pColor1 = "#A3B18A"; // Soft Green
-            pColor2 = "#E29578"; // Muted Pink
-            pColor3 = "#84A59D"; // Muted Teal
+            pColor1 = "#A3B18A";
+            pColor2 = "#E29578";
+            pColor3 = "#84A59D";
             lColor1 = "#3D4042";
             lColor2 = "#A3B18A";
             lColor3 = "#E29578";
         } else {
-            // Stormy Monochromatic Blue Scheme
-            pColor1 = "#7DD3FC"; // Sky Blue
-            pColor2 = "#94A3B8"; // Slate Gray
-            pColor3 = "#38BDF8"; // Ocean Blue
+            pColor1 = "#7DD3FC";
+            pColor2 = "#94A3B8";
+            pColor3 = "#38BDF8";
             lColor1 = "#1E293B";
             lColor2 = "#334155";
             lColor3 = "#0F172A";

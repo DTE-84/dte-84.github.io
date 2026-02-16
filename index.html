@@ -62,35 +62,31 @@
 
     <div id="protocol-loader">
       <div class="loader-content">
-        <div class="glitch-text" data-text="REBOOTING PROTOCOL...">
-          REBOOTING PROTOCOL...
-        </div>
+        <div class="glitch-text" data-text="LOADING...">LOADING...</div>
         <div class="load-bar"><div class="load-progress"></div></div>
       </div>
     </div>
 
     <nav class="circuit-nav">
       <div class="nav-container">
-        <!-- FAR LEFT -->
         <div class="nav-section-left">
           <div class="nav-brand-container flex items-center gap-4">
             <div class="tech-logo">
               <div class="logo-hex"><span class="logo-text">DTE</span></div>
             </div>
             <div class="brand-info flex flex-col">
-              <span class="brand-text text-[9px]">SYSTEM_v22.8</span>
+              <span class="brand-text text-[9px]">PORTFOLIO</span>
               <div class="system-status flex items-center gap-2">
                 <span class="status-dot"></span>
                 <span
                   class="status-text text-[8px] opacity-50 uppercase tracking-widest font-black"
-                  >Active</span
+                  >Live</span
                 >
               </div>
             </div>
           </div>
         </div>
 
-        <!-- CENTER -->
         <div class="nav-section-center">
           <ul class="nav-links" id="navLinksList">
             <li><a href="#home" class="tech-tab">Home</a></li>
@@ -106,14 +102,22 @@
             </li>
           </ul>
 
-          <div id="hamburger-trigger" class="lg:hidden flex flex-col gap-1.5 cursor-pointer z-[1001] translate-x-12">
-            <span class="w-6 h-0.5 bg-accent transition-all duration-300 origin-center"></span>
-            <span class="w-6 h-0.5 bg-accent transition-all duration-300"></span>
-            <span class="w-6 h-0.5 bg-accent transition-all duration-300 origin-center"></span>
+          <div
+            id="hamburger-trigger"
+            class="lg:hidden flex flex-col gap-1.5 cursor-pointer z-[1001] translate-x-12"
+          >
+            <span
+              class="w-6 h-0.5 bg-accent transition-all duration-300 origin-center"
+            ></span>
+            <span
+              class="w-6 h-0.5 bg-accent transition-all duration-300"
+            ></span>
+            <span
+              class="w-6 h-0.5 bg-accent transition-all duration-300 origin-center"
+            ></span>
           </div>
         </div>
 
-        <!-- FAR RIGHT -->
         <div class="nav-section-right">
           <div class="flex items-center gap-6 justify-end">
             <div class="protocol-switch flex items-center gap-3">
@@ -125,7 +129,7 @@
               <label for="protocol-toggle" class="slider"></label>
               <span
                 class="protocol-label hide-on-mobile text-[10px] font-bold text-accent tracking-widest uppercase"
-                >Protocol</span
+                >Theme</span
               >
             </div>
           </div>
@@ -133,7 +137,6 @@
       </div>
     </nav>
 
-    <!-- Floating Mail Button -->
     <button
       class="mail__btn click"
       onclick="toggleModal()"
@@ -147,12 +150,12 @@
         <h3
           class="modal__title text-2xl font-bold mb-4 uppercase tracking-widest text-black"
         >
-          DTE SYSTEM_v22.8
+          Drew T Ernst
         </h3>
         <h4
           class="modal__sub-title text-black/60 font-bold mb-4 uppercase tracking-widest text-[10px]"
         >
-          Identity Profile
+          Frontend Developer
         </h4>
         <p
           class="modal__para leading-relaxed text-black/80 text-sm font-medium"
@@ -170,7 +173,7 @@
         <h3
           class="modal__title text-2xl font-bold mb-6 uppercase tracking-widest text-accent"
         >
-          Uplink
+          Contact
         </h3>
         <form id="contact__form" onsubmit="contact(event)" class="space-y-4">
           <div class="form__item">
@@ -180,7 +183,7 @@
             >
             <input
               class="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none font-mono text-xs uppercase placeholder:text-black/30"
-              placeholder="INPUT NAME..."
+              placeholder="NAME..."
               name="user_name"
               type="text"
               required
@@ -193,7 +196,7 @@
             >
             <input
               class="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none font-mono text-xs uppercase placeholder:text-black/30"
-              placeholder="INPUT EMAIL..."
+              placeholder="EMAIL..."
               name="user_email"
               type="email"
               required
@@ -202,11 +205,11 @@
           <div class="form__item">
             <label
               class="block text-[9px] font-bold uppercase mb-1 text-accent tracking-[0.2em]"
-              >Transmission</label
+              >Message</label
             >
             <textarea
               class="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none h-32 font-mono text-xs uppercase placeholder:text-black/30"
-              placeholder="ENTER MESSAGE..."
+              placeholder="MESSAGE..."
               name="message"
               required
             ></textarea>
@@ -215,7 +218,7 @@
             id="contact__submit"
             class="w-full py-3 border-2 border-accent text-accent font-bold uppercase tracking-widest hover:bg-accent hover:text-black transition-all text-xs"
           >
-            Send transmission
+            Send Message
           </button>
         </form>
       </div>
@@ -322,7 +325,7 @@
             <h2
               class="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase"
             >
-              01 // Identity
+              Identity
             </h2>
             <div class="h-[1px] flex-grow bg-accent/20"></div>
           </div>
@@ -392,13 +395,12 @@
             <h2
               class="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase"
             >
-              02 // Archive
+              Archive
             </h2>
             <div class="h-[1px] flex-grow bg-accent/20"></div>
           </div>
 
           <div class="space-y-32">
-            <!-- Featured Project: ISP Assistant Pro -->
             <div class="group grid md:grid-cols-2 gap-16 items-center relative">
               <div
                 class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"
@@ -412,11 +414,17 @@
                   class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl"
                 />
               </div>
-              <div class="border-l-2 border-accent/20 pl-8 group-hover:border-accent transition-all duration-500 relative">
-                <div class="md:absolute md:top-[6px] md:left-0 md:-translate-x-full md:pr-8 mb-6 md:mb-0">
-                  <span class="flex items-center gap-2 text-[8px] font-black uppercase tracking-[0.3em] text-accent animate-pulse whitespace-nowrap">
+              <div
+                class="border-l-2 border-accent/20 pl-8 group-hover:border-accent transition-all duration-500 relative"
+              >
+                <div
+                  class="md:absolute md:top-[6px] md:left-0 md:-translate-x-full md:pr-8 mb-6 md:mb-0"
+                >
+                  <span
+                    class="flex items-center gap-2 text-[8px] font-black uppercase tracking-[0.3em] text-accent animate-pulse whitespace-nowrap"
+                  >
                     <span class="w-2 h-2 rounded-full bg-accent"></span>
-                    Priority_Case_Study
+                    Featured Project
                   </span>
                 </div>
                 <div class="flex items-center gap-4 mb-6">
@@ -433,7 +441,9 @@
                 >
                   ISP Assistant Pro
                 </h3>
-                <p class="text-white/70 text-lg leading-relaxed mb-8 font-medium">
+                <p
+                  class="text-white/70 text-lg leading-relaxed mb-8 font-medium"
+                >
                   High-fidelity clinical drafting tool for Missouri DMH
                   providers, automating complex ISP documentation with
                   zero-knowledge architecture.
@@ -476,7 +486,7 @@
                 </div>
               </div>
             </div>
-            <!-- Project 1: CryptoLive -->
+
             <div class="group grid md:grid-cols-2 gap-16 items-center">
               <div
                 class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"
@@ -505,7 +515,9 @@
                 >
                   CryptoLive App
                 </h3>
-                <p class="text-white/70 text-lg leading-relaxed mb-8 font-medium">
+                <p
+                  class="text-white/70 text-lg leading-relaxed mb-8 font-medium"
+                >
                   Real-time cryptocurrency tracking with live price feeds and
                   dynamic visualization.
                 </p>
@@ -536,7 +548,6 @@
               </div>
             </div>
 
-            <!-- Project 2: Keano Modeling -->
             <div class="group grid md:grid-cols-2 gap-16 items-center">
               <div
                 class="md:order-2 relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"
@@ -553,7 +564,7 @@
               <div class="md:order-1">
                 <div class="flex items-center gap-4 mb-6">
                   <span
-                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    class="px-3 py-1.5 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
                     >Creative</span
                   >
                   <span class="text-xs text-zinc-400 font-mono tracking-[0.2em]"
@@ -565,7 +576,9 @@
                 >
                   Keano Modeling
                 </h3>
-                <p class="text-white/70 text-lg leading-relaxed mb-8 font-medium">
+                <p
+                  class="text-white/70 text-lg leading-relaxed mb-8 font-medium"
+                >
                   A professional high-fidelity modeling portfolio featuring
                   immersive visual galleries.
                 </p>
@@ -596,7 +609,6 @@
               </div>
             </div>
 
-            <!-- Project 3: Tony's Landscaping -->
             <div class="group grid md:grid-cols-2 gap-16 items-center">
               <div
                 class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"
@@ -613,7 +625,7 @@
               <div>
                 <div class="flex items-center gap-4 mb-6">
                   <span
-                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    class="px-3 py-1.5 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
                     >Service</span
                   >
                   <span class="text-xs text-zinc-400 font-mono tracking-[0.2em]"
@@ -625,8 +637,12 @@
                 >
                   Tony's Landscaping LLC
                 </h3>
-                <p class="text-white/70 text-lg leading-relaxed mb-8 font-medium">
-                  Premium landing page for a St. Louis landscaping company, featuring a custom interactive "Before & After" engine to showcase professional landscaping transformations.
+                <p
+                  class="text-white/70 text-lg leading-relaxed mb-8 font-medium"
+                >
+                  Premium landing page for a St. Louis landscaping company,
+                  featuring a custom interactive "Before & After" engine to
+                  showcase professional landscaping transformations.
                 </p>
                 <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
                   <span
@@ -655,7 +671,6 @@
               </div>
             </div>
 
-            <!-- Project 3: CarSales -->
             <div class="group grid md:grid-cols-2 gap-16 items-center">
               <div
                 class="md:order-2 relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"
@@ -672,7 +687,7 @@
               <div class="md:order-1">
                 <div class="flex items-center gap-4 mb-6">
                   <span
-                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    class="px-3 py-1.5 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
                     >Saas</span
                   >
                   <span class="text-xs text-zinc-400 font-mono tracking-[0.2em]"
@@ -684,7 +699,9 @@
                 >
                   CarSales Platform
                 </h3>
-                <p class="text-white/70 text-lg leading-relaxed mb-8 font-medium">
+                <p
+                  class="text-white/70 text-lg leading-relaxed mb-8 font-medium"
+                >
                   An automotive marketplace optimized for high-performance
                   discovery flows.
                 </p>
@@ -715,7 +732,6 @@
               </div>
             </div>
 
-            <!-- Project 4: TREACT -->
             <div class="group grid md:grid-cols-2 gap-16 items-center">
               <div
                 class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"
@@ -732,7 +748,7 @@
               <div>
                 <div class="flex items-center gap-4 mb-6">
                   <span
-                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    class="px-3 py-1.5 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
                     >Business</span
                   >
                   <span class="text-xs text-zinc-400 font-mono tracking-[0.2em]"
@@ -744,7 +760,9 @@
                 >
                   TREACT Landing
                 </h3>
-                <p class="text-white/70 text-lg leading-relaxed mb-8 font-medium">
+                <p
+                  class="text-white/70 text-lg leading-relaxed mb-8 font-medium"
+                >
                   High-converting business landing page emphasizing performance
                   and premium transitions.
                 </p>
@@ -775,7 +793,6 @@
               </div>
             </div>
 
-            <!-- Project 5: React E-Store -->
             <div class="group grid md:grid-cols-2 gap-16 items-center">
               <div
                 class="md:order-2 relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"
@@ -792,7 +809,7 @@
               <div class="md:order-1">
                 <div class="flex items-center gap-4 mb-6">
                   <span
-                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    class="px-3 py-1.5 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
                     >Commerce</span
                   >
                   <span class="text-xs text-zinc-400 font-mono tracking-[0.2em]"
@@ -804,7 +821,9 @@
                 >
                   React E-Store
                 </h3>
-                <p class="text-white/70 text-lg leading-relaxed mb-8 font-medium">
+                <p
+                  class="text-white/70 text-lg leading-relaxed mb-8 font-medium"
+                >
                   Modern e-commerce solution exploring advanced state management
                   and React Hooks.
                 </p>
@@ -835,7 +854,6 @@
               </div>
             </div>
 
-            <!-- Project 6: v1.0 Portfolio -->
             <div class="group grid md:grid-cols-2 gap-16 items-center">
               <div
                 class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"
@@ -852,7 +870,7 @@
               <div>
                 <div class="flex items-center gap-4 mb-6">
                   <span
-                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
+                    class="px-3 py-1.5 rounded-full text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase text-accent"
                     >Archive</span
                   >
                   <span class="text-xs text-zinc-400 font-mono tracking-[0.2em]"
@@ -864,7 +882,9 @@
                 >
                   v1.0 Portfolio
                 </h3>
-                <p class="text-white/70 text-lg leading-relaxed mb-8 font-medium">
+                <p
+                  class="text-white/70 text-lg leading-relaxed mb-8 font-medium"
+                >
                   My first dive into software development. A retrospective on my
                   learning journey.
                 </p>
@@ -909,7 +929,7 @@
             <div
               class="inline-block px-4 py-2 rounded-full border border-accent/20 bg-accent/5 text-accent text-[10px] font-bold uppercase tracking-[0.3em]"
             >
-              Contact // Transmission
+              Contact
             </div>
             <h2
               class="text-4xl md:text-5xl font-bold text-white uppercase tracking-tighter leading-none"
@@ -970,7 +990,7 @@
                   >
                   <input
                     class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white font-bold outline-none font-mono text-xs uppercase placeholder:text-white/20 focus:border-accent/50 transition-all"
-                    placeholder="ID_NAME"
+                    placeholder="NAME"
                     name="user_name"
                     type="text"
                     required
@@ -983,7 +1003,7 @@
                   >
                   <input
                     class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white font-bold outline-none font-mono text-xs uppercase placeholder:text-white/20 focus:border-accent/50 transition-all"
-                    placeholder="ID_EMAIL"
+                    placeholder="EMAIL"
                     name="user_email"
                     type="email"
                     required
@@ -993,11 +1013,11 @@
               <div class="form__item">
                 <label
                   class="block text-[9px] font-bold uppercase mb-2 text-accent tracking-[0.2em]"
-                  >Transmission</label
+                  >Message</label
                 >
                 <textarea
                   class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white font-bold outline-none h-32 font-mono text-xs uppercase placeholder:text-white/20 focus:border-accent/50 transition-all resize-none"
-                  placeholder="ENTER MESSAGE..."
+                  placeholder="MESSAGE..."
                   name="message"
                   required
                 ></textarea>
@@ -1024,7 +1044,7 @@
             <p
               class="font-mono text-[9px] uppercase tracking-[0.3em] opacity-40"
             >
-              System_v22.8 // Archive_2025
+              Portfolio 2025
             </p>
           </div>
           <div class="flex gap-8">
@@ -1050,13 +1070,11 @@
         </div>
       </div>
 
-      <!-- Decorative background elements -->
       <div
         class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"
       ></div>
     </footer>
 
-    <!-- Overlays for Contact Form -->
     <div class="modal__overlay modal__overlay--loading hidden">
       <i
         class="fas fa-spinner modal__overlay-spinner text-accent text-5xl animate-spin"
