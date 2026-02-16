@@ -9,7 +9,7 @@
   --theme-accent: #7DD3FC;
   --theme-accent-rgb: 125, 211, 252;
   --theme-text: #ffffff;
-  --theme-text-dim: rgba(255, 255, 255, 0.6);
+  --theme-text-dim: rgba(255, 255, 255, 0.75);
   --theme-shadow: rgba(125, 211, 252, 0.4);
   --container-width: 1100px;
 }
@@ -264,19 +264,29 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
 /* --- ABOUT REVEAL --- */
 .container-main { width: 100%; max-width: var(--container-width); margin: 0 auto; padding: 0 30px; }
 #about, #projects { padding: 100px 0; }
-.about-reveal { font-size: clamp(0.95rem, 2.2vw, 1.4rem); line-height: 1.5; font-weight: 500; color: var(--theme-text-dim); }
+.about-reveal { font-size: clamp(0.95rem, 2.2vw, 1.4rem); line-height: 1.5; font-weight: 600; color: var(--theme-text-dim); }
 .reveal-word { display: inline-block; opacity: 0; filter: blur(8px); transform: translateY(8px); transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1); margin-right: 0.2em; }
 .about-reveal.visible .reveal-word { opacity: 1; filter: blur(0); transform: translateY(0); }
 .bold { font-weight: 700; color: var(--theme-accent); text-shadow: 0 0 10px var(--theme-shadow); }
 
 .terminal-list { list-style: none; padding: 0; margin-top: 30px; }
-.terminal-list li { position: relative; padding-left: 25px; margin-bottom: 18px; font-size: clamp(0.85rem, 1.8vw, 1.1rem); color: var(--theme-text-dim); line-height: 1.5; }
+.terminal-list li { position: relative; padding-left: 25px; margin-bottom: 18px; font-size: clamp(0.85rem, 1.8vw, 1.1rem); color: var(--theme-text-dim); line-height: 1.5; font-weight: 600; }
 .terminal-list li::before {
   content: ">>"; position: absolute; left: 0; color: var(--theme-accent);
   font-family: "Zen Dots", sans-serif; font-size: 9px; top: 4px;
   animation: list-pulse 1.5s infinite;
 }
 @keyframes list-pulse { 0%, 100% { opacity: 1; transform: translateX(0); } 50% { opacity: 0.5; transform: translateX(3px); } }
+
+/* --- PROJECT GLOW EFFECT --- */
+.thumbnail-glow {
+  transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.group:hover .thumbnail-glow {
+  box-shadow: 0 0 60px -15px rgba(var(--theme-accent-rgb), 0.35);
+  background: rgba(var(--theme-accent-rgb), 0.03);
+}
 
 /* --- ORB TRACKER --- */
 .scroll-nav-container { position: fixed; top: 50%; left: 25px; transform: translateY(-50%); width: 2px; height: 260px; z-index: 1000; }
