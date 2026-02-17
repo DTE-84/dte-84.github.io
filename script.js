@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressBar = document.getElementById("progressBar");
   const orbs = document.querySelectorAll(".orb-wrapper");
 
+  // Hero H1 Letter Split
+  const heroH1 = document.querySelector(".hero-content h1");
+  if (heroH1) {
+    const text = heroH1.textContent.trim();
+    heroH1.innerHTML = text.split("").map((char, i) => {
+      if (char === " ") return `<span class="hero-letter">&nbsp;</span>`;
+      return `<span class="hero-letter" style="animation-delay: ${i * 0.1}s">${char}</span>`;
+    }).join("");
+  }
+
   if (loader) {
     setTimeout(() => {
       loader.style.opacity = "0";
@@ -70,10 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("scroll", () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    if (progressBar) progressBar.style.height = scrolled + "%";
+    const winScroll = window.scrollY || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
     const sections = ["home", "about", "projects", "footer"];
     let currentSection = "home";
@@ -82,14 +90,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const section = document.getElementById(id);
       if (section) {
         const sectionTop = section.offsetTop;
-        if (winScroll >= sectionTop - 100) {
+        if (winScroll >= sectionTop - 150) {
           currentSection = id;
         }
       }
     });
 
     orbs.forEach(orb => {
-      orb.classList.toggle("active", orb.getAttribute("data-section") === currentSection);
+      const wrapper = orb.closest(".orb-wrapper");
+      if (wrapper) {
+        wrapper.classList.toggle("active", wrapper.getAttribute("data-section") === currentSection);
+      }
     });
   });
 
