@@ -237,7 +237,8 @@
             class="typewriter text-lg md:text-xl font-mono uppercase tracking-[0.3em]"
             style="color: var(--theme-accent)"
           >
-            Frontend Developer // Problem Solver
+          <br>
+            Frontend Developer<span class="slashsmoke"> //</span> Problem Solver
           </p>
           <div
             class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
@@ -325,7 +326,7 @@
             <h2
               class="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase"
             >
-              Identity
+              <span class="text-accent/60">01</span><span class="slashblue"> //</span> Identity
             </h2>
             <div class="h-[1px] flex-grow bg-accent/20"></div>
           </div>
@@ -393,100 +394,109 @@
         <div class="container-main">
           <div class="flex items-center gap-6 mb-20">
             <h2
-              class="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase"
+              class="text-2xl md:text-3xl font-bold text-white text-decoration-underline tracking-widest uppercase"
             >
-              Archive
+              <span class="text-accent/60">02 </span><span class="slashblue">//</span> Case Study
             </h2>
             <div class="h-[1px] flex-grow bg-accent/20"></div>
           </div>
 
           <div class="space-y-32">
-            <div class="group grid md:grid-cols-2 gap-16 items-center relative">
-              <div
-                class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"
-              >
-                <div
-                  class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"
-                ></div>
-                <img
-                  src="./assets/Screenshot 2026-02-15 135946.png"
-                  alt="ISP Assistant Pro"
-                  class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl"
-                />
-              </div>
-              <div
-                class="border-l-2 border-accent/20 pl-8 group-hover:border-accent transition-all duration-500 relative"
-              >
-                <div
-                  class="md:absolute md:top-[6px] md:left-0 md:-translate-x-full md:pr-8 mb-6 md:mb-0"
-                >
+            <div class="group relative">
+              <!-- Technical Header -->
+              <div class="mb-8 flex items-end gap-6">
+                <div class="flex flex-col">
+                  <span class="text-[10px] font-mono text-accent/40 mb-1 tracking-[0.2em]">REF_ID: 2026_ISP_PRO</span>
                   <span
-                    class="flex items-center gap-2 text-[8px] font-black uppercase tracking-[0.3em] text-accent animate-pulse whitespace-nowrap"
+                    class="flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.3em] text-accent animate-pulse whitespace-nowrap"
                   >
                     <span class="w-2 h-2 rounded-full bg-accent"></span>
                     Featured Project
                   </span>
                 </div>
-                <div class="flex items-center gap-4 mb-6">
-                  <span
-                    class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/40 text-accent bg-accent/10 tracking-widest uppercase"
-                    >Healthcare Architecture</span
-                  >
-                  <span class="text-xs text-zinc-400 font-mono tracking-[0.2em]"
-                    >2026</span
-                  >
-                </div>
-                <h3
-                  class="text-4xl font-bold text-white mb-6 group-hover:text-accent transition-colors uppercase tracking-widest leading-tight"
+                <div class="h-[1px] flex-grow bg-accent/20 mb-1"></div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div
+                  class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"
                 >
-                  ISP Assistant Pro
-                </h3>
-                <p
-                  class="text-white/70 text-lg leading-relaxed mb-8 font-medium"
-                >
-                  High-fidelity clinical drafting tool for Missouri DMH
-                  providers, automating complex ISP documentation with
-                  zero-knowledge architecture.
-                </p>
-                <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
-                  <span
-                    class="text-[10px] bg-accent/10 px-3 py-1.5 rounded uppercase tracking-widest border border-accent/20"
-                    >Vanilla JS</span
-                  >
-                  <span
-                    class="text-[10px] bg-accent/10 px-3 py-1.5 rounded uppercase tracking-widest border border-accent/20"
-                    >HIPAA-Safe</span
-                  >
-                  <span
-                    class="text-[10px] bg-accent/10 px-3 py-1.5 rounded uppercase tracking-widest border border-accent/20"
-                    >OSHA Logic</span
-                  >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"
+                  ></div>
+                  <img
+                    src="./assets/Screenshot 2026-02-15 135946.png"
+                    alt="ISP Assistant Pro"
+                    class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-lg shadow-2xl"
+                  />
                 </div>
-                <div class="flex gap-8">
-                  <a
-                    href="https://dte-84.github.io/MCSDD-APP/"
-                    target="_blank"
-                    class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
-                    >Launch Terminal
-                    <iconify-icon
-                      icon="solar:arrow-right-up-linear"
-                      class="ml-2"
-                    ></iconify-icon
-                  ></a>
-                  <a
-                    href="case-study-isp.html"
-                    target="_blank"
-                    class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
-                    >Read Research
-                    <iconify-icon
-                      icon="solar:document-text-linear"
-                      class="ml-2"
-                    ></iconify-icon
-                  ></a>
+                <div
+                  class="border-l-2 border-accent/20 pl-8 group-hover:border-accent transition-all duration-500"
+                >
+                  <div class="flex items-center gap-4 mb-6">
+                    <span
+                      class="px-3 py-1 rounded-full text-[10px] font-bold border border-accent/40 text-accent bg-accent/10 tracking-widest uppercase"
+                      >Healthcare Architecture</span
+                    >
+                    <span class="text-xs text-zinc-400 font-mono tracking-[0.2em]"
+                      >2026</span
+                    >
+                  </div>
+                                  <h3
+                                    class="text-4xl font-bold text-white mb-6 group-hover:text-accent transition-colors uppercase tracking-widest leading-tight"
+                                  >
+                                    ISP Assistant Pro
+                                  </h3>
+                                  <p
+                                    class="text-white/70 text-lg leading-relaxed mb-8 font-medium about-reveal reveal-reverse"
+                                  >
+                                    High-fidelity clinical drafting tool for Missouri DMH
+                                    providers, automating complex ISP documentation with
+                                    zero-knowledge architecture.
+                                  </p>                  <div class="flex flex-wrap gap-3 mb-10 text-accent font-bold">
+                    <span
+                      class="text-[10px] bg-accent/10 px-3 py-1.5 rounded uppercase tracking-widest border border-accent/20"
+                      >Vanilla JS</span
+                    >
+                    <span
+                      class="text-[10px] bg-accent/10 px-3 py-1.5 rounded uppercase tracking-widest border border-accent/20"
+                      >HIPAA-Safe</span
+                    >
+                    <span
+                      class="text-[10px] bg-accent/10 px-3 py-1.5 rounded uppercase tracking-widest border border-accent/20"
+                      >OSHA Logic</span
+                    >
+                  </div>
+                  <div class="flex gap-8">
+                    <a
+                      href="https://dte-84.github.io/MCSDD-APP/"
+                      target="_blank"
+                      class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
+                      >Launch Terminal
+                      <iconify-icon
+                        icon="solar:arrow-right-up-linear"
+                        class="ml-2"
+                      ></iconify-icon
+                    ></a>
+                    <a
+                      href="case-study-isp.html"
+                      target="_blank"
+                      class="inline-flex items-center text-sm font-bold text-white border-b-2 border-accent/30 pb-1 hover:border-accent hover:text-accent transition-all uppercase tracking-widest"
+                      >Read Research
+                      <iconify-icon
+                        icon="solar:document-text-linear"
+                        class="ml-2"
+                      ></iconify-icon
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
-
+<h2
+              class="text-2xl md:text-3xl font-bold text-white text-decoration-underline tracking-widest uppercase"
+            >
+              <span class="text-accent/60">03 </span><span class="slashblue">//</span> Archive
+            </h2>
             <div class="group grid md:grid-cols-2 gap-16 items-center">
               <div
                 class="relative rounded-xl overflow-hidden border border-white/5 bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/30 transition-all duration-700 p-4 md:p-6 thumbnail-glow"

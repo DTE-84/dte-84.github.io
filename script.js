@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  let globalWordIndex = 0;
   document.querySelectorAll(".about-reveal").forEach((el) => {
     const content = el.innerHTML;
     const newContent = content
@@ -49,8 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
     el.innerHTML = newContent;
 
     const words = el.querySelectorAll(".reveal-word");
+    const isReverse = el.classList.contains("reveal-reverse");
     words.forEach((word, i) => {
-      word.style.transitionDelay = `${i * 35}ms`;
+      const index = isReverse ? words.length - 1 - i : i;
+      word.style.transitionDelay = `${index * 35}ms`;
     });
   });
 
@@ -58,6 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
       }
     });
   }, { threshold: 0.15 });
@@ -79,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const section = document.getElementById(id);
       if (section) {
         const sectionTop = section.offsetTop;
-        if (winScroll >= sectionTop - 300) {
+        if (winScroll >= sectionTop - 100) {
           currentSection = id;
         }
       }
