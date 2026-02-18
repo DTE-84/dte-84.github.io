@@ -70,18 +70,6 @@
 
 .tech-tab-hover-swap:hover .tab-text {
   display: block;
-  animation: tracking-in 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-}
-
-@keyframes tracking-in {
-  from {
-    letter-spacing: -1px;
-    opacity: 0;
-  }
-  to {
-    letter-spacing: 0.5px;
-    opacity: 1;
-  }
 }
 
 .toolkit-header {
@@ -341,26 +329,64 @@ h6,
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 0 60px 0 35px;
-  display: grid;
-  grid-template-columns: minmax(250px, 1fr) auto minmax(250px, 1fr);
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.nav-section-left {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.nav-section-left, .nav-section-right {
+  flex: 0 1 auto;
 }
+
 .nav-section-center {
+  flex: 1 1 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.nav-section-right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+  .nav-section-center {
+    order: 3;
+    width: auto;
+    flex: 0 0 auto;
+  }
+  .nav-section-right {
+    order: 2;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 18px;
+  }
+  .brand-info {
+    display: none;
+  }
+  .nav-container {
+    padding: 0 15px;
+  }
+}
+
+.hero-content h1 {
+  font-family: "Orbitron", sans-serif !important;
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: whitesmoke;
+  position: relative;
+  display: inline-block;
+  letter-spacing: clamp(4px, 2vw, 8px);
+  z-index: 10;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 
 .logo-hex {
