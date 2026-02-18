@@ -1,0 +1,12 @@
+# Ignore large video files that exceed GitHub's 100MB limit
+assets/*.mov
+assets/*.mp4
+assets/*.avi
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Workspace settings
+.vscode/
+.idea/
