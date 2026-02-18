@@ -27,6 +27,65 @@
         color: #ffffff;
         line-height: 1.6;
       }
+      
+      /* Table of Contents Styling */
+      .toc-nav {
+        position: fixed;
+        left: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 180px;
+        z-index: 100;
+        display: none; /* Hidden by default, shown on large screens */
+      }
+
+      @media (min-width: 1280px) {
+        .toc-nav { display: block; }
+      }
+
+      .toc-list {
+        list-style: none;
+        padding-left: 0;
+        border-left: 1px solid rgba(0, 255, 204, 0.1);
+      }
+
+      .toc-item {
+        position: relative;
+        padding: 10px 0 10px 20px;
+      }
+
+      .toc-link {
+        color: rgba(255, 255, 255, 0.4);
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-family: "Orbitron", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        transition: all 0.3s ease;
+        display: block;
+      }
+
+      .toc-item.active .toc-link {
+        color: var(--theme-accent);
+        transform: translateX(5px);
+      }
+
+      .toc-item::before {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 50%;
+        width: 2px;
+        height: 0;
+        background: var(--theme-accent);
+        transition: all 0.3s ease;
+        transform: translateY(-50%);
+      }
+
+      .toc-item.active::before {
+        height: 100%;
+      }
+
       .font-zen {
         font-family: "Orbitron", sans-serif;
         letter-spacing: 0.05em;
@@ -121,6 +180,27 @@
         class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#00ffcc11_0%,_transparent_50%)]"
       ></div>
     </div>
+
+    <!-- Table of Contents -->
+    <nav class="toc-nav">
+      <ul class="toc-list">
+        <li class="toc-item active" data-section="challenge">
+          <a href="#challenge" class="toc-link">01 // The Challenge</a>
+        </li>
+        <li class="toc-item" data-section="solution">
+          <a href="#solution" class="toc-link">02 // The Solution</a>
+        </li>
+        <li class="toc-item" data-section="execution">
+          <a href="#execution" class="toc-link">03 // The Execution</a>
+        </li>
+        <li class="toc-item" data-section="impact">
+          <a href="#impact" class="toc-link">04 // The Impact</a>
+        </li>
+        <li class="toc-item" data-section="appendix">
+          <a href="#appendix" class="toc-link">05 // Appendix</a>
+        </li>
+      </ul>
+    </nav>
 
     <div class="max-w-5xl mx-auto relative">
       <header class="mb-12">
@@ -229,7 +309,7 @@
       </div>
 
       <div class="space-y-32">
-        <section class="grid lg:grid-cols-3 gap-12">
+        <section id="challenge" class="grid lg:grid-cols-3 gap-12">
           <div class="lg:col-span-1">
             <h2
               class="text-2xl font-black uppercase tracking-tight sticky top-12"
@@ -290,7 +370,7 @@
           </div>
         </section>
 
-        <section class="grid lg:grid-cols-3 gap-12">
+        <section id="solution" class="grid lg:grid-cols-3 gap-12">
           <div class="lg:col-span-1">
             <h2
               class="text-2xl font-black uppercase tracking-tight sticky top-12"
@@ -354,7 +434,7 @@
           </div>
         </section>
 
-        <section class="grid lg:grid-cols-3 gap-12">
+        <section id="execution" class="grid lg:grid-cols-3 gap-12">
           <div class="lg:col-span-1">
             <h2
               class="text-2xl font-black uppercase tracking-tight sticky top-12"
@@ -417,7 +497,7 @@
           </div>
         </section>
 
-        <section class="grid lg:grid-cols-3 gap-12">
+        <section id="impact" class="grid lg:grid-cols-3 gap-12">
           <div class="lg:col-span-1">
             <h2
               class="text-2xl font-black uppercase tracking-tight sticky top-12"
@@ -483,7 +563,7 @@
           </div>
         </section>
 
-        <section class="grid lg:grid-cols-3 gap-12">
+        <section id="appendix" class="grid lg:grid-cols-3 gap-12">
           <div class="lg:col-span-1">
             <h2
               class="text-2xl font-black uppercase tracking-tight sticky top-12"
@@ -613,5 +693,26 @@
         Portfolio 2025 // Marion County DMH Solution
       </p>
     </footer>
+
+    <script>
+      // Table of Contents Scroll-Spy
+      window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
+            const tocItem = document.querySelector(`.toc-item[data-section="${id}"]`);
+            
+            if (entry.isIntersecting) {
+              document.querySelectorAll('.toc-item').forEach(item => item.classList.remove('active'));
+              if (tocItem) tocItem.classList.add('active');
+            }
+          });
+        }, { threshold: 0.2, rootMargin: "-100px 0px -70% 0px" });
+
+        document.querySelectorAll('section[id]').forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
   </body>
 </html>
