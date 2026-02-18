@@ -98,15 +98,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = ["home", "about", "projects", "footer"];
     let currentSection = "home";
 
-    sections.forEach((id) => {
-      const section = document.getElementById(id);
-      if (section) {
-        const sectionTop = section.offsetTop;
-        if (winScroll >= sectionTop - 150) {
-          currentSection = id;
+    const isAtBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 100;
+
+    if (isAtBottom) {
+      currentSection = "footer";
+    } else {
+      sections.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          if (winScroll >= sectionTop - 150) {
+            currentSection = id;
+          }
         }
-      }
-    });
+      });
+    }
 
     orbs.forEach((orb) => {
       const wrapper = orb.closest(".orb-wrapper");
