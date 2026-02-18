@@ -27,7 +27,7 @@
         color: #ffffff;
         line-height: 1.6;
       }
-      
+
       /* Table of Contents Styling */
       .toc-nav {
         position: fixed;
@@ -40,7 +40,9 @@
       }
 
       @media (min-width: 1280px) {
-        .toc-nav { display: block; }
+        .toc-nav {
+          display: block;
+        }
       }
 
       .toc-list {
@@ -696,20 +698,27 @@
 
     <script>
       // Table of Contents Scroll-Spy
-      window.addEventListener('DOMContentLoaded', () => {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            const id = entry.target.getAttribute('id');
-            const tocItem = document.querySelector(`.toc-item[data-section="${id}"]`);
-            
-            if (entry.isIntersecting) {
-              document.querySelectorAll('.toc-item').forEach(item => item.classList.remove('active'));
-              if (tocItem) tocItem.classList.add('active');
-            }
-          });
-        }, { threshold: 0.2, rootMargin: "-100px 0px -70% 0px" });
+      window.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              const id = entry.target.getAttribute("id");
+              const tocItem = document.querySelector(
+                `.toc-item[data-section="${id}"]`,
+              );
 
-        document.querySelectorAll('section[id]').forEach((section) => {
+              if (entry.isIntersecting) {
+                document
+                  .querySelectorAll(".toc-item")
+                  .forEach((item) => item.classList.remove("active"));
+                if (tocItem) tocItem.classList.add("active");
+              }
+            });
+          },
+          { threshold: 0.2, rootMargin: "-100px 0px -70% 0px" },
+        );
+
+        document.querySelectorAll("section[id]").forEach((section) => {
           observer.observe(section);
         });
       });
