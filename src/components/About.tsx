@@ -27,13 +27,11 @@ const RevealText: React.FC<{ text: string, isReverse?: boolean }> = ({ text, isR
     <p ref={containerRef} className={`about-reveal ${isVisible ? 'visible' : ''}`}>
       {words.map((word, i) => {
         const index = isReverse ? words.length - 1 - i : i;
-        const isBold = word.startsWith('**') && word.endsWith('**');
-        const cleanWord = isBold ? word.slice(2, -2) : word;
         
         return (
           <span 
             key={i} 
-            className={`reveal-word inline-block opacity-0 blur-[8px] translate-y-[8px] transition-all duration-[0.8s] ease-[cubic-bezier(0.23,1,0.32,1)] mr-[0.2em] ${isBold ? 'bold' : ''}`}
+            className={`reveal-word inline-block opacity-0 blur-[8px] translate-y-[8px] transition-all duration-[0.8s] ease-[cubic-bezier(0.23,1,0.32,1)] mr-[0.2em]`}
             style={{ 
               transitionDelay: `${index * 35}ms`,
               opacity: isVisible ? 1 : 0,
@@ -41,7 +39,7 @@ const RevealText: React.FC<{ text: string, isReverse?: boolean }> = ({ text, isR
               transform: isVisible ? 'translateY(0)' : 'translateY(8px)'
             }}
           >
-            {cleanWord}
+            {word}
           </span>
         );
       })}
@@ -62,9 +60,9 @@ const About: React.FC = () => {
 
         <div className="grid lg:grid-cols-3 gap-12 lg:gap-20">
           <div className="lg:col-span-2 space-y-12">
-            <RevealText text='A results-oriented **Frontend-Developer** with a background in operations and management. I specialize in building intuitive, user-centric web applications where technical precision meets business logic.' />
-            <RevealText text='My previous career in leadership taught me that the best software isn’t built in a vacuum — it’s the result of **clear-communication** and **effective-collaboration**. I excel in cross-functional teams with the ability to turn complex requirements into seamless digital experiences.' />
-            <RevealText text='I build software with a focus on clarity, usability, and impact. Transitioning from a successful career in operations to Frontend development. I bring a **unique-perspective** and **"business-first"-lens** to the engineering process.' />
+            <RevealText text='A results-oriented Frontend Developer with a background in operations and management. I specialize in building intuitive, user-centric web applications where technical precision meets business logic.' />
+            <RevealText text='My previous career in leadership taught me that the best software isn’t built in a vacuum — it’s the result of clear communication and effective collaboration. I excel in cross-functional teams with the ability to turn complex requirements into seamless digital experiences.' />
+            <RevealText text='I build software with a focus on clarity, usability, and impact. Transitioning from a successful career in operations to Frontend development. I bring a unique perspective and "business-first" lens to the engineering process.' />
           </div>
 
           <div className="space-y-10">

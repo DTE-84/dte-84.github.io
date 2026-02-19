@@ -32,30 +32,22 @@
 
 /* Specific overrides for yellow theme highlights */
 [data-theme="yellow"] .bold {
-  color: var(--theme-offset) !important;
-  text-shadow: 0 0 10px rgba(226, 149, 120, 0.4);
+  color: var(--theme-accent);
 }
 
-/* Ensure only dividing lines or underlines change to orange on hover */
+/* Restrict orange strictly to hover lines/underlines */
 [data-theme="yellow"] a:hover {
-  color: var(--theme-accent) !important; /* Keep text sage even on hover */
+  color: var(--theme-accent) !important; /* Force text to stay sage */
 }
 
-/* Targeting project links underlines/borders specifically */
-[data-theme="yellow"] a:hover .border-accent,
-[data-theme="yellow"] a:hover.border-accent {
+/* Target the actual border lines in the projects section */
+[data-theme="yellow"] .border-b-2:hover {
   border-color: var(--theme-offset) !important;
 }
 
 [data-theme="yellow"] .tech-tab:hover {
   border-color: var(--theme-offset) !important;
-  color: var(--theme-offset) !important; /* Tech tabs keep offset text on hover as they are more like buttons */
-}
-
-/* The 'Read Research' and 'Launch Terminal' lines */
-[data-theme="yellow"] .border-b-2:hover {
-  border-color: var(--theme-offset) !important;
-  color: var(--theme-accent) !important; /* Keep text sage */
+  color: var(--theme-accent) !important;
 }
 
 @font-face {
