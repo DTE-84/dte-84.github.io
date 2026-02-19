@@ -68,12 +68,16 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label {
   font-family: var(--font-orbitron) !important;
 }
 
-.glitch-text {
+.glitch-text, .glitch-text * {
   font-family: "SD Glitch", sans-serif !important;
 }
 
-.glitch-title {
+.glitch-title, .glitch-title * {
   font-family: "SD Glitch", sans-serif !important;
+}
+
+.orbitron-text {
+  font-family: var(--font-orbitron) !important;
 }
 
 /* Custom Animations from Original style.css */
@@ -218,7 +222,7 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label {
 }
 
 .toolkit-header {
-  font-family: var(--font-orbitron);
+  font-family: var(--font-orbitron) !important;
   font-size: 10px;
   letter-spacing: 6px;
   color: var(--theme-accent);
