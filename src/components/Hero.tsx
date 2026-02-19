@@ -1,27 +1,31 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Icon } from '@iconify/react';
 
 const Hero: React.FC = () => {
-  const [letters, setLetters] = useState<string[]>([]);
   const name = "Drew T Ernst";
-
-  useEffect(() => {
-    setLetters(name.split(""));
-  }, []);
+  const words = name.split(" ");
 
   return (
     <section id="home" className="hero min-h-screen flex items-center justify-center text-center pt-[100px] bg-transparent">
       <div className="container-main hero-content">
-        <h1 className="text-white font-bold uppercase leading-none mb-4 text-[clamp(2.5rem,10vw,6rem)] tracking-[clamp(4px,2vw,8px)] relative inline-block z-10 w-full overflow-wrap-break-word">
-          {letters.map((char, i) => (
-            <span 
-              key={i} 
-              className="hero-letter inline-block animate-[hero-wave-breathe_4s_ease-in-out_infinite] blur-[0.5px]" 
-              style={{ animationDelay: `${i * 0.1}s` }}
-            >
-              {char === " " ? "\u00A0" : char}
+        <h1 className="text-white font-bold uppercase leading-none mb-4 text-[clamp(2.2rem,10vw,6rem)] tracking-[clamp(4px,2vw,8px)] relative inline-block z-10 w-full">
+          {words.map((word, wordIndex) => (
+            <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.3em] last:mr-0">
+              {word.split("").map((char, charIndex) => {
+                // Calculate global index for animation delay
+                const globalIndex = name.indexOf(word) + charIndex;
+                return (
+                  <span 
+                    key={charIndex} 
+                    className="hero-letter inline-block animate-[hero-wave-breathe_4s_ease-in-out_infinite] blur-[0.5px]" 
+                    style={{ animationDelay: `${globalIndex * 0.1}s` }}
+                  >
+                    {char}
+                  </span>
+                );
+              })}
             </span>
           ))}
         </h1>
