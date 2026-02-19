@@ -55,13 +55,16 @@
   src: url("/assets/SdglitchdemoRegular-YzROj.ttf") format("truetype");
 }
 
-/* Base Styles */
 body {
-  font-family: var(--font-space);
+  font-family: var(--font-space), ui-sans-serif, system-ui, sans-serif;
   background: var(--theme-bg);
   color: var(--theme-text);
   overflow-x: hidden;
   transition: background 0.5s ease;
+}
+
+.logo-text, .protocol-label {
+  font-family: var(--font-space) !important;
 }
 
 h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label {
