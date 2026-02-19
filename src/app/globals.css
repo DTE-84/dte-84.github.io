@@ -68,6 +68,10 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label, .glitch-text {
   font-family: var(--font-orbitron) !important;
 }
 
+.glitch-title {
+  font-family: "SD Glitch", sans-serif !important;
+}
+
 /* Custom Animations from Original style.css */
 @keyframes main-flicker {
   0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
