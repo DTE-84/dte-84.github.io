@@ -23,11 +23,11 @@
 [data-theme="yellow"] {
   --theme-bg: #2b2b2b;
   --theme-bg-alt: #3d4042;
-  --theme-accent: #a3b18a;
-  --theme-offset: #e29578;
-  --theme-accent-rgb: 163, 177, 138;
+  --theme-accent: #e29578;
+  --theme-offset: #a3b18a;
+  --theme-accent-rgb: 226, 149, 120;
   --theme-text: #d7e3fc;
-  --theme-shadow: rgba(163, 177, 138, 0.4);
+  --theme-shadow: rgba(226, 149, 120, 0.4);
 }
 
 @font-face {
