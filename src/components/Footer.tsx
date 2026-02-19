@@ -80,7 +80,7 @@ const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
           </div>
           <div className="flex gap-8">
             <a href="https://github.com/dte-84" target="_blank" className="text-white/40 hover:text-accent transition-colors text-xl"><Icon icon="fa-brands:github" /></a>
-            <a href="https://www.linkedin.com/in/dte-84/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent transition-colors text-xl"><Icon icon="mdi:linkedin" /></a>
+            <a href="https://www.linkedin.com/in/dte84/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent transition-colors text-xl"><Icon icon="mdi:linkedin" /></a>
             <button onClick={onContactClick} className="text-white/40 hover:text-accent transition-colors text-xl"><Icon icon="fa-solid:envelope" /></button>
           </div>
         </div>

@@ -53,7 +53,7 @@ const ScrollNav: React.FC = () => {
           onClick={() => scrollToSection(section.id)}
         >
           <div className={`orb w-3 h-3 rounded-full border border-accent transition-all duration-400 z-[2] shadow-[0_0_10px_rgba(var(--theme-accent-rgb),0.2)] ${activeSection === section.id ? 'bg-accent scale-[1.3] shadow-[0_0_20px_var(--theme-accent)] animate-[orbPulse_1.5s_infinite]' : 'bg-[#0f172a]'}`} />
-          <span className={`orb-label ml-[55px] text-[8px] font-bold text-accent tracking-[2px] whitespace-nowrap transition-all duration-400 group-hover:opacity-100 group-hover:translate-x-0 ${activeSection === section.id ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[15px]'}`}>
+          <span className={`orb-label ml-[55px] text-[12px] font-bold text-accent tracking-[2px] whitespace-nowrap transition-all duration-400 group-hover:opacity-100 group-hover:translate-x-0 ${activeSection === section.id ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[15px]'}`}>
             {section.label}
           </span>
           {/* Tactical connecting line */}
