@@ -34,63 +34,64 @@ const Hero: React.FC = () => {
           style={{ color: 'var(--theme-accent)' }}
         >
           <br />
-          Frontend Developer<span className="slashblue text-offset"> {"//"}</span> Problem Solver
+          Frontend Developer <span className="text-offset" style={{ color: 'var(--theme-offset)', textShadow: '0 0 10px rgba(var(--theme-offset-rgb), 0.3)' }}>{"//"}</span> Problem Solver
         </p>
 
         {/* Interaction Stack */}
-        <div className=" mt-20 flex flex-col items-center gap-12">
-           <div className="flex justify-center my-8 md:my-0">
-              <a href="#projects" className="tech-tab view-works-uplink scale-150 relative overflow-hidden bg-accent/10 border-accent/40 shadow-[0_0_30px_rgba(var(--theme-accent-rgb),0.15)] z-[5] transition-all duration-[0.4s] hover:scale-[1.7] hover:bg-accent/20 hover:shadow-[0_0_40px_rgba(var(--theme-accent-rgb),0.4)] font-orbitron" style={{ width: '160px', height: '60px' }}>
-                My Work
-              </a>
-            </div>
-         
+        <div className="mt-20 flex flex-col items-center gap-14 md:gap-20 w-full">
+          <div className="flex justify-center">
+            <a 
+              href="#projects" 
+              className="tech-tab view-works-uplink scale-[1.25] md:scale-[1.4] relative overflow-hidden bg-accent/10 border-accent/40 shadow-[0_0_30px_rgba(var(--theme-accent-rgb),0.15)] z-[5] transition-all duration-[0.4s] hover:scale-[1.35] md:hover:scale-[1.55] hover:bg-accent/20 hover:shadow-[0_0_40px_rgba(var(--theme-accent-rgb),0.3)] font-orbitron" 
+              style={{ width: '150px', height: '55px' }}
+            >
+              My Work
+            </a>
+          </div>
 
           {/* Tactical Tech Array */}
-          <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-            {/* Left Wing */}
-            <div className="flex items-center gap-6 relative">
-              <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all">
-                <Icon icon="solar:atom-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
-                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent">React</span>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all">
-                  <Icon icon="solar:server-square-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
-                  <span className="tab-text md:hidden md:group-hover:block transition-all text-accent">Next.js</span>
-                </div>
-                <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all">
-                  <Icon icon="solar:pallete-2-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
-                  <span className="tab-text md:hidden md:group-hover:block transition-all text-accent">Tailwind</span>
-                </div>
-              </div>
-             
+          <div className="w-full flex flex-col items-center gap-12 max-w-[1400px] mx-auto px-4">
+            
+            {/* Toolkit Header (Top) */}
+            <div className="flex items-center justify-center gap-4 md:gap-8 py-4">
+              <div 
+                className="h-[1.5px] w-10 md:w-16 flex-shrink-0" 
+                style={{ backgroundColor: 'var(--theme-offset)', boxShadow: '0 0 10px var(--theme-offset)' }}
+              ></div>
+              <h4 className="text-[14px] md:text-[18px] font-bold text-accent uppercase tracking-[6px] md:tracking-[10px] whitespace-nowrap flicker-animation font-space [text-shadow:0_0_10px_rgba(var(--theme-accent-rgb),0.4)]">
+                My Toolkit
+              </h4>
+              <div 
+                className="h-[1.5px] w-10 md:w-16 flex-shrink-0" 
+                style={{ backgroundColor: 'var(--theme-offset)', boxShadow: '0 0 10px var(--theme-offset)' }}
+              ></div>
             </div>
 
-            {/* My Toolkit Header */}
-          <div className="relative flex items-center"></div>
-          <div className="absolute -right-12 top-1/2 w-8 h-[3px] bg-accent/20"></div>
-          <div className="toolkit-header">
-            My Toolkit
-          </div>
-<div className="absolute -left-12 top-1/2 w-8 h-[3px] bg-accent/20"></div>
-
-            {/* Right Wing */}
-            <div className="flex items-center gap-6 relative">
-             
-              <div className="flex flex-col gap-4">
-                <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all">
-                  <Icon icon="solar:layers-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
-                  <span className="tab-text md:hidden md:group-hover:block transition-all text-accent">TypeScript</span>
-                </div>
-                <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all">
-                  <Icon icon="solar:code-2-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
-                  <span className="tab-text md:hidden md:group-hover:block transition-all text-accent">JavaScript</span>
-                </div>
+            {/* Language Icons Row (Bottom) */}
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 max-w-[1000px]">
+              <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10" style={{ width: '125px', height: '48px' }}>
+                <Icon icon="solar:atom-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
+                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">React</span>
               </div>
-              <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all">
+              <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10" style={{ width: '125px', height: '48px' }}>
+                <Icon icon="solar:server-square-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
+                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">Next.js</span>
+              </div>
+              <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10" style={{ width: '125px', height: '48px' }}>
+                <Icon icon="solar:pallete-2-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
+                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">Tailwind</span>
+              </div>
+              <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10" style={{ width: '125px', height: '48px' }}>
+                <Icon icon="solar:layers-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
+                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">TypeScript</span>
+              </div>
+              <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10" style={{ width: '125px', height: '48px' }}>
+                <Icon icon="solar:code-2-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
+                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">JavaScript</span>
+              </div>
+              <div className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10" style={{ width: '125px', height: '48px' }}>
                 <Icon icon="solar:clapperboard-edit-linear" className="tab-icon text-accent text-xl md:group-hover:hidden transition-all" />
-                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent">CSS3</span>
+                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">CSS3</span>
               </div>
             </div>
           </div>
