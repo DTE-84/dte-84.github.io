@@ -146,7 +146,7 @@ const Projects: React.FC = () => {
                     Launch Terminal <Icon icon="solar:arrow-right-up-linear" className="ml-2" />
                   </a>
                   {project.caseStudy && (
-                    <Link href={project.caseStudy} className="inline-flex items-center text-sm font-bold text-accent border-b-2 border-accent pb-1 hover:border-white hover:text-white transition-all uppercase tracking-widest">
+                    <Link href={project.caseStudy} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-accent border-b-2 border-accent pb-1 hover:border-white hover:text-white transition-all uppercase tracking-widest">
                       Read Research <Icon icon="solar:document-text-linear" className="ml-2" />
                     </Link>
                   )}
