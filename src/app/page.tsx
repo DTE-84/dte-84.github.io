@@ -10,6 +10,7 @@ import ContactModal from '@/components/ContactModal';
 import ScrollNav from '@/components/ScrollNav';
 import { Icon } from '@iconify/react';
 
+// Trigger redeploy to sync local and remote versions
 export default function Home() {
   const [theme, setTheme] = useState('blue');
   const [isModalOpen, setIsModalOpen] = useState(false);
