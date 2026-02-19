@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
 
             {/* Center */}
             <div className="flex justify-center my-8 md:my-0">
-              <a href="#projects" className="tech-tab view-works-uplink scale-150 relative overflow-hidden bg-accent/10 border-accent/40 shadow-[0_0_30px_rgba(var(--theme-accent-rgb),0.15)] z-[5] transition-all duration-[0.4s] hover:scale-[1.7] hover:bg-accent/20 hover:shadow-[0_0_40px_rgba(var(--theme-accent-rgb),0.4)] font-orbitron" style={{ width: '130px', height: '50px' }}>
+              <a href="#projects" className="tech-tab view-works-uplink scale-150 relative overflow-hidden bg-accent/10 border-accent/40 shadow-[0_0_30px_rgba(var(--theme-accent-rgb),0.15)] z-[5] transition-all duration-[0.4s] hover:scale-[1.7] hover:bg-accent/20 hover:shadow-[0_0_40px_rgba(var(--theme-accent-rgb),0.4)] font-orbitron" style={{ width: '160px', height: '60px' }}>
                 My Work
               </a>
             </div>
