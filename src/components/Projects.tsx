@@ -3,6 +3,7 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -118,15 +119,23 @@ const Projects: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div className="relative rounded-none overflow-hidden border border-transparent bg-accent/5 backdrop-blur-md aspect-video group-hover:border-accent transition-all duration-700 p-4 md:p-6 thumbnail-glow">
-                {/* Tactical Brackets - Positioned at corners of the container, image is padded */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-accent opacity-40 group-hover:opacity-100 transition-opacity z-30"></div>
-                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-accent opacity-40 group-hover:opacity-100 transition-opacity z-30"></div>
-                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-accent opacity-40 group-hover:opacity-100 transition-opacity z-30"></div>
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-accent opacity-40 group-hover:opacity-100 transition-opacity z-30"></div>
+              <div className="relative rounded-none border border-transparent bg-accent/5 backdrop-blur-md aspect-video group-hover:border-offset transition-all duration-700 p-4 md:p-6 thumbnail-glow">
+                {/* Tactical Brackets - Positioned at corners of the container */}
+                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity z-30"></div>
+                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity z-30"></div>
+                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity z-30"></div>
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity z-30"></div>
                 
-                <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 z-10 rounded-sm shadow-xl" />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent h-1/2 w-full -top-full group-hover:top-full transition-all duration-[2000ms] pointer-events-none z-40"></div>
+                <div className="relative w-full h-full overflow-hidden rounded-sm z-10 shadow-xl">
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    fill
+                    quality={80}
+                    className="object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent h-1/2 w-full -top-full group-hover:top-full transition-all duration-[2000ms] pointer-events-none z-40"></div>
+                </div>
               </div>
 
               <div className="relative border-l-4 border-accent pl-10 py-8 bg-accent/[0.03] backdrop-blur-sm rounded-r-2xl group-hover:bg-accent/[0.05] transition-all duration-500">
@@ -166,14 +175,22 @@ const Projects: React.FC = () => {
         <div className="space-y-48">
           {projects.filter(p => !p.featured).map((project, idx) => (
             <div key={project.id} className="group grid md:grid-cols-2 gap-16 items-center">
-              <div className={`relative rounded-none overflow-hidden border border-transparent bg-white/5 backdrop-blur-sm aspect-video group-hover:border-accent/60 transition-all duration-700 p-4 md:p-6 thumbnail-glow ${idx % 2 !== 0 ? 'md:order-2' : ''}`}>
-                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-accent opacity-40 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-accent opacity-40 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-accent opacity-40 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-accent opacity-40 group-hover:opacity-100 transition-opacity"></div>
+              <div className={`relative rounded-none border border-transparent bg-white/5 backdrop-blur-sm aspect-video group-hover:border-offset/60 transition-all duration-700 p-4 md:p-6 thumbnail-glow ${idx % 2 !== 0 ? 'md:order-2' : ''}`}>
+                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity"></div>
                 
-                <div className="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"></div>
-                <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700 rounded-sm shadow-2xl" />
+                <div className="relative w-full h-full overflow-hidden rounded-sm z-10 shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"></div>
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    fill
+                    quality={80}
+                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700" 
+                  />
+                </div>
               </div>
               <div className={idx % 2 !== 0 ? 'md:order-1' : ''}>
                 <div className="flex items-center gap-4 mb-6">

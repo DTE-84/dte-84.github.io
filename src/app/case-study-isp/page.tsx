@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
+import Image from 'next/image';
 
 export default function CaseStudyISP() {
   useEffect(() => {
@@ -104,9 +105,12 @@ export default function CaseStudyISP() {
         <div className="mb-32 relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffcc]/20 to-transparent blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
           <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/40 bg-black aspect-[21/9]">
-            <img
+            <Image
               src="/assets/mwisptop.png"
               alt="ISP Assistant Pro Hero"
+              fill
+              quality={80}
+              priority
               className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-700 hover:scale-105 cursor-pointer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -134,13 +138,13 @@ export default function CaseStudyISP() {
                 <div className="p-6 rounded-xl border border-[#00ffcc]/20 bg-white/5 backdrop-blur-sm">
                   <h4 className="text-[#00ffcc] text-[14px] font-black uppercase tracking-widest mb-3 font-orbitron">The Administrative Burden</h4>
                   <p className="text-base text-white/85">
-                    Case Managers (CMs) spent 40% of their week on manual data entry, leading to extreme "click-fatigue" and organizational burnout.
+                    Case Managers (CMs) spent 40% of their week on manual data entry, leading to extreme &quot;click-fatigue&quot; and organizational burnout.
                   </p>
                 </div>
                 <div className="p-6 rounded-xl border border-[#00ffcc]/20 bg-white/5 backdrop-blur-sm">
                   <h4 className="text-[#00ffcc] text-[14px] font-black uppercase tracking-widest mb-3 font-orbitron">The Compliance Gap</h4>
                   <p className="text-base text-white/85">
-                    State auditors require rigorous "Active Treatment" language. Vague phrasing led to rejected plans, delayed services, and high audit risk.
+                    State auditors require rigorous &quot;Active Treatment&quot; language. Vague phrasing led to rejected plans, delayed services, and high audit risk.
                   </p>
                 </div>
                 <div className="p-6 rounded-xl border border-[#00ffcc]/20 bg-white/5 backdrop-blur-sm border-red-500/20">
@@ -161,14 +165,16 @@ export default function CaseStudyISP() {
             </div>
             <div className="lg:col-span-2 space-y-12">
               <p className="text-lg text-white/95 font-medium leading-relaxed">
-                I engineered a Zero-Footprint Logic Engine to build a client-side web application that acts as a clinical "narrative calculator." This tool bridges the gap between raw client desires and Missouri-mandated clinical markers.
+                I engineered a Zero-Footprint Logic Engine to build a client-side web application that acts as a clinical &quot;narrative calculator.&quot; This tool bridges the gap between raw client desires and Missouri-mandated clinical markers.
               </p>
 
-              <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/20 bg-[#00ffcc]/5 p-2">
-                <img
+              <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/20 bg-[#00ffcc]/5 p-2 aspect-video">
+                <Image
                   src="/assets/mwhealth.png"
                   alt="ISP Workflow"
-                  className="rounded-xl opacity-80 shadow-2xl w-full hover:scale-105 transition-all duration-700 cursor-pointer"
+                  fill
+                  quality={80}
+                  className="rounded-xl opacity-80 shadow-2xl w-full h-full object-cover hover:scale-105 transition-all duration-700 cursor-pointer"
                 />
               </div>
 
@@ -178,7 +184,7 @@ export default function CaseStudyISP() {
                     <Icon icon="solar:widget-add-linear" className="text-[#00ffcc]" /> Modular Builder
                   </h4>
                   <p className="text-sm text-white/85 leading-loose">
-                    Uses a dropdown-driven "Building Block" approach to turn casual goals into standardized SMART goals instantly.
+                    Uses a dropdown-driven &quot;Building Block&quot; approach to turn casual goals into standardized SMART goals instantly.
                   </p>
                 </div>
                 <div className="space-y-4">
@@ -206,7 +212,7 @@ export default function CaseStudyISP() {
                   <div>
                     <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">Regulatory Discovery</h4>
                     <p className="text-sm text-white/95">
-                      Deep-dive analysis of Missouri 9 CSR 45-3.010 and the "Good Life" Framework to identify required clinical triggers.
+                      Deep-dive analysis of Missouri 9 CSR 45-3.010 and the &quot;Good Life&quot; Framework to identify required clinical triggers.
                     </p>
                   </div>
                 </div>
@@ -215,17 +221,19 @@ export default function CaseStudyISP() {
                   <div>
                     <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">Zero-Knowledge Architecture</h4>
                     <p className="text-sm text-white/95">
-                      Opted for a single-file HTML/JS deployment. By processing data only in the browser's volatile RAM, I bypassed the need for IT server infrastructure while maintaining 100% HIPAA compliance.
+                      Opted for a single-file HTML/JS deployment. By processing data only in the browser&apos;s volatile RAM, I bypassed the need for IT server infrastructure while maintaining 100% HIPAA compliance.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/20 bg-[#00ffcc]/5 p-2">
-                <img
+              <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/20 bg-[#00ffcc]/5 p-2 aspect-video">
+                <Image
                   src="/assets/Screenshot 2026-02-15 140038.png"
                   alt="Clinical Logic Builder"
-                  className="rounded-xl opacity-80 shadow-2xl w-full hover:scale-105 transition-all duration-700 cursor-pointer"
+                  fill
+                  quality={80}
+                  className="rounded-xl opacity-80 shadow-2xl w-full h-full object-cover hover:scale-105 transition-all duration-700 cursor-pointer"
                 />
               </div>
             </div>
@@ -284,7 +292,7 @@ export default function CaseStudyISP() {
               <div className="space-y-8">
                 <h3 className="text-white font-bold uppercase tracking-widest text-base border-b border-[#00ffcc]/40 pb-2 font-orbitron">I. Data Lifecycle Management</h3>
                 <p className="text-sm text-white/95">
-                  The primary security feature is its <span className="text-white font-bold">Stateless Architecture</span>. Unlike SaaS platforms, this tool functions as a "Client-Side Processor."
+                  The primary security feature is its <span className="text-white font-bold">Stateless Architecture</span>. Unlike SaaS platforms, this tool functions as a &quot;Client-Side Processor.&quot;
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20">
@@ -292,7 +300,7 @@ export default function CaseStudyISP() {
                     <p className="text-[14px] text-white/85">All logic executes in the browser RAM. Data never leaves Volatile Memory.</p>
                   </div>
                   <div className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20">
-                    <span className="text-[#00ffcc] text-[14px] font-black uppercase block mb-2 font-orbitron">The "Refresh" Wipe</span>
+                    <span className="text-[#00ffcc] text-[14px] font-black uppercase block mb-2 font-orbitron">The &quot;Refresh&quot; Wipe</span>
                     <p className="text-[14px] text-white/85">Closing the tab instantly purges all session data. No database, no POST requests.</p>
                   </div>
                 </div>
@@ -311,7 +319,7 @@ export default function CaseStudyISP() {
               <div className="space-y-6">
                 <h3 className="text-white font-bold uppercase tracking-widest text-base border-b border-[#00ffcc]/40 pb-2 font-orbitron">III. Deployment Strategy</h3>
                 <p className="text-base text-white/95">
-                  Hosted on the agency's <span className="text-white font-bold">internal drive</span>. It inherits existing Windows Active Directory permissions, removing the need for a separate login system.
+                  Hosted on the agency&apos;s <span className="text-white font-bold">internal drive</span>. It inherits existing Windows Active Directory permissions, removing the need for a separate login system.
                 </p>
               </div>
             </div>
@@ -323,7 +331,7 @@ export default function CaseStudyISP() {
                 <span className="text-[#00ffcc]/40">06 //</span> Conclusion
               </h2>
               <p className="text-xl font-space text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
-                "By leveraging a client-side JavaScript architecture, I provided the Marion County Department of Mental Health with a modern, high-speed drafting tool that satisfies the 'Security Rule' of HIPAA. This project demonstrates my ability to build high-impact tools within highly regulated environments where traditional cloud solutions are often prohibited."
+                &quot;By leveraging a client-side JavaScript architecture, I provided the Marion County Department of Mental Health with a modern, high-speed drafting tool that satisfies the &apos;Security Rule&apos; of HIPAA. This project demonstrates my ability to build high-impact tools within highly regulated environments where traditional cloud solutions are often prohibited.&quot;
               </p>
               <div className="flex justify-center gap-8">
                 <a

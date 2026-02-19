@@ -77,9 +77,9 @@ export default function Home() {
               className="lg:hidden flex flex-col gap-1.5 cursor-pointer z-[1001] w-8 h-8 justify-center items-center"
               onClick={toggleNav}
             >
-              <span className={`w-6 h-0.5 bg-accent transition-all duration-300 ${isNavActive ? 'rotate-45 translate-y-[4px]' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-accent transition-all duration-300 ${isNavActive ? 'rotate-45 translate-y-[4px] w-5' : ''}`}></span>
               <span className={`w-6 h-0.5 bg-accent transition-all duration-300 ${isNavActive ? 'opacity-0' : ''}`}></span>
-              <span className={`w-6 h-0.5 bg-accent transition-all duration-300 ${isNavActive ? '-rotate-45 -translate-y-[4px]' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-accent transition-all duration-300 ${isNavActive ? '-rotate-45 -translate-y-[4px] w-5' : ''}`}></span>
             </div>
           </div>
 

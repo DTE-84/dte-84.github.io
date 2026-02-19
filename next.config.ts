@@ -1,5 +1,10 @@
 import type { NextConfig } from "next";
 
+module.exports = {
+  images: {
+    qualities: [80],
+  },
+};
 const nextConfig: NextConfig = {
   output: 'export',
   images: {

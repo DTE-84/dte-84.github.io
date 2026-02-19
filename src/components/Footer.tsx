@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
           <div className="flex flex-col justify-between">
             <div className="space-y-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white uppercase tracking-tighter leading-none">
-                Let's build the{" "}
+                Let&apos;s build the{" "}
                 <span className="text-accent italic">Future</span> together.
               </h2>
               <p className="text-zinc-400 text-lg max-w-md leading-relaxed">
@@ -131,10 +131,10 @@ const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
               target="_blank"
               className="text-white/40 hover:text-accent transition-colors text-xl"
             >
-              <Icon icon="fa-brands:github" />
+              <Icon icon="mdi:github" />
             </a>
             <a
-              href="https://www.linkedin.com/in/dte84/"
+              href="https://www.linkedin.com/in/dte84"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/40 hover:text-accent transition-colors text-xl"
@@ -145,7 +145,7 @@ const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
               onClick={onContactClick}
               className="text-white/40 hover:text-accent transition-colors text-xl"
             >
-              <Icon icon="fa-solid:envelope" />
+              <Icon icon="mdi:email" />
             </button>
           </div>
         </div>
