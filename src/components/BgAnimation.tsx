@@ -54,7 +54,7 @@ const BgAnimation: React.FC = () => {
       draw() {
         if (!ctx) return;
         const isYellow = document.documentElement.getAttribute('data-theme') === 'yellow';
-        const color = isYellow ? '226, 149, 120' : '125, 211, 252';
+        const color = isYellow ? '163, 177, 138' : '125, 211, 252';
         ctx.fillStyle = `rgba(${color}, ${this.alpha})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);

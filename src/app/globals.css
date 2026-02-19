@@ -23,11 +23,28 @@
 [data-theme="yellow"] {
   --theme-bg: #2b2b2b;
   --theme-bg-alt: #3d4042;
-  --theme-accent: #e29578;
-  --theme-offset: #a3b18a;
-  --theme-accent-rgb: 226, 149, 120;
+  --theme-accent: #a3b18a;
+  --theme-offset: #e29578;
+  --theme-accent-rgb: 163, 177, 138;
   --theme-text: #d7e3fc;
-  --theme-shadow: rgba(226, 149, 120, 0.4);
+  --theme-shadow: rgba(163, 177, 138, 0.4);
+}
+
+/* Specific overrides for yellow theme highlights */
+[data-theme="yellow"] .bold {
+  color: var(--theme-offset);
+  text-shadow: 0 0 10px rgba(226, 149, 120, 0.4);
+}
+
+[data-theme="yellow"] a:hover, 
+[data-theme="yellow"] button:hover {
+  color: var(--theme-offset) !important;
+  border-color: var(--theme-offset) !important;
+}
+
+[data-theme="yellow"] .tech-tab:hover {
+  color: var(--theme-offset) !important;
+  border-color: var(--theme-offset) !important;
 }
 
 @font-face {
