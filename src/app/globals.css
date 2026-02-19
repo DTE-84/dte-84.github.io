@@ -67,11 +67,11 @@ body {
   font-family: var(--font-space) !important;
 }
 
-h1, .view-works-uplink {
+h1, h2, h3, h4, h5, h6, .view-works-uplink {
   font-family: var(--font-orbitron) !important;
 }
 
-h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label {
+.brand-text, .tech-tab, .orb-label, .protocol-label, .logo-text {
   font-family: var(--font-space) !important;
 }
 
