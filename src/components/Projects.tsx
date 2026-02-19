@@ -103,7 +103,7 @@ const Projects: React.FC = () => {
       <div className="container-main">
         <div className="flex items-center gap-6 mb-32">
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase">
-            <span style={{ color: 'var(--theme-offset)', opacity: 0.8 }}>02 //</span> Exploratory Case Study
+            <span style={{ color: 'var(--theme-accent)', opacity: 0.8 }}>02 //</span> Exploratory Case Study
           </h2>
           <div className="h-[1px] flex-grow bg-accent/60"></div>
         </div>
@@ -167,7 +167,7 @@ const Projects: React.FC = () => {
 
         <div className="flex items-center gap-6 mb-32">
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase">
-            <span style={{ color: 'var(--theme-offset)', opacity: 0.8 }}>03 //</span> The Archives
+            <span style={{ color: 'var(--theme-accent)', opacity: 0.8 }}>03 //</span> The Archives
           </h2>
           <div className="h-[1px] flex-grow bg-accent/60"></div>
         </div>
