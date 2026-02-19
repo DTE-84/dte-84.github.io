@@ -67,8 +67,12 @@ body {
   font-family: var(--font-space) !important;
 }
 
-h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label {
+h1, .view-works-uplink {
   font-family: var(--font-orbitron) !important;
+}
+
+h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label {
+  font-family: var(--font-space) !important;
 }
 
 .glitch-text {
@@ -76,7 +80,11 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label {
 }
 
 .orbitron-text {
-  font-family: var(--font-orbitron) !important;
+  font-family: var(--font-space) !important;
+}
+
+.flicker-animation {
+  animation: main-flicker 4s infinite;
 }
 
 /* Custom Animations from Original style.css */
@@ -221,7 +229,7 @@ h1, h2, h3, h4, h5, h6, .brand-text, .tech-tab, .orb-label {
 }
 
 .toolkit-header {
-  font-family: var(--font-orbitron) !important;
+  font-family: var(--font-space) !important;
   font-size: 10px;
   letter-spacing: 6px;
   color: var(--theme-accent);
