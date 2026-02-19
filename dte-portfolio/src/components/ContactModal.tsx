@@ -1,0 +1,53 @@
+'use client';
+
+import React from 'react';
+import { Icon } from '@iconify/react';
+
+interface ContactModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
+  return (
+    <div className={`fixed inset-0 z-[3000] flex items-center justify-center bg-black/90 backdrop-blur-[10px] transition-all duration-500 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+      <div className={`main-modal relative w-[95%] max-w-[950px] max-h-[85vh] bg-[#1e293b] rounded-xl flex border border-accent/20 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 ${isOpen ? 'scale-100' : 'scale-95'}`}>
+        {/* Left Half: About */}
+        <div className={`modal__half modal__about w-1/2 p-[35px] flex flex-col justify-center bg-accent text-black hidden md:flex transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
+          <h3 className="modal__title text-2xl font-bold mb-4 uppercase tracking-widest font-orbitron">Drew T Ernst</h3>
+          <h4 className="modal__sub-title text-black/60 font-bold mb-4 uppercase tracking-widest text-[10px]">Frontend Developer</h4>
+          <p className="modal__para leading-relaxed text-black/80 text-sm font-medium">
+            Specialized in high-fidelity frontend architecture and immersive user experiences. Teaching digital geometry to render at peak human emotion.
+          </p>
+        </div>
+        
+        {/* Right Half: Contact */}
+        <div className={`modal__half modal__contact w-full md:w-1/2 p-[35px] flex flex-col justify-center bg-[#1e293b] text-[#d7e3fc] relative transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full md:translate-x-full opacity-0'}`}>
+          <button onClick={onClose} className="absolute top-6 right-8 text-3xl cursor-pointer text-accent transition-transform z-50 p-2 group/close">
+            <Icon icon="bi:x-lg" className="modal__exit block transition-transform duration-300 group-hover/close:rotate-90 group-hover/close:scale-110" />
+          </button>
+          <h3 className="modal__title text-2xl font-bold mb-6 uppercase tracking-widest text-accent font-orbitron">Contact</h3>
+          <form className="space-y-4">
+            <div className="form__item">
+              <label className="block text-[9px] font-bold uppercase mb-1 text-accent tracking-[0.2em]">Name</label>
+              <input className="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none font-mono text-xs uppercase placeholder:text-black/30" placeholder="NAME..." name="user_name" type="text" required />
+            </div>
+            <div className="form__item">
+              <label className="block text-[9px] font-bold uppercase mb-1 text-accent tracking-[0.2em]">Email</label>
+              <input className="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none font-mono text-xs uppercase placeholder:text-black/30" placeholder="EMAIL..." name="user_email" type="email" required />
+            </div>
+            <div className="form__item">
+              <label className="block text-[9px] font-bold uppercase mb-1 text-accent tracking-[0.2em]">Message</label>
+              <textarea className="w-full p-3 bg-white border border-accent/20 rounded text-black font-bold outline-none h-32 font-mono text-xs uppercase placeholder:text-black/30" placeholder="MESSAGE..." name="message" required></textarea>
+            </div>
+            <button className="w-full py-3 border-2 border-accent text-accent font-bold uppercase tracking-widest hover:bg-accent hover:text-black transition-all text-xs">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactModal;
