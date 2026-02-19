@@ -2,6 +2,47 @@
 
 import React, { useEffect, useRef } from 'react';
 
+class Particle {
+  x: number;
+  y: number;
+  size: number;
+  speedX: number;
+  speedY: number;
+  alpha: number;
+  w: number;
+  h: number;
+
+  constructor(w: number, h: number) {
+    this.w = w;
+    this.h = h;
+    this.x = Math.random() * w;
+    this.y = Math.random() * h;
+    this.size = Math.random() * 2 + 0.5;
+    this.speedX = Math.random() * 1 - 0.5;
+    this.speedY = Math.random() * 1 - 0.5;
+    this.alpha = Math.random() * 0.5 + 0.1;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    if (this.x > this.w) this.x = 0;
+    else if (this.x < 0) this.x = this.w;
+    if (this.y > this.h) this.y = 0;
+    else if (this.y < 0) this.y = this.h;
+  }
+
+  draw(ctx: CanvasRenderingContext2D) {
+    const isYellow = document.documentElement.getAttribute('data-theme') === 'yellow';
+    const color = isYellow ? '163, 177, 138' : '125, 211, 252';
+    ctx.fillStyle = `rgba(${color}, ${this.alpha})`;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
 const BgAnimation: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -13,71 +54,35 @@ const BgAnimation: React.FC = () => {
     if (!ctx) return;
 
     let animationFrameId: number;
-    let particles: any[] = [];
+    let particles: Particle[] = [];
     let w: number, h: number;
 
     const resize = () => {
       w = canvas.width = window.innerWidth;
       h = canvas.height = window.innerHeight;
+      // Re-initialize particles on resize to ensure they stay within bounds
+      init();
     };
-
-    window.addEventListener('resize', resize);
-    resize();
-
-    class Particle {
-      x: number;
-      y: number;
-      size: number;
-      speedX: number;
-      speedY: number;
-      alpha: number;
-
-      constructor() {
-        this.x = Math.random() * w;
-        this.y = Math.random() * h;
-        this.size = Math.random() * 2 + 0.5;
-        this.speedX = Math.random() * 1 - 0.5;
-        this.speedY = Math.random() * 1 - 0.5;
-        this.alpha = Math.random() * 0.5 + 0.1;
-      }
-
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        if (this.x > w) this.x = 0;
-        else if (this.x < 0) this.x = w;
-        if (this.y > h) this.y = 0;
-        else if (this.y < 0) this.y = h;
-      }
-
-      draw() {
-        if (!ctx) return;
-        const isYellow = document.documentElement.getAttribute('data-theme') === 'yellow';
-        const color = isYellow ? '163, 177, 138' : '125, 211, 252';
-        ctx.fillStyle = `rgba(${color}, ${this.alpha})`;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
 
     const init = () => {
       particles = [];
       for (let i = 0; i < 150; i++) {
-        particles.push(new Particle());
+        particles.push(new Particle(w, h));
       }
     };
 
     const animate = () => {
+      if (!ctx) return;
       ctx.clearRect(0, 0, w, h);
       particles.forEach((p) => {
         p.update();
-        p.draw();
+        p.draw(ctx);
       });
       animationFrameId = requestAnimationFrame(animate);
     };
 
+    window.addEventListener('resize', resize);
+    resize();
     init();
     animate();
 
