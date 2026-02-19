@@ -36,22 +36,21 @@
   text-shadow: 0 0 10px rgba(226, 149, 120, 0.4);
 }
 
+/* Ensure only dividing lines or underlines change to orange on hover */
 [data-theme="yellow"] a:hover {
-  color: var(--theme-offset) !important;
+  /* Keep text original color unless it's a specific highlighted element */
 }
 
-/* Ensure the border-bottom on project links also uses the offset color on hover */
-[data-theme="yellow"] .border-accent {
-  border-color: var(--theme-accent);
-}
-
+/* Targeting project links underlines/borders specifically */
 [data-theme="yellow"] a:hover .border-accent,
-[data-theme="yellow"] a:hover.border-accent {
+[data-theme="yellow"] a:hover.border-accent,
+[data-theme="yellow"] .tech-tab:hover {
   border-color: var(--theme-offset) !important;
+  color: var(--theme-accent) !important; /* Keep text sage */
 }
 
-[data-theme="yellow"] .tech-tab:hover {
-  color: var(--theme-offset) !important;
+/* The 'Read Research' and 'Launch Terminal' lines */
+[data-theme="yellow"] .border-b-2:hover {
   border-color: var(--theme-offset) !important;
 }
 
