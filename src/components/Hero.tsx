@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="hero min-h-screen flex items-center justify-center text-center pt-[100px] bg-transparent">
       <div className="container-main hero-content">
-        <h1 className="text-white font-bold uppercase leading-none mb-4 text-[clamp(2.2rem,10vw,6rem)] tracking-[clamp(4px,2vw,8px)] relative inline-block z-10 w-full glitch-text">
+        <h1 className="text-white font-bold uppercase leading-none mb-4 text-[clamp(2.2rem,10vw,6rem)] tracking-[clamp(4px,2vw,8px)] relative inline-block z-10 w-full">
           {words.map((word, wordIndex) => (
             <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.3em] last:mr-0">
               {word.split("").map((char, charIndex) => {
