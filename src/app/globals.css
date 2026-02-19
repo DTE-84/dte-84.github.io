@@ -36,9 +36,17 @@
   text-shadow: 0 0 10px rgba(226, 149, 120, 0.4);
 }
 
-[data-theme="yellow"] a:hover, 
-[data-theme="yellow"] button:hover {
+[data-theme="yellow"] a:hover {
   color: var(--theme-offset) !important;
+}
+
+/* Ensure the border-bottom on project links also uses the offset color on hover */
+[data-theme="yellow"] .border-accent {
+  border-color: var(--theme-accent);
+}
+
+[data-theme="yellow"] a:hover .border-accent,
+[data-theme="yellow"] a:hover.border-accent {
   border-color: var(--theme-offset) !important;
 }
 

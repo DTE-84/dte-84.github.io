@@ -60,13 +60,13 @@ const About: React.FC = () => {
         <div className="grid lg:grid-cols-3 gap-12 lg:gap-20">
           <div className="lg:col-span-2 space-y-12">
             <RevealText>
-              A results-oriented Frontend Developer with a background in operations and management. I specialize in building intuitive, user-centric web applications where technical precision meets business logic.
+              A results-oriented <span className="bold">Frontend Developer</span> with a background in operations and management. I specialize in building intuitive, user-centric web applications where technical precision meets business logic.
             </RevealText>
             <RevealText>
-              My previous career in leadership taught me that the best software isn’t built in a vacuum — it’s the result of clear communication and effective collaboration. I excel in cross-functional teams with the ability to turn complex requirements into seamless digital experiences.
+              My previous career in leadership taught me that the best software isn’t built in a vacuum — it’s the result of <span className="bold">clear communication</span> and <span className="bold">effective collaboration</span>. I excel in cross-functional teams with the ability to turn complex requirements into seamless digital experiences.
             </RevealText>
             <RevealText>
-              I build software with a focus on clarity, usability, and impact. Transitioning from a successful career in operations to Frontend development. I bring a unique perspective and "business-first" lens to the engineering process.
+              I build software with a focus on clarity, usability, and impact. Transitioning from a successful career in operations to Frontend development. I bring a <span className="bold">unique perspective</span> and <span className="bold">"business-first" lens</span> to the engineering process.
             </RevealText>
           </div>
 
