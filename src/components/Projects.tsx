@@ -82,14 +82,14 @@ const Projects: React.FC = () => {
     },
     {
       id: "V1_PORTFOLIO",
-      title: "Legacy v1.0",
+      title: "Portfolio v1.0",
       category: "Archive Alpha",
       year: "2025",
       description:
         "The foundational release of my digital ecosystem. An exploratory look at early design protocols and interaction systems.",
       tags: ["HTML5", "CSS3", "JS"],
       image: "/assets/eportfolio1.jpg",
-      link: "https://dte-84.github.io/E-Portfolio/",
+      link: "https://github.com/DTE-84/E-Portfolio",
       featured: false,
     },
   ];
@@ -138,6 +138,23 @@ const Projects: React.FC = () => {
                       className="object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.05] transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent h-1/2 w-full -top-full group-hover:top-full transition-all duration-[2000ms] pointer-events-none z-40"></div>
+                  </div>
+
+                  {/* Overlapping Case Study Preview */}
+                  <div className="absolute -bottom-6 -right-6 w-[120px] md:w-[160px] aspect-[3/4] z-50 rounded-sm border border-white/20 bg-[#0a0a0c] p-1 shadow-[0_20px_50px_rgba(0,0,0,0.8)] hidden md:block group-hover:translate-y-[-10px] group-hover:border-accent/50 transition-all duration-500">
+                    <div className="relative w-full h-full overflow-hidden rounded-sm">
+                      <Image
+                        src="/assets/pcspap1.png"
+                        alt="Case Study Preview"
+                        fill
+                        className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                      />
+                      <div className="absolute inset-0 bg-accent/5 pointer-events-none"></div>
+                    </div>
+                    {/* Tiny label for the overlap */}
+                    <div className="absolute -top-3 left-2 bg-accent text-black text-[7px] font-black px-1.5 py-0.5 uppercase tracking-tighter">
+                      Research_DOC
+                    </div>
                   </div>
                 </div>
 
