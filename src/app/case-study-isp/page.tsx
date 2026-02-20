@@ -14,9 +14,12 @@ export default function CaseStudyISP() {
             let id = entry.target.getAttribute("id");
             // Group conclusion with appendix for TOC highlighting
             if (id === "conclusion") id = "appendix";
-            
+
             document.querySelectorAll(".toc-item").forEach((item) => {
-              item.classList.toggle("active", item.getAttribute("data-section") === id);
+              item.classList.toggle(
+                "active",
+                item.getAttribute("data-section") === id,
+              );
             });
           }
         });
