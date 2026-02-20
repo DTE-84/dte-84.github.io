@@ -54,8 +54,8 @@ const Hero: React.FC = () => {
         </p>
 
         {/* Interaction Stack */}
-        <div className="mt-20 flex flex-col items-center gap-14 md:gap-20 w-full">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+        <div className="mt-20 flex flex-col items-center gap-12 w-full">
+          <div className="flex justify-center mb-4">
             <a
               href="#projects"
               className="tech-tab view-works-uplink scale-[1.25] md:scale-[1.4] relative overflow-hidden bg-accent/10 border-accent/40 shadow-[0_0_30px_rgba(var(--theme-accent-rgb),0.15)] z-[5] transition-all duration-[0.4s] hover:scale-[1.35] md:hover:scale-[1.55] hover:bg-accent/20 hover:shadow-[0_0_40px_rgba(var(--theme-accent-rgb),0.3)] font-orbitron"
@@ -63,16 +63,18 @@ const Hero: React.FC = () => {
             >
               My Work
             </a>
-            <a
-              href="/assets/DTE84resume.pdf"
-              download
-              className="tech-tab relative overflow-hidden border-white/20 text-white/70 hover:text-white hover:border-white transition-all duration-300 font-orbitron text-[12px] group"
-              style={{ width: "180px", height: "50px" }}
-            >
-              <Icon icon="solar:download-minimalistic-linear" className="mr-2 text-lg group-hover:scale-110 transition-transform" />
-              Download CV
-            </a>
           </div>
+
+          <a
+            href="/assets/DTE-Resume.pdf"
+            download
+            className="flex items-center text-[10px] font-black uppercase tracking-[4px] text-white/40 hover:text-accent transition-all duration-300 group -mt-4"
+          >
+            <Icon icon="solar:file-download-linear" className="mr-2 text-base opacity-40 group-hover:opacity-100 group-hover:-translate-y-0.5 transition-all" />
+            Download Portfolio CV
+          </a>
+
+          {/* Tactical Tech Array */}
 
           {/* Tactical Tech Array */}
           <div className="w-full flex flex-col items-center gap-12 max-w-[1400px] mx-auto px-4">

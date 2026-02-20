@@ -66,20 +66,20 @@ export default function Home() {
           </div>
 
           <div className="nav-section-center flex-1 flex justify-center">
-            <ul className={`nav-links flex gap-4 md:gap-8 list-none transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${isNavActive ? 'active fixed top-[clamp(80px,10vh,100px)] left-0 w-full h-auto bg-[rgba(10,10,10,0.98)] flex-col justify-center items-center py-16 border-b border-accent opacity-100 translate-y-0' : 'hidden lg:flex lg:opacity-100 lg:translate-y-0 opacity-0 -translate-y-10'}`}>
-              <li><a href="#home" className="tech-tab" onClick={closeNav}>Home</a></li>
-              <li><a href="#about" className="tech-tab" onClick={closeNav}>About</a></li>
-              <li><a href="#projects" className="tech-tab" onClick={closeNav}>Projects</a></li>
-              <li><button onClick={() => { toggleModal(); closeNav(); }} className="tech-tab">Contact</button></li>
-              <li>
+            <ul className={`nav-links flex gap-6 md:gap-10 list-none transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${isNavActive ? 'active fixed top-[clamp(80px,10vh,100px)] left-0 w-full h-auto bg-[rgba(10,10,10,0.98)] flex-col justify-center items-center py-16 border-b border-accent opacity-100 translate-y-0' : 'hidden lg:flex lg:opacity-100 lg:translate-y-0 opacity-0 -translate-y-10'}`}>
+              <li><a href="#home" className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-white/70 hover:text-accent transition-colors" onClick={closeNav}>Home</a></li>
+              <li><a href="#about" className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-white/70 hover:text-accent transition-colors" onClick={closeNav}>About</a></li>
+              <li><a href="#projects" className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-white/70 hover:text-accent transition-colors" onClick={closeNav}>Projects</a></li>
+              <li><button onClick={() => { toggleModal(); closeNav(); }} className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-white/70 hover:text-accent transition-colors cursor-pointer">Contact</button></li>
+              <li className="lg:ml-4 lg:pl-6 lg:border-l lg:border-white/10">
                 <a 
-                  href="/assets/DTE84resume.pdf" 
+                  href="/assets/DTE-Resume.pdf" 
                   download 
-                  className="tech-tab !border-white/20 !text-white/60 hover:!text-white hover:!border-white group"
+                  className="flex items-center text-[11px] font-black uppercase tracking-[2px] text-accent/80 hover:text-white transition-all group"
                   onClick={closeNav}
                 >
-                  <Icon icon="solar:file-download-bold-duotone" className="mr-2 text-lg group-hover:scale-110 transition-transform" />
-                  CV
+                  <Icon icon="solar:file-download-linear" className="mr-2 text-base group-hover:-translate-y-0.5 transition-transform" />
+                  Download CV
                 </a>
               </li>
             </ul>
