@@ -8,7 +8,7 @@ import Image from "next/image";
 const Projects: React.FC = () => {
   const projects = [
     {
-      id: "2026_ISP_PRO",
+      id: "2026_PCSP_PRO",
       title: "ISP Assistant Pro",
       category: "Healthcare Architecture",
       year: "2026",
@@ -128,7 +128,7 @@ const Projects: React.FC = () => {
                   <span className="w-2 h-2 rounded-full bg-accent animate-[pulse-fast_1.5s_infinite]"></span>
                   <span className="glowingtext">Featured Project</span>
                 </span>
-                <span className="text-[10px] font-mono text-accent/40 tracking-[0.2em] ml-4">
+                <span className="text-[10px] font-mono text-white/80 tracking-[0.2em] ml-4">
                   REF_ID: {project.id}
                 </span>
               </div>
@@ -195,7 +195,7 @@ const Projects: React.FC = () => {
                         href={project.caseStudy}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-bold text-accent border-b-2 border-accent pb-1 hover:border-white hover:text-white transition-all uppercase tracking-widest"
+                        className="inline-flex items-center text-sm font-bold text-[var(--theme-offset)] border-b-2 border-[var(--theme-offset)] pb-1 hover:border-white hover:text-white transition-all uppercase tracking-widest"
                       >
                         Read Research{" "}
                         <Icon
