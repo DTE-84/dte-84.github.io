@@ -68,6 +68,30 @@ const Projects: React.FC = () => {
       link: "https://dte-84.github.io/Car-Sales-Marketing/",
       featured: false,
     },
+    {
+      id: "REACT_ESTORE",
+      title: "State Logic Store",
+      category: "Digital Commerce",
+      year: "2025",
+      description:
+        "Technical demonstration of advanced state management and asynchronous data orchestration within a high-performance retail environment.",
+      tags: ["React", "Hooks", "API"],
+      image: "/assets/library.png",
+      link: "https://ecommercelibray-react-a3c104c7bd57.herokuapp.com/",
+      featured: false,
+    },
+    {
+      id: "V1_PORTFOLIO",
+      title: "Legacy v1.0",
+      category: "Archive Alpha",
+      year: "2025",
+      description:
+        "The foundational release of my digital ecosystem. An exploratory look at early design protocols and interaction systems.",
+      tags: ["HTML5", "CSS3", "JS"],
+      image: "/assets/eportfolio1.jpg",
+      link: "https://dte-84.github.io/E-Portfolio/",
+      featured: false,
+    },
   ];
 
   return (
