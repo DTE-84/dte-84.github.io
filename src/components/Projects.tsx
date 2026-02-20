@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
       tags: ["UI/UX", "Vanilla JS", "HIPAA-Safe"],
       image: "/assets/pcsp1.png",
       link: "https://dte-84.github.io/PCSP-assistant-PRO/",
-      caseStudy: "/case-study-PCSP",
+      caseStudy: "/case-study-pcsp",
       featured: true,
     },
     {
