@@ -139,23 +139,6 @@ const Projects: React.FC = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent h-1/2 w-full -top-full group-hover:top-full transition-all duration-[2000ms] pointer-events-none z-40"></div>
                   </div>
-
-                  {/* Overlapping Case Study Preview */}
-                  <div className="absolute -bottom-6 -right-6 w-[120px] md:w-[160px] aspect-[3/4] z-50 rounded-sm border border-white/20 bg-[#0a0a0c] p-1 shadow-[0_20px_50px_rgba(0,0,0,0.8)] hidden md:block group-hover:translate-y-[-10px] group-hover:border-accent/50 transition-all duration-500">
-                    <div className="relative w-full h-full overflow-hidden rounded-sm">
-                      <Image
-                        src="/assets/pcspap1.png"
-                        alt="Case Study Preview"
-                        fill
-                        className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-                      />
-                      <div className="absolute inset-0 bg-accent/5 pointer-events-none"></div>
-                    </div>
-                    {/* Tiny label for the overlap */}
-                    <div className="absolute -top-3 left-2 bg-accent text-black text-[7px] font-black px-1.5 py-0.5 uppercase tracking-tighter">
-                      Research_DOC
-                    </div>
-                  </div>
                 </div>
 
                 <div className="relative border-l-4 border-accent pl-10 py-8 bg-accent/[0.03] backdrop-blur-sm rounded-r-2xl group-hover:bg-accent/[0.05] transition-all duration-500">
