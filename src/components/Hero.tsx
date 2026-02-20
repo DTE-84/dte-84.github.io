@@ -55,27 +55,28 @@ const Hero: React.FC = () => {
 
         {/* Interaction Stack */}
         <div className="mt-20 flex flex-col items-center gap-12 w-full">
-          <div className="flex justify-center mb-4">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8">
             <a
               href="#projects"
-              className="tech-tab view-works-uplink scale-[1.25] md:scale-[1.4] relative overflow-hidden bg-accent/10 border-accent/40 shadow-[0_0_30px_rgba(var(--theme-accent-rgb),0.15)] z-[5] transition-all duration-[0.4s] hover:scale-[1.35] md:hover:scale-[1.55] hover:bg-accent/20 hover:shadow-[0_0_40px_rgba(var(--theme-accent-rgb),0.3)] font-orbitron"
-              style={{ width: "150px", height: "55px" }}
+              className="tech-tab group relative flex items-center justify-center gap-3 bg-accent/5 border-accent/30 text-accent font-orbitron text-[13px] tracking-[3px] transition-all duration-300 hover:bg-accent/20 hover:border-accent hover:shadow-[0_0_25px_rgba(var(--theme-accent-rgb),0.2)]"
+              style={{ width: "180px", height: "52px" }}
             >
+              <Icon icon="solar:clapperboard-edit-linear" className="text-xl group-hover:scale-110 transition-transform" />
               My Work
+            </a>
+
+            <a
+              href="/assets/DTE-Resume.pdf"
+              download
+              className="tech-tab group relative flex items-center justify-center gap-3 bg-white/5 border-white/20 text-white/70 font-orbitron text-[13px] tracking-[3px] transition-all duration-300 hover:bg-white/10 hover:border-white hover:text-white"
+              style={{ width: "180px", height: "52px" }}
+            >
+              <Icon icon="solar:file-download-linear" className="text-xl group-hover:scale-110 transition-transform" />
+              Download CV
             </a>
           </div>
 
-          <a
-            href="/assets/DTE-Resume.pdf"
-            download
-            className="flex items-center text-[10px] font-black uppercase tracking-[4px] text-white/40 hover:text-accent transition-all duration-300 group -mt-4"
-          >
-            <Icon icon="solar:file-download-linear" className="mr-2 text-base opacity-40 group-hover:opacity-100 group-hover:-translate-y-0.5 transition-all" />
-            Download Portfolio CV
-          </a>
-
           {/* Tactical Tech Array */}
-
           {/* Tactical Tech Array */}
           <div className="w-full flex flex-col items-center gap-12 max-w-[1400px] mx-auto px-4">
             {/* Toolkit Header (Top) */}
