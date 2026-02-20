@@ -11,7 +11,10 @@ export default function CaseStudyISP() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const id = entry.target.getAttribute("id");
+            let id = entry.target.getAttribute("id");
+            // Group conclusion with appendix for TOC highlighting
+            if (id === "conclusion") id = "appendix";
+            
             document.querySelectorAll(".toc-item").forEach((item) => {
               item.classList.toggle("active", item.getAttribute("data-section") === id);
             });
@@ -859,7 +862,7 @@ export default function CaseStudyISP() {
           </section>
 
           {/* ── 06 // CONCLUSION ── */}
-          <section className="pb-32">
+          <section id="conclusion" className="pb-32">
             <div className="circuit-border p-12 bg-[#00ffcc]/5 rounded-2xl text-center border border-[#00ffcc]/20">
               <h2 className="text-3xl font-black uppercase tracking-tighter text-white mb-8 font-orbitron">
                 <span className="text-[#00ffcc]/40">06 //</span> Conclusion
