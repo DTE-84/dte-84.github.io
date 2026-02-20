@@ -203,9 +203,10 @@ export default function CaseStudyISP() {
             </div>
             <div className="lg:col-span-2 space-y-8">
               <p className="text-lg text-white/95 font-medium leading-relaxed">
-                Marion County Services for the Developmentally Disabled (MCSDD) 
-                was struggling with an outdated, narrative-heavy Person Centered 
-                Service Plan (PCSP) process that placed immense burden on frontline staff.
+                Marion County Services for the Developmentally Disabled (MCSDD)
+                was struggling with an outdated, narrative-heavy Person Centered
+                Service Plan (PCSP) process that placed immense burden on
+                frontline staff.
               </p>
               <div className="grid gap-6">
                 <div className="p-6 rounded-xl border border-[#00ffcc]/20 bg-white/5 backdrop-blur-sm">

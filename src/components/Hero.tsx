@@ -61,17 +61,23 @@ const Hero: React.FC = () => {
               className="tech-tab group relative flex items-center justify-center gap-3 bg-accent/5 border-accent/30 text-accent font-orbitron text-[13px] tracking-[3px] transition-all duration-300 hover:bg-accent/20 hover:border-accent hover:shadow-[0_0_25px_rgba(var(--theme-accent-rgb),0.2)]"
               style={{ width: "180px", height: "52px" }}
             >
-              <Icon icon="solar:clapperboard-edit-linear" className="text-xl group-hover:scale-110 transition-transform" />
+              <Icon
+                icon="solar:clapperboard-edit-linear"
+                className="text-xl group-hover:scale-110 transition-transform"
+              />
               My Work
             </a>
 
             <a
-              href="/assets/DTE-Resume.pdf"
+              href="/asseTS/DTERESUME.pdf"
               download
               className="tech-tab group relative flex items-center justify-center gap-3 bg-white/5 border-white/20 text-white/70 font-orbitron text-[13px] tracking-[3px] transition-all duration-300 hover:bg-white/10 hover:border-white hover:text-white"
               style={{ width: "180px", height: "52px" }}
             >
-              <Icon icon="solar:file-download-linear" className="text-xl group-hover:scale-110 transition-transform" />
+              <Icon
+                icon="solar:file-download-linear"
+                className="text-xl group-hover:scale-110 transition-transform"
+              />
               Download CV
             </a>
           </div>
@@ -91,13 +97,20 @@ const Hero: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center justify-center w-full">
               {/* Engineering Cluster */}
               <div className="flex flex-col items-center gap-4">
-                <span className="text-[10px] font-mono uppercase tracking-[3px] text-white/40">Core Engineering</span>
+                <span className="text-[10px] font-mono uppercase tracking-[3px] text-white/40">
+                  Core Engineering
+                </span>
                 <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-[400px]">
-                  {['React', 'Next.js', 'TypeScript', 'JavaScript'].map((tech) => (
-                    <div key={tech} className="px-4 py-2 bg-accent/5 border border-accent/20 text-accent text-[10px] font-bold uppercase tracking-widest font-space hover:bg-accent/10 transition-all cursor-default">
-                      {tech}
-                    </div>
-                  ))}
+                  {["React", "Next.js", "TypeScript", "JavaScript"].map(
+                    (tech) => (
+                      <div
+                        key={tech}
+                        className="px-4 py-2 bg-accent/5 border border-accent/20 text-accent text-[10px] font-bold uppercase tracking-widest font-space hover:bg-accent/10 transition-all cursor-default"
+                      >
+                        {tech}
+                      </div>
+                    ),
+                  )}
                 </div>
               </div>
 
@@ -106,10 +119,15 @@ const Hero: React.FC = () => {
 
               {/* Design Cluster */}
               <div className="flex flex-col items-center gap-4">
-                <span className="text-[10px] font-mono uppercase tracking-[3px] text-white/40">UI/UX & Design</span>
+                <span className="text-[10px] font-mono uppercase tracking-[3px] text-white/40">
+                  UI/UX & Design
+                </span>
                 <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-[400px]">
-                  {['Tailwind', 'CSS3', 'Figma', 'Motion'].map((tech) => (
-                    <div key={tech} className="px-4 py-2 bg-white/5 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest font-space hover:bg-white/10 hover:text-white transition-all cursor-default">
+                  {["Tailwind", "CSS3", "Figma", "Motion"].map((tech) => (
+                    <div
+                      key={tech}
+                      className="px-4 py-2 bg-white/5 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest font-space hover:bg-white/10 hover:text-white transition-all cursor-default"
+                    >
                       {tech}
                     </div>
                   ))}

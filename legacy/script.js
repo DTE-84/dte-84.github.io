@@ -98,7 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = ["home", "about", "projects", "footer"];
     let currentSection = "home";
 
-    const isAtBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 100;
+    const isAtBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 100;
 
     if (isAtBottom) {
       currentSection = "footer";
