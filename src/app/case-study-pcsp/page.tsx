@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
@@ -12,96 +12,158 @@ export default function CaseStudyPCSP() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             let id = entry.target.getAttribute("id");
-            // Group conclusion with appendix for TOC highlighting
             if (id === "conclusion") id = "appendix";
-
             document.querySelectorAll(".toc-item").forEach((item) => {
               item.classList.toggle(
                 "active",
-                item.getAttribute("data-section") === id,
+                item.getAttribute("data-section") === id
               );
             });
           }
         });
       },
-      { threshold: 0, rootMargin: "-20% 0px -70% 0px" },
+      { threshold: 0, rootMargin: "-20% 0px -70% 0px" }
     );
-
-    document.querySelectorAll("section[id]").forEach((section) => {
-      observer.observe(section);
-    });
-
+    document.querySelectorAll("section[id]").forEach((s) => observer.observe(s));
     return () => observer.disconnect();
   }, []);
 
+  const tocLinks = [
+    { id: "challenge", label: "01 // The Challenge" },
+    { id: "solution",  label: "02 // The Solution"  },
+    { id: "execution", label: "03 // The Execution" },
+    { id: "impact",    label: "04 // The Impact"    },
+    { id: "appendix",  label: "05 // Appendix"      },
+  ];
+
+  const domains = [
+    { num: "01", label: "Demographics & Legal" },
+    { num: "02", label: "Communication Profile" },
+    { num: "03", label: "Likes & Dislikes" },
+    { num: "04", label: "Important People" },
+    { num: "05", label: "Vision for a Good Life" },
+    { num: "06", label: "Health, Safety & Risk" },
+    { num: "07", label: "Legal Rights & Satisfaction" },
+    { num: "08", label: "Contributors & Admin" },
+    { num: "09", label: "Measurable Outcomes" },
+  ];
+
+  const impactRows = [
+    { metric: "Audit Rejection",      before: "High Risk (Passive Language)",  after: "0% Rejected"           },
+    { metric: "Drafting Time",         before: "~15–20 Min / Goal",             after: "< 2 Minutes"           },
+    { metric: "Audit Compliance",      before: "High Risk (Passive Language)",  after: "100% Active Phrasing"  },
+    { metric: "IT Overhead",           before: "Complex Security Requirements", after: "Zero (Browser Only)"   },
+    { metric: "Revision Cycles",       before: "Frequent Rejections",           after: "First-Pass Approval"   },
+    { metric: "Communication Docs",    before: "Inconsistent / Missing",        after: "Structured + Charted"  },
+    { metric: "Plan Portability",      before: "Locked to One Machine",         after: ".pcsp File / PDF"      },
+    { metric: "Person-Centered Data",  before: "Freeform / Overlooked",         after: "Structured Profiles"   },
+  ];
+
+  const solutionFeatures = [
+    {
+      icon: "solar:widget-add-linear",
+      title: "Modular Builder",
+      body: "A dropdown-driven building block approach converts casual goal language into standardized SMART goals instantly. Each of the nine PCSP sections is self-contained and collapses cleanly for focused drafting.",
+    },
+    {
+      icon: "solar:library-linear",
+      title: "Clinical Word Bank",
+      body: "Pre-loaded with Missouri-approved active verbs — Model, Facilitate, Educate — to ensure audit-ready language on the first draft, not the third revision.",
+    },
+    {
+      icon: "solar:chat-square-like-linear",
+      title: "Communication Profiling",
+      body: "Captures primary language, sign language type, multi-select method checkboxes, evaluation status, identified barriers, and a dynamic behavior-to-response chart — all per Missouri DD guidelines.",
+    },
+    {
+      icon: "solar:users-group-rounded-linear",
+      title: "Person-Centered Supports",
+      body: "Dedicated sections for what the individual genuinely likes and dislikes, plus an unlimited dynamic roster of important people — each with relationship type, shared activities, and frequency of contact.",
+    },
+    {
+      icon: "solar:diskette-linear",
+      title: "Portable File System",
+      body: "Plans save as encrypted .pcsp files locally, reload on demand with full fidelity, print as clean PDFs, or persist as browser drafts — zero cloud dependency, zero IT involvement.",
+    },
+    {
+      icon: "solar:shield-check-linear",
+      title: "HCBS & Due Process",
+      body: "Automated workflows for federal HCBS Rule compliance and Missouri Due Process. Captures less restrictive alternatives, historical patterns, and measurable criteria for lifting rights restrictions.",
+    },
+    {
+      icon: "solar:shield-keyhole-linear",
+      title: "HIPAA Privacy Mode",
+      body: "A single toggle replaces all visible PHI with anonymized placeholders in the live preview — enabling safe screen-sharing during supervision and team meetings without ever exposing client data.",
+    },
+  ];
+
+  const executionSteps = [
+    {
+      num: "01",
+      title: "Regulatory Discovery",
+      body: "Before writing a line of code, I conducted a full read of Missouri 9 CSR 45-3.010 and the \"Good Life\" Framework to map every required clinical trigger. The nine-domain PCSP structure, active treatment language requirements, and HCBS federal compliance rules all had to be baked into the logic before the UI could be designed. The first challenge was regulatory, not technical.",
+    },
+    {
+      num: "02",
+      title: "Zero-Knowledge Architecture",
+      body: "Every other option — a hosted web app, a shared database, a cloud-synced form — introduced either a HIPAA risk or an IT bottleneck. A single-file HTML/JS deployment with zero external dependencies eliminated both problems simultaneously. By processing everything in the browser's volatile RAM, I bypassed the need for server infrastructure entirely. No POST requests. No databases. No BAA. No licensing cost.",
+    },
+    {
+      num: "03",
+      title: "Communication Module",
+      body: "Built a structured profiling system covering primary language, sign language type, a multi-select method checklist (Verbal, AAC Device, PECS, Gestures, Eye Gaze), evaluation status with conditional barrier documentation, and a fully dynamic Communication Chart. Each chart row maps a behavior to its meaning and the correct staff response — a direct Missouri DD compliance requirement that previously went undocumented.",
+    },
+    {
+      num: "04",
+      title: "Likes, Dislikes & Person-Centered Supports",
+      body: "Designed dedicated form sections for capturing what the individual genuinely enjoys — favorite activities, foods, and places — alongside dislikes, triggers, and sensory sensitivities. This feeds directly into the narrative and ensures plans reflect the individual's actual life, not clinical boilerplate. The difference matters during audits.",
+    },
+    {
+      num: "05",
+      title: "Important People Engine",
+      body: "Engineered a dynamic multi-entry system for documenting the people who matter most to the individual. Each entry captures name, relationship, and an unlimited list of shared activities with frequency of contact. Staff can add or remove people and activities on the fly — the narrative auto-updates in real time. This satisfies the Natural Supports documentation requirement without a separate system.",
+    },
+    {
+      num: "06",
+      title: "Clinical Data Expansion",
+      body: "Expanded the engine to cover the full Missouri State Audit Checklist — including complex data structures for detailed medication protocols (PRN psychotropics), comprehensive family medical history, and mandatory HCBS housing compliance triggers.",
+    },
+    {
+      num: "07",
+      title: "Portable File System (.pcsp)",
+      body: "Implemented a complete save/restore pipeline using a custom .pcsp format. On export, the full plan state — dynamic entries, checkboxes, narratives, communication chart rows, important people — serializes to a locally stored JSON file. On import, a single file upload auto-fills the entire form in seconds, with full fidelity.",
+    },
+  ];
+
   return (
     <div className="bg-[#0a0a0c] min-h-screen text-white font-space selection:bg-[#00ffcc] selection:text-black">
-      <div className="fixed inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#00ffcc11_0%,_transparent_50%)]"></div>
+      {/* Ambient background */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full opacity-[0.07] bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,_#00ffcc_0%,_transparent_70%)]" />
       </div>
 
-      {/* Table of Contents */}
+      {/* ── TOC ── */}
       <nav className="toc-nav fixed left-10 top-1/2 -translate-y-1/2 w-[180px] z-[100] hidden xl:block">
         <ul className="toc-list list-none pl-0 border-l border-[#00ffcc]/10">
-          <li
-            className="toc-item relative py-2.5 pl-5 transition-all active"
-            data-section="challenge"
-          >
-            <a
-              href="#challenge"
-              className="toc-link text-white/40 no-underline text-[0.7rem] font-orbitron uppercase tracking-[0.15em] block transition-all hover:text-[#00ffcc]"
+          {tocLinks.map(({ id, label }, i) => (
+            <li
+              key={id}
+              className={`toc-item relative py-2.5 pl-5 transition-all${i === 0 ? " active" : ""}`}
+              data-section={id}
             >
-              01 // The Challenge
-            </a>
-          </li>
-          <li
-            className="toc-item relative py-2.5 pl-5 transition-all"
-            data-section="solution"
-          >
-            <a
-              href="#solution"
-              className="toc-link text-white/40 no-underline text-[0.7rem] font-orbitron uppercase tracking-[0.15em] block transition-all hover:text-[#00ffcc]"
-            >
-              02 // The Solution
-            </a>
-          </li>
-          <li
-            className="toc-item relative py-2.5 pl-5 transition-all"
-            data-section="execution"
-          >
-            <a
-              href="#execution"
-              className="toc-link text-white/40 no-underline text-[0.7rem] font-orbitron uppercase tracking-[0.15em] block transition-all hover:text-[#00ffcc]"
-            >
-              03 // The Execution
-            </a>
-          </li>
-          <li
-            className="toc-item relative py-2.5 pl-5 transition-all"
-            data-section="impact"
-          >
-            <a
-              href="#impact"
-              className="toc-link text-white/40 no-underline text-[0.7rem] font-orbitron uppercase tracking-[0.15em] block transition-all hover:text-[#00ffcc]"
-            >
-              04 // The Impact
-            </a>
-          </li>
-          <li
-            className="toc-item relative py-2.5 pl-5 transition-all"
-            data-section="appendix"
-          >
-            <a
-              href="#appendix"
-              className="toc-link text-white/40 no-underline text-[0.7rem] font-orbitron uppercase tracking-[0.15em] block transition-all hover:text-[#00ffcc]"
-            >
-              05 // Appendix
-            </a>
-          </li>
+              <a
+                href={`#${id}`}
+                className="toc-link text-white/40 no-underline text-[0.7rem] font-orbitron uppercase tracking-[0.15em] block transition-all hover:text-[#00ffcc]"
+              >
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
 
       <div className="max-w-5xl mx-auto relative p-4 md:p-12">
+        {/* ── HEADER ── */}
         <header className="mb-12">
           <div className="flex justify-between items-start mb-12">
             <Link
@@ -126,75 +188,53 @@ export default function CaseStudyPCSP() {
                 PCSP Assistant <br />
                 <span className="text-[#00ffcc] italic">Pro</span>
               </h1>
-
               <div className="flex flex-wrap justify-end gap-x-8 gap-y-4 pt-8 border-t border-[#00ffcc]/20">
-                <div className="text-right">
-                  <span className="block text-[10px] font-black text-[#00ffcc]/50 uppercase tracking-widest mb-1">
-                    Role
-                  </span>
-                  <span className="text-sm font-bold uppercase tracking-tight text-white/90">
-                    Product Designer
-                  </span>
-                </div>
-                <div className="text-right">
-                  <span className="block text-[10px] font-black text-[#00ffcc]/50 uppercase tracking-widest mb-1">
-                    Client
-                  </span>
-                  <span className="text-sm font-bold uppercase tracking-tight text-white/90">
-                    MCSDD (MO DMH)
-                  </span>
-                </div>
-                <div className="text-right">
-                  <span className="block text-[10px] font-black text-[#00ffcc]/50 uppercase tracking-widest mb-1">
-                    Security
-                  </span>
-                  <span className="text-sm font-bold uppercase tracking-tight text-red-400">
-                    HIPAA
-                  </span>
-                </div>
-                <div className="text-right">
-                  <span className="block text-[10px] font-black text-[#00ffcc]/50 uppercase tracking-widest mb-1">
-                    Stack
-                  </span>
-                  <span className="text-sm font-bold uppercase tracking-tight text-white/90">
-                    Vanilla JS
-                  </span>
-                </div>
+                {[
+                  { label: "Role",     value: "Product Designer",  color: "text-white/90" },
+                  { label: "Client",   value: "MCSDD (MO DMH)",    color: "text-white/90" },
+                  { label: "Security", value: "HIPAA",             color: "text-red-400"  },
+                  { label: "Stack",    value: "Vanilla JS",        color: "text-white/90" },
+                ].map(({ label, value, color }) => (
+                  <div key={label} className="text-right">
+                    <span className="block text-[10px] font-black text-[#00ffcc]/50 uppercase tracking-widest mb-1">
+                      {label}
+                    </span>
+                    <span className={`text-sm font-bold uppercase tracking-tight ${color}`}>
+                      {value}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </header>
 
-        {/* Hero Image Section */}
+        {/* ── HERO IMAGE ── */}
         <div className="mb-32 relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffcc]/20 to-transparent blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffcc]/20 to-transparent blur opacity-20 group-hover:opacity-40 transition-opacity" />
           <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/40 bg-black aspect-[21/9]">
             <Image
               src="/assets/pcsp1.png"
-              alt="PCSP Assistant Pro Hero"
+              alt="PCSP Assistant Pro interface"
               fill
               quality={80}
               priority
               className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-700 hover:scale-105 cursor-pointer"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-            <div className="absolute bottom-8 left-8">
-              <div className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-[#00ffcc] animate-pulse"></span>
-                <span className="text-[12px] font-mono text-[#00ffcc] uppercase tracking-[0.3em]">
-                  System Active // Missouri DMH Engine
-                </span>
-              </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+            <div className="absolute bottom-8 left-8 flex items-center gap-3">
+              <span className="w-2 h-2 rounded-full bg-[#00ffcc] animate-pulse" />
+              <span className="text-[12px] font-mono text-[#00ffcc] uppercase tracking-[0.3em]">
+                System Active // Missouri DMH Engine
+              </span>
             </div>
           </div>
         </div>
 
         <div className="space-y-32">
+
           {/* ── 01 // THE CHALLENGE ── */}
-          <section
-            id="challenge"
-            className="grid lg:grid-cols-3 gap-12 pt-[100px]"
-          >
+          <section id="challenge" className="grid lg:grid-cols-3 gap-12 pt-[100px]">
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-black uppercase tracking-tight sticky top-12 font-orbitron">
                 <span className="text-[#00ffcc]/40">01 //</span> The{" "}
@@ -203,47 +243,52 @@ export default function CaseStudyPCSP() {
             </div>
             <div className="lg:col-span-2 space-y-8">
               <p className="text-lg text-white/95 font-medium leading-relaxed">
-                Marion County Services for the Developmentally Disabled (MCSDD)
-                was struggling with an outdated, narrative-heavy Person Centered
-                Service Plan (PCSP) process that placed immense burden on
-                frontline staff.
+                Marion County MCSDD case managers were spending nearly half their week on documentation —
+                not because the work was complicated, but because the tools were broken.
               </p>
+              <p className="text-base text-white/70 leading-relaxed">
+                Each Person Centered Service Plan required manually documenting nine clinical domains across
+                multiple disconnected systems. Missouri state auditors check every one of them, and vague
+                or passive phrasing — <em className="text-white/90">"will try to improve communication"</em> instead
+                of <em className="text-[#00ffcc]">"Staff will facilitate structured AAC sessions"</em> — gets
+                a plan rejected outright. A rejected plan doesn&apos;t just mean more paperwork. It means
+                a client&apos;s services are delayed.
+              </p>
+
               <div className="grid gap-6">
                 <div className="p-6 rounded-xl border border-[#00ffcc]/20 bg-white/5 backdrop-blur-sm">
                   <h4 className="text-[#00ffcc] text-[14px] font-black uppercase tracking-widest mb-3 font-orbitron">
                     The Administrative Burden
                   </h4>
                   <p className="text-base text-white/85">
-                    Case Managers (CMs) spent 40% of their week on manual data
-                    entry, leading to extreme &quot;click-fatigue&quot; and
-                    organizational burnout. Each plan required documenting
-                    demographics, communication profiles, personal preferences,
-                    relationships, health risk, and measurable outcomes — all by
-                    hand, across multiple disconnected systems.
+                    Case Managers spent 40% of their week on manual data entry across disconnected systems —
+                    demographics, communication profiles, personal preferences, relationships, health risk,
+                    and measurable outcomes, all by hand. The result was extreme documentation fatigue and
+                    organizational burnout at the frontline.
                   </p>
                 </div>
+
                 <div className="p-6 rounded-xl border border-[#00ffcc]/20 bg-white/5 backdrop-blur-sm">
                   <h4 className="text-[#00ffcc] text-[14px] font-black uppercase tracking-widest mb-3 font-orbitron">
                     The Compliance Gap
                   </h4>
                   <p className="text-base text-white/85">
-                    State auditors require rigorous &quot;Active Treatment&quot;
-                    language, structured communication profiles, and documented
-                    person-centered supports. Vague phrasing, missing
-                    communication barriers, or undocumented important
-                    relationships led to rejected plans, delayed services, and
-                    high audit risk.
+                    State auditors require rigorous Active Treatment language, structured communication
+                    profiles, and documented person-centered supports. Vague phrasing, missing communication
+                    barriers, or undocumented natural supports led to rejected plans, delayed services, and
+                    compounding audit risk — on plans that staff had already spent hours writing.
                   </p>
                 </div>
-                <div className="p-6 rounded-xl border border-[#00ffcc]/20 bg-white/5 backdrop-blur-sm border-red-500/20">
+
+                <div className="p-6 rounded-xl border border-[#00ffcc]/20 bg-white/5 backdrop-blur-sm border-red-500/30">
                   <h4 className="text-red-400 text-[14px] font-black uppercase tracking-widest mb-3 font-orbitron">
                     The HIPAA Constraint
                   </h4>
                   <p className="text-base text-white/85">
-                    Standard cloud tools (Notion, Google Docs) were prohibited
-                    due to lack of BAAs and strict patient confidentiality laws.
-                    Any solution had to process sensitive PHI without
-                    transmitting it to any external server.
+                    Standard cloud tools — Notion, Google Docs, shared drives — were prohibited. No BAA,
+                    no compliance. Any solution handling PHI had to meet HIPAA&apos;s Security Rule without
+                    transmitting data to any external server. That constraint ruled out virtually every
+                    off-the-shelf tool on the market.
                   </p>
                 </div>
               </div>
@@ -251,10 +296,7 @@ export default function CaseStudyPCSP() {
           </section>
 
           {/* ── 02 // THE SOLUTION ── */}
-          <section
-            id="solution"
-            className="grid lg:grid-cols-3 gap-12 pt-[100px]"
-          >
+          <section id="solution" className="grid lg:grid-cols-3 gap-12 pt-[100px]">
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-black uppercase tracking-tight sticky top-12 font-orbitron">
                 <span className="text-[#00ffcc]/40">02 //</span> The{" "}
@@ -262,19 +304,27 @@ export default function CaseStudyPCSP() {
               </h2>
             </div>
             <div className="lg:col-span-2 space-y-12">
-              <p className="text-lg text-white/95 font-medium leading-relaxed">
-                I engineered a Zero-Footprint Logic Engine — a client-side web
-                application that acts as a clinical &quot;narrative
-                calculator.&quot; This tool bridges the gap between raw client
-                information and Missouri-mandated PCSP clinical markers,
-                covering every required domain from demographics to measurable
-                outcomes in a single unified workspace.
-              </p>
+              <div className="space-y-5">
+                <p className="text-lg text-white/95 font-medium leading-relaxed">
+                  The answer wasn&apos;t a SaaS platform or an enterprise system. It was a single HTML file.
+                </p>
+                <p className="text-base text-white/70 leading-relaxed">
+                  I engineered PCSP Assistant Pro as a <span className="text-white font-semibold">Zero-Footprint Logic Engine</span> — a
+                  clinical drafting tool that runs entirely in the browser&apos;s volatile RAM. It processes sensitive PHI
+                  locally, generates Missouri-compliant narrative language in real time, and leaves no trace when the tab
+                  closes. No servers. No POST requests. No IT tickets. No licensing cost.
+                </p>
+                <p className="text-base text-white/70 leading-relaxed">
+                  The interface covers all nine PCSP domains in a single unified workspace, from demographics to measurable
+                  outcomes — with a word bank, a dynamic communication chart, and an unlimited important-people roster baked
+                  directly into the logic.
+                </p>
+              </div>
 
               <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/20 bg-[#00ffcc]/5 p-2 aspect-video">
                 <Image
                   src="/assets/pcsp2.png"
-                  alt="PCSP Workflow"
+                  alt="PCSP Workflow diagram"
                   fill
                   quality={80}
                   className="rounded-xl opacity-80 shadow-2xl w-full h-full object-cover hover:scale-105 transition-all duration-700 cursor-pointer"
@@ -282,115 +332,34 @@ export default function CaseStudyPCSP() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <h4 className="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-3 font-orbitron">
-                    <Icon
-                      icon="solar:widget-add-linear"
-                      className="text-[#00ffcc]"
-                    />{" "}
-                    Modular Builder
-                  </h4>
-                  <p className="text-sm text-white/85 leading-loose">
-                    Uses a dropdown-driven &quot;Building Block&quot; approach
-                    to turn casual goals into standardized SMART goals
-                    instantly. Each of the nine PCSP sections is self-contained
-                    and collapses cleanly for focused drafting.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-3 font-orbitron">
-                    <Icon
-                      icon="solar:library-linear"
-                      className="text-[#00ffcc]"
-                    />{" "}
-                    Clinical Word Bank
-                  </h4>
-                  <p className="text-sm text-white/85 leading-loose">
-                    Pre-loaded with MO-approved active verbs (Model, Facilitate,
-                    Educate) to ensure audit-readiness on the first draft.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-3 font-orbitron">
-                    <Icon
-                      icon="solar:chat-square-like-linear"
-                      className="text-[#00ffcc]"
-                    />{" "}
-                    Communication Profiling
-                  </h4>
-                  <p className="text-sm text-white/85 leading-loose">
-                    A full communication section captures primary language, sign
-                    language type, method checkboxes, evaluation status,
-                    identified barriers, and a dynamic chart mapping behaviors
-                    to staff responses — all per Missouri DD guidelines.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-3 font-orbitron">
-                    <Icon
-                      icon="solar:users-group-rounded-linear"
-                      className="text-[#00ffcc]"
-                    />{" "}
-                    Person-Centered Supports
-                  </h4>
-                  <p className="text-sm text-white/85 leading-loose">
-                    Dedicated sections capture what the individual likes and
-                    dislikes, plus an unlimited dynamic roster of important
-                    people — each with their relationship, shared activities,
-                    and frequency of contact.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-3 font-orbitron">
-                    <Icon
-                      icon="solar:diskette-linear"
-                      className="text-[#00ffcc]"
-                    />{" "}
-                    Portable File System
-                  </h4>
-                  <p className="text-sm text-white/85 leading-loose">
-                    Plans are saved as encrypted{" "}
-                    <span className="text-[#00ffcc] font-mono">.pcsp</span>{" "}
-                    files locally, opened and auto-filled on demand, printed as
-                    clean PDFs, or kept as browser drafts — zero cloud
-                    dependency.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-3 font-orbitron">
-                    <Icon
-                      icon="solar:shield-check-linear"
-                      className="text-[#00ffcc]"
-                    />{" "}
-                    HCBS &amp; Due Process
-                  </h4>
-                  <p className="text-sm text-white/85 leading-loose">
-                    Automated workflows for federal HCBS Rule compliance and Missouri Due Process requirements. Captures less intrusive methods, historical patterns, and measurable criteria for lifting rights restrictions.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-3 font-orbitron">
-                    <Icon
-                      icon="solar:shield-keyhole-linear"
-                      className="text-[#00ffcc]"
-                    />{" "}
-                    HIPAA Privacy Mode
-                  </h4>
-                  <p className="text-sm text-white/85 leading-loose">
-                    A toggle instantly masks all PHI in the live preview with
-                    anonymized placeholders, allowing safe screen-sharing during
-                    team meetings without ever exposing client data.
-                  </p>
-                </div>
+                {solutionFeatures.map(({ icon, title, body }) => (
+                  <div key={title} className="space-y-3">
+                    <h4 className="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-3 font-orbitron">
+                      <Icon icon={icon} className="text-[#00ffcc] text-base flex-shrink-0" />
+                      {title}
+                    </h4>
+                    <p className="text-sm text-white/75 leading-relaxed">
+                      {body.includes(".pcsp") ? (
+                        <>
+                          {body.split(".pcsp").map((part, i, arr) =>
+                            i < arr.length - 1 ? (
+                              <React.Fragment key={i}>
+                                {part}
+                                <span className="text-[#00ffcc] font-mono">.pcsp</span>
+                              </React.Fragment>
+                            ) : part
+                          )}
+                        </>
+                      ) : body}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
 
           {/* ── 03 // THE EXECUTION ── */}
-          <section
-            id="execution"
-            className="grid lg:grid-cols-3 gap-12 pt-[100px]"
-          >
+          <section id="execution" className="grid lg:grid-cols-3 gap-12 pt-[100px]">
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-black uppercase tracking-tight sticky top-12 font-orbitron">
                 <span className="text-[#00ffcc]/40">03 //</span> The{" "}
@@ -398,172 +367,64 @@ export default function CaseStudyPCSP() {
               </h2>
             </div>
             <div className="lg:col-span-2 space-y-12">
-              <div className="space-y-6">
-                <div className="flex gap-6 items-start">
-                  <div className="text-[#00ffcc] font-black font-space text-3xl opacity-20 italic">
-                    01
+              {/* Intro paragraph — the key upgrade */}
+              <p className="text-base text-white/70 leading-relaxed">
+                The execution wasn&apos;t linear. Every architectural decision was a deliberate tradeoff between
+                compliance, usability, and maintainability — built for staff who needed a tool, not a tutorial.
+              </p>
+
+              <div className="space-y-8">
+                {executionSteps.map(({ num, title, body }) => (
+                  <div key={num} className="flex gap-6 items-start group">
+                    <div className="text-[#00ffcc] font-black font-space text-3xl opacity-20 italic flex-shrink-0 group-hover:opacity-40 transition-opacity">
+                      {num}
+                    </div>
+                    <div className="space-y-2">
+                      <h4 className="text-white font-bold uppercase tracking-widest text-base font-orbitron">
+                        {title}
+                      </h4>
+                      <p className="text-sm text-white/75 leading-relaxed">
+                        {body.includes(".pcsp") ? (
+                          <>
+                            {body.split(".pcsp").map((part, i, arr) =>
+                              i < arr.length - 1 ? (
+                                <React.Fragment key={i}>
+                                  {part}
+                                  <span className="text-[#00ffcc] font-mono">.pcsp</span>
+                                </React.Fragment>
+                              ) : part
+                            )}
+                          </>
+                        ) : body}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">
-                      Regulatory Discovery
-                    </h4>
-                    <p className="text-sm text-white/95">
-                      Deep-dive analysis of Missouri 9 CSR 45-3.010 and the
-                      &quot;Good Life&quot; Framework to identify required
-                      clinical triggers. This included mapping the full PCSP
-                      domain structure — demographics, communication profiling,
-                      person-centered preferences, vision, health and risk,
-                      legal rights, and measurable outcomes.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-6 items-start">
-                  <div className="text-[#00ffcc] font-black font-space text-3xl opacity-20 italic">
-                    02
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">
-                      Zero-Knowledge Architecture
-                    </h4>
-                    <p className="text-sm text-white/95">
-                      Opted for a single-file HTML/JS deployment. By processing
-                      data only in the browser&apos;s volatile RAM, I bypassed
-                      the need for IT server infrastructure while maintaining
-                      100% HIPAA compliance. No POST requests. No databases. No
-                      third-party dependencies.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-6 items-start">
-                  <div className="text-[#00ffcc] font-black font-space text-3xl opacity-20 italic">
-                    03
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">
-                      Communication Module
-                    </h4>
-                    <p className="text-sm text-white/95">
-                      Built a structured communication profiling system covering
-                      primary language, sign language type selection, a
-                      multi-select method checklist (Verbal, AAC Device, PECS,
-                      Gestures, Eye Gaze, and more), evaluation status with
-                      conditional barrier documentation, and a fully dynamic
-                      Communication Chart. Each chart row maps a specific
-                      situation or behavior to its meaning and the correct staff
-                      response — a direct Missouri DD compliance requirement.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-6 items-start">
-                  <div className="text-[#00ffcc] font-black font-space text-3xl opacity-20 italic">
-                    04
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">
-                      Likes, Dislikes &amp; Person-Centered Supports
-                    </h4>
-                    <p className="text-sm text-white/95">
-                      Designed dedicated form sections for capturing what the
-                      individual genuinely enjoys — favorite activities, foods,
-                      and places — alongside dislikes, triggers, and sensory
-                      sensitivities. This feeds directly into the narrative and
-                      ensures plans reflect the individual&apos;s actual life,
-                      not just clinical boilerplate.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-6 items-start">
-                  <div className="text-[#00ffcc] font-black font-space text-3xl opacity-20 italic">
-                    05
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">
-                      Important People Engine
-                    </h4>
-                    <p className="text-sm text-white/95">
-                      Engineered a dynamic multi-entry system for documenting
-                      the people who matter most to the individual. Each entry
-                      captures name, relationship, and an unlimited list of
-                      shared activities with frequency of contact. Staff can add
-                      or remove people and activities on the fly — the narrative
-                      auto-updates in real time. This satisfies the
-                      &quot;Natural Supports&quot; documentation requirement
-                      without requiring a separate system.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-6 items-start">
-                  <div className="text-[#00ffcc] font-black font-space text-3xl opacity-20 italic">
-                    06
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">
-                      Clinical Data Expansion
-                    </h4>
-                    <p className="text-sm text-white/95">
-                      Expanded the engine to encompass the full Missouri State Audit Checklist. This included engineering complex data structures for detailed medication protocols (PRN psychotropics), comprehensive family medical history, and mandatory HCBS housing compliance triggers.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-6 items-start">
-                  <div className="text-[#00ffcc] font-black font-space text-3xl opacity-20 italic">
-                    07
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">
-                      Portable File System (.pcsp)
-                    </h4>
-                    <p className="text-sm text-white/95">
-                      Implemented a complete save/restore pipeline using a
-                      custom{" "}
-                      <span className="text-[#00ffcc] font-mono">.pcsp</span>{" "}
-                      file format. On export, the full plan state — including
-                      all dynamic entries like legal reps, communication chart
-                      rows, important people, checkboxes, and narrative — is
-                      serialized to a locally stored JSON file. On import, a
-                      single file upload auto-fills the entire form in seconds.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
 
               <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/20 bg-[#00ffcc]/5 p-2 aspect-video">
                 <Image
                   src="/assets/pcsp3.png"
-                  alt="Clinical Logic Builder"
+                  alt="Clinical Logic Builder interface"
                   fill
                   quality={80}
                   className="rounded-xl opacity-80 shadow-2xl w-full h-full object-cover hover:scale-105 transition-all duration-700 cursor-pointer"
                 />
               </div>
 
-              {/* Feature Architecture Callout */}
+              {/* 9 Domains */}
               <div className="p-6 rounded-xl border border-[#00ffcc]/20 bg-white/5">
                 <h4 className="text-[#00ffcc] text-[13px] font-black uppercase tracking-widest mb-6 font-orbitron">
                   Full Section Architecture — 9 PCSP Domains
                 </h4>
                 <div className="grid md:grid-cols-3 gap-3">
-                  {[
-                    { num: "01", label: "Demographics & Legal" },
-                    { num: "02", label: "Communication Profile" },
-                    { num: "03", label: "Likes & Dislikes" },
-                    { num: "04", label: "Important People" },
-                    { num: "05", label: "Vision for a Good Life" },
-                    { num: "06", label: "Health, Safety & Risk" },
-                    { num: "07", label: "Legal Rights & Satisfaction" },
-                    { num: "08", label: "Contributors & Admin" },
-                    { num: "09", label: "Measurable Outcomes" },
-                  ].map((item) => (
+                  {domains.map(({ num, label }) => (
                     <div
-                      key={item.num}
-                      className="flex items-center gap-3 p-3 rounded-lg bg-black/30 border border-white/5"
+                      key={num}
+                      className="flex items-center gap-3 p-3 rounded-lg bg-black/30 border border-white/5 hover:border-[#00ffcc]/20 transition-colors"
                     >
-                      <span className="text-[#00ffcc]/30 font-mono text-[11px] font-black">
-                        {item.num}
-                      </span>
-                      <span className="text-white/80 text-[12px] font-bold uppercase tracking-wide">
-                        {item.label}
-                      </span>
+                      <span className="text-[#00ffcc]/30 font-mono text-[11px] font-black flex-shrink-0">{num}</span>
+                      <span className="text-white/80 text-[12px] font-bold uppercase tracking-wide">{label}</span>
                     </div>
                   ))}
                 </div>
@@ -572,10 +433,7 @@ export default function CaseStudyPCSP() {
           </section>
 
           {/* ── 04 // THE IMPACT ── */}
-          <section
-            id="impact"
-            className="grid lg:grid-cols-3 gap-12 pt-[100px]"
-          >
+          <section id="impact" className="grid lg:grid-cols-3 gap-12 pt-[100px]">
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-black uppercase tracking-tight sticky top-12 font-orbitron">
                 <span className="text-[#00ffcc]/40">04 //</span> The{" "}
@@ -583,110 +441,35 @@ export default function CaseStudyPCSP() {
               </h2>
             </div>
             <div className="lg:col-span-2 space-y-12">
+              <p className="text-base text-white/70 leading-relaxed">
+                The shift from passive to active documentation wasn&apos;t incremental — it was structural.
+                Every metric below reflects a process that no longer requires rework.
+              </p>
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-separate border-spacing-y-2">
                   <thead>
                     <tr>
-                      <th className="text-[#00ffcc] uppercase text-[0.7rem] tracking-[0.2em] p-3 font-orbitron">
-                        Metric
-                      </th>
-                      <th className="text-[#00ffcc] uppercase text-[0.7rem] tracking-[0.2em] p-3 font-orbitron">
-                        Pre-Deployment
-                      </th>
-                      <th className="text-[#00ffcc] uppercase text-[0.7rem] tracking-[0.2em] p-3 font-orbitron">
-                        Post-Deployment
-                      </th>
+                      {["Metric", "Pre-Deployment", "Post-Deployment"].map((h) => (
+                        <th key={h} className="text-[#00ffcc] uppercase text-[0.7rem] tracking-[0.2em] p-3 font-orbitron">
+                          {h}
+                        </th>
+                      ))}
                     </tr>
                   </thead>
                   <tbody className="text-sm">
-                    <tr className="bg-white/[0.02]">
-                      <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
-                        Audit Rejection
-                      </td>
-                      <td className="p-4 border-t border-b border-white/5 text-white/85 italic">
-                        High Risk (Passive)
-                      </td>
-                      <td className="p-4 border-t border-b border-r border-white/5 rounded-r-lg text-[#00ffcc] font-black uppercase tracking-widest">
-                        0% Projected
-                      </td>
-                    </tr>
-                    <tr className="bg-white/[0.02]">
-                      <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
-                        Drafting Time
-                      </td>
-                      <td className="p-4 border-t border-b border-white/5 text-white/85 italic">
-                        ~15-20 Minutes / Goal
-                      </td>
-                      <td className="p-4 border-t border-b border-r border-white/5 rounded-r-lg text-[#00ffcc] font-black uppercase tracking-widest">
-                        &lt; 2 Minutes
-                      </td>
-                    </tr>
-                    <tr className="bg-white/[0.02]">
-                      <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
-                        Audit Compliance
-                      </td>
-                      <td className="p-4 border-t border-b border-white/5 text-white/85 italic">
-                        High Risk (Passive)
-                      </td>
-                      <td className="p-4 border-t border-b border-r border-white/5 rounded-r-lg text-[#00ffcc] font-black uppercase tracking-widest">
-                        100% Active Phrasing
-                      </td>
-                    </tr>
-                    <tr className="bg-white/[0.02]">
-                      <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
-                        IT Overhead
-                      </td>
-                      <td className="p-4 border-t border-b border-white/5 text-white/85 italic">
-                        Complex Security Reqs
-                      </td>
-                      <td className="p-4 border-t border-b border-r border-white/5 rounded-r-lg text-[#00ffcc] font-black uppercase tracking-widest">
-                        Zero (Browser Only)
-                      </td>
-                    </tr>
-                    <tr className="bg-white/[0.02]">
-                      <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
-                        Revision Cycles
-                      </td>
-                      <td className="p-4 border-t border-b border-white/5 text-white/85 italic">
-                        Frequent Rejections
-                      </td>
-                      <td className="p-4 border-t border-b border-r border-white/5 rounded-r-lg text-[#00ffcc] font-black uppercase tracking-widest">
-                        First-Pass Approval
-                      </td>
-                    </tr>
-                    <tr className="bg-white/[0.02]">
-                      <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
-                        Communication Docs
-                      </td>
-                      <td className="p-4 border-t border-b border-white/5 text-white/85 italic">
-                        Inconsistent / Missing
-                      </td>
-                      <td className="p-4 border-t border-b border-r border-white/5 rounded-r-lg text-[#00ffcc] font-black uppercase tracking-widest">
-                        Structured + Charted
-                      </td>
-                    </tr>
-                    <tr className="bg-white/[0.02]">
-                      <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
-                        Plan Portability
-                      </td>
-                      <td className="p-4 border-t border-b border-white/5 text-white/85 italic">
-                        Locked to One Machine
-                      </td>
-                      <td className="p-4 border-t border-b border-r border-white/5 rounded-r-lg text-[#00ffcc] font-black uppercase tracking-widest">
-                        .pcsp File / PDF
-                      </td>
-                    </tr>
-                    <tr className="bg-white/[0.02]">
-                      <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
-                        Person-Centered Data
-                      </td>
-                      <td className="p-4 border-t border-b border-white/5 text-white/85 italic">
-                        Freeform / Overlooked
-                      </td>
-                      <td className="p-4 border-t border-b border-r border-white/5 rounded-r-lg text-[#00ffcc] font-black uppercase tracking-widest">
-                        Structured Profiles
-                      </td>
-                    </tr>
+                    {impactRows.map(({ metric, before, after }) => (
+                      <tr key={metric} className="bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                        <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
+                          {metric}
+                        </td>
+                        <td className="p-4 border-t border-b border-white/5 text-white/60 italic">
+                          {before}
+                        </td>
+                        <td className="p-4 border-t border-b border-r border-white/5 rounded-r-lg text-[#00ffcc] font-black uppercase tracking-widest">
+                          {after}
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
@@ -694,10 +477,7 @@ export default function CaseStudyPCSP() {
           </section>
 
           {/* ── 05 // TECHNICAL APPENDIX ── */}
-          <section
-            id="appendix"
-            className="grid lg:grid-cols-3 gap-12 pt-[100px]"
-          >
+          <section id="appendix" className="grid lg:grid-cols-3 gap-12 pt-[100px]">
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-black uppercase tracking-tight sticky top-12 font-orbitron">
                 <span className="text-[#00ffcc]/40">05 //</span> Technical{" "}
@@ -705,202 +485,164 @@ export default function CaseStudyPCSP() {
               </h2>
             </div>
             <div className="lg:col-span-2 space-y-12">
-              <div className="space-y-8">
+
+              {/* I. Data Lifecycle */}
+              <div className="space-y-6">
                 <h3 className="text-white font-bold uppercase tracking-widest text-base border-b border-[#00ffcc]/40 pb-2 font-orbitron">
                   I. Data Lifecycle Management
                 </h3>
-                <p className="text-sm text-white/95">
+                <p className="text-sm text-white/75 leading-relaxed">
                   The primary security feature is its{" "}
-                  <span className="text-white font-bold">
-                    Stateless Architecture
-                  </span>
-                  . Unlike SaaS platforms, this tool functions as a
-                  &quot;Client-Side Processor.&quot;
+                  <span className="text-white font-semibold">Stateless Architecture</span>. Unlike SaaS
+                  platforms, this tool functions as a pure client-side processor — data exists only for
+                  the duration of the session.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20">
-                    <span className="text-[#00ffcc] text-[14px] font-black uppercase block mb-2 font-orbitron">
-                      Zero-Persistence
-                    </span>
-                    <p className="text-[14px] text-white/85">
-                      All logic executes in the browser RAM. Data never leaves
-                      Volatile Memory during a live session.
-                    </p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20">
-                    <span className="text-[#00ffcc] text-[14px] font-black uppercase block mb-2 font-orbitron">
-                      The &quot;Refresh&quot; Wipe
-                    </span>
-                    <p className="text-[14px] text-white/85">
-                      Closing the tab instantly purges all session data. No
-                      database, no POST requests.
-                    </p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20">
-                    <span className="text-[#00ffcc] text-[14px] font-black uppercase block mb-2 font-orbitron">
-                      .pcsp Export
-                    </span>
-                    <p className="text-[14px] text-white/85">
-                      When persistence is needed, the full plan state serializes
-                      to a local <span className="font-mono">.pcsp</span> file.
-                      The CM controls where it lives — agency drive, encrypted
-                      USB, or secure folder.
-                    </p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20">
-                    <span className="text-[#00ffcc] text-[14px] font-black uppercase block mb-2 font-orbitron">
-                      Browser Drafts
-                    </span>
-                    <p className="text-[14px] text-white/85">
-                      Up to 10 in-progress drafts are stored in localStorage on
-                      the local machine only — never synced, never transmitted.
-                    </p>
-                  </div>
+                  {[
+                    {
+                      title: "Zero-Persistence",
+                      body: "All logic executes in browser RAM. Data never leaves volatile memory during a live session.",
+                    },
+                    {
+                      title: 'The "Refresh" Wipe',
+                      body: "Closing the tab instantly purges all session data. No database, no POST requests, no residual trace.",
+                    },
+                    {
+                      title: ".pcsp Export",
+                      body: "When persistence is needed, the full plan state serializes to a local .pcsp file. The CM controls where it lives — agency drive, encrypted USB, or secure folder.",
+                    },
+                    {
+                      title: "Browser Drafts",
+                      body: "Up to 10 in-progress drafts persist in localStorage on the local machine only — never synced, never transmitted.",
+                    },
+                  ].map(({ title, body }) => (
+                    <div key={title} className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20">
+                      <span className="text-[#00ffcc] text-[13px] font-black uppercase block mb-2 font-orbitron">
+                        {title}
+                      </span>
+                      <p className="text-[13px] text-white/75 leading-relaxed">{body}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
 
+              {/* II. Clinical Logic */}
               <div className="space-y-6">
                 <h3 className="text-white font-bold uppercase tracking-widest text-base border-b border-[#00ffcc]/40 pb-2 font-orbitron">
                   II. Missouri Clinical Logic
                 </h3>
-                <div className="p-6 rounded-xl bg-black border border-[#00ffcc]/40 font-mono text-sm">
-                  <span className="text-purple-400">const</span> narrative ={" "}
-                  <span className="text-yellow-200">
-                    \ will work toward their goal to \
-                  </span>
-                  ;<br />
-                  <span className="text-zinc-400">Staff will </span>
-                  <span className="text-yellow-200">\</span>
-                  <span className="text-zinc-400">
-                    {" "}
-                    the necessary steps to ensure success.
-                  </span>
-                  <br />
-                  <span className="text-zinc-400">
-                    Progress will be monitored{" "}
-                  </span>
-                  <span className="text-yellow-200">\</span>
-                  <span className="text-zinc-400">.</span>
+                <div className="p-6 rounded-xl bg-black border border-[#00ffcc]/40 font-mono text-sm space-y-1">
+                  <div>
+                    <span className="text-purple-400">const</span>
+                    <span className="text-zinc-300"> narrative </span>
+                    <span className="text-zinc-400">= </span>
+                    <span className="text-yellow-200">{"` {client} will work toward their goal to {goal}`"}</span>
+                    <span className="text-zinc-400">;</span>
+                  </div>
+                  <div>
+                    <span className="text-zinc-400">Staff will </span>
+                    <span className="text-yellow-200">{"{activeVerb}"}</span>
+                    <span className="text-zinc-400"> the necessary steps to ensure success.</span>
+                  </div>
+                  <div>
+                    <span className="text-zinc-400">Progress will be monitored </span>
+                    <span className="text-yellow-200">{"{frequency}"}</span>
+                    <span className="text-zinc-400">.</span>
+                  </div>
                 </div>
-                <p className="text-xs text-white/85 italic">
-                  Variable Sanitization: Logic encourages initials for
-                  De-Identification.
+                <p className="text-xs text-white/50 italic">
+                  Variable sanitization: the engine encourages initials over full names for de-identification during drafting.
                 </p>
               </div>
 
+              {/* III. Dynamic Data */}
               <div className="space-y-6">
                 <h3 className="text-white font-bold uppercase tracking-widest text-base border-b border-[#00ffcc]/40 pb-2 font-orbitron">
                   III. Dynamic Data Architecture
                 </h3>
-                <p className="text-sm text-white/95">
-                  Several sections of the PCSP require an unbounded number of
-                  entries — legal representatives, communication chart rows, and
-                  important people with their activities. These are managed via
-                  in-memory JavaScript arrays rendered to the DOM on each state
-                  change, with full capture and restore on{" "}
-                  <span className="font-mono text-[#00ffcc]">.pcsp</span> export
-                  and import.
+                <p className="text-sm text-white/75 leading-relaxed">
+                  Several PCSP sections require an unbounded number of entries — legal representatives,
+                  communication chart rows, important people and their activities. Fixed forms don&apos;t work
+                  here: a client might have two guardians or six. Each section manages entries as in-memory
+                  JavaScript arrays, rendered to the DOM on every state change and serialized with full
+                  fidelity on{" "}
+                  <span className="text-[#00ffcc] font-mono">.pcsp</span> export.
                 </p>
                 <div className="p-6 rounded-xl bg-black border border-[#00ffcc]/40 font-mono text-sm space-y-1">
-                  <div>
-                    <span className="text-purple-400">legalReps</span>
-                    <span className="text-zinc-400"> = [] </span>
-                    <span className="text-zinc-500">
-                      // guardians, POA, custodians
-                    </span>
-                  </div>
-                  <div>
-                    <span className="text-purple-400">commChartRows</span>
-                    <span className="text-zinc-400"> = [] </span>
-                    <span className="text-zinc-500">
-                      // behavior → meaning → response
-                    </span>
-                  </div>
-                  <div>
-                    <span className="text-purple-400">importantPeople</span>
-                    <span className="text-zinc-400"> = [] </span>
-                    <span className="text-zinc-500">
-                      // person → relationship → activities[]
-                    </span>
-                  </div>
-                  <div className="pt-2 text-zinc-500">
-                    // all arrays serialize into .pcsp on export
-                  </div>
-                  <div className="text-zinc-500">
-                    // and restore with full fidelity on import
-                  </div>
+                  {[
+                    ["legalReps",      "guardians, POA, custodians"             ],
+                    ["commChartRows",  "behavior → meaning → staff response"    ],
+                    ["importantPeople","person → relationship → activities[]"   ],
+                  ].map(([varName, comment]) => (
+                    <div key={varName}>
+                      <span className="text-purple-400">{varName}</span>
+                      <span className="text-zinc-400"> = [] </span>
+                      <span className="text-zinc-600">// {comment}</span>
+                    </div>
+                  ))}
+                  <div className="pt-2 text-zinc-600">// all arrays serialize into .pcsp on export</div>
+                  <div className="text-zinc-600">// and restore with full fidelity on import</div>
                 </div>
               </div>
 
+              {/* IV. UI Components */}
               <div className="space-y-6">
                 <h3 className="text-white font-bold uppercase tracking-widest text-base border-b border-[#00ffcc]/40 pb-2 font-orbitron">
                   IV. Interactive UI Components
                 </h3>
-                <p className="text-sm text-white/95">
-                  Engineered custom, lightweight multi-select dropdowns with animated tag systems. This allows for complex, multi-dimensional data capture (e.g. learning styles, health parameters, legal roles) while maintaining a clean, single-page UI footprint.
+                <p className="text-sm text-white/75 leading-relaxed">
+                  Custom lightweight multi-select dropdowns with animated tag systems handle complex,
+                  multi-dimensional data capture — learning styles, health parameters, legal roles — while
+                  maintaining a clean, single-page UI footprint. No framework overhead. No third-party
+                  component libraries. Every interaction is purpose-built for clinical context.
                 </p>
               </div>
 
+              {/* V. Output Pipeline */}
               <div className="space-y-6">
                 <h3 className="text-white font-bold uppercase tracking-widest text-base border-b border-[#00ffcc]/40 pb-2 font-orbitron">
                   V. Output Pipeline
                 </h3>
                 <div className="grid md:grid-cols-3 gap-4">
-                  <div className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20 text-center">
-                    <Icon
-                      icon="solar:printer-linear"
-                      className="text-[#00ffcc] text-2xl mx-auto mb-2"
-                    />
-                    <span className="text-[#00ffcc] text-[13px] font-black uppercase block mb-2 font-orbitron">
-                      Print / PDF
-                    </span>
-                    <p className="text-[12px] text-white/75">
-                      Dedicated print stylesheet strips all UI chrome. Outputs a
-                      clean, PCSP-formatted document ready for signature or
-                      filing.
-                    </p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20 text-center">
-                    <Icon
-                      icon="solar:diskette-linear"
-                      className="text-[#00ffcc] text-2xl mx-auto mb-2"
-                    />
-                    <span className="text-[#00ffcc] text-[13px] font-black uppercase block mb-2 font-orbitron">
-                      .pcsp File
-                    </span>
-                    <p className="text-[12px] text-white/75">
-                      Full plan state exported as a portable JSON-based file.
-                      Auto-fills every field — including dynamic entries — on
-                      re-import.
-                    </p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20 text-center">
-                    <Icon
-                      icon="solar:copy-linear"
-                      className="text-[#00ffcc] text-2xl mx-auto mb-2"
-                    />
-                    <span className="text-[#00ffcc] text-[13px] font-black uppercase block mb-2 font-orbitron">
-                      Clipboard
-                    </span>
-                    <p className="text-[12px] text-white/75">
-                      One-click copy of the full narrative summary to paste
-                      directly into CIMOR, MOEDIWEB, or any agency system.
-                    </p>
-                  </div>
+                  {[
+                    {
+                      icon: "solar:printer-linear",
+                      title: "Print / PDF",
+                      body: "A dedicated print stylesheet strips all UI chrome. Outputs a clean, PCSP-formatted document ready for signature or filing.",
+                    },
+                    {
+                      icon: "solar:diskette-linear",
+                      title: ".pcsp File",
+                      body: "Full plan state exported as a portable JSON-based file. Auto-fills every field — static and dynamic — on re-import.",
+                    },
+                    {
+                      icon: "solar:copy-linear",
+                      title: "Clipboard",
+                      body: "One-click copy of the full narrative summary for direct paste into CIMOR, MOEDIWEB, or any agency system.",
+                    },
+                  ].map(({ icon, title, body }) => (
+                    <div key={title} className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20 text-center">
+                      <Icon icon={icon} className="text-[#00ffcc] text-2xl mx-auto mb-2" />
+                      <span className="text-[#00ffcc] text-[13px] font-black uppercase block mb-2 font-orbitron">
+                        {title}
+                      </span>
+                      <p className="text-[12px] text-white/65 leading-relaxed">{body}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="space-y-6">
+              {/* VI. Deployment */}
+              <div className="space-y-4">
                 <h3 className="text-white font-bold uppercase tracking-widest text-base border-b border-[#00ffcc]/40 pb-2 font-orbitron">
-                  V. Deployment Strategy
+                  VI. Deployment Strategy
                 </h3>
-                <p className="text-base text-white/95">
+                <p className="text-sm text-white/75 leading-relaxed">
                   Hosted on the agency&apos;s{" "}
-                  <span className="text-white font-bold">internal drive</span>.
-                  It inherits existing Windows Active Directory permissions,
-                  removing the need for a separate login system. Staff open the
-                  file in any modern browser — no installation, no IT ticket, no
-                  licensing cost.
+                  <span className="text-white font-semibold">internal drive</span>, it inherits existing
+                  Windows Active Directory permissions — no separate login system required. Staff open the
+                  file in any modern browser. No installation, no IT ticket, no licensing cost. The
+                  &quot;server&quot; was already on every desk.
                 </p>
               </div>
             </div>
@@ -912,23 +654,26 @@ export default function CaseStudyPCSP() {
               <h2 className="text-3xl font-black uppercase tracking-tighter text-white mb-8 font-orbitron">
                 <span className="text-[#00ffcc]/40">06 //</span> Conclusion
               </h2>
-              <p className="text-xl font-space text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
-                &quot;By leveraging a client-side JavaScript architecture, I
-                provided the Marion County Department of Mental Health with a
-                modern, high-speed drafting tool that satisfies the
-                &apos;Security Rule&apos; of HIPAA. The tool covers all nine
-                Missouri PCSP domains — including structured communication
-                profiling, person-centered likes and dislikes, and a dynamic
-                important people roster — without a single line of data ever
-                leaving the user&apos;s machine. This project demonstrates my
-                ability to build high-impact clinical tools within highly
-                regulated environments where traditional cloud solutions are
-                often prohibited.&quot;
+              <p className="text-lg font-space text-white/75 max-w-3xl mx-auto leading-relaxed mb-4">
+                This project sits at an unusual intersection: clinical compliance, zero-infrastructure
+                security, and a genuine need to reduce burnout for frontline staff.
               </p>
-              <div className="flex justify-center gap-8">
+              <p className="text-lg font-space text-white/75 max-w-3xl mx-auto leading-relaxed mb-4">
+                The constraint of &quot;no cloud tools&quot; that initially seemed like a limitation turned
+                out to be the design brief. A stateless, browser-based architecture wasn&apos;t a workaround
+                — it was the right answer. By keeping everything in volatile memory, I eliminated both the
+                HIPAA risk and the IT bottleneck in a single architectural decision.
+              </p>
+              <p className="text-lg font-space text-white/75 max-w-3xl mx-auto leading-relaxed mb-12">
+                The result covers every Missouri PCSP domain, satisfies HIPAA&apos;s Security Rule without
+                a BAA or a server, and gets case managers from blank page to audit-ready narrative in under
+                two minutes. That&apos;s the kind of problem frontend engineering is uniquely positioned to solve.
+              </p>
+              <div className="flex justify-center gap-8 flex-wrap">
                 <a
                   href="https://dte-84.github.io/PCSP-assistant-PRO/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-4 bg-[#00ffcc] text-[#0a0a0c] font-bold uppercase tracking-widest text-xs rounded hover:scale-105 transition-all"
                 >
                   Launch Live App
@@ -942,6 +687,7 @@ export default function CaseStudyPCSP() {
               </div>
             </div>
           </section>
+
         </div>
       </div>
 
