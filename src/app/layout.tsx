@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Drew Ernst | Portfolio V2.2",
     description: "Frontend Developer specializing in high-fidelity architecture and immersive user experiences. Featured: PCSP Assistant Pro.",
     images: [{
-      url: "https://dte-84.github.io/assets/pcspap1.png",
+      url: "https://dte-84.github.io/assets/mypage1.png",
       width: 1200,
       height: 630,
       alt: "Drew Ernst Portfolio - PCSP Assistant Pro",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Drew Ernst | Portfolio V2.2",
     description: "Frontend Architect specializing in high-performance healthcare solutions.",
-    images: ["https://dte-84.github.io/assets/pcspap1.png"],
+    images: ["https://dte-84.github.io/assets/mypage1.png"],
   },
   icons: {
     icon: "/favicon.ico",
