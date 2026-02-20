@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
             <div className="flex items-center justify-center gap-4 md:gap-8 py-4">
               <div className="h-[1px] w-8 md:w-12 bg-accent/40 shadow-[0_0_10px_var(--theme-accent)]"></div>
               <h4 className="text-[12px] md:text-[14px] font-bold text-accent uppercase tracking-[4px] md:tracking-[6px] whitespace-nowrap font-space">
-                Tools of the Trade
+                Tools
               </h4>
               <div className="h-[1px] w-8 md:w-12 bg-accent/40 shadow-[0_0_10px_var(--theme-accent)]"></div>
             </div>
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
                     (tech) => (
                       <div
                         key={tech}
-                        className="px-4 py-2 bg-accent/5 border border-accent/20 text-accent text-[10px] font-bold uppercase tracking-widest font-space hover:bg-accent/10 transition-all cursor-default"
+                        className="flex items-center justify-center w-[110px] h-[40px] bg-accent/5 border border-accent/20 text-accent text-[10px] font-bold uppercase tracking-widest font-space hover:bg-accent/10 transition-all cursor-default"
                       >
                         {tech}
                       </div>
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
                   {["Tailwind", "CSS3", "Figma", "Motion"].map((tech) => (
                     <div
                       key={tech}
-                      className="px-4 py-2 bg-white/5 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest font-space hover:bg-white/10 hover:text-white transition-all cursor-default"
+                      className="flex items-center justify-center w-[110px] h-[40px] bg-white/5 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest font-space hover:bg-white/10 hover:text-white transition-all cursor-default"
                     >
                       {tech}
                     </div>
