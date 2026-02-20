@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
           >
             {"//"}
           </span>{" "}
-          UI Designer
+          Secure High-Fidelity Solutions
         </p>
 
         {/* Interaction Stack */}
