@@ -10,11 +10,11 @@ const Projects: React.FC = () => {
     {
       id: "2026_PCSP_PRO",
       title: "PCSP Assistant Pro",
-      category: "Healthcare Architecture",
+      category: "Healthcare Design & Dev",
       year: "2026",
       description:
-        "Zero-knowledge clinical drafting engine for Missouri DMH providers, automating complex PCSP documentation with audit-ready logic and HIPAA-safe architecture.",
-      tags: ["Vanilla JS", "HIPAA-Safe", "OSHA Logic"],
+        "A user-centric clinical drafting engine designed for MCSDD (Missouri DMH), streamlining complex PCSP documentation through intuitive UI and HIPAA-safe logic.",
+      tags: ["UI/UX", "Vanilla JS", "HIPAA-Safe"],
       image: "/assets/pcsp1.png",
       link: "https://dte-84.github.io/MCSDD-APP/",
       caseStudy: "/case-study-isp",

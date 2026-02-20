@@ -133,15 +133,15 @@ export default function CaseStudyISP() {
                     Role
                   </span>
                   <span className="text-sm font-bold uppercase tracking-tight text-white/90">
-                    Solution Architect
+                    Product Designer
                   </span>
                 </div>
                 <div className="text-right">
                   <span className="block text-[10px] font-black text-[#00ffcc]/50 uppercase tracking-widest mb-1">
-                    Sector
+                    Client
                   </span>
                   <span className="text-sm font-bold uppercase tracking-tight text-white/90">
-                    Gov Health
+                    MCSDD (MO DMH)
                   </span>
                 </div>
                 <div className="text-right">
@@ -203,10 +203,9 @@ export default function CaseStudyISP() {
             </div>
             <div className="lg:col-span-2 space-y-8">
               <p className="text-lg text-white/95 font-medium leading-relaxed">
-                The Marion County Services for the Department of Developmental
-                Disabilities was struggling with an outdated, narrative-heavy
-                Person Centered Service Plan (PCSP) process that placed immense
-                burden on frontline staff.
+                Marion County Services for the Developmentally Disabled (MCSDD) 
+                was struggling with an outdated, narrative-heavy Person Centered 
+                Service Plan (PCSP) process that placed immense burden on frontline staff.
               </p>
               <div className="grid gap-6">
                 <div className="p-6 rounded-xl border border-[#00ffcc]/20 bg-white/5 backdrop-blur-sm">

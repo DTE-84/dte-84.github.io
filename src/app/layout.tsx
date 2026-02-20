@@ -13,9 +13,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Drew Ernst | Frontend Architect & Next.js Expert",
-  description: "Senior Frontend Developer specializing in high-performance healthcare solutions and immersive digital architecture. Expert in React, Next.js, and HIPAA-compliant application design.",
-  keywords: ["Frontend Developer", "React Architect", "Next.js Expert", "Healthcare Tech", "HIPAA-Safe Design", "Missouri DMH", "UI/UX Engineer", "Web Performance"],
+  title: "Drew Ernst | Frontend Developer & UI Designer",
+  description: "Creative Frontend Developer and UI Designer specializing in high-fidelity healthcare applications and immersive digital experiences. Expert in React, Next.js, and user-centric design.",
+  keywords: ["Frontend Developer", "UI Designer", "UX Design", "React Developer", "Next.js", "Healthcare Tech", "Product Design", "Web Development"],
   authors: [{ name: "Drew Ernst" }],
   openGraph: {
     title: "Drew Ernst | Portfolio V2.2",
