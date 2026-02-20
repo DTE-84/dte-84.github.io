@@ -70,11 +70,11 @@ const Hero: React.FC = () => {
           <div className="w-full flex flex-col items-center gap-8 max-w-[1400px] mx-auto px-4">
             {/* Toolkit Header */}
             <div className="flex items-center justify-center gap-4 md:gap-8 py-4">
-              <div className="h-[1px] w-8 md:w-12 bg-accent/40 shadow-[0_0_10px_var(--theme-accent)]"></div>
+              <div className="h-[1px] w-8 md:w-12 bg-[var(--theme-offset)] shadow-[0_0_10px_var(--theme-offset)]"></div>
               <h4 className="text-[12px] md:text-[14px] font-bold text-accent uppercase tracking-[4px] md:tracking-[6px] whitespace-nowrap font-space">
                 Tools of the Trade
               </h4>
-              <div className="h-[1px] w-8 md:w-12 bg-accent/40 shadow-[0_0_10px_var(--theme-accent)]"></div>
+              <div className="h-[1px] w-8 md:w-12 bg-[var(--theme-offset)] shadow-[0_0_10px_var(--theme-offset)]"></div>
             </div>
 
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center justify-center w-full">
@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Separator for mobile/desktop */}
-              <div className="w-16 h-[1px] bg-white/10 md:w-[1px] md:h-16"></div>
+              <div className="w-16 h-[1px] bg-[var(--theme-offset)]/40 md:w-[1px] md:h-16"></div>
 
               {/* Design Cluster */}
               <div className="flex flex-col items-center gap-4">
