@@ -61,22 +61,12 @@ const Hero: React.FC = () => {
               className="tech-tab group relative flex items-center justify-center gap-3 bg-accent/5 border-accent/30 text-accent font-orbitron text-[13px] tracking-[3px] transition-all duration-300 hover:bg-accent/20 hover:border-accent hover:shadow-[0_0_25px_rgba(var(--theme-accent-rgb),0.2)]"
               style={{ width: "180px", height: "52px" }}
             >
-              <Icon
-                icon="solar:clapperboard-edit-linear"
-                className="text-xl group-hover:scale-110 transition-transform"
-              />
+              <Icon icon="solar:clapperboard-edit-linear" className="text-xl group-hover:scale-110 transition-transform" />
               My Work
             </a>
+          </div>
 
-            <a
-              href="/asseTS/DTERESUME.pdf"
-              download
-              className="tech-tab group relative flex items-center justify-center gap-3 bg-white/5 border-white/20 text-white/70 font-orbitron text-[13px] tracking-[3px] transition-all duration-300 hover:bg-white/10 hover:border-white hover:text-white"
-              style={{ width: "180px", height: "52px" }}
-            >
-              <Icon
-                icon="solar:file-download-linear"
-                className="text-xl group-hover:scale-110 transition-transform"
+          {/* Tactical Tech Array */}
               />
               Download CV
             </a>
