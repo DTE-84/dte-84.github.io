@@ -80,7 +80,7 @@ export default function Home() {
               <li>
                 <a
                   href="#home"
-                  className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-white/70 hover:text-accent transition-colors"
+                  className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-accent hover:text-white transition-colors"
                   onClick={closeNav}
                 >
                   Home
@@ -89,7 +89,7 @@ export default function Home() {
               <li>
                 <a
                   href="#about"
-                  className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-white/70 hover:text-accent transition-colors"
+                  className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-accent hover:text-white transition-colors"
                   onClick={closeNav}
                 >
                   About
@@ -98,7 +98,7 @@ export default function Home() {
               <li>
                 <a
                   href="#projects"
-                  className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-white/70 hover:text-accent transition-colors"
+                  className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-accent hover:text-white transition-colors"
                   onClick={closeNav}
                 >
                   Projects
@@ -110,7 +110,7 @@ export default function Home() {
                     toggleModal();
                     closeNav();
                   }}
-                  className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-white/70 hover:text-accent transition-colors cursor-pointer"
+                  className="nav-item-link text-[13px] font-bold uppercase tracking-[3px] text-accent hover:text-white transition-colors cursor-pointer"
                 >
                   Contact
                 </button>
