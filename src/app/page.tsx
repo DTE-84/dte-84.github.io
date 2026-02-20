@@ -57,10 +57,10 @@ export default function Home() {
               <div className="logo-hex bg-accent/10 border border-accent px-4 py-2 [clip-path:polygon(15%_0,100%_0,85%_100%,0%_100%)] transition-all hover:skew-x-[-5deg]"><span className="logo-text font-space text-[22px] font-black text-white tracking-[2.5px] [text-shadow:0_0_10px_rgba(var(--theme-accent-rgb),0.5)]">DTE</span></div>
             </div>
             <div className="brand-info flex flex-col">
-              <span className="brand-text text-[14px] font-bold text-accent tracking-[2px]">Port_V.22</span>
+              <span className="brand-text text-[14px] font-bold text-accent tracking-[2px]">Port_V2.2</span>
               <div className="system-status flex items-center gap-2">
                 <span className="status-dot w-2 h-2 bg-white rounded-full shadow-[0_0_10px_#fff,0_0_20px_var(--theme-accent)] animate-[status-pulse_2s_infinite_ease-in-out]"></span>
-                <span className="status-text text-[8px] opacity-50 uppercase tracking-widest font-black">Live</span>
+                <span className="status-text text-[10px] opacity-50 uppercase tracking-widest font-black">Live</span>
               </div>
             </div>
           </div>
