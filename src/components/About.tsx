@@ -47,8 +47,7 @@ const RevealText: React.FC<{ text: string; isReverse?: boolean }> = ({
               }}
             >
               {word}
-            </span>
-            {" "}
+            </span>{" "}
           </React.Fragment>
         );
       })}
@@ -72,7 +71,7 @@ const About: React.FC = () => {
 
         <div className="grid lg:grid-cols-3 gap-12 lg:gap-20">
           <div className="lg:col-span-2 space-y-12">
-            <RevealText text="Specializing in the intersection of technical precision and operational logic. I build high-fidelity interfaces that serve as intuitive bridges between complex data systems and the human users who navigate them." />
+            <RevealText text="Specializing in the intersection of technical precision and operational logic, I build high-fidelity interfaces that serve as intuitive bridges between complex data systems and the human users who navigate them." />
             <RevealText text="My background in operations management provides a unique 'business-first' lens. I view software not as isolated code, but as a critical component of a larger ecosystem where communication protocols and collaborative engineering are paramount." />
             <RevealText text="Transitioning from leadership to frontend development has refined my focus on clarity, impact, and systemic efficiency. I don't just build components; I engineer workflows that streamline performance and drive measurable results." />
           </div>
