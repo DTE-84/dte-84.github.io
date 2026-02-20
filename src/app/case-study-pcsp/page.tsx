@@ -359,6 +359,18 @@ export default function CaseStudyPCSP() {
                 <div className="space-y-4">
                   <h4 className="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-3 font-orbitron">
                     <Icon
+                      icon="solar:shield-check-linear"
+                      className="text-[#00ffcc]"
+                    />{" "}
+                    HCBS &amp; Due Process
+                  </h4>
+                  <p className="text-sm text-white/85 leading-loose">
+                    Automated workflows for federal HCBS Rule compliance and Missouri Due Process requirements. Captures less intrusive methods, historical patterns, and measurable criteria for lifting rights restrictions.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-3 font-orbitron">
+                    <Icon
                       icon="solar:shield-keyhole-linear"
                       className="text-[#00ffcc]"
                     />{" "}
@@ -486,6 +498,19 @@ export default function CaseStudyPCSP() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">
+                      Clinical Data Expansion
+                    </h4>
+                    <p className="text-sm text-white/95">
+                      Expanded the engine to encompass the full Missouri State Audit Checklist. This included engineering complex data structures for detailed medication protocols (PRN psychotropics), comprehensive family medical history, and mandatory HCBS housing compliance triggers.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-6 items-start">
+                  <div className="text-[#00ffcc] font-black font-space text-3xl opacity-20 italic">
+                    07
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold uppercase tracking-widest text-base mb-2 font-orbitron">
                       Portable File System (.pcsp)
                     </h4>
                     <p className="text-sm text-white/95">
@@ -497,9 +522,6 @@ export default function CaseStudyPCSP() {
                       rows, important people, checkboxes, and narrative — is
                       serialized to a locally stored JSON file. On import, a
                       single file upload auto-fills the entire form in seconds.
-                      Plans can also be printed to PDF via a dedicated print
-                      stylesheet that strips all UI chrome and renders only the
-                      clean PCSP document.
                     </p>
                   </div>
                 </div>
@@ -577,6 +599,17 @@ export default function CaseStudyPCSP() {
                     </tr>
                   </thead>
                   <tbody className="text-sm">
+                    <tr className="bg-white/[0.02]">
+                      <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
+                        Audit Rejection
+                      </td>
+                      <td className="p-4 border-t border-b border-white/5 text-white/85 italic">
+                        High Risk (Passive)
+                      </td>
+                      <td className="p-4 border-t border-b border-r border-white/5 rounded-r-lg text-[#00ffcc] font-black uppercase tracking-widest">
+                        0% Projected
+                      </td>
+                    </tr>
                     <tr className="bg-white/[0.02]">
                       <td className="p-4 border-t border-b border-l border-white/5 rounded-l-lg font-bold text-white">
                         Drafting Time
@@ -801,7 +834,16 @@ export default function CaseStudyPCSP() {
 
               <div className="space-y-6">
                 <h3 className="text-white font-bold uppercase tracking-widest text-base border-b border-[#00ffcc]/40 pb-2 font-orbitron">
-                  IV. Output Pipeline
+                  IV. Interactive UI Components
+                </h3>
+                <p className="text-sm text-white/95">
+                  Engineered custom, lightweight multi-select dropdowns with animated tag systems. This allows for complex, multi-dimensional data capture (e.g. learning styles, health parameters, legal roles) while maintaining a clean, single-page UI footprint.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <h3 className="text-white font-bold uppercase tracking-widest text-base border-b border-[#00ffcc]/40 pb-2 font-orbitron">
+                  V. Output Pipeline
                 </h3>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="p-4 rounded-lg bg-white/5 border border-[#00ffcc]/20 text-center">
