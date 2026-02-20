@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
             <div className="flex items-center justify-center gap-4 md:gap-8 py-4">
               <div className="h-[1px] w-8 md:w-12 bg-accent/40 shadow-[0_0_10px_var(--theme-accent)]"></div>
               <h4 className="text-[12px] md:text-[14px] font-bold text-accent uppercase tracking-[4px] md:tracking-[6px] whitespace-nowrap font-space">
-                Technical Arsenal
+                Tools of the Trade
               </h4>
               <div className="h-[1px] w-8 md:w-12 bg-accent/40 shadow-[0_0_10px_var(--theme-accent)]"></div>
             </div>
