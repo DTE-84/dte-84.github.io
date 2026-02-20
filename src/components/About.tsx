@@ -35,18 +35,21 @@ const RevealText: React.FC<{ text: string; isReverse?: boolean }> = ({
         const index = isReverse ? words.length - 1 - i : i;
 
         return (
-          <span
-            key={i}
-            className={`reveal-word inline-block opacity-0 blur-[8px] translate-y-[8px] transition-all duration-[0.8s] ease-[cubic-bezier(0.23,1,0.32,1)] mr-[0.2em]`}
-            style={{
-              transitionDelay: `${index * 35}ms`,
-              opacity: isVisible ? 1 : 0,
-              filter: isVisible ? "blur(0)" : "blur(8px)",
-              transform: isVisible ? "translateY(0)" : "translateY(8px)",
-            }}
-          >
-            {word}
-          </span>
+          <React.Fragment key={i}>
+            <span
+              className="reveal-word inline-block opacity-0 blur-[8px] translate-y-[8px] transition-all duration-[0.8s] ease-[cubic-bezier(0.23,1,0.32,1)] font-medium"
+              style={{
+                transitionDelay: `${index * 35}ms`,
+                opacity: isVisible ? 1 : 0,
+                filter: isVisible ? "blur(0)" : "blur(8px)",
+                transform: isVisible ? "translateY(0)" : "translateY(8px)",
+                marginRight: "0.25em",
+              }}
+            >
+              {word}
+            </span>
+            {" "}
+          </React.Fragment>
         );
       })}
     </p>
