@@ -111,12 +111,12 @@ const Projects: React.FC = () => {
       <div className="container-main">
         <div className="flex items-center gap-6 mb-32">
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase">
-            <span style={{ color: "var(--theme-accent)", opacity: 0.8 }}>
+            <span style={{ color: "var(--theme-offset)", opacity: 0.8 }}>
               02 //
             </span>{" "}
             Exploratory Case Study
           </h2>
-          <div className="h-[1px] flex-grow bg-accent/60"></div>
+          <div className="h-[1px] flex-grow bg-[var(--theme-offset)]/40"></div>
         </div>
 
         {projects
@@ -155,7 +155,7 @@ const Projects: React.FC = () => {
 
                 <div className="relative border-l-4 border-accent pl-10 py-8 bg-accent/[0.03] backdrop-blur-sm rounded-r-2xl group-hover:bg-accent/[0.05] transition-all duration-500">
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="px-3 py-1.5 category-badge rounded-none text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase">
+                    <span className="px-2 py-1 category-badge rounded-none text-[9px] font-bold border border-[var(--theme-offset)]/40 text-[var(--theme-offset)] bg-[var(--theme-offset)]/5 tracking-widest uppercase">
                       {project.category}
                     </span>
                     <span className="text-xs text-zinc-400 font-mono tracking-[0.2em]">
@@ -168,11 +168,11 @@ const Projects: React.FC = () => {
                   <p className="text-white/70 text-lg leading-relaxed mb-8 font-medium">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-3 mb-10 text-accent font-bold">
+                  <div className="flex flex-wrap gap-2 mb-10 text-[var(--theme-offset)] font-bold">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[10px] bg-accent/10 px-3 py-1.5 rounded uppercase tracking-widest border border-accent/20"
+                        className="text-[9px] bg-[var(--theme-offset)]/10 px-2 py-1 rounded-none uppercase tracking-widest border border-[var(--theme-offset)]/30"
                       >
                         {tag}
                       </span>
@@ -212,12 +212,12 @@ const Projects: React.FC = () => {
 
         <div className="flex items-center gap-6 mb-32">
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase">
-            <span style={{ color: "var(--theme-accent)", opacity: 0.8 }}>
+            <span style={{ color: "var(--theme-offset)", opacity: 0.8 }}>
               03 //
             </span>{" "}
             The Archives
           </h2>
-          <div className="h-[1px] flex-grow bg-accent/60"></div>
+          <div className="h-[1px] flex-grow bg-[var(--theme-offset)]/40"></div>
         </div>
 
         <div className="space-y-48">
@@ -249,7 +249,7 @@ const Projects: React.FC = () => {
                 </div>
                 <div className={idx % 2 !== 0 ? "md:order-1" : ""}>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="px-3 py-1.5 category-badge rounded-none text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase">
+                    <span className="px-2 py-1 category-badge rounded-none text-[9px] font-bold border border-[var(--theme-offset)]/40 text-[var(--theme-offset)] bg-[var(--theme-offset)]/5 tracking-widest uppercase">
                       {project.category}
                     </span>
                     <span className="text-xs text-zinc-400 font-mono tracking-[0.2em]">
@@ -262,11 +262,11 @@ const Projects: React.FC = () => {
                   <p className="text-white/70 text-lg leading-relaxed mb-8 font-medium">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-3 mb-10 text-accent font-bold">
+                  <div className="flex flex-wrap gap-2 mb-10 text-[var(--theme-offset)] font-bold">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1.5 tech-tag-chip rounded-none text-[10px] font-bold border border-accent/20 text-accent bg-accent/5 tracking-widest uppercase"
+                        className="px-2 py-1 tech-tag-chip rounded-none text-[9px] font-bold border border-[var(--theme-offset)]/30 text-[var(--theme-offset)] bg-[var(--theme-offset)]/5 tracking-widest uppercase"
                       >
                         {tag}
                       </span>

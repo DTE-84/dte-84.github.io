@@ -53,9 +53,9 @@ const About: React.FC = () => {
       <div className="container-main">
         <div className="flex items-center gap-6 mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-widest uppercase">
-            <span style={{ color: 'var(--theme-accent)', opacity: 0.8 }}>01 //</span> Identity
+            <span style={{ color: 'var(--theme-offset)', opacity: 0.8 }}>01 //</span> Identity
           </h2>
-          <div className="h-[1px] flex-grow bg-accent/60"></div>
+          <div className="h-[1px] flex-grow bg-[var(--theme-offset)]/40"></div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12 lg:gap-20">
@@ -66,7 +66,7 @@ const About: React.FC = () => {
           </div>
 
           <div className="space-y-10">
-            <h4 className="text-lg font-bold text-white uppercase tracking-widest border-b border-accent/80 pb-4">
+            <h4 className="text-lg font-bold text-white uppercase tracking-widest border-b border-[var(--theme-offset)]/60 pb-4">
               Philosophy
             </h4>
             <ul className="terminal-list list-none p-0 mt-[30px]">

@@ -107,11 +107,11 @@ export default function Home() {
       <Footer onContactClick={toggleModal} />
 
       <button
-        className="mail__btn fixed bottom-[30px] right-[30px] w-[45px] h-[45px] rounded-full bg-[#1e293b] border border-accent text-accent flex items-center justify-center transition-all duration-300 z-[1000] shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:bg-accent hover:text-black hover:scale-[1.1]"
+        className="tech-tab fixed bottom-[30px] right-[30px] !w-[60px] !h-[60px] bg-[#1e293b]/80 backdrop-blur-sm z-[1000] shadow-[0_0_20px_rgba(0,0,0,0.5)]"
         onClick={toggleModal}
         aria-label="Contact me"
       >
-        <Icon icon="fa-solid:envelope" />
+        <Icon icon="fa-solid:envelope" width="28" height="28" />
       </button>
     </div>
   );
