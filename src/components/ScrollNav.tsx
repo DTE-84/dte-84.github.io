@@ -39,9 +39,9 @@ const ScrollNav: React.FC = () => {
 
   const sections = [
     { id: "home", label: "HOME", top: "0%" },
-    { id: "about", label: "ABOUT", top: "33%" },
-    { id: "projects", label: "PROJECTS", top: "66%" },
-    { id: "footer", label: "CONTACT", top: "100%" },
+    { id: "about", label: "IDENTITY", top: "33%" },
+    { id: "projects", label: "ARCHIVES", top: "66%" },
+    { id: "footer", label: "TRANSMISSIONS", top: "100%" },
   ];
 
   return (
