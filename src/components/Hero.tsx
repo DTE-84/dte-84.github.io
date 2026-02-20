@@ -78,101 +78,42 @@ const Hero: React.FC = () => {
 
           {/* Tactical Tech Array */}
           {/* Tactical Tech Array */}
-          <div className="w-full flex flex-col items-center gap-12 max-w-[1400px] mx-auto px-4">
-            {/* Toolkit Header (Top) */}
+          <div className="w-full flex flex-col items-center gap-8 max-w-[1400px] mx-auto px-4">
+            {/* Toolkit Header */}
             <div className="flex items-center justify-center gap-4 md:gap-8 py-4">
-              <div
-                className="h-[1.5px] w-10 md:w-16 flex-shrink-0"
-                style={{
-                  backgroundColor: "var(--theme-offset)",
-                  boxShadow: "0 0 10px var(--theme-offset)",
-                }}
-              ></div>
-              <h4 className="text-[14px] md:text-[18px] font-bold text-accent uppercase tracking-[6px] md:tracking-[10px] whitespace-nowrap flicker-animation font-space [text-shadow:0_0_10px_rgba(var(--theme-accent-rgb),0.4)]">
-                My Toolkit
+              <div className="h-[1px] w-8 md:w-12 bg-accent/40 shadow-[0_0_10px_var(--theme-accent)]"></div>
+              <h4 className="text-[12px] md:text-[14px] font-bold text-accent uppercase tracking-[4px] md:tracking-[6px] whitespace-nowrap font-space">
+                Technical Arsenal
               </h4>
-              <div
-                className="h-[1.5px] w-10 md:w-16 flex-shrink-0"
-                style={{
-                  backgroundColor: "var(--theme-offset)",
-                  boxShadow: "0 0 10px var(--theme-offset)",
-                }}
-              ></div>
+              <div className="h-[1px] w-8 md:w-12 bg-accent/40 shadow-[0_0_10px_var(--theme-accent)]"></div>
             </div>
 
-            {/* Language Icons Row (Bottom) */}
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 max-w-[1000px]">
-              <div
-                className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10"
-                style={{ width: "125px", height: "48px" }}
-              >
-                <Icon
-                  icon="solar:atom-linear"
-                  className="tab-icon text-accent text-xl md:group-hover:hidden transition-all"
-                />
-                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">
-                  React
-                </span>
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center justify-center w-full">
+              {/* Engineering Cluster */}
+              <div className="flex flex-col items-center gap-4">
+                <span className="text-[10px] font-mono uppercase tracking-[3px] text-white/40">Core Engineering</span>
+                <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-[400px]">
+                  {['React', 'Next.js', 'TypeScript', 'JavaScript'].map((tech) => (
+                    <div key={tech} className="px-4 py-2 bg-accent/5 border border-accent/20 text-accent text-[10px] font-bold uppercase tracking-widest font-space hover:bg-accent/10 transition-all cursor-default">
+                      {tech}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div
-                className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10"
-                style={{ width: "125px", height: "48px" }}
-              >
-                <Icon
-                  icon="solar:server-square-linear"
-                  className="tab-icon text-accent text-xl md:group-hover:hidden transition-all"
-                />
-                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">
-                  Next.js
-                </span>
-              </div>
-              <div
-                className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10"
-                style={{ width: "125px", height: "48px" }}
-              >
-                <Icon
-                  icon="solar:pallete-2-linear"
-                  className="tab-icon text-accent text-xl md:group-hover:hidden transition-all"
-                />
-                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">
-                  Tailwind
-                </span>
-              </div>
-              <div
-                className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10"
-                style={{ width: "125px", height: "48px" }}
-              >
-                <Icon
-                  icon="solar:layers-linear"
-                  className="tab-icon text-accent text-xl md:group-hover:hidden transition-all"
-                />
-                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">
-                  TypeScript
-                </span>
-              </div>
-              <div
-                className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10"
-                style={{ width: "125px", height: "48px" }}
-              >
-                <Icon
-                  icon="solar:code-2-linear"
-                  className="tab-icon text-accent text-xl md:group-hover:hidden transition-all"
-                />
-                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">
-                  JavaScript
-                </span>
-              </div>
-              <div
-                className="tech-tab flex items-center justify-center gap-2 group cursor-pointer transition-all hover:bg-accent/10"
-                style={{ width: "125px", height: "48px" }}
-              >
-                <Icon
-                  icon="solar:clapperboard-edit-linear"
-                  className="tab-icon text-accent text-xl md:group-hover:hidden transition-all"
-                />
-                <span className="tab-text md:hidden md:group-hover:block transition-all text-accent text-[11px] font-bold uppercase tracking-widest">
-                  CSS3
-                </span>
+
+              {/* Separator for mobile/desktop */}
+              <div className="w-16 h-[1px] bg-white/10 md:w-[1px] md:h-16"></div>
+
+              {/* Design Cluster */}
+              <div className="flex flex-col items-center gap-4">
+                <span className="text-[10px] font-mono uppercase tracking-[3px] text-white/40">UI/UX & Design</span>
+                <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-[400px]">
+                  {['Tailwind', 'CSS3', 'Figma', 'Motion'].map((tech) => (
+                    <div key={tech} className="px-4 py-2 bg-white/5 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest font-space hover:bg-white/10 hover:text-white transition-all cursor-default">
+                      {tech}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
