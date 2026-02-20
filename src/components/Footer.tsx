@@ -40,7 +40,7 @@ const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
                 </span>
               </a>
               <a
-                href="/assets/DTEResume.pdf"
+                href="/assets/DTE-Resume.docx"
                 target="_blank"
                 className="flex items-center gap-4 text-white group hover:text-accent transition-colors"
               >
