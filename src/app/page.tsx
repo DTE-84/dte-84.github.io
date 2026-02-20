@@ -71,6 +71,17 @@ export default function Home() {
               <li><a href="#about" className="tech-tab" onClick={closeNav}>About</a></li>
               <li><a href="#projects" className="tech-tab" onClick={closeNav}>Projects</a></li>
               <li><button onClick={() => { toggleModal(); closeNav(); }} className="tech-tab">Contact</button></li>
+              <li>
+                <a 
+                  href="/assets/DTE84resume.pdf" 
+                  download 
+                  className="tech-tab !border-white/20 !text-white/60 hover:!text-white hover:!border-white group"
+                  onClick={closeNav}
+                >
+                  <Icon icon="solar:file-download-bold-duotone" className="mr-2 text-lg group-hover:scale-110 transition-transform" />
+                  CV
+                </a>
+              </li>
             </ul>
 
             <div 

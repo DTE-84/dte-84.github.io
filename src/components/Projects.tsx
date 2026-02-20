@@ -9,13 +9,13 @@ const Projects: React.FC = () => {
   const projects = [
     {
       id: "2026_PCSP_PRO",
-      title: "ISP Assistant Pro",
+      title: "PCSP Assistant Pro",
       category: "Healthcare Architecture",
       year: "2026",
       description:
-        "High-fidelity clinical drafting tool for Missouri DMH providers, automating complex ISP documentation with zero-knowledge architecture.",
+        "Zero-knowledge clinical drafting engine for Missouri DMH providers, automating complex PCSP documentation with audit-ready logic and HIPAA-safe architecture.",
       tags: ["Vanilla JS", "HIPAA-Safe", "OSHA Logic"],
-      image: "/assets/mwisptop.png",
+      image: "/assets/pcsp1.png",
       link: "https://dte-84.github.io/MCSDD-APP/",
       caseStudy: "/case-study-isp",
       featured: true,
