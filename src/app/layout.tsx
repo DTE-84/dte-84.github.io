@@ -13,6 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dte-84.github.io"),
   title: "Drew Ernst | Frontend Developer & UI Designer",
   description: "Specialized in secure, high-fidelity healthcare and fintech solutions. Expert in bridging complex logic with intuitive digital design using React and Next.js.",
   keywords: ["Frontend Developer", "UI Designer", "UX Design", "React Developer", "Next.js", "Healthcare Tech", "Product Design", "HIPAA-Safe Design"],
