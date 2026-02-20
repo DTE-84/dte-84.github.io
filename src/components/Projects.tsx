@@ -21,6 +21,18 @@ const Projects: React.FC = () => {
       featured: true,
     },
     {
+      id: "SIKNIGHT",
+      title: "SiKnight",
+      category: "Interactive Game Hub",
+      year: "2026",
+      description:
+        "High-engagement gaming portal featuring an interactive engine, real-time leaderboard, and virtual currency systems. Includes a custom avatar interface and integrated media galleries.",
+      tags: ["React", "Interactive", "Game Design"],
+      image: "/assets/siknighthome.png",
+      link: "https://dte-84.github.io/SiKnight/",
+      featured: false,
+    },
+    {
       id: "CRYPTOLIVE",
       title: "CryptoLive Engine",
       category: "Fintech",
@@ -129,7 +141,7 @@ const Projects: React.FC = () => {
                   <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity z-30"></div>
                   <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity z-30"></div>
 
-                  <div className="relative w-full h-full overflow-hidden rounded-sm z-10 shadow-xl">
+                  <div className="relative w-full h-full overflow-hidden rounded-sm z-10 shadow-xl">      
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -143,10 +155,10 @@ const Projects: React.FC = () => {
 
                 <div className="relative border-l-4 border-accent pl-10 py-8 bg-accent/[0.03] backdrop-blur-sm rounded-r-2xl group-hover:bg-accent/[0.05] transition-all duration-500">
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="px-2 py-1 category-badge rounded-none text-[9px] font-bold border border-[var(--theme-offset)]/40 text-[var(--theme-offset)] bg-[var(--theme-offset)]/5 tracking-widest uppercase">
+                    <span className="px-2 py-1 category-badge rounded-none text-[11px] font-bold border border-[var(--theme-offset)]/40 text-[var(--theme-offset)] bg-[var(--theme-offset)]/5 tracking-widest uppercase">
                       {project.category}
                     </span>
-                    <span className="text-xs text-zinc-400 font-mono tracking-[0.2em]">
+                    <span className="text-sm text-zinc-400 font-mono tracking-[0.2em]">
                       {project.year}
                     </span>
                   </div>
@@ -156,11 +168,11 @@ const Projects: React.FC = () => {
                   <p className="text-white/70 text-lg leading-relaxed mb-8 font-medium">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-10 text-[var(--theme-offset)] font-bold">
+                  <div className="flex flex-wrap gap-2 mb-10 text-[var(--theme-offset)] font-bold">       
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[9px] bg-[var(--theme-offset)]/10 px-2 py-1 rounded-none uppercase tracking-widest border border-[var(--theme-offset)]/30"
+                        className="text-[11px] bg-[var(--theme-offset)]/10 px-2 py-1 rounded-none uppercase tracking-widest border border-[var(--theme-offset)]/30"
                       >
                         {tag}
                       </span>
@@ -170,7 +182,7 @@ const Projects: React.FC = () => {
                     <a
                       href={project.link}
                       target="_blank"
-                      className="inline-flex items-center text-sm font-bold text-accent border-b-2 border-accent pb-1 hover:border-white hover:text-white transition-all uppercase tracking-widest"
+                      className="inline-flex items-center text-base font-bold text-accent border-b-2 border-accent pb-1 hover:border-white hover:text-white transition-all uppercase tracking-widest"
                     >
                       Launch Terminal{" "}
                       <Icon
@@ -183,7 +195,7 @@ const Projects: React.FC = () => {
                         href={project.caseStudy}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-bold text-[var(--theme-offset)] border-b-2 border-[var(--theme-offset)] pb-1 hover:border-white hover:text-white transition-all uppercase tracking-widest"
+                        className="inline-flex items-center text-base font-bold text-[var(--theme-offset)] border-b-2 border-[var(--theme-offset)] pb-1 hover:border-white hover:text-white transition-all uppercase tracking-widest"
                       >
                         Read Research{" "}
                         <Icon
@@ -224,7 +236,7 @@ const Projects: React.FC = () => {
                   <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity"></div>
                   <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-offset opacity-40 group-hover:opacity-100 transition-opacity"></div>
 
-                  <div className="relative w-full h-full overflow-hidden rounded-sm z-10 shadow-2xl">
+                  <div className="relative w-full h-full overflow-hidden rounded-sm z-10 shadow-2xl">     
                     <div className="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent z-10 pointer-events-none"></div>
                     <Image
                       src={project.image}
@@ -237,10 +249,10 @@ const Projects: React.FC = () => {
                 </div>
                 <div className={idx % 2 !== 0 ? "md:order-1" : ""}>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="px-2 py-1 category-badge rounded-none text-[9px] font-bold border border-[var(--theme-offset)]/40 text-[var(--theme-offset)] bg-[var(--theme-offset)]/5 tracking-widest uppercase">
+                    <span className="px-2 py-1 category-badge rounded-none text-[11px] font-bold border border-[var(--theme-offset)]/40 text-[var(--theme-offset)] bg-[var(--theme-offset)]/5 tracking-widest uppercase">
                       {project.category}
                     </span>
-                    <span className="text-xs text-zinc-400 font-mono tracking-[0.2em]">
+                    <span className="text-sm text-zinc-400 font-mono tracking-[0.2em]">
                       {project.year}
                     </span>
                   </div>
@@ -250,11 +262,11 @@ const Projects: React.FC = () => {
                   <p className="text-white/70 text-lg leading-relaxed mb-8 font-medium">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-10 text-[var(--theme-offset)] font-bold">
+                  <div className="flex flex-wrap gap-2 mb-10 text-[var(--theme-offset)] font-bold">       
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-1 tech-tag-chip rounded-none text-[9px] font-bold border border-[var(--theme-offset)]/30 text-[var(--theme-offset)] bg-[var(--theme-offset)]/5 tracking-widest uppercase"
+                        className="px-2 py-1 tech-tag-chip rounded-none text-[11px] font-bold border border-[var(--theme-offset)]/30 text-[var(--theme-offset)] bg-[var(--theme-offset)]/5 tracking-widest uppercase"
                       >
                         {tag}
                       </span>
@@ -263,7 +275,7 @@ const Projects: React.FC = () => {
                   <a
                     href={project.link}
                     target="_blank"
-                    className="inline-flex items-center text-sm font-bold text-accent border-b-2 border-accent pb-1 hover:border-white hover:text-white transition-all uppercase tracking-widest"
+                    className="inline-flex items-center text-base font-bold text-accent border-b-2 border-accent pb-1 hover:border-white hover:text-white transition-all uppercase tracking-widest"
                   >
                     Uplink Project{" "}
                     <Icon icon="solar:arrow-right-up-linear" className="ml-2" />
