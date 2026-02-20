@@ -72,9 +72,9 @@ const About: React.FC = () => {
 
         <div className="grid lg:grid-cols-3 gap-12 lg:gap-20">
           <div className="lg:col-span-2 space-y-12">
-            <RevealText text="A results-oriented Frontend Developer with a background in operations and management. I specialize in building intuitive, user-centric web applications where technical precision meets business logic." />
-            <RevealText text="My previous career in leadership taught me that the best software isn’t built in a vacuum — it’s the result of clear communication and effective collaboration. I excel in cross-functional teams with the ability to turn complex requirements into seamless digital experiences." />
-            <RevealText text='I build software with a focus on clarity, usability, and impact. Transitioning from a successful career in operations to Frontend development. I bring a unique perspective and "business-first" lens to the engineering process.' />
+            <RevealText text="Specializing in the intersection of technical precision and operational logic. I build high-fidelity interfaces that serve as intuitive bridges between complex data systems and the human users who navigate them." />
+            <RevealText text="My background in operations management provides a unique 'business-first' lens. I view software not as isolated code, but as a critical component of a larger ecosystem where communication protocols and collaborative engineering are paramount." />
+            <RevealText text="Transitioning from leadership to frontend development has refined my focus on clarity, impact, and systemic efficiency. I don't just build components; I engineer workflows that streamline performance and drive measurable results." />
           </div>
 
           <div className="space-y-10">
