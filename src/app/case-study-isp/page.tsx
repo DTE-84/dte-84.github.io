@@ -167,7 +167,7 @@ export default function CaseStudyISP() {
           <div className="absolute -inset-1 bg-gradient-to-r from-[#00ffcc]/20 to-transparent blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
           <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/40 bg-black aspect-[21/9]">
             <Image
-              src="/assets/mwisptop.png"
+              src="/assets/pcsp1.png"
               alt="PCSP Assistant Pro Hero"
               fill
               quality={80}
@@ -270,7 +270,7 @@ export default function CaseStudyISP() {
 
               <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/20 bg-[#00ffcc]/5 p-2 aspect-video">
                 <Image
-                  src="/assets/mwhealth.png"
+                  src="/assets/pcsp2.png"
                   alt="PCSP Workflow"
                   fill
                   quality={80}
@@ -504,7 +504,7 @@ export default function CaseStudyISP() {
 
               <div className="relative rounded-2xl overflow-hidden border border-[#00ffcc]/20 bg-[#00ffcc]/5 p-2 aspect-video">
                 <Image
-                  src="/assets/Screenshot 2026-02-15 140038.png"
+                  src="/assets/pcsp3.png"
                   alt="Clinical Logic Builder"
                   fill
                   quality={80}
