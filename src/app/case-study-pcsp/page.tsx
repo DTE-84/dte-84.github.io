@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 
-export default function CaseStudyISP() {
+export default function CaseStudyPCSP() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -112,7 +112,7 @@ export default function CaseStudyISP() {
             </Link>
             <div className="text-right">
               <span className="block text-[7px] font-mono text-[#00ffcc]/40 mb-1 uppercase tracking-widest">
-                ARCHIVE_ID: 2026_ISP_PRO
+                ARCHIVE_ID: 2026_PCSP_PRO
               </span>
               <div className="inline-block px-3 py-1 rounded-full border border-[#00ffcc]/20 bg-[#00ffcc]/5 text-[#00ffcc] text-[9px] font-black uppercase tracking-[0.4em]">
                 CASE STUDY
