@@ -885,7 +885,7 @@ export default function CaseStudyISP() {
               </p>
               <div className="flex justify-center gap-8">
                 <a
-                  href="https://dte-84.github.io/MCSDD-APP/"
+                  href="https://dte-84.github.io/PCSP-assistant-PRO/"
                   target="_blank"
                   className="px-8 py-4 bg-[#00ffcc] text-[#0a0a0c] font-bold uppercase tracking-widest text-xs rounded hover:scale-105 transition-all"
                 >

@@ -16,8 +16,8 @@ const Projects: React.FC = () => {
         "A user-centric clinical drafting engine designed for MCSDD (Missouri DMH), streamlining complex PCSP documentation through intuitive UI and HIPAA-safe logic.",
       tags: ["UI/UX", "Vanilla JS", "HIPAA-Safe"],
       image: "/assets/pcsp1.png",
-      link: "https://dte-84.github.io/MCSDD-APP/",
-      caseStudy: "/case-study-isp",
+      link: "https://dte-84.github.io/PCSP-assistant-PRO/",
+      caseStudy: "/case-study-PCSP",
       featured: true,
     },
     {
