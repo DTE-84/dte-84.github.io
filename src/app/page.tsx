@@ -117,7 +117,7 @@ export default function Home() {
               </li>
               <li className="lg:ml-2">
                 <a
-                  href="/assets/DTE-Resume.pdf"
+                  href="/assets/DTEResume.pdf"
                   download
                   className="tech-tab !w-[110px] !h-[42px] !text-[11px] !tracking-[2px] !border-[var(--theme-offset)]/40 !text-[var(--theme-offset)] hover:!text-white hover:!border-white transition-all group"
                   onClick={closeNav}
