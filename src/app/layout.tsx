@@ -13,20 +13,27 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "DTE E-Portfolio",
-  description: "Frontend Developer specializing in high-fidelity architecture and immersive user experiences.",
+  title: "Drew Ernst | Frontend Architect & Next.js Expert",
+  description: "Senior Frontend Developer specializing in high-performance healthcare solutions and immersive digital architecture. Expert in React, Next.js, and HIPAA-compliant application design.",
+  keywords: ["Frontend Developer", "React Architect", "Next.js Expert", "Healthcare Tech", "HIPAA-Safe Design", "Missouri DMH", "UI/UX Engineer", "Web Performance"],
+  authors: [{ name: "Drew Ernst" }],
   openGraph: {
-    title: "Drew T Ernst | Port_V.22",
-    description: "Frontend Developer specializing in high-fidelity architecture and immersive user experiences.",
-    images: ["/assets/og-image.png"],
+    title: "Drew Ernst | Portfolio V2.2",
+    description: "Frontend Developer specializing in high-fidelity architecture and immersive user experiences. Featured: PCSP Assistant Pro.",
+    images: [{
+      url: "/assets/pcsp1.png",
+      width: 1200,
+      height: 630,
+      alt: "Drew Ernst Portfolio - PCSP Assistant Pro",
+    }],
     url: "https://dte-84.github.io/",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Drew T Ernst | Port_V.22",
-    description: "Frontend Developer specializing in high-fidelity architecture and immersive user experiences.",
-    images: ["/assets/og-image.png"],
+    title: "Drew Ernst | Portfolio V2.2",
+    description: "Frontend Architect specializing in high-performance healthcare solutions.",
+    images: ["/assets/pcsp1.png"],
   },
 };
 
