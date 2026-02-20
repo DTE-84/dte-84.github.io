@@ -117,7 +117,7 @@ export default function Home() {
               </li>
               <li className="lg:ml-4 lg:pl-6 lg:border-l lg:border-white/10">
                 <a
-                  href="/assets/DTEResume.pdf"
+                  href="/assets/DTEresume.pdf"
                   download
                   className="flex items-center text-[11px] font-black uppercase tracking-[2px] text-accent/80 hover:text-white transition-all group"
                   onClick={closeNav}
