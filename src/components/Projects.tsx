@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
         "An automotive marketplace optimized for high-performance discovery flows.",
       tags: ["React", "Rest API", "UX Design"],
       image: "/assets/santishowroom.png",
-      link: "https://dte-84.github.io/SantiCars/",
+      link: "https://dte-84.github.io/Car-Sales-Marketing/",
       featured: false,
     },
     {
