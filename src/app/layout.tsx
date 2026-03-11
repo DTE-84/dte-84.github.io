@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DTE - Portfolio",
     description: "Data Analyst | Software Engineer",
-    images: ["/assets/DTE84resume.png"],
+    images: ["/DTE-E-Portfolio/assets/DTE84resume.png"],
   },
   keywords: [
     "Frontend Developer",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "DTE - Portfolio",
     description:
       "Data Analyst | Software Engineer. Specialized in solving world problems with sophisticated applications.",
-    images: ["/assets/DTE84resume.png"],
+    images: ["/DTE-E-Portfolio/assets/DTE84resume.png"],
   },
   icons: {
     icon: "/favicon.ico",

@@ -8,24 +8,23 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import VersionSelector from "../components/VersionSelector";
+import ContactModal from "../components/ContactModal";
 
 export default function Home() {
-        const [theme, setTheme] = useState("teal");
+        const [theme, setTheme] = useState("blue");
         const [isGatewayOpen, setIsGatewayOpen] = useState(false);
+        const [isContactOpen, setIsContactOpen] = useState(false);
 
         const toggleGateway = () => setIsGatewayOpen(!isGatewayOpen);
 
-	const scrollToFooter = () => {
-		const footer = document.getElementById('footer');
-		if (footer) footer.scrollIntoView({ behavior: 'smooth' });
-	};
-
         const toggleTheme = () => {
-                // Theme is locked to teal for high-fidelity brand consistency
+                const newTheme = theme === "blue" ? "yellow" : "blue";
+                setTheme(newTheme);
+                document.documentElement.setAttribute("data-theme", newTheme);
         };
 
         useEffect(() => {
-                document.documentElement.setAttribute("data-theme", "teal");
+                document.documentElement.setAttribute("data-theme", "blue");
         }, []);
 
         return (
@@ -88,10 +87,12 @@ export default function Home() {
                                 <Projects />
                         </main>
 
-                        <Footer onGatewayClick={toggleGateway} onContactClick={scrollToFooter} />
+                        <Footer onGatewayClick={toggleGateway} onContactClick={() => setIsContactOpen(true)} />
 
-                        {isGatewayOpen && (
-                                <VersionSelector isOpen={isGatewayOpen} onClose={toggleGateway} />
+                        <VersionSelector isOpen={isGatewayOpen} onClose={toggleGateway} />
+
+                        {isContactOpen && (
+                                <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
                         )}
                 </div>
         );

@@ -68,7 +68,7 @@ const Projects: React.FC = () => {
                         description:
                                 "AI-driven lead intelligence engine for the $84 trillion wealth transfer. Orchestrates behavioral financial modeling to bridge the trust gap between inheritors and fiduciary experts.",
                         tags: ["React 19", "Behavioral Finance", "Lead Intelligence"],
-                        image: "/assets/novaui.png",
+                        image: "/DTE-E-Portfolio/assets/novaui.png",
                         link: "https://dte-84.github.io/NestLegacy/",
                         featured: true,
                 },
@@ -80,8 +80,8 @@ const Projects: React.FC = () => {
                         description:
                                 "Clinical data validation engine synthesizing unstructured patient narratives with Missouri DMH/HCBS compliance frameworks; features zero-knowledge PHI security and automated documentation logic.",
                         tags: ["Next.js", "Compliance Logic", "HIPAA"],
-                        image: "/assets/pcsp1.png",
-                        video: "/assets/CaseStudy-PCSP-1771755500766.mp4",
+                        image: "/DTE-E-Portfolio/assets/pcsp1.png",
+                        video: "/DTE-E-Portfolio/assets/CaseStudy-PCSP-1771755500766.mp4",
                         link: "https://dte-84.github.io/case-study-pcsp/",
                         caseStudy: "/case-study-pcsp",
                         featured: true,
@@ -94,8 +94,8 @@ const Projects: React.FC = () => {
                         description:
                                 "Integrated financial data ecosystem (Plaid API, AWS S3 unstructured metadata, and MongoDB) utilizing a Python/FastAPI backend to deliver real-time behavioral insights and multi-source wealth forecasting.",
                         tags: ["Python FastAPI", "Data Science", "AWS"],
-                        image: "/assets/novaui.png",
-                        video: "/assets/DTESolutionsFinanceTrack.mp4",
+                        image: "/DTE-E-Portfolio/assets/novaui.png",
+                        video: "/DTE-E-Portfolio/assets/DTESolutionsFinanceTrack.mp4",
                         link: "https://dte-84.github.io/Pulse/",
                         featured: true,
                 },
@@ -107,8 +107,8 @@ const Projects: React.FC = () => {
                         description:
                                 "Multi-source telemetry engine orchestrating real-time GPS coordinates, historical player databases, and audible distance-to-pin assistant for tour-grade performance analysis.",
                         tags: ["React 19", "Geospatial", "IoT"],
-                        image: "/assets/fluff/FLUFF-GPS.png",
-                        video: "/assets/Fluff.mp4",
+                        image: "/DTE-E-Portfolio/assets/fluff/FLUFF-GPS.png",
+                        video: "/DTE-E-Portfolio/assets/Fluff.mp4",
                         link: "https://dte-84.github.io/Fluff/",
                         featured: true,
                 }
@@ -123,8 +123,8 @@ const Projects: React.FC = () => {
                         description:
                                 "Initial architectural breakdown of the Behavioral Financial Conscience. Explores the core psychological frameworks and data orchestration logic that birthed Nova.",
                         tags: ["Behavioral Logic", "Fintech Architecture"],
-                        image: "/assets/novaui.png",
-                        video: "/assets/DTESolutionsFinanceTrack.mp4",
+                        image: "/DTE-E-Portfolio/assets/novaui.png",
+                        video: "/DTE-E-Portfolio/assets/DTESolutionsFinanceTrack.mp4",
                         link: "/hub/pulse-breakdown.html",
                         featured: true,
                 },
@@ -136,8 +136,8 @@ const Projects: React.FC = () => {
                         description:
                                 "Deep technical specification for the PGA-grade telemetry engine. Documents the geospatial processing and audible assistant protocols.",
                         tags: ["IoT Telemetry", "Geospatial Logic"],
-                        image: "/assets/fluff/FLUFF-GPS.png",
-                        video: "/assets/Fluff.mp4",
+                        image: "/DTE-E-Portfolio/assets/fluff/FLUFF-GPS.png",
+                        video: "/DTE-E-Portfolio/assets/Fluff.mp4",
                         link: "https://dte-84.github.io/Fluff/",
                         featured: true,
                 },
@@ -149,8 +149,8 @@ const Projects: React.FC = () => {
                         description:
                                 "A boutique digital portfolio designed for high-impact visual storytelling. Features immersive scroll dynamics and gallery-focused architecture.",
                         tags: ["UX Design", "Framer Motion", "React"],
-                        image: "/assets/kwportfront.png",
-                        video: "/assets/KWModeling-1771900067138.mp4",
+                        image: "/DTE-E-Portfolio/assets/kwportfront.png",
+                        video: "/DTE-E-Portfolio/assets/KWModeling-1771900067138.mp4",
                         link: "https://kw-portfolio-kappa.vercel.app/",
                         featured: true,
                 },
@@ -162,8 +162,8 @@ const Projects: React.FC = () => {
                         description:
                                 "A centralized gaming nexus aggregating multi-platform content. Demonstrates advanced DOM manipulation and responsive media grid layouts.",
                         tags: ["Vanilla JS", "CSS3", "Media"],
-                        image: "/assets/siknighthome.png",
-                        video: "/assets/SiKnight-1771896141464.mp4",
+                        image: "/DTE-E-Portfolio/assets/siknighthome.png",
+                        video: "/DTE-E-Portfolio/assets/SiKnight-1771896141464.mp4",
                         link: "https://dte-84.github.io/SiKnight/",
                         featured: true,
                 },
@@ -175,8 +175,8 @@ const Projects: React.FC = () => {
                         description:
                                 "A dynamic automotive inventory platform featuring custom filtering logic and high-resolution asset management.",
                         tags: ["Inventory Logic", "Frontend Eng", "UI"],
-                        image: "/assets/santicars.png",
-                        video: "/assets/CarSales.mp4",
+                        image: "/DTE-E-Portfolio/assets/santicars.png",
+                        video: "/DTE-E-Portfolio/assets/CarSales.mp4",
                         link: "https://dte-84.github.io/CarSalesInv/",
                         featured: true,
                 }
@@ -303,14 +303,14 @@ const Projects: React.FC = () => {
                                 <div className='flex flex-col md:flex-row justify-between items-end mb-24'>
                                         <div>
                                                 <div className='flex items-center gap-4 mb-4'>
-                                                        <div className='w-12 h-[1px] bg-white/20'></div>
-                                                        <span className='font-orbitron text-white/40 tracking-[0.3em] text-sm font-bold'>
+                                                        <div className='w-12 h-[1px] bg-[var(--theme-accent)]/40'></div>
+                                                        <span className='font-orbitron text-[var(--theme-accent)]/60 tracking-[0.3em] text-sm font-bold'>
                                                                 03 // ARCHIVE
                                                         </span>
                                                 </div>
-                                                <h2 className='text-5xl md:text-7xl font-black text-white/20 uppercase tracking-tighter'>
+                                                <h2 className='text-5xl md:text-7xl font-black text-white uppercase tracking-tighter'>
                                                         Legacy <br />
-                                                        <span className='text-white/10'>
+                                                        <span className='text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/20'>
                                                                 Solutions
                                                         </span>
                                                 </h2>

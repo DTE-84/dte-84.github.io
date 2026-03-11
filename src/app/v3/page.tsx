@@ -188,8 +188,8 @@ const FeaturedCaseStudy = () => {
 					<div className='absolute -inset-4 bg-accent/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>
 					<div className='relative aspect-video bg-zinc-900 border border-white/10 overflow-hidden'>
 						<video
-							src='/assets/MCSDD-PCSP.mp4'
-							poster='/assets/pcsp1.png'
+							src='/DTE-E-Portfolio/assets/MCSDD-PCSP.mp4'
+							poster='/DTE-E-Portfolio/assets/pcsp1.png'
 							autoPlay
 							muted
 							loop
@@ -285,7 +285,7 @@ const Work = () => {
                         description:
                                 "Digital trust layer for the $84 trillion wealth transfer. AI-driven lead intelligence bridging inheritors to fiduciary experts through behavioral financial modeling.",
                         tags: ["React 19", "Behavioral Finance", "Lead Intelligence", "Nova AI"],
-                        image: "/assets/novaui.png",
+                        image: "/DTE-E-Portfolio/assets/novaui.png",
                         link: "https://dte-84.github.io/NestLegacy/",
                 },
 		{
@@ -301,8 +301,8 @@ const Work = () => {
 				"MongoDB",
 				"Behavioral AI",
 			],
-			image: "/assets/novaui.png",
-			video: "/assets/DTESolutionsFinanceTrack.mp4",
+			image: "/DTE-E-Portfolio/assets/novaui.png",
+			video: "/DTE-E-Portfolio/assets/DTESolutionsFinanceTrack.mp4",
 			link: "https://dte-84.github.io/DTE-FinancialSolutions/",
 		},
 		{
@@ -318,8 +318,8 @@ const Work = () => {
 				"IoT Sync",
 				"Biometrics",
 			],
-			image: "/assets/fluff/FLUFF-GPS.png",
-			video: "/assets/Fluff.mp4",
+			image: "/DTE-E-Portfolio/assets/fluff/FLUFF-GPS.png",
+			video: "/DTE-E-Portfolio/assets/Fluff.mp4",
 			link: "https://dte-84.github.io/Fluff/",
 		},
 		{
@@ -330,8 +330,8 @@ const Work = () => {
 			description:
 				"High-engagement gaming portal featuring an interactive engine, real-time leaderboard, and virtual currency.",
 			tags: ["React", "Interactive", "Game Design"],
-			image: "/assets/siknighthome.png",
-			video: "/assets/siknight.mp4",
+			image: "/DTE-E-Portfolio/assets/siknighthome.png",
+			video: "/DTE-E-Portfolio/assets/siknight.mp4",
 			link: "https://dte-84.github.io/SiKnight/",
 		},
 		{
@@ -342,8 +342,8 @@ const Work = () => {
 			description:
 				"Immersive visual architecture for a high-end creative portfolio, focusing on fluid navigation.",
 			tags: ["Next.js", "Motion", "Tailwind"],
-			image: "/assets/kwportfront.png",
-			video: "/assets/KWModel.mp4",
+			image: "/DTE-E-Portfolio/assets/kwportfront.png",
+			video: "/DTE-E-Portfolio/assets/KWModel.mp4",
 			link: "https://kw-portfolio-kappa.vercel.app/",
 		},
 		{
@@ -354,8 +354,8 @@ const Work = () => {
 			description:
 				"Service-oriented architecture featuring a custom interactive engine for visual data comparison.",
 			tags: ["Vanilla JS", "UI/UX", "GSAP"],
-			image: "/assets/tonybna.png",
-			video: "/assets/Tonysllc.mp4",
+			image: "/DTE-E-Portfolio/assets/tonybna.png",
+			video: "/DTE-E-Portfolio/assets/Tonysllc.mp4",
 			link: "https://tonyslandscapingllc.com",
 		},
 		{
@@ -366,8 +366,8 @@ const Work = () => {
 			description:
 				"Technical demonstration of advanced state management and asynchronous data orchestration.",
 			tags: ["React", "Hooks", "API"],
-			image: "/assets/library.png",
-			video: "/assets/estore.mp4",
+			image: "/DTE-E-Portfolio/assets/library.png",
+			video: "/DTE-E-Portfolio/assets/estore.mp4",
 			link: "https://dte-84.github.io/E-Commerce-Books/",
 		},
 		{
@@ -378,8 +378,8 @@ const Work = () => {
 			description:
 				"Automotive marketplace interface optimized for complex search heuristics and high-speed filtering.",
 			tags: ["React", "REST API", "UX Design"],
-			image: "/assets/santishowroom.png",
-			video: "/assets/CarSales.mp4",
+			image: "/DTE-E-Portfolio/assets/santishowroom.png",
+			video: "/DTE-E-Portfolio/assets/CarSales.mp4",
 			link: "https://dte-84.github.io/CarSalesInv/",
 		},
 		{
@@ -390,7 +390,7 @@ const Work = () => {
 			description:
 				"High-performance websocket implementation for real-time market data visualization.",
 			tags: ["React", "Socket.io", "Chart.js"],
-			image: "/assets/cryptolive (2).png",
+			image: "/DTE-E-Portfolio/assets/cryptolive (2).png",
 			link: "https://cryptolive-5jmo.onrender.com/",
 		},
 	];

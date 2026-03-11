@@ -225,7 +225,7 @@ const Footer: React.FC<FooterProps> = ({ onContactClick, onGatewayClick }) => {
 						{onGatewayClick && (
 							<button
 								onClick={onGatewayClick}
-								className='text-white/10 hover:text-[#22C55E] transition-all text-xl hover:scale-110 active:scale-90 ml-4'
+								className='text-white/10 hover:text-[var(--theme-accent)] transition-all text-xl hover:scale-110 active:scale-90 ml-4'
 								title='DTE Solutions Gateway'
 							>
 								<Icon icon='ph:star-fill' />

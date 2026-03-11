@@ -39,7 +39,7 @@ export default function Navbar() {
                                                 href='/'
                                                 className='text-2xl font-black tracking-tighter text-white group z-[1001]'
                                                 onClick={closeMenu}>
-                                                <Image src="/assets/DREWMAINLOGO.png" alt="DTE" width={100} height={32} className="h-8 w-auto object-contain group-hover:scale-105 transition-transform" />
+                                                <Image src="/DTE-E-Portfolio/assets/DREWMAINLOGO.png" alt="DTE" width={100} height={32} className="h-8 w-auto object-contain group-hover:scale-105 transition-transform" />
                                         </Link>
 
                                         <div className='hidden md:flex gap-12 items-center'>

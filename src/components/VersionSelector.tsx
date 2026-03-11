@@ -41,10 +41,10 @@ export default function VersionSelector({ forcedOpen = false, onClose, isOpen = 
       aria-modal="true"
       aria-label="Select your destination"
     >
-      {forcedOpen && (
+      {(forcedOpen || isOpen) && (
         <button 
           onClick={onClose}
-          className="absolute top-8 right-8 text-white/40 hover:text-[#22C55E] transition-colors p-4"
+          className="absolute top-8 right-8 text-white/40 hover:text-[var(--theme-accent)] transition-colors p-4"
         >
           <Icon icon="bi:x-lg" className="text-3xl" />
         </button>
@@ -63,18 +63,18 @@ export default function VersionSelector({ forcedOpen = false, onClose, isOpen = 
         <Link
           href="/"
           onClick={handleSelect}
-          className="group flex-1 p-10 bg-zinc-900/50 border border-white/5 hover:border-[#7dd3fc] transition-all duration-500 relative overflow-hidden rounded-3xl"
+          className="group flex-1 p-10 bg-zinc-900/50 border border-white/5 hover:border-[var(--theme-accent)] transition-all duration-500 relative overflow-hidden rounded-3xl"
         >
           <div className="absolute top-6 left-6 text-[10px] font-bold uppercase tracking-widest text-zinc-600">Protocol V2.2</div>
           <div className="mt-16">
             <h2 className="text-4xl font-black tracking-tighter text-white mb-2 uppercase">
-              Portfolio<span className="text-[#7dd3fc]">.</span>
+              Portfolio<span className="text-[var(--theme-accent)]">.</span>
             </h2>
             <p className="text-zinc-500 text-sm font-medium leading-relaxed">
               Immersive personal workspace showcasing full-stack engineering and public relations background.
             </p>
           </div>
-          <div className="absolute bottom-8 right-8 text-[#7dd3fc] translate-x-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-4xl">
+          <div className="absolute bottom-8 right-8 text-[var(--theme-accent)] translate-x-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-4xl">
             &rarr;
           </div>
         </Link>
