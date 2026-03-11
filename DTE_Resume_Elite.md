@@ -21,6 +21,13 @@ A rare hybrid of **Advanced Software Engineering** and **Strategic Communication
 
 ## HIGH-PERFORMANCE ENGINEERING INITIATIVES
 
+### Founder & Principal Consultant • DTE Solutions LLC | 2025 – Present
+*Strategic Technical Orchestration & Full-Stack Solutions for High-Stakes Environments.*
+
+- **Independent Consultancy:** Established a high-fidelity freelance engine specializing in rapid prototyping and deployment of specialized analytical tools for clinical and financial sectors.
+- **Full-Lifecycle Ownership:** Orchestrate the entire product trajectory from regulatory discovery and architectural design to production-grade deployment and CI/CD maintenance.
+- **Strategic Partnership:** Leverage communication expertise to translate complex technical constraints into actionable business roadmaps for diverse organizational stakeholders.
+
 ### Founder & Principal Engineer • NestLegacy | 2026
 *Digital Trust Layer & Wealth Acquisition Engine for the $84 Trillion Transfer.*
 
@@ -28,21 +35,21 @@ A rare hybrid of **Advanced Software Engineering** and **Strategic Communication
 - **Projective Analytics:** Architected interactive longevity and tax-exposure projection systems, providing immediate mathematical value to prospects and increasing consultation conversion rates.
 - **Enterprise Nexus:** Developed a modular ecosystem architecture ensuring high-fidelity data integrity across corporate hubs and product-specific deep links.
 
-### Lead Full-Stack Developer â€¢ Pulse (The Behavioral Finance Conscience) | 2026
+### Lead Full-Stack Developer • Pulse (The Behavioral Finance Conscience) | 2026
 *Production-grade behavioral finance ecosystem designed to correlate financial velocity with user psychology.*
 
 - **Behavioral Intelligence:** Engineered "Nova," an evolving AI consciousness using GPT-4o; implemented "Behavioral Mirroring" to detect "Stress-Spending Clusters" by correlating financial data with user-logged stress indices and sleep quality.
 - **High-Velocity Infrastructure:** Architected a multi-tier system utilizing **React 19** and a **FastAPI** asynchronous backend, achieving sub-millisecond data visualization delivery via Recharts.
 - **Strategic Security:** Integrated an AWS S3 Receipt Ecosystem with encrypted pre-signed URL protocols, ensuring audit-ready data persistence and uncompromising user privacy.
 
-### Lead Software Engineer â€¢ Marion County DDSD (Missouri DMH) | 2026
-*PCSP Assistant Pro â€” HIPAA-compliant clinical documentation engine for state government audits.*
+### Lead Software Engineer • Marion County DDSD (Missouri DMH) | 2026
+*PCSP Assistant Pro — HIPAA-compliant clinical documentation engine for state government audits.*
 
 - **Strategic Communications Bridge:** Applied PR/Marketing expertise to design an "Intelligent Phrasing Engine," translating complex clinical requirements into intuitive UI patterns for non-technical staff.
 - **Workflow Optimization:** Reduced documentation revision cycles by 40%, ensuring 100% adherence to Missouri DMH state audit requirements through rigid enterprise logic.
 - **Zero-Footprint Security:** Engineered an in-memory processing architecture to satisfy stringent HIPAA security standards without compromising system speed.
 
-### Full-Stack Engineer â€¢ Caddy Pro & SiKnight | 2025 â€“ 2026
+### Full-Stack Engineer • Caddy Pro & SiKnight | 2025 – 2026
 *Elite Performance Tracking & High-Engagement Interactive Platforms.*
 
 - **Caddy Pro:** Engineered a "Tournament Edition" golf utility for competitive amateurs; features automated GPS shot tracking, a Live Skins Game logic engine with shared group sync, and speech-synthesis audible GPS assistance.
@@ -53,6 +60,9 @@ A rare hybrid of **Advanced Software Engineering** and **Strategic Communication
 ## STRATEGIC EDUCATION & PROFESSIONAL TRAINING
 - **B.S. Communication (Public Relations Focus):** Quincy University | GPA: 3.8
 - **B.S. Marketing:** Culver-Stockton College | GPA: 3.8
+- **Advanced Engineering Mentorship:** David Bragg (Senior Software Engineer) | 2025 – 2026
+  - *Intensive 1-on-1 technical mentorship focused on enterprise-grade software architecture, advanced OOD principles, and high-frequency data orchestration.*
+  - *Refined full-stack proficiency through rigorous review of production lifecycle management and scalability strategies.*
 - **Frontend Simplified Bootcamp:** Production-Grade React & Software Architecture | 2025
-- **Advanced Engineering Mentorship:** David Bragg, Senior Software Engineer | 2025
+  - *Comprehensive immersion in modern frontend ecosystems, focusing on state management complexity and high-fidelity UI implementation.*
 
