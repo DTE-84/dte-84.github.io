@@ -287,6 +287,7 @@ const Work = () => {
                                 "Digital trust layer for the $84 trillion wealth transfer. AI-driven lead intelligence bridging inheritors to fiduciary experts through behavioral financial modeling.",
                         tags: ["React 19", "Behavioral Finance", "Lead Intelligence", "Nova AI"],
                         image: "/DTE-E-Portfolio/assets/novaui.png",
+						video: "/DTE-E-Portfolio/assets/NestLegacy.mp4",
                         link: "https://dte-84.github.io/NestLegacy/",
                 },
 		{

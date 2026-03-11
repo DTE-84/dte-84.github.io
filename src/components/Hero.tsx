@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
 			id='home'
 			className='hero min-h-screen flex items-center justify-center text-center pt-[120px] md:pt-[100px] bg-transparent'>
 			<div className='container-main hero-content'>
-				<h1 className='font-bold uppercase leading-none mb-4 text-[clamp(2.2rem,10vw,6rem)] tracking-[clamp(4px,2vw,8px)] relative inline-block z-10 w-full flicker-animation bg-gradient-to-r from-white via-accent to-white/80 bg-clip-text text-transparent'>
+				<h1 className='font-orbitron font-black uppercase leading-none mb-4 text-[clamp(2.2rem,10vw,6rem)] tracking-[clamp(4px,2vw,8px)] relative inline-block z-10 w-full'>
 					{words.map((word, wordIndex) => (
 						<span
 							key={wordIndex}
@@ -22,8 +22,12 @@ const Hero: React.FC = () => {
 								return (
 									<span
 										key={charIndex}
-										className='hero-letter inline-block animate-[hero-wave-breathe_4s_ease-in-out_infinite] blur-[0.5px]'
-										style={{ animationDelay: `${globalIndex * 0.1}s` }}>
+										className='hero-letter inline-block animate-[hero-wave-breathe_4s_ease-in-out_infinite] relative'
+										style={{ 
+											animationDelay: `${globalIndex * 0.1}s`,
+											color: '#fff',
+											textShadow: '0 0 20px rgba(var(--theme-accent-rgb), 0.8), 0 0 40px rgba(var(--theme-accent-rgb), 0.5), 0 0 60px rgba(var(--theme-accent-rgb), 0.3)'
+										}}>
 										{char}
 									</span>
 								);
