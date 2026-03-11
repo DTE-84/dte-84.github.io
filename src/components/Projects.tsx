@@ -99,7 +99,7 @@ const Projects: React.FC = () => {
                         tags: ["Python FastAPI", "Data Science", "AWS"],
                         image: "/DTE-E-Portfolio/assets/novaui.png",
                         video: "/DTE-E-Portfolio/assets/Pulse.mp4",
-                        link: "https://dte-84.github.io/Pulse/",
+                        link: "https://dte-solutions.icu/pulse-breakdown.html",
                         featured: true,
                 },
                 {
