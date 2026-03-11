@@ -13,9 +13,9 @@
 [data-theme="yellow"] {
   --theme-bg: #000000;
   --theme-bg-alt: #050505;
-  --theme-accent: #FDE047;
-  --theme-offset: #EAB308;
-  --theme-accent-rgb: 253, 224, 71;
+  --theme-accent: #00AAFA;
+  --theme-offset: #008CD4;
+  --theme-accent-rgb: 0, 170, 250;
   --theme-text: #FFFFFF;
-  --theme-shadow: rgba(253, 224, 71, 0.4);
+  --theme-shadow: rgba(0, 170, 250, 0.4);
 }
