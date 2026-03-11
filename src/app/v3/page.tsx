@@ -304,7 +304,7 @@ const Work = () => {
 				"Behavioral AI",
 			],
 			image: "/DTE-E-Portfolio/assets/novaui.png",
-			video: "/DTE-E-Portfolio/assets/DTESolutionsFinanceTrack.mp4",
+			video: "/DTE-E-Portfolio/assets/Pulse.mp4",
 			link: "https://dte-84.github.io/DTE-FinancialSolutions/",
 		},
 		{

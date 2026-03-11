@@ -98,7 +98,7 @@ const Projects: React.FC = () => {
                                 "Integrated financial data ecosystem (Plaid API, AWS S3 unstructured metadata, and MongoDB) utilizing a Python/FastAPI backend to deliver real-time behavioral insights and multi-source wealth forecasting.",
                         tags: ["Python FastAPI", "Data Science", "AWS"],
                         image: "/DTE-E-Portfolio/assets/novaui.png",
-                        video: "/DTE-E-Portfolio/assets/DTESolutionsFinanceTrack.mp4",
+                        video: "/DTE-E-Portfolio/assets/Pulse.mp4",
                         link: "https://dte-84.github.io/Pulse/",
                         featured: true,
                 },
