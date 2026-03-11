@@ -42,9 +42,9 @@ const Hero: React.FC = () => {
 							color: "var(--theme-offset)",
 							textShadow: "0 0 10px rgba(var(--theme-offset-rgb), 0.3)",
 						}}></span>
-						<br>					
+						<br />					
 					Engineering Performance through Data Integrity
-					</br>
+					
 				</p>
 
 				<div className='mt-20 flex flex-col items-center gap-12 w-full'>

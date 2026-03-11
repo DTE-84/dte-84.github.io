@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
                 image: "/DTE-E-Portfolio/assets/pcsp1.png",
                 video: "/DTE-E-Portfolio/assets/CaseStudy-PCSP-1771755500766.mp4",
                 link: "https://dte-84.github.io/DTE-E-Portfolio/case-study-pcsp/",
-                caseStudy: "/DTE-E-Portfolio/case-study-pcsp/",
+                caseStudy: "/case-study-pcsp/",
                 featured: true,
         };
 
