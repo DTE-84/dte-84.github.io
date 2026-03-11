@@ -22,7 +22,7 @@ export default function CaseStudyPCSP() {
           }
         });
       },
-      { threshold: 0.2, rootMargin: "-10% 0px -40% 0px" },
+      { threshold: 0.1, rootMargin: "-25% 0px -25% 0px" },
     );
     document
       .querySelectorAll("section[id]")
