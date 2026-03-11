@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../theme.css";
 
 @theme {
   --color-nova-blue: #7dd3fc;
@@ -16,8 +17,6 @@
   --animate-orb-pulse: orbPulse 2s ease-in-out infinite;
   --animate-status-pulse: statusPulse 2s infinite ease-in-out;
 }
-
-@import "../theme.css";
 
 @keyframes float {
   0%, 100% { transform: translate(0, 0) scale(1); }
