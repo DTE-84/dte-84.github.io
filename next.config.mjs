@@ -1,3 +1,4 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
@@ -6,4 +7,5 @@ const nextConfig = {
     qualities: [75, 80],
   },
 };
+
 export default nextConfig;
