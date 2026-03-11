@@ -7,9 +7,11 @@ import { useTrapFocus } from "../hooks/useTrapFocus";
 
 interface NavbarProps {
   onContactClick?: () => void;
+  theme?: string;
+  onThemeToggle?: () => void;
 }
 
-export default function Navbar({ onContactClick }: NavbarProps) {
+export default function Navbar({ onContactClick, theme, onThemeToggle }: NavbarProps) {
         const [isOpen, setIsOpen] = useState(false);
         const [scrolled, setScrolled] = useState(false);
         const mobileMenuRef = useRef<HTMLDivElement>(null);
@@ -75,7 +77,20 @@ export default function Navbar({ onContactClick }: NavbarProps) {
                                                 </a>
                                         </div>
 
-                                        <div className='hidden md:flex items-center'>
+                                        <div className='hidden md:flex items-center gap-4'>
+                                                {onThemeToggle && (
+                                                        <div
+                                                                className='protocol-switch flex items-center gap-3 cursor-pointer'
+                                                                onClick={onThemeToggle}>
+                                                                <div className='slider w-9 h-[18px] bg-[#222] rounded-[20px] relative border border-accent'>
+                                                                        <div
+                                                                                className={`dot absolute w-3 h-3 top-0.5 bg-accent rounded-full transition-transform duration-300 ${theme === "yellow" ? "translate-x-[18px]" : "translate-x-0.5"}`}></div>
+                                                                </div>
+                                                                <span className='protocol-label text-[14px] font-bold text-accent tracking-widest uppercase font-space'>
+                                                                        Protocol
+                                                                </span>
+                                                        </div>
+                                                )}
                                                 <Link
                                                         href='/'
                                                         className='group relative px-4 py-2 overflow-hidden border border-white/10 transition-all hover:border-accent/50'>

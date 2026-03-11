@@ -38,7 +38,7 @@ export default function Home() {
                         <ScrollNav />
 
                         {/* HIGH-FIDELITY NAVBAR */}
-                        <Navbar onContactClick={() => setIsContactOpen(true)} />
+                        <Navbar onContactClick={() => setIsContactOpen(true)} theme={theme} onThemeToggle={toggleTheme} />
 
                         <main id="main-content" className="relative z-10 bg-transparent">
                                 <Hero />
