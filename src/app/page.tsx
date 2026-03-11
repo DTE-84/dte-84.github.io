@@ -48,10 +48,10 @@ export default function Home() {
                                         <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-2 md:p-4 rounded-[32px] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative group">
                                                 <div className="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                                                 <video 
-                                                        autoplay 
+                                                        autoPlay 
                                                         loop 
                                                         muted 
-                                                        playsinline 
+                                                        playsInline 
                                                         className="w-full h-auto rounded-2xl opacity-90 group-hover:opacity-100 transition-opacity duration-700"
                                                 >
                                                         <source src="/pulse.mp4" type="video/mp4" />
