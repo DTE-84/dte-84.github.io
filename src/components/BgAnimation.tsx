@@ -69,7 +69,7 @@ const BgAnimation: React.FC = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const isYellow = currentTheme.current === "yellow";
-      const color = isYellow ? "253, 224, 71" : "34, 197, 94";
+      const color = isYellow ? "253, 224, 71" : "0, 255, 204";
 
       particles.forEach((p) => {
         p.x += p.speedX;

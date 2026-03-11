@@ -8,7 +8,6 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import VersionSelector from "../components/VersionSelector";
-import ShatterPortal from "../components/ShatterPortal";
 
 export default function Home() {
         const [theme, setTheme] = useState("blue");
@@ -89,7 +88,6 @@ export default function Home() {
                                 <Hero />
                                 <About />
                                 <Projects />
-                                <ShatterPortal />
                         </main>
 
                         <Footer onGatewayClick={toggleGateway} onContactClick={scrollToFooter} />
