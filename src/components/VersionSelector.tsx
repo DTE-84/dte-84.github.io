@@ -65,18 +65,18 @@ export default function VersionSelector({ forcedOpen = false, onClose, isOpen = 
         <Link
           href="/"
           onClick={handleSelect}
-          className="group flex-1 p-10 bg-zinc-900/50 border border-white/5 hover:border-[var(--theme-accent)] transition-all duration-500 relative overflow-hidden rounded-3xl"
+          className="group flex-1 p-10 bg-zinc-900/50 border border-white/20 hover:border-white transition-all duration-500 relative overflow-hidden rounded-3xl"
         >
           <div className="absolute top-6 left-6 text-[10px] font-bold uppercase tracking-widest text-zinc-600">Protocol V2.2</div>
           <div className="mt-16">
             <h2 className="text-4xl font-black tracking-tighter text-white mb-2 uppercase">
-              Portfolio<span className="text-[var(--theme-accent)]">.</span>
+              Portfolio<span>.</span>
             </h2>
             <p className="text-zinc-500 text-sm font-medium leading-relaxed">
               Immersive personal workspace showcasing full-stack engineering and public relations background.
             </p>
           </div>
-          <div className="absolute bottom-8 right-8 text-[var(--theme-accent)] translate-x-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-4xl">
+          <div className="absolute bottom-8 right-8 text-white translate-x-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-4xl">
             &rarr;
           </div>
         </Link>
@@ -105,18 +105,18 @@ export default function VersionSelector({ forcedOpen = false, onClose, isOpen = 
         <Link
           href="/v3"
           onClick={handleSelect}
-          className="group flex-1 p-10 bg-zinc-900/50 border border-white/5 hover:border-white transition-all duration-500 relative overflow-hidden rounded-3xl"
+          className="group flex-1 p-10 bg-zinc-900/50 border border-green-500/20 hover:border-green-500 transition-all duration-500 relative overflow-hidden rounded-3xl"
         >
           <div className="absolute top-6 left-6 text-[10px] font-bold uppercase tracking-widest text-zinc-600">Protocol V3</div>
           <div className="mt-16">
-            <h2 className="text-4xl font-black tracking-tighter text-white mb-2 uppercase text-white/40 group-hover:text-white transition-colors">
-              Minimal<span className="text-zinc-700">.</span>
+            <h2 className="text-4xl font-black tracking-tighter text-white mb-2 uppercase text-white/40 group-hover:text-green-500 transition-colors">
+              Minimal<span className="text-green-500">.</span>
             </h2>
             <p className="text-zinc-500 text-sm font-medium leading-relaxed">
               Refined, content-focused architecture for rapid behavioral analysis review.
             </p>
           </div>
-          <div className="absolute bottom-8 right-8 text-white translate-x-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-4xl">
+          <div className="absolute bottom-8 right-8 text-green-500 translate-x-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-4xl">
             &rarr;
           </div>
         </Link>
