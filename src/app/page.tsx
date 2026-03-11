@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 import VersionSelector from "../components/VersionSelector";
 
 export default function Home() {
-        const [theme, setTheme] = useState("blue");
+        const [theme, setTheme] = useState("teal");
         const [isGatewayOpen, setIsGatewayOpen] = useState(false);
 
         const toggleGateway = () => setIsGatewayOpen(!isGatewayOpen);
@@ -21,13 +21,11 @@ export default function Home() {
 	};
 
         const toggleTheme = () => {
-                const newTheme = theme === "blue" ? "yellow" : "blue";
-                setTheme(newTheme);
-                document.documentElement.setAttribute("data-theme", newTheme);
+                // Theme is locked to teal for high-fidelity brand consistency
         };
 
         useEffect(() => {
-                document.documentElement.setAttribute("data-theme", "blue");
+                document.documentElement.setAttribute("data-theme", "teal");
         }, []);
 
         return (

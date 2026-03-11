@@ -1,21 +1,21 @@
 :root {
-  --theme-bg: #0A0A0A;
-  --theme-bg-alt: #171717;
-  --theme-accent: #22C55E;
-  --theme-offset: #10B981;
-  --theme-accent-rgb: 34, 197, 94;
-  --theme-text: #E5E7EB;
-  --theme-text-dim: rgba(229, 231, 235, 0.75);
-  --theme-shadow: rgba(34, 197, 94, 0.4);
+  --theme-bg: #000000;
+  --theme-bg-alt: #050505;
+  --theme-accent: #00ffcc;
+  --theme-offset: #06b6d4;
+  --theme-accent-rgb: 0, 255, 204;
+  --theme-text: #FFFFFF;
+  --theme-text-dim: rgba(255, 255, 255, 0.7);
+  --theme-shadow: rgba(0, 255, 204, 0.4);
   --container-width: 1100px;
 }
 
 [data-theme="yellow"] {
-  --theme-bg: #0A0A0A;
-  --theme-bg-alt: #171717;
-  --theme-accent: #FDE047;
-  --theme-offset: #EAB308;
-  --theme-accent-rgb: 253, 224, 71;
-  --theme-text: #E5E7EB;
-  --theme-shadow: rgba(253, 224, 71, 0.4);
+  --theme-bg: #000000;
+  --theme-bg-alt: #050505;
+  --theme-accent: #00ffcc;
+  --theme-offset: #06b6d4;
+  --theme-accent-rgb: 0, 255, 204;
+  --theme-text: #FFFFFF;
+  --theme-shadow: rgba(0, 255, 204, 0.4);
 }

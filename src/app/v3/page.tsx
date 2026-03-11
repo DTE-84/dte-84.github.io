@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { Icon } from "@iconify/react";
+import BgAnimation from "../../components/BgAnimation";
 
 const RevealText: React.FC<{ text: string; isReverse?: boolean }> = ({
 	text,
@@ -60,7 +61,7 @@ const Hero = () => {
 		<section
 			id='home'
 			className='min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden pt-20'>
-			<div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(125,211,252,0.1),transparent_70%)] pointer-events-none'></div>
+			<div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,204,0.1),transparent_70%)] pointer-events-none'></div>
 			<div className='max-w-5xl relative z-10 w-full'>
 				<div className='flex flex-col items-center mb-6 animate-fade-in'>
 					<span className='text-accent font-bold tracking-[0.4em] uppercase text-[9px] md:text-[10px] mb-8 md:mb-12'>
@@ -623,7 +624,7 @@ export default function Home() {
 					animation: fade-in 1s ease-out forwards;
 				}
 				:root {
-					--accent: #7dd3fc;
+					--accent: #00ffcc;
 				}
 				.text-accent {
 					color: var(--accent);
