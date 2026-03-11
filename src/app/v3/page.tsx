@@ -70,13 +70,13 @@ const Hero = () => {
 
 					<h1 className='text-[clamp(2.5rem,12vw,8rem)] font-black text-white leading-[0.95] tracking-tighter mb-8 md:mb-10 uppercase break-words'>
 						DESIGNING <br />
-						<span className='text-transparent bg-clip-text bg-gradient-to-r from-accent to-white/40'>
+						<span className='text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent to-white/90'>
 							EXPERIENCE.
 						</span>
 					</h1>
 
-					<h2 className='text-xl md:text-3xl lg:text-4xl font-black text-white tracking-[-0.05em] uppercase mb-8'>
-						Drew T Ernst<span className='text-accent'>_</span>
+					<h2 className='text-xl md:text-3xl lg:text-4xl font-black text-white tracking-[-0.05em] uppercase mb-8 [text-shadow:0_0_20px_rgba(0,255,204,0.3)]'>
+						Drew T Ernst<span className='text-accent animate-pulse'>_</span>
 					</h2>
 				</div>
 				<p className='text-zinc-400 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed font-medium px-4'>
