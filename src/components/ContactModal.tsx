@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 
 interface ContactModalProps {
@@ -23,6 +23,16 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSending, setIsSending] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      const timer = setTimeout(() => setIsAnimating(true), 50);
+      return () => clearTimeout(timer);
+    } else {
+      setIsAnimating(false);
+    }
+  }, [isOpen]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,7 +90,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         )}
 
         <div
-          className={`modal__half modal__about w-1/2 p-[35px] flex flex-col justify-center bg-accent text-black hidden md:flex transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
+          className={`modal__half modal__about w-1/2 p-[35px] flex flex-col justify-center bg-accent text-black hidden md:flex transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${isAnimating ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
         >
           <h3 className="modal__title text-2xl font-bold mb-4 uppercase tracking-widest font-orbitron">
             Drew T Ernst
@@ -96,7 +106,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         </div>
 
         <div
-          className={`modal__half modal__contact w-full md:w-1/2 p-[35px] flex flex-col justify-center bg-[#1e293b] text-[#d7e3fc] relative transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${isOpen ? "translate-x-0 opacity-100" : "translate-x-full md:translate-x-full opacity-0"}`}
+          className={`modal__half modal__contact w-full md:w-1/2 p-[35px] flex flex-col justify-center bg-[#1e293b] text-[#d7e3fc] relative transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${isAnimating ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
         >
           <button
             onClick={onClose}
