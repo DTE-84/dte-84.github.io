@@ -27,6 +27,7 @@ export default function Navbar() {
         const navLinks = [
                 { href: "#projects", label: "Work" },
                 { href: "#about", label: "About" },
+                { href: "#contact", label: "Contact" },
         ];
 
         return (
@@ -35,7 +36,7 @@ export default function Navbar() {
                                 className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-500 ${scrolled || isOpen ? "bg-black/90 backdrop-blur-md py-4" : "bg-transparent py-8"}`}>
                                 <div className='max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center'>
                                         <Link
-                                                href='/v3'
+                                                href='/'
                                                 className='text-2xl font-black tracking-tighter text-white group z-[1001]'
                                                 onClick={closeMenu}>
                                                 <Image src="/assets/DREWMAINLOGO.png" alt="DTE" width={100} height={32} className="h-8 w-auto object-contain group-hover:scale-105 transition-transform" />
@@ -51,7 +52,7 @@ export default function Navbar() {
                                                         </a>
                                                 ))}
                                                 <a
-                                                        href='/public/Drew_T_Ernst_Resume.pdf'
+                                                        href='/DTE-E-Portfolio/resume.pdf'
                                                         target='_blank'
                                                         className='px-6 py-2 border border-accent/40 text-accent text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black hover:border-white transition-all'>
                                                         Resume
@@ -61,11 +62,11 @@ export default function Navbar() {
                                         <div className='hidden md:flex items-center'>
                                                 <Link
                                                         href='/'
-                                                        className='group relative px-4 py-2 overflow-hidden border border-white/10 transition-all hover:border-[#7dd3fc]/50'>
-                                                        <span className='relative z-10 text-[10px] font-black uppercase tracking-[0.3em] text-white/70 group-hover:text-[#7dd3fc] transition-colors'>
+                                                        className='group relative px-4 py-2 overflow-hidden border border-white/10 transition-all hover:border-accent/50'>
+                                                        <span className='relative z-10 text-[10px] font-black uppercase tracking-[0.3em] text-white/70 group-hover:text-accent transition-colors'>
                                                                 Switch to V2.2
                                                         </span>
-                                                        <div className='absolute inset-0 z-0 bg-[#7dd3fc]/5 opacity-0 group-hover:opacity-100 transition-opacity' />
+                                                        <div className='absolute inset-0 z-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity' />
                                                 </Link>
                                         </div>
 
@@ -105,7 +106,7 @@ export default function Navbar() {
                                 ))}
 
                                 <a
-                                        href='/public/Drew_T_Ernst_Resume.pdf'
+                                        href='/DTE-E-Portfolio/resume.pdf'
                                         target='_blank'
                                         className='mt-4 px-12 py-4 border border-accent/40 text-accent text-lg font-black uppercase tracking-widest hover:bg-white hover:text-black hover:border-white transition-all'
                                         onClick={closeMenu}>

@@ -594,6 +594,7 @@ export default function Home() {
 
 	return (
 		<main className='bg-black min-h-screen text-white selection:bg-accent selection:text-black antialiased font-(family-name:--font-space-grotesk)'>
+			<BgAnimation />
 			<Navbar />
 			<Hero />
 			<ToolsOfTheTrade />
