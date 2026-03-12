@@ -1,7 +1,7 @@
 # DREW T. ERNST
 **Frontend Architect | Full-Stack Engineer | Strategic Technical Communicator**  
 Quincy, IL | (217) 653-9445 | dte.solutions.llc@gmail.com
-[GitHub](https://github.com/dte-solutions-llc) | [Website](https://dte-84.github.io) | [LinkedIn](https://www.linkedin.com/in/dte84)
+GitHub: github.com/dte-solutions-llc | Website: dte-84.github.io | LinkedIn: linkedin.com/in/dte84
 
 ---
 
