@@ -1,12 +1,12 @@
 # DREW T. ERNST
-**Frontend Architect | Full-Stack Engineer | Strategic Technical Communicator**  
+**Frontend Architect | Full-Stack Engineer | Strategic Data Analyst and Communicator**  
 Quincy, IL | (217) 653-9445 | dte.solutions.llc@gmail.com
-GitHub: github.com/dte-solutions-llc | Website: dte-84.github.io | LinkedIn: linkedin.com/in/dte84
+GitHub: dte-84.github.io/DTE-E-Portfoio | Website: dte-solutions.icu | LinkedIn: linkedin.com/in/dte84
 
 ---
 
 ## EXECUTIVE PROFILE
-A rare hybrid of **Advanced Software Engineering** and **Strategic Communication**. Leveraging dual degrees in **Public Relations and Marketing** to bridge the gap between complex algorithmic logic and intuitive user experiences. Expert in architecting high-stakes, production-grade ecosystemsâ€”from HIPAA-compliant clinical engines to **Behavioral AI fintech platforms**. Proven ability to translate technical velocity into business value, specializing in "try-hard" amateur demographics and elite performance utilities.
+A rare hybrid of **Advanced Software Engineering** and **Strategic Communication**. Leveraging dual degrees in **Public Relations and Marketing** to bridge the gap between complex algorithmic logic and intuitive user experiences. Expert in architecting high-stakes, production-grade systems from HIPAA-compliant clinical engines to **Behavioral AI fintech platforms**. Proven ability to translate technical velocity into business value, specializing in "try-hard" amateur demographics and elite performance utilities.
 
 ---
 
@@ -31,38 +31,39 @@ A rare hybrid of **Advanced Software Engineering** and **Strategic Communication
 ### Founder & Principal Engineer • NestLegacy | 2026
 *Digital Trust Layer & Wealth Acquisition Engine for the $84 Trillion Transfer.*
 
-- **Behavioral Lead Intelligence:** Engineered a high-fidelity lead qualification engine utilizing AI-driven behavioral modeling to bridge the gap between young inheritors and fiduciary experts.
+- **Behavioral Lead Intelligence:** Engineered a lead qualification engine utilizing AI-driven behavioral modeling to bridge the gap between young inheritors and fiduciary experts.
 - **Projective Analytics:** Architected interactive longevity and tax-exposure projection systems, providing immediate mathematical value to prospects and increasing consultation conversion rates.
-- **Enterprise Nexus:** Developed a modular ecosystem architecture ensuring high-fidelity data integrity across corporate hubs and product-specific deep links.
+- **Enterprise Nexus:** Developed a modular hub-style architecture ensuring high-fidelity data integrity across corporate branches and product-specific deep links.
 
 ### Lead Full-Stack Developer • Pulse (The Behavioral Finance Conscience) | 2026
-*Production-grade behavioral finance ecosystem designed to correlate financial velocity with user psychology.*
+*Production-grade behavioral finance system designed to correlate financial velocity with user psychology.*
 
 - **Behavioral Intelligence:** Engineered "Nova," an evolving AI consciousness using GPT-4o; implemented "Behavioral Mirroring" to detect "Stress-Spending Clusters" by correlating financial data with user-logged stress indices and sleep quality.
 - **High-Velocity Infrastructure:** Architected a multi-tier system utilizing **React 19** and a **FastAPI** asynchronous backend, achieving sub-millisecond data visualization delivery via Recharts.
-- **Strategic Security:** Integrated an AWS S3 Receipt Ecosystem with encrypted pre-signed URL protocols, ensuring audit-ready data persistence and uncompromising user privacy.
+- **Strategic Security:** Integrated an AWS S3 Receipt system with encrypted pre-signed URL protocols, ensuring audit-ready data persistence and uncompromising user privacy.
 
 ### Lead Software Engineer • Marion County DDSD (Missouri DMH) | 2026
 *PCSP Assistant Pro — HIPAA-compliant clinical documentation engine for state government audits.*
 
 - **Strategic Communications Bridge:** Applied PR/Marketing expertise to design an "Intelligent Phrasing Engine," translating complex clinical requirements into intuitive UI patterns for non-technical staff.
-- **Workflow Optimization:** Reduced documentation revision cycles by 40%, ensuring 100% adherence to Missouri DMH state audit requirements through rigid enterprise logic.
+- **Workflow Optimization:** Reduced documentation revision cycles significant amounts, ensuring minimum margin of error adherence to Missouri DMH state audit requirements through rigid enterprise logic.
 - **Zero-Footprint Security:** Engineered an in-memory processing architecture to satisfy stringent HIPAA security standards without compromising system speed.
 
-### Full-Stack Engineer • Caddy Pro & SiKnight | 2025 – 2026
-*Elite Performance Tracking & High-Engagement Interactive Platforms.*
+### Full-Stack Engineer • Caddie & Fluff Ecosystem | 2025 – 2026
+*Biomechanical Intelligence & High-Engagement Performance Tracking.*
 
-- **Caddy Pro:** Engineered a "Tournament Edition" golf utility for competitive amateurs; features automated GPS shot tracking, a Live Skins Game logic engine with shared group sync, and speech-synthesis audible GPS assistance.
-- **Real-Time Systems:** Leveraged **Node.js** and **Socket.io** to maintain high-frequency state management for interactive gaming and live leaderboard environments.
+Golf Caddie - Mobile App: "Fluff" & Golf Course GPS and Tee-Time Schedule App: "TheClubHouse" 
+- **Biomechanical Swing Analysis:** Engineered a high-fidelity computer vision engine to analyze skeletal alignment and swing plane consistency, delivering real-time kinematic feedback to competitive amateurs.
+- **Tactical Caddie Logic:** Developed automated GPS shot tracking and a "Live Skins" synchronization engine using **Node.js** and **Socket.io** for precision management in competitive environments.
+- **Audible Intelligence:** Integrated speech-synthesis protocols for hands-free GPS distance allocation and "Amen Corner" grade tactical course advice.
 
 ---
 
 ## STRATEGIC EDUCATION & PROFESSIONAL TRAINING
-- **B.S. Communication (Public Relations Focus):** Quincy University | GPA: 3.8
-- **B.S. Marketing:** Culver-Stockton College | GPA: 3.8
 - **Advanced Engineering Mentorship:** David Bragg (Senior Software Engineer) | 2025 – 2026
   - *Intensive 1-on-1 technical mentorship focused on enterprise-grade software architecture, advanced OOD principles, and high-frequency data orchestration.*
   - *Refined full-stack proficiency through rigorous review of production lifecycle management and scalability strategies.*
 - **Frontend Simplified Bootcamp:** Production-Grade React & Software Architecture | 2025
   - *Comprehensive immersion in modern frontend ecosystems, focusing on state management complexity and high-fidelity UI implementation.*
-
+- **B.S. Communication (Public Relations Focus):** Quincy University | GPA: 3.8
+- **B.S. Marketing:** Culver-Stockton College | GPA: 3.8
