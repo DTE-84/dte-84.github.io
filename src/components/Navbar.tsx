@@ -2,6 +2,7 @@
 import { Icon } from "@iconify/react";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useScrollLock } from "../hooks/useScrollLock";
 import { useTrapFocus } from "../hooks/useTrapFocus";
 
@@ -15,6 +16,11 @@ export default function Navbar({ onContactClick, theme, onThemeToggle }: NavbarP
         const [isOpen, setIsOpen] = useState(false);
         const [scrolled, setScrolled] = useState(false);
         const mobileMenuRef = useRef<HTMLDivElement>(null);
+        const pathname = usePathname();
+        
+        // Determine if we are on V3 based on pathname
+        // Since basePath is /DTE-E-Portfolio, we need to check if pathname contains /v3/
+        const isV3 = pathname?.includes("/v3/");
         
         // Lock scroll and trap focus when mobile menu is open
         useScrollLock(isOpen);
@@ -92,10 +98,10 @@ export default function Navbar({ onContactClick, theme, onThemeToggle }: NavbarP
                                                         </div>
                                                 )}
                                                 <Link
-                                                        href='https://dte-84.github.io/DTE-E-Portfolio/v3'
+                                                        href={isV3 ? '/' : '/v3'}
                                                         className='group relative px-4 py-2 overflow-hidden border border-white/10 transition-all hover:border-accent/50'>
                                                         <span className='relative z-10 text-[10px] font-black uppercase tracking-[0.3em] text-white/70 group-hover:text-accent transition-colors'>
-                                                                Switch to V3
+                                                                {isV3 ? 'Switch to V2.2' : 'Switch to V3'}
                                                         </span>
                                                         <div className='absolute inset-0 z-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity' />
                                                 </Link>

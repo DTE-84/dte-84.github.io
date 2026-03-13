@@ -66,7 +66,7 @@ export default function VersionSelector({ forcedOpen = false, onClose, isOpen = 
           onClick={handleSelect}
           className="group flex-1 p-10 bg-zinc-900/50 border border-[#00ffcc]/20 hover:border-[#00ffcc] transition-all duration-500 relative overflow-hidden rounded-3xl"
         >
-          <div className="absolute top-6 left-6 text-[10px] font-bold uppercase tracking-widest text-zinc-600">Protocol V2.2</div>
+          <div className="absolute top-6 left-6 text-[10px] font-bold uppercase tracking-widest text-zinc-600">Protocol V3.0 (High-Fidelity)</div>
           <div className="mt-16 text-center">
             <h2 className="text-4xl font-black tracking-tighter text-white mb-2 uppercase group-hover:text-[#00ffcc] transition-colors">
               Portfolio<span className="text-[#00ffcc]">.</span>
@@ -100,7 +100,7 @@ export default function VersionSelector({ forcedOpen = false, onClose, isOpen = 
           onClick={handleSelect}
           className="group flex-1 p-10 bg-zinc-900/50 border border-[#00ffff]/20 hover:border-[#00ffff] transition-all duration-500 relative overflow-hidden rounded-3xl"
         >
-          <div className="absolute top-6 left-6 text-[10px] font-bold uppercase tracking-widest text-zinc-600">Protocol V3</div>
+          <div className="absolute top-6 left-6 text-[10px] font-bold uppercase tracking-widest text-zinc-600">Protocol V3.0 (Minimalist)</div>
           <div className="mt-16 text-center">
             <h2 className="text-4xl font-black tracking-tighter text-white mb-2 uppercase group-hover:text-[#00ffff] transition-colors">
               Minimal<span className="text-[#00ffff]">.</span>
