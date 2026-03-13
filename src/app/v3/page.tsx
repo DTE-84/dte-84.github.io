@@ -195,23 +195,41 @@ const About = () => {
 						With a background in Public Relations and Marketing, I approach software not just as a technical challenge, but as a mechanism for trust acquisition and data integrity.
 					</p>
 				</div>
-				<div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-center gap-6">
+				<div className="bg-white/5 border border-white/10 rounded-3xl p-8 grid sm:grid-cols-2 gap-8">
 					<div className="flex items-center gap-4">
-						<div className="w-12 h-12 rounded-full border border-accent flex items-center justify-center">
+						<div className="w-12 h-12 rounded-full border border-accent flex items-center justify-center shrink-0">
 							<Icon icon="solar:globus-linear" className="text-2xl text-accent" />
 						</div>
 						<div>
-							<h4 className="font-bold uppercase tracking-tight">Enterprise Scaling</h4>
-							<p className="text-xs text-zinc-500">Global Distribution Ready</p>
+							<h4 className="font-bold uppercase tracking-tight text-sm">Enterprise Scaling</h4>
+							<p className="text-[10px] text-zinc-500 uppercase tracking-widest">Global Ready</p>
 						</div>
 					</div>
 					<div className="flex items-center gap-4">
-						<div className="w-12 h-12 rounded-full border border-accent flex items-center justify-center">
+						<div className="w-12 h-12 rounded-full border border-accent flex items-center justify-center shrink-0">
 							<Icon icon="solar:shield-check-linear" className="text-2xl text-accent" />
 						</div>
 						<div>
-							<h4 className="font-bold uppercase tracking-tight">HIPAA / Data Safety</h4>
-							<p className="text-xs text-zinc-500">Zero-Footprint Protocols</p>
+							<h4 className="font-bold uppercase tracking-tight text-sm">HIPAA / Data Safety</h4>
+							<p className="text-[10px] text-zinc-500 uppercase tracking-widest">Zero-Footprint</p>
+						</div>
+					</div>
+					<div className="flex items-center gap-4">
+						<div className="w-12 h-12 rounded-full border border-accent flex items-center justify-center shrink-0">
+							<Icon icon="solar:brain-linear" className="text-2xl text-accent" />
+						</div>
+						<div>
+							<h4 className="font-bold uppercase tracking-tight text-sm">Behavioral AI</h4>
+							<p className="text-[10px] text-zinc-500 uppercase tracking-widest">Predictive UX</p>
+						</div>
+					</div>
+					<div className="flex items-center gap-4">
+						<div className="w-12 h-12 rounded-full border border-accent flex items-center justify-center shrink-0">
+							<Icon icon="solar:chat-round-line-linear" className="text-2xl text-accent" />
+						</div>
+						<div>
+							<h4 className="font-bold uppercase tracking-tight text-sm">Strategic PR</h4>
+							<p className="text-[10px] text-zinc-500 uppercase tracking-widest">Narrative Design</p>
 						</div>
 					</div>
 				</div>
