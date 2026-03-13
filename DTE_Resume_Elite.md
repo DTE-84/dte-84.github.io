@@ -23,39 +23,43 @@ A rare hybrid of **Advanced Software Engineering** and **Strategic Communication
 
 ### Founder & Principal Consultant • DTE Solutions LLC | 2025 – Present
 *Strategic Technical Orchestration & Full-Stack Solutions for High-Stakes Environments.*
+**Tech Stack:** TypeScript, Next.js, Node.js, AWS, Docker, CI/CD
 
-- **Independent Consultancy:** Established a high-fidelity freelance engine specializing in rapid prototyping and deployment of specialized analytical tools for clinical and financial sectors.
-- **Full-Lifecycle Ownership:** Orchestrate the entire product trajectory from regulatory discovery and architectural design to production-grade deployment and CI/CD maintenance.
+- **Independent Consultancy:** Established a high-fidelity freelance engine specializing in rapid prototyping and deployment of specialized analytical tools for clinical and financial sectors using **TypeScript** and **Next.js**.
+- **Full-Lifecycle Ownership:** Orchestrate the entire product trajectory from regulatory discovery and architectural design to production-grade deployment via **Docker** and **GitHub Actions CI/CD** maintenance.
 - **Strategic Partnership:** Leverage communication expertise to translate complex technical constraints into actionable business roadmaps for diverse organizational stakeholders.
 
 ### Founder & Principal Engineer • NestLegacy | 2026
 *Digital Trust Layer & Wealth Acquisition Engine for the $84 Trillion Transfer.*
+**Tech Stack:** Next.js, TypeScript, GPT-4o, Tailwind CSS, Vercel
 
-- **Behavioral Lead Intelligence:** Engineered a lead qualification engine utilizing AI-driven behavioral modeling to bridge the gap between young inheritors and fiduciary experts.
-- **Projective Analytics:** Architected interactive longevity and tax-exposure projection systems, providing immediate mathematical value to prospects and increasing consultation conversion rates.
-- **Enterprise Nexus:** Developed a modular hub-style architecture ensuring high-fidelity data integrity across corporate branches and product-specific deep links.
+- **Behavioral Lead Intelligence:** Engineered a lead qualification engine utilizing **AI-driven behavioral modeling (GPT-4o)** to bridge the gap between young inheritors and fiduciary experts.
+- **Projective Analytics:** Architected interactive longevity and tax-exposure projection systems using **TypeScript**, providing immediate mathematical value to prospects and increasing consultation conversion rates.
+- **Enterprise Nexus:** Developed a modular hub-style architecture in **Next.js** ensuring high-fidelity data integrity across corporate branches and product-specific deep links.
 
 ### Lead Full-Stack Developer • Pulse (The Behavioral Finance Conscience) | 2026
 *Production-grade behavioral finance system designed to correlate financial velocity with user psychology.*
+**Tech Stack:** React 19, FastAPI (Python), PostgreSQL, AWS S3, Recharts, TypeScript
 
-- **Behavioral Intelligence:** Engineered "Nova," an evolving AI consciousness using GPT-4o; implemented "Behavioral Mirroring" to detect "Stress-Spending Clusters" by correlating financial data with user-logged stress indices and sleep quality.
-- **High-Velocity Infrastructure:** Architected a multi-tier system utilizing **React 19** and a **FastAPI** asynchronous backend, achieving sub-millisecond data visualization delivery via Recharts.
-- **Strategic Security:** Integrated an AWS S3 Receipt system with encrypted pre-signed URL protocols, ensuring audit-ready data persistence and uncompromising user privacy.
+- **Behavioral Intelligence:** Engineered "Nova," an evolving AI consciousness using **GPT-4o** and **Python**; implemented "Behavioral Mirroring" to detect "Stress-Spending Clusters" by correlating financial data with user-logged stress indices and sleep quality.
+- **High-Velocity Infrastructure:** Architected a multi-tier system utilizing **React 19** and a **FastAPI** asynchronous backend, achieving sub-millisecond data visualization delivery via **Recharts**.
+- **Strategic Security:** Integrated an **AWS S3** Receipt system with encrypted pre-signed URL protocols, ensuring audit-ready data persistence and uncompromising user privacy.
 
 ### Lead Software Engineer • Marion County DDSD (Missouri DMH) | 2026
 *PCSP Assistant Pro — HIPAA-compliant clinical documentation engine for state government audits.*
+**Tech Stack:** Vanilla JavaScript, OOD, CSS3, HTML5
 
-- **Strategic Communications Bridge:** Applied PR/Marketing expertise to design an "Intelligent Phrasing Engine," translating complex clinical requirements into intuitive UI patterns for non-technical staff.
-- **Workflow Optimization:** Reduced documentation revision cycles significant amounts, ensuring minimum margin of error adherence to Missouri DMH state audit requirements through rigid enterprise logic.
-- **Zero-Footprint Security:** Engineered an in-memory processing architecture to satisfy stringent HIPAA security standards without compromising system speed.
+- **Strategic Communications Bridge:** Applied PR/Marketing expertise to design an "Intelligent Phrasing Engine" in **Vanilla JavaScript**, translating complex clinical requirements into intuitive UI patterns for non-technical staff.
+- **Workflow Optimization:** Reduced documentation revision cycles significant amounts, ensuring minimum margin of error adherence to Missouri DMH state audit requirements through rigid **Object-Oriented Design (OOD)**.
+- **Zero-Footprint Security:** Engineered an **in-memory processing architecture** to satisfy stringent HIPAA security standards without compromising system speed.
 
 ### Full-Stack Engineer • Caddie & Fluff Ecosystem | 2025 – 2026
 *Biomechanical Intelligence & High-Engagement Performance Tracking.*
+**Tech Stack:** React, TypeScript, Node.js, Socket.io, Firebase, Computer Vision (Python)
 
-Golf Caddie - Mobile App: "Fluff" & Golf Course GPS and Tee-Time Schedule App: "TheClubHouse" 
-- **Biomechanical Swing Analysis:** Engineered a high-fidelity computer vision engine to analyze skeletal alignment and swing plane consistency, delivering real-time kinematic feedback to competitive amateurs.
+- **Biomechanical Swing Analysis:** Engineered a high-fidelity computer vision engine (**Python/OpenCV**) to analyze skeletal alignment and swing plane consistency, delivering real-time kinematic feedback.
 - **Tactical Caddie Logic:** Developed automated GPS shot tracking and a "Live Skins" synchronization engine using **Node.js** and **Socket.io** for precision management in competitive environments.
-- **Audible Intelligence:** Integrated speech-synthesis protocols for hands-free GPS distance allocation and "Amen Corner" grade tactical course advice.
+- **Cloud Integration:** Leveraged **Firebase (Auth/Firestore)** for real-time user state management and the "Amen Corner" grade tactical course advice system.
 
 ---
 
