@@ -112,6 +112,17 @@ const ProjectCard = ({ project }: { project: any }) => {
 const Work = () => {
 	const projects = [
 		{
+		id: "SetLogic",
+		title: "SetLogic - Physical Performance Engine",
+		category: "DTE Solutions",
+		year: "2026",
+		description:
+			"AI-driven physical performance engine optimizing biomechanic trajectory through iterative coaching and metabolic data correlation.",
+		tags: ["React 19", "Nutrition and Exercise", "Lead Intelligence", "Claude AI"],
+		link: "https://dte-84.github.io/SetLogic/",
+		video: "/DTE-E-Portfolio/assets/SetLogic.mp4",
+	},
+		{
 			id: "NestLegacy",
 			title: "NestLegacy - Wealth Transfer Engine",
 			category: "Enterprise Fintech",
