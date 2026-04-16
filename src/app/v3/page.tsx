@@ -147,6 +147,17 @@ const Work = () => {
 			video: "/DTE-E-Portfolio/assets/Pulse.mp4",
 		},
 		{
+			id: "ecommerceSQL",
+			title: "E-Commerce SQL Analytics",
+			category: "Data Analysis",
+			year: "2026",
+			description:
+				"Advanced SQL engineering and EDA for e-commerce telemetry. Features complex multi-table joins, window functions (NTILE, DENSE_RANK), and LTV cohort analysis to drive business intelligence.",
+			tags: ["SQL", "PostgreSQL", "Data Analytics", "React"],
+			link: "https://ecomm-sql.vercel.app/",
+			video: "/assets/PCSP.mp4",
+		},
+		{
 			id: "SetLogic",
 			title: "SetLogic - AI Fitness Planning App",
 			category: "Health & Fitness",
